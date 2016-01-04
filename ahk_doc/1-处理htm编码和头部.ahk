@@ -51,33 +51,29 @@ delHead()
       FileDelete, % A_LoopFileFullPath
       
       _newContent := ""      
+      _isLineOk := false
       
       ;~ 解析内容
       loop, Parse, % content, `n, `r
       {
          _line := A_LoopField
          
-         if (A_Index = 6)
-         || (A_Index = 7)
+         if !(_isLineOk)
          {
             if (_line ~= "i)charset=iso-8859-1")
             {
-               _line := RegExReplace(_line,"i)charset=iso-8859-1","charset=utf-8")
+               _line := RegExReplace(_line,"i)charset=iso-8859-1","charset=utf-8")            
             }            
-            else if (_line ~= "i)charset=GB2312")
+            else if (_line ~= "i)GB2312")
             {
-               _line := RegExReplace(_line,"i)charset=GB2312","charset=utf-8")               
+               _line := RegExReplace(_line,"i)GB2312","utf-8")               
+            }
+            
+            if (_line ~= "i)<body>")
+            {            
+               _isLineOk := true
             }
          }
-         else if (A_Index = 9)
-         || (A_Index = 10)
-         {
-            if (_line ~= "^<script.*jquery")
-            {
-               continue
-            }
-         }
-         
          _newContent .= _line "`n"
       }
       ;~ 删除最后的换行符
@@ -86,45 +82,5 @@ delHead()
       ToolTip, %A_Index% %A_LoopFileLongPath% 完成
    }
    Trace("替换头部完成", 3)
-   return
-}
-
-go_change1()
-{
-   ;~ 新版的js引用位置变化
-   _replaceStr1 =
-   (`"
-   static/jquery.js" type="text/javascript"></script>
-   )
-
-   _replaceStr2=
-   (`"
-   static/tree.jquery.js" type="text/javascript"></script>
-   )
-
-   Loop, %A_ScriptDir%\*.htm, , 1
-   {
-       FileRead, content, % A_LoopFileFullPath
-       FileDelete, % A_LoopFileFullPath
-
-      _newContent := ""
-      Loop, parse, content, `n, `r
-      {
-         _line := Trim(A_LoopField)
-         if (A_Index < 20)
-         && ((_line ~= _replaceStr1) || (_line ~= _replaceStr2))
-         {
-            continue
-         }
-         _newContent .= A_LoopField "`n"
-      }
-      
-      ;~ 删除最后的换行符
-      _newContent := SubStr(_newContent, 1 , -1)
-      
-      FileAppend, % _newContent, % A_LoopFileFullPath
-   }
-   Trace("第一步完成")
-   Sleep, 500
    return
 }
