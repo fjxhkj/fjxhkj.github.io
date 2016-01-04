@@ -1487,7 +1487,7 @@ function AddContent()
 
     var en = 'http://ahkscript.org/docs/';
     var de = 'http://ragnar-f.github.io/docs/';
-    var cn = 'http://fjxhkj.github.io/ahk_doc/zh-cn/';
+    var cn = 'http://fjxhkj.github.io/ahk_doc/zh-cn/docs/';
 
     $('#lng-btn-en').on('click', function() { document.location = en + relPath; } );
     $('#lng-btn-de').on('click', function() { document.location = de + relPath; } );
