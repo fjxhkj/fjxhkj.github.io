@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Critical</title>
-<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/content.js" type="text/javascript"></script>
@@ -12,40 +12,40 @@
 
 <h1>Critical</h1>
 
-<p>·ÀÖ¹<a href="../misc/Threads.htm">µ±Ç°Ïß³Ì</a>±»ÆäËûÏß³ÌÖĞ¶Ï, »ò¿ªÆô¿ÉÖĞ¶Ï.</p>
+<p>é˜²æ­¢<a href="../misc/Threads.htm">å½“å‰çº¿ç¨‹</a>è¢«å…¶ä»–çº¿ç¨‹ä¸­æ–­, æˆ–å¼€å¯å¯ä¸­æ–­.</p>
 
 <pre class="Syntax">Critical [, Off]
-Critical 50 <em>; Çë²ÎÔÄ<a href="#Interval">±¸×¢µ×²¿</a>¡£</em></pre>
-<p>Èç¹ûÊ×¸ö²ÎÊıÊ¡ÂÔ (»òÎªµ¥´Ê On), ÔòÉèÖÃ <a href="../misc/Threads.htm">µ±Ç°Ïß³Ì</a> Îª¹Ø¼üµÄ, ÕâÒâÎ¶×ÅËü²»»á±»ÆäËûÏß³ÌÖĞ¶Ï. Èç¹ûÊ×¸ö²ÎÊıÎª Off£¨»òÔÚ v1.0.48+ ÎªÊı×Ö 0£©£¬Ôòµ±Ç°Ïß³Ì»á²»ÂÛ <a href="Thread.htm">Thread Interrupt</a> ÉèÖÃÈçºÎ¶¼»á±ä³É¿ÉÖĞ¶Ï×´Ì¬¡£</p>
+Critical 50 <em>; è¯·å‚é˜…<a href="#Interval">å¤‡æ³¨åº•éƒ¨</a>ã€‚</em></pre>
+<p>å¦‚æœé¦–ä¸ªå‚æ•°çœç•¥ (æˆ–ä¸ºå•è¯ On), åˆ™è®¾ç½® <a href="../misc/Threads.htm">å½“å‰çº¿ç¨‹</a> ä¸ºå…³é”®çš„, è¿™æ„å‘³ç€å®ƒä¸ä¼šè¢«å…¶ä»–çº¿ç¨‹ä¸­æ–­. å¦‚æœé¦–ä¸ªå‚æ•°ä¸º Offï¼ˆæˆ–åœ¨ v1.0.48+ ä¸ºæ•°å­— 0ï¼‰ï¼Œåˆ™å½“å‰çº¿ç¨‹ä¼šä¸è®º <a href="Thread.htm">Thread Interrupt</a> è®¾ç½®å¦‚ä½•éƒ½ä¼šå˜æˆå¯ä¸­æ–­çŠ¶æ€ã€‚</p>
 
 <h3 id="Behave">Behavior of Critical Threads</h3>
-<p>Óë <a href="../misc/Threads.htm">¸ßÓÅÏÈ¼¶</a> Ïß³Ì²»Í¬, ÔÚ¹Ø¼üÏß³ÌÖĞ²úÉúµÄÊÂ¼ş²»»á±»¶ªÆú. ÀıÈç, ÔÚµ±Ç°Ïß³ÌÎª¹Ø¼üÏß³ÌÊ±ÓÃ»§°´ÏÂÁË <a href="../Hotkeys.htm">ÈÈ¼ü</a>, ÄÇÃ´´ËÈÈ¼ü»á±»»º³åµ½µ±Ç°Ïß³Ì½áÊø»ò³ÉÎª·Ç¹Ø¼üÏß³ÌÊ±²Å×÷ÎªĞÂµÄÏß³ÌÆô¶¯.</p>
-<p>¹Ø¼üÏß³ÌÒ²»á±»½ô¼±ÊÂ¼şÖĞ¶Ï. ½ô¼±ÊÂ¼ş°üÀ¨: 1) <a href="OnExit.htm">OnExit</a> ×Ó³ÌĞò; 2) ¼àÌıÏûÏ¢ºÅĞ¡ÓÚ 0x312 µÄÈÎºÎ <a href="OnMessage.htm">OnMessage()</a> º¯Êı (»ò±»ÕâĞ©ÏûÏ¢´¥·¢µÄ <a href="RegisterCallback.htm">»Øµ÷</a>); ºÍ 3) ÓÉ½ô¼±Ïß³Ì×ÔÉí¼ä½Ó´¥·¢µÄÈÎºÎ <a href="RegisterCallback.htm">»Øµ÷</a> (ÀıÈçÍ¨¹ı <a href="PostMessage.htm">SendMessage</a> »ò <a href="DllCall.htm">DllCall</a>). Òª±ÜÃâ±»ÕâĞ©ÊÂ¼şÖĞ¶Ï, ¿ÉÒÔÁÙÊ±½ûÓÃÕâĞ©º¯Êı.</p>
-<p>¹Ø¼üÏß³ÌÔÚÏÔÊ¾ <a href="MsgBox.htm">MsgBox</a> »òÆäËû¶Ô»°¿òÊ±, »á±ä³É¿ÉÖĞ¶ÏµÄ. µ«ÊÇ£¬Óë <a href="Thread.htm">Thread Interrupt</a> ²»Í¬£¬ÔÚÓÃ»§½â³ı¶Ô»°¿òºóÕâ¸öÏß³Ì»áÔÙ»Ö¸´Îª¹Ø¼üµÄ¡£</p>
+<p>ä¸ <a href="../misc/Threads.htm">é«˜ä¼˜å…ˆçº§</a> çº¿ç¨‹ä¸åŒ, åœ¨å…³é”®çº¿ç¨‹ä¸­äº§ç”Ÿçš„äº‹ä»¶ä¸ä¼šè¢«ä¸¢å¼ƒ. ä¾‹å¦‚, åœ¨å½“å‰çº¿ç¨‹ä¸ºå…³é”®çº¿ç¨‹æ—¶ç”¨æˆ·æŒ‰ä¸‹äº† <a href="../Hotkeys.htm">çƒ­é”®</a>, é‚£ä¹ˆæ­¤çƒ­é”®ä¼šè¢«ç¼“å†²åˆ°å½“å‰çº¿ç¨‹ç»“æŸæˆ–æˆä¸ºéå…³é”®çº¿ç¨‹æ—¶æ‰ä½œä¸ºæ–°çš„çº¿ç¨‹å¯åŠ¨.</p>
+<p>å…³é”®çº¿ç¨‹ä¹Ÿä¼šè¢«ç´§æ€¥äº‹ä»¶ä¸­æ–­. ç´§æ€¥äº‹ä»¶åŒ…æ‹¬: 1) <a href="OnExit.htm">OnExit</a> å­ç¨‹åº; 2) ç›‘å¬æ¶ˆæ¯å·å°äº 0x312 çš„ä»»ä½• <a href="OnMessage.htm">OnMessage()</a> å‡½æ•° (æˆ–è¢«è¿™äº›æ¶ˆæ¯è§¦å‘çš„ <a href="RegisterCallback.htm">å›è°ƒ</a>); å’Œ 3) ç”±ç´§æ€¥çº¿ç¨‹è‡ªèº«é—´æ¥è§¦å‘çš„ä»»ä½• <a href="RegisterCallback.htm">å›è°ƒ</a> (ä¾‹å¦‚é€šè¿‡ <a href="PostMessage.htm">SendMessage</a> æˆ– <a href="DllCall.htm">DllCall</a>). è¦é¿å…è¢«è¿™äº›äº‹ä»¶ä¸­æ–­, å¯ä»¥ä¸´æ—¶ç¦ç”¨è¿™äº›å‡½æ•°.</p>
+<p>å…³é”®çº¿ç¨‹åœ¨æ˜¾ç¤º <a href="MsgBox.htm">MsgBox</a> æˆ–å…¶ä»–å¯¹è¯æ¡†æ—¶, ä¼šå˜æˆå¯ä¸­æ–­çš„. ä½†æ˜¯ï¼Œä¸ <a href="Thread.htm">Thread Interrupt</a> ä¸åŒï¼Œåœ¨ç”¨æˆ·è§£é™¤å¯¹è¯æ¡†åè¿™ä¸ªçº¿ç¨‹ä¼šå†æ¢å¤ä¸ºå…³é”®çš„ã€‚</p>
 
 <h3 id="Off">Critical Off</h3>
-<p>µ±»º³åµÄÊÂ¼şµÈ´ıÆô¶¯ĞÂµÄÏß³ÌÊ±, Ê¹ÓÃ <code>Critical Off</code> ²»»áµ¼ÖÂÁ¢¼´ÖĞ¶Ïµ±Ç°Ïß³Ì. Instead, an average of 5 milliseconds will pass before an interruption occurs. This makes it more than 99.999% likely that at least one line after <code>Critical Off</code> will execute before an interruption. You can force interruptions to occur immediately by means of a delay such as a <code><a href="Sleep.htm">Sleep -1</a></code> or a <a href="WinWait.htm">WinWait</a> for a window that does not yet exist.</p>
+<p>å½“ç¼“å†²çš„äº‹ä»¶ç­‰å¾…å¯åŠ¨æ–°çš„çº¿ç¨‹æ—¶, ä½¿ç”¨ <code>Critical Off</code> ä¸ä¼šå¯¼è‡´ç«‹å³ä¸­æ–­å½“å‰çº¿ç¨‹. Instead, an average of 5 milliseconds will pass before an interruption occurs. This makes it more than 99.999% likely that at least one line after <code>Critical Off</code> will execute before an interruption. You can force interruptions to occur immediately by means of a delay such as a <code><a href="Sleep.htm">Sleep -1</a></code> or a <a href="WinWait.htm">WinWait</a> for a window that does not yet exist.</p>
 <p><code>Critical Off</code> cancels the current thread's period of uninterruptibility even if the thread was not Critical, thereby letting events such as <a href="Gui.htm#GuiSize">GuiSize</a> be processed sooner or more predictably.</p>
 
 <h3 id="Settings">Thread Settings</h3>
 <p>See <a href="../Variables.htm#IsCritical">A_IsCritical</a> for how to save and restore the current setting of Critical. However, since Critical is a thread-specific setting, when a critical thread ends, the underlying/resumed thread (if any) will  be automatically noncritical. Consequently there is no need to do &quot;Critical Off&quot; right before ending a thread.</p>
 <p>If Critical is not used in the auto-execute section (top part of the script), all threads start off as noncritical (though the settings of <a href="Thread.htm">Thread Interrupt</a> will still apply). By contrast, if the auto-execute section turns on Critical but never turns it off, every newly launched <a href="../misc/Threads.htm">thread</a> (such as a <a href="../Hotkeys.htm">hotkey</a>, <a href="Menu.htm">custom menu item</a>, or <a href="SetTimer.htm">timed</a> subroutine) starts off critical.</p>
 <p>The command <a href="Thread.htm">Thread NoTimers</a> is similar to Critical except that it only prevents interruptions from <a href="SetTimer.htm">timers</a>.</p>
-<p>ÔÚ v1.0.47+£¬´ò¿ª Critical µÄÍ¬Ê±Ò²»áÈÃ <a href="SetBatchLines.htm"><code>SetBatchLines -1</code></a> ¶Ô<a href="../misc/Threads.htm">µ±Ç°Ïß³Ì</a>ÉúĞ§¡£</p>
+<p>åœ¨ v1.0.47+ï¼Œæ‰“å¼€ Critical çš„åŒæ—¶ä¹Ÿä¼šè®© <a href="SetBatchLines.htm"><code>SetBatchLines -1</code></a> å¯¹<a href="../misc/Threads.htm">å½“å‰çº¿ç¨‹</a>ç”Ÿæ•ˆã€‚</p>
 
 <h3 id="Interval">Message Check Interval</h3>
 <p>In v1.0.47+, specifying a positive number as the first parameter (e.g. <code>Critical 30</code>) turns on Critical but also changes the number of milliseconds between checks of the internal message queue. If unspecified, messages are checked every 16 milliseconds while Critical is On, and every 5 ms while Critical is Off. Increasing the interval postpones the arrival of messages/events, which gives the <a href="../misc/Threads.htm">current thread</a> more time to finish. This reduces the possibility that certain <a href="OnMessage.htm">OnMessage()</a> and <a href="Gui.htm#DefaultWin">GUI events</a> will be lost due to &quot;thread already running&quot;. However, commands that wait such as <a href="Sleep.htm">Sleep</a> and <a href="WinWait.htm">WinWait</a> will check messages regardless of this setting (a workaround is <code>DllCall(&quot;Sleep&quot;, Uint, 500)</code>). Note: Increasing the message-check interval too much may reduce the responsiveness of various events such as <a href="Gui.htm">GUI</a> window repainting.</p>
 
-<h3>Ïà¹Ø</h3>
-<p><a href="Thread.htm">Thread£¨ÃüÁî£©</a>, <a href="../misc/Threads.htm">Ïß³Ì</a>, <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a>, <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a>, <a href="OnMessage.htm">OnMessage()</a>, <a href="RegisterCallback.htm">RegisterCallback()</a>, <a href="Hotkey.htm">Hotkey</a>, <a href="Menu.htm">Menu</a>, <a href="SetTimer.htm">SetTimer</a></p>
+<h3>ç›¸å…³</h3>
+<p><a href="Thread.htm">Threadï¼ˆå‘½ä»¤ï¼‰</a>, <a href="../misc/Threads.htm">çº¿ç¨‹</a>, <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a>, <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a>, <a href="OnMessage.htm">OnMessage()</a>, <a href="RegisterCallback.htm">RegisterCallback()</a>, <a href="Hotkey.htm">Hotkey</a>, <a href="Menu.htm">Menu</a>, <a href="SetTimer.htm">SetTimer</a></p>
 
-<h3>Ê¾Àı</h3>
-<pre class="NoIndent">#space::  <em>; Win+Space ÈÈ¼ü.</em>
+<h3>ç¤ºä¾‹</h3>
+<pre class="NoIndent">#space::  <em>; Win+Space çƒ­é”®.</em>
 Critical
 ToolTip No new threads will launch until after this ToolTip disappears.
 Sleep 3000
-ToolTip  <em>; ¹Ø±ÕÌáÊ¾.</em>
-return  <em>; ´ÓÈÈ¼ü×Ó³ÌĞòÖĞ·µ»Ø, ÕâÑù½áÊøÁËµ±Ç°Ïß³Ì. ºóÃæµÄÏß³Ì»á°´ÉèÖÃ»Ö¸´Îª·Ç¹Ø¼üµÄ.</em></pre>
+ToolTip  <em>; å…³é—­æç¤º.</em>
+return  <em>; ä»çƒ­é”®å­ç¨‹åºä¸­è¿”å›, è¿™æ ·ç»“æŸäº†å½“å‰çº¿ç¨‹. åé¢çš„çº¿ç¨‹ä¼šæŒ‰è®¾ç½®æ¢å¤ä¸ºéå…³é”®çš„.</em></pre>
 
 </body>
 </html>
