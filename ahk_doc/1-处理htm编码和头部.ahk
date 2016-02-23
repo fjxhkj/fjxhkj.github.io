@@ -9,9 +9,7 @@ global Gs_IsDebug := true
 , gs_public := "2015"
 , gs_setting_ini := SubStr(A_ScriptName, 1, -4) ".ini"
 
-Include_Functions()
 Include_CpTransform()
-
 delHead()
 
 ExitApp
@@ -23,7 +21,7 @@ delHead()
    ;~ 遍历目录用 D, 文件用 F, 文件和目录用 DF.
    loop, Files, %A_ScriptDir%\*.htm*, RF
    {
-      _fEncoding := Unicode_GetFileEncoding(A_LoopFileLongPath)
+      _fEncoding := File_GetEncoding(A_LoopFileLongPath)
       
       ;~ Debug(A_LineFile "`nFunc `: " A_ThisFunc "`nLine : " A_LineNumber "`n`n"
       ;~ . "encoding " _fEncoding "`n" A_LoopFileLongPath)

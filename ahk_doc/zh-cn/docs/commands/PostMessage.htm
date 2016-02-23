@@ -13,7 +13,7 @@
 
 <h1>PostMessage / SendMessage</h1>
 
-<p>发送消息到窗口或控件（SendMessage 还会等待回复）。</p>
+<p>发送消息到窗口或控件(SendMessage 还会等待回复).</p>
 
 <pre class="Syntax">PostMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
 SendMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText, Timeout]</pre>
@@ -30,12 +30,12 @@ SendMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, Ex
   <dd><p>消息的第二个组件, 可以为 <a href="../Variables.htm#Expressions">表达式</a>. 如果为空或省略, 则会被设置为 0.</p></dd>
 
   <dt>Control</dt>
-  <dd><p>如果此参数为空或省略, 则消息会被直接发送到目标窗口而不是它的某个控件. 或者此参数可以是 ClassNN（控件的类名和实例编号）或控件的文本，它们都可以通过 Window Spy 获取。使用文本时，匹配行为由 <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> 决定。</p>
-    <p>要对控件的 HWND（窗口句柄）进行操作，请将 <em>Control</em> 参数留空同时在 <em>WinTitle</em> 参数中指定 <code>ahk_id %ControlHwnd%</code>（即使在 <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> 设置关闭时，这样也可以操作隐藏控件）。获取控件的 HWND 的一般方法是使用 <a href="ControlGet.htm#Hwnd">ControlGet Hwnd</a>, <a href="MouseGetPos.htm">MouseGetPos</a> 或 <a href="DllCall.htm">DllCall</a>.</p>
+  <dd><p>如果此参数为空或省略, 则消息会被直接发送到目标窗口而不是它的某个控件. 或者此参数可以是 ClassNN(控件的类名和实例编号)或控件的文本，它们都可以通过 Window Spy 获取.使用文本时，匹配行为由 <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> 决定.</p>
+    <p>要对控件的 HWND(窗口句柄)进行操作，请将 <em>Control</em> 参数留空同时在 <em>WinTitle</em> 参数中指定 <code>ahk_id %ControlHwnd%</code> (即使在 <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> 设置关闭时，这样也可以操作隐藏控件).获取控件的 HWND 的一般方法是使用 <a href="ControlGet.htm#Hwnd">ControlGet Hwnd</a>, <a href="MouseGetPos.htm">MouseGetPos</a> 或 <a href="DllCall.htm">DllCall</a>.</p>
     </dd>
 
   <dt>WinTitle</dt>
-  <dd><p>窗口标题或识别目标窗口的其他条件。请参阅 <a href="../misc/WinTitle.htm">WinTitle</a>。</p></dd>
+  <dd><p>窗口标题或识别目标窗口的其他条件.请参阅 <a href="../misc/WinTitle.htm">WinTitle</a>.</p></dd>
 
   <dt>WinText</dt>
   <dd><p>如果使用此参数, 那么它必须是目标窗口中单个文本元素的子字符串 (和内置的 Window Spy 工具显示的一样). 当 <a href="DetectHiddenText.htm">DetectHiddenText</a> 的设置为 ON 时, 那么会检测到隐藏文本元素.</p></dd>
@@ -46,8 +46,8 @@ SendMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, Ex
   <dt>ExcludeText</dt>
   <dd><p>文本中含有此参数值的窗口将被排除.</p></dd>
 
-  <dt>超时</dt>
-  <dd><p><span class="ver">[AHK_L 42+]：</span>等待目标窗口处理消息的最大毫秒数。如果省略，则默认为 5000 （毫秒），这同时也是不支持此参数的 AutoHotkey 旧版本的默认行为。如果在这时间内消息没有被处理, 则命令结束并设置 ErrorLevel 为单词 FAIL. 此参数可以为 <a href="../Variables.htm#Expressions">表达式</a>.</p></dd>
+  <dt>Timeout</dt>
+  <dd><p><span class="ver">[AHK_L 42+]:</span>等待目标窗口处理消息的最大毫秒数.如果省略，则默认为 5000 (毫秒)，这同时也是不支持此参数的 AutoHotkey 旧版本的默认行为.如果在这时间内消息没有被处理, 则命令结束并设置 ErrorLevel 为单词 FAIL. 此参数可以为 <a href="../Variables.htm#Expressions">表达式</a>.</p></dd>
 
 </dl>
 
@@ -83,13 +83,13 @@ SendMessage, 0xC, 0, <strong>"New Notepad Title"</strong>  <em>; 0XC 为 WM_SETT
 <pre class="NoIndent">#o::  <em>; Win+O 热键关闭显示器.</em>
 Sleep 1000  <em>; 让用户有机会释放按键 (以防释放它们时再次唤醒显视器).
 ; 关闭显示器:</em>
-SendMessage, 0x112, 0xF170, 2,, Program Manager  <em>; 0x112 为 WM_SYSCOMMAND, 0xF170 为 SC_MONITORPOWER.
+SendMessage, 0x112, 0xF170, 2,, Program Manager  <em>; 0x112 is WM_SYSCOMMAND, 0xF170 is SC_MONITORPOWER.
 ; 对上面命令的注释: 使用 -1 代替 2 来打开显示器.
 ; 使用 1 代替 2 来激活显示器的节能模式.</em>
 return
 
 <em>; 启动用户选择的屏幕保护程序:</em>
-SendMessage, 0x112, 0xF140, 0,, Program Manager  <em>; 0x112 为 WM_SYSCOMMAND, 而 0xF140 为 SC_SCREENSAVE.</em>
+SendMessage, 0x112, 0xF140, 0,, Program Manager  <em>; 0x112 is WM_SYSCOMMAND, and 0xF140 is SC_SCREENSAVE.</em>
 
 <em>; 向上滚动一行 (用于含垂直滚动条的控件):</em>
 ControlGetFocus, control, A
@@ -100,7 +100,7 @@ ControlGetFocus, control, A
 SendMessage, 0x115, 1, 0, %control%, A
 
 <em>; 切换活动窗口的键盘布局/语言为英语:</em>
-PostMessage, 0x50, 0, 0x4090409,, A  <em>; 0x50 为 WM_INPUTLANGCHANGEREQUEST.</em>
+PostMessage, 0x50, 0, 0x4090409,, A  <em>; 0x50 is WM_INPUTLANGCHANGEREQUEST.</em>
 
 <em>; 这个例子请求 Winamp 的当前活动的轨道编号:</em>
 SetTitleMatchMode, 2

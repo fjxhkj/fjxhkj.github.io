@@ -70,7 +70,7 @@
 <p>如果指定了 <em>N</em>, 则可以使用方括号 [] 代替其中的圆括号.</p>
 
 <h3>性能</h3>
-<p>要在一个较大的字符串中搜索简单的子字符串, 请使用 <a href="../Functions.htm#InStr">InStr()</a>, 因为它比 RegExMatch() 执行地更快.</p>
+<p>要在一个较大的字符串中搜索简单的子字符串, 请使用 <a href="InStr.htm">InStr()</a> 因为它比 RegExMatch() 更快.</p>
 <p>为了提升性能, 最近使用的 100 个正则表达式会被缓存在内存中 (以已编译的形式).</p>
 <p>多次使用一个正则表达式时 (例如在循环中), 使用 <a href="../misc/RegEx-QuickRef.htm#Study">研究选项 (S)</a> 可以提高性能.</p>
 <h3>备注</h3>
@@ -80,7 +80,7 @@
 <p>要了解正则表达式的基础 (或复习正则表达式的语法), 请参阅 <a href="../misc/RegEx-QuickRef.htm">正则表达式快速参考</a>.</p>
 <p>AutoHotkey 的正则表达式是使用来自 <a href="http://www.pcre.org/">www.pcre.org</a> 的兼容 Perl 的正则表达式 (PCRE) 实现的.</p>
 <h3>相关</h3>
-<p><a href="RegExReplace.htm">RegExReplace()</a>, <a href="../misc/RegEx-QuickRef.htm">正则表达式快速参考</a>, <a href="../misc/RegExCallout.htm">正则表达式调出</a>, <a href="../Functions.htm#InStr">InStr()</a>, <a href="IfInString.htm">IfInString</a>, <a href="StringGetPos.htm">StringGetPos</a>, <a href="../Functions.htm#SubStr">SubStr()</a>, <a href="SetTitleMatchMode.htm#RegEx">SetTitleMatchMode RegEx</a>, <a href="http://www.autohotkey.com/forum/topic16164.html">全局匹配和 Grep (论坛链接)</a></p>
+<p><a href="RegExReplace.htm">RegExReplace()</a>, <a href="../misc/RegEx-QuickRef.htm">正则表达式快速参考</a>, <a href="../misc/RegExCallout.htm">正则表达式调出</a>, <a href="InStr.htm">InStr()</a>, <a href="IfInString.htm">IfInString</a>, <a href="StringGetPos.htm">StringGetPos</a>, <a href="SubStr.htm">SubStr()</a>, <a href="SetTitleMatchMode.htm#RegEx">SetTitleMatchMode RegEx</a>, <a href="http://www.autohotkey.com/forum/topic16164.html">全局匹配和 Grep (论坛链接)</a></p>
 <p>文本数据的常见来源: <a href="FileRead.htm">FileRead</a>, <a href="URLDownloadToFile.htm">UrlDownloadToFile</a>, <a href="../misc/Clipboard.htm">Clipboard</a>, <a href="GuiControls.htm#Edit">GUI Edit 控件</a></p>
 <h3>示例</h3>
 <pre class="NoIndent">FoundPos := RegExMatch(&quot;xxxabc123xyz&quot;, &quot;abc.*xyz&quot;)  <em>; 返回 4, 这是找到匹配的位置.</em>

@@ -4,7 +4,7 @@
 <head>
 <title>ListView (GUI)</title>
 <meta name="description" content="使用此免费的脚本语言轻松地创建 ListView 控件. 包含上下文菜单, 行/列图标以及可点击进行排序的列标题.">
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/content.js" type="text/javascript"></script>
@@ -88,7 +88,7 @@ ExitApp</pre>
 <p><strong>Report:</strong> 切换会报告视图, 这是最初的默认模式. 例如：<code>GuiControl, +Report, MyListView</code>。</p>
 <h2 id="BuiltIn">ListView 中的内置函数</h2>
 <p>所有的 ListView 函数操作于当前线程的<a href="Gui.htm#DefaultWin">默认 GUI 窗口</a>（这可以使用 <a href="Gui.htm#Default"><code>Gui, 2:Default</code></a> 进行改变）。如果默认窗口不存在或不含有 ListView 控件, 则所有函数返回零来表明此问题.</p>
-<p><a name="GuiLV"></a>如果窗口含有多个 ListView 控件, 默认情况下函数操作于最近添加的那个. 要改变这种情况，请指定 <code>Gui, ListView, ListViewName</code>，其中 <em>ListViewName</em> 为 ListView 的<a href="Gui.htm#var">关联变量</a>的名称或 Window Spy 中显示的其 ClassNN（在 v1.1.04+）或其 HWND。一旦改变后, 所有现有和将来的 <a href="../misc/Threads.htm">线程</a> 将使用指定的 ListView.</p>
+<p><a name="GuiLV"></a>如果窗口含有多个 ListView 控件, 默认情况下函数操作于最近添加的那个. 要改变这种情况，请指定 <code>Gui, ListView, ListViewName</code>，其中 <em>ListViewName</em> 为 ListView 的<a href="Gui.htm#var">关联变量</a>的名称或 Window Spy 中显示的其 ClassNN（在 v1.1.04+）或其 HWND。一旦改变后, 所有现有和将来的 <a href="../misc/Threads.htm">线程</a> 将使用指定的 ListView. <span class="ver">[v1.1.23+]:</span> <a href="../Variables.htm#DefaultListView">A_DefaultListView</a> 包含了当前的设置.</p>
 <p><a name="RowNumber"></a>当在此页面使用短语 "row number", 它指的是 ListView 中行的当前位置. 最上面一行为 1, 第二行为 2, 依此类推. 添加一行后, 其行号会因为排序, 删除和插入其他行而发生变化. 因此, 要根据内容查找特定的一行或多行, 通常最好在循环中使用 <a href="#LV_GetText">LV_GetText()</a>.</p>
 <h2 id="bifRow">行函数</h2>
 <h3><a name="LV_Add"></a>LV_Add([Options, Field1, Field2, ...])</h3>
@@ -199,7 +199,7 @@ return</pre>
 <p><strong>E</strong>：用户开始编辑一行的首个字段（只有在 ListView 选项中含有 <code><a href="#ReadOnly">-ReadOnly</a></code> 时用户才可以进行编辑）。变量 A_EventInfo 包含目标行号.</p>
 <p><strong>F</strong>: ListView 接收到键盘焦点.</p>
 <p><strong>f</strong> (小写的 F): ListView 失去了键盘焦点.</p>
-<p><strong><a name="ItemChanged"></a>I</strong>: 项目发生了变化. 通过变成选择的/未选择的, 选中的/未选中的等让一行改变了. 如果用户选择了一个新行, 则至少会接收到两个这样的通知: 一个是在取消之前的行时, 而另一个是在选择新行时. 在 v1.0.44+, 变量 A_EventInfo 包含目标行号. 在 v1.0.46.10+, ErrorLevel 包含零个或多个下列字母来表示项目发生的变化: S (选择) 或 s (取消选择), 和/或 F (成为焦点) 或 f (失去焦点), 和/或 C (选中) 或 c (取消选中). 例如, SF 表示此行被选择且成为了焦点. 要检查是否存在一个特定的字母，请使用<a href="LoopParse.htm">解析循环</a>或带区分大小写选项的 <a href="../Functions.htm#InStr">InStr()</a>; 例如：<code>InStr(ErrorLevel, "S", true)</code>。注: 考虑到和未来版本的兼容性, 脚本不应假定 "SsFfCc" 包含了所有可能的字母或字母组合. 此外, 指定 <a href="Critical.htm">Critical</a> 作为 <a href="Gui.htm#label">g 标签</a> 子程序的首行来确保接收到所有的 "I" 通知 (否则, 如果脚本无法跟上, 则它们其中一些可能会丢失).</p>
+<p><strong><a name="ItemChanged"></a>I</strong>: 项目发生了变化. 通过变成选择的/未选择的, 选中的/未选中的等让一行改变了. 如果用户选择了一个新行, 则至少会接收到两个这样的通知: 一个是在取消之前的行时, 而另一个是在选择新行时. 在 v1.0.44+, 变量 A_EventInfo 包含目标行号. 在 v1.0.46.10+, ErrorLevel 包含零个或多个下列字母来表示项目发生的变化: S (选择) 或 s (取消选择), 和/或 F (成为焦点) 或 f (失去焦点), 和/或 C (选中) 或 c (取消选中). 例如, SF 表示此行被选择且成为了焦点. 要检查是否存在一个特定的字母，请使用<a href="LoopParse.htm">解析循环</a>或带区分大小写选项的 <a href="InStr.htm">InStr()</a>; 例如：<code>InStr(ErrorLevel, "S", true)</code>。注: 考虑到和未来版本的兼容性, 脚本不应假定 "SsFfCc" 包含了所有可能的字母或字母组合. 此外, 指定 <a href="Critical.htm">Critical</a> 作为 <a href="Gui.htm#label">g 标签</a> 子程序的首行来确保接收到所有的 "I" 通知 (否则, 如果脚本无法跟上, 则它们其中一些可能会丢失).</p>
 <p><strong><a name="NotifyK"></a>K</strong>: 当 ListView 拥有焦点时用户按下了一个键. A_EventInfo 包含此键的虚拟按键代码, 这是介于 1 和 255 之间的数字. 如果此键是字母键，则在大多数键盘布局中可以使用 <code><a href="../Functions.htm#Chr">Chr(A_EventInfo)</a></code> 把它转换成相应的字符。不论 <a href="#WantF2">WantF2</a> 选项如何都可以接收到 F2 键击。然而，不会接收到 Enter 键击；要接收它，请像<a href="#Enter">下面</a>描述的那样使用一个默认按钮。</p>
 <p><strong>M</strong>: 选取框. 用户开始在一组行或图标周围拖动一个矩形选区.</p>
 <p><strong>S</strong>: 用户开始滚动 ListView.</p>
@@ -230,6 +230,7 @@ ExitApp</pre>
 <p>添加图标或图片到指定的 <em>ImageListID</em> 并返回新图标的索引（首个图标索引为 1，第二个为 2，依此类推）。<em>Filename</em> 为图标（.ICO）、光标（.CUR）或动画光标（.ANI）文件的名称（动画光标在 ListView 中显示时实际将不会动）。图标的其他来源包含下列类型的文件: EXE, DLL, CPL, SCR 以及包含图标资源的其他类型. 要使用文件中的图标组而不是首个图标，请在 <em>IconNumber</em> 指定它的编号。如果 <em>IconNumber</em> 为负数，则假定其绝对值表示可执行文件中图标的资源 ID。在下面的例子中，将使用第二个图标组中的默认图标：<code>IL_Add(ImageListID, "C:\My Application.exe", 2)</code>。</p>
 <p>还可以加载非图标图像, 例如 BMP, GIF 和 JPG. 然而, 此时应该指定最后两个参数以确保正确执行: <em>IconNumber</em> 应该为屏蔽的/透明的颜色编码 (对于大多数图片 0xFFFFFF [白色] 可能是最佳的); 而 <em>ResizeNonIcon</em> 应该为非零值来缩放图片为单个图标, 或者为零来把图像分割为多个可以匹配实际宽度的图标.</p>
 <p>在所有的操作系统中都支持 GIF, JPG, BMP, ICO, CUR 和 ANI 图像. 在 Windows XP 或更高版本中, 还支持其他图像格式, 例如PNG, TIF, Exif, WMF 和 EMF. 比 XP 早的操作系统可以通过复制微软免费的 GDI+ DLL 到 AutoHotkey.exe 文件夹中来提供支持 (但如果是 <a href="Scripts.htm#ahk2exe">已编译脚本</a>, 则复制此 DLL 到脚本的文件夹). 要下载这个 DLL, 请在 <a href="http://www.microsoft.com">www.microsoft.com</a> 搜索下列短语: gdi redistributable</p>
+<p><span class="ver">[v1.1.23+]:</span> <a href="../misc/ImageHandles.htm">bitmap (位图) 或 icon (图标) handle (句柄)</a> 可用于替代文件名称. 例如, <code>HBITMAP:%handle%</code>.</p>
 <h3><a name="IL_Destroy"></a>IL_Destroy(ImageListID)</h3>
 <p>删除指定的图像列表，成功时返回 1 而失败返回 0。通常没必要销毁图像列表, 因为一旦关联到 ListView, 当 ListView 或其父窗口销毁时它们会被自动销毁. 但是，如果一个 ListView 和其他 ListView 共享图像列表（通过在选项中包含 <code>0x40</code>），在所有使用此图像列表的 ListView 销毁后脚本应该明确地销毁它。同样地, 如果脚本使用一个新的图像列表代替 ListView 中原来的, 则应该明确销毁原来的图像列表.</p>
 <h2 id="Remarks">ListView 备注</h2>

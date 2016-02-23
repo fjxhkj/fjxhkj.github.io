@@ -72,7 +72,7 @@ return</pre>
 <p><strong>(未命名的数值样式):</strong> 由于上述以外的其他样式很少使用, 所以没有为它们命名. 请参阅 <a href="../misc/Styles.htm#TreeView">TreeView 样式表</a> 了解这些样式.</p>
 <h2 id="BuiltIn">TreeView 中的内置函数</h2>
 <p>所有的 TreeView 函数操作于当前线程的<a href="Gui.htm#DefaultWin">默认 GUI 窗口</a>（这可以使用 <code><a href="Gui.htm#Default">Gui, 2:Default</a></code> 进行改变）。如果默认窗口不存在或不含有 TreeView 控件, 则所有函数返回零来表明此问题.</p>
-<p><a name="GuiTV"></a>如果窗口中含有多个 TreeView 控件, 则默认情况下函数操作于最近添加的那个. 要改变这种情况，请指定 <code>Gui, TreeView, TreeViewName</code>，其中 <em>TreeViewName</em> 为 TreeView 的<a href="Gui.htm#var">关联变量</a>的名称或 Window Spy 中显示的其 ClassNN 或（在 v1.1.04+）它的 HWND。一旦改变后, 所有现有和将来的 <a href="../misc/Threads.htm">线程</a> 都会使用指定的 TreeView.</p>
+<p><a name="GuiTV"></a>如果窗口中含有多个 TreeView 控件, 则默认情况下函数操作于最近添加的那个. 要改变这种情况，请指定 <code>Gui, TreeView, TreeViewName</code>，其中 <em>TreeViewName</em> 为 TreeView 的<a href="Gui.htm#var">关联变量</a>的名称或 Window Spy 中显示的其 ClassNN 或（在 v1.1.04+）它的 HWND。一旦改变后, 所有现有和将来的 <a href="../misc/Threads.htm">线程</a> 都会使用指定的 TreeView. <span class="ver">[v1.1.23+]:</span> <a href="../Variables.htm#DefaultTreeView">A_DefaultTreeView</a> 包含当前设置.</p>
 <h3 id="TV_SetImageList">TV_SetImageList(ImageListID [, 0|2]) <span class="ver">[v1.1.02+]</span></h3>
 <p>设置或替换 TreeView 的 <a href="#ImageList">ImageList</a>。ImageListID 为前面调用 <a href="ListView.htm#IL_Create">IL_Create()</a> 返回的数字。第二个参数一般情况下忽略, 此时它默认为 0. 否则，对于状态图标指定 2（还没有直接支持状态图标，不过可以通过 <a href="PostMessage.htm">SendMessage</a> 使用）。如果成功, 则 TV_SetImageList() 返回之前与 TreeView 关联的 ImageListID (如果没有则为 0). 任何分离的图像列表一般应使用 <a href="ListView.htm#IL_Destroy">IL_Destroy(ImageListID)</a> 进行销毁。</p>
 <h2 id="bifAddModifyDelete">添加, 修改和删除项目</h2>

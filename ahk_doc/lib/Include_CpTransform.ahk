@@ -1,3 +1,4 @@
+;~ https://msdn.microsoft.com/en-us/library/windows/desktop/dd374085(v=vs.85).aspx
 Include_CpTransform()
 {
    return true
@@ -34,7 +35,7 @@ File_CpTransform(aInFile, aInCp, aToCp, aToFile = "")
 		aToFile := aInFile
 	}
 
-	_content := FileRead(aInFile)
+	_content := fc_FileRead(aInFile)
 	if (ErrorLevel)
 	{
 
@@ -199,6 +200,7 @@ Unicode2UTF8(aUStr)
 }
 
 ;~ 将 ANSI 的字符串转换为 Unicode 的字符串
+;~ https://msdn.microsoft.com/en-us/library/windows/desktop/dd319072(v=vs.85).aspx
 Ansi2Unicode(ByRef sString, ByRef wString, CP = 0)
 {
    nSize := DllCall("MultiByteToWideChar"
@@ -219,6 +221,7 @@ Ansi2Unicode(ByRef sString, ByRef wString, CP = 0)
 }
 
 ;~ 将 Unicode 的字符串转换为 ANSI 的字符串
+;~ https://msdn.microsoft.com/en-us/library/windows/desktop/dd374130(v=vs.85).aspx
 Unicode2Ansi(ByRef wString, ByRef sString, CP = 0)
 {
    nSize := DllCall("WideCharToMultiByte"

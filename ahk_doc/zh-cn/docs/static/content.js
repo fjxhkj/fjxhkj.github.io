@@ -184,7 +184,7 @@ toc = [
     {label:"StrPut/StrGet",path:"commands/StrPutGet.htm"},
     {label:"StrReplace",path:"commands/StringReplace.htm"},
     {label:"StrSplit",path:"commands/StringSplit.htm"},
-    {label:"SubStr",path:"Functions.htm#SubStr"},
+    {label:"SubStr",path:"commands/SubStr.htm"},
     {label:"VarSetCapacity",path:"commands/VarSetCapacity.htm"},
     {label:"WinActive",path:"commands/WinActive.htm"},
     {label:"WinExist",path:"commands/WinExist.htm"}
@@ -345,7 +345,7 @@ toc = [
     {label:"StrPut()/StrGet()",path:"commands/StrPutGet.htm"},
     {label:"StrReplace()",path:"commands/StringReplace.htm"},
     {label:"StrSplit()",path:"commands/StringSplit.htm"},
-    {label:"SubStr()",path:"Functions.htm#SubStr"},
+    {label:"SubStr()",path:"commands/SubStr.htm"},
     {label:"Trim()",path:"commands/Trim.htm"}
   ]},
   {label:"Window Management",children:
@@ -1213,7 +1213,7 @@ index = [
   ["StrGet()","commands/StrPutGet.htm"],
   ["string (search for)","Functions.htm#InStr"],
   ["string: InStr()","Functions.htm#InStr"],
-  ["string: SubStr()","Functions.htm#SubStr"],
+  ["string: SubStr()","commands/SubStr.htm"],
   ["StringCaseSense","commands/StringCaseSense.htm"],
   ["StringGetPos","commands/StringGetPos.htm"],
   ["StringLeft","commands/StringLeft.htm"],
@@ -1232,7 +1232,7 @@ index = [
   ["StrSplit()","commands/StringSplit.htm"],
   ["structures, via DllCall","commands/DllCall.htm#struct"],
   ["styles for GUI command","misc/Styles.htm"],
-  ["SubStr()","Functions.htm#SubStr"],
+  ["SubStr()","commands/SubStr.htm"],
   ["subtract","commands/EnvSub.htm"],
   ["Super-global variables","Functions.htm#SuperGlobal"],
   ["Suspend","commands/Suspend.htm"],

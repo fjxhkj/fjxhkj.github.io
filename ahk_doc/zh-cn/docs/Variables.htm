@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>变量和表达式</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="static/theme.css" rel="stylesheet" type="text/css" />
 <script src="static/content.js" type="text/javascript"></script>
@@ -463,9 +463,27 @@ MsgBox,  %ElapsedTime% milliseconds have elapsed.</pre>
     <td>A_FormatFloat</td>
     <td>由 <a href="commands/SetFormat.htm">SetFormat</a> 设置的当前浮点数格式.</td>
   </tr>
+  <tr id="SendMode">
+    <td>A_SendMode</td>
+    <td><span class="ver">[v1.1.23+]:</span> 由 <a href="commands/SendMode.htm">SendMode</a> 设置的当前模式字符串 (可能的值为: Event, Input, Play 或 InputThenPlay).</td>
+  </tr>
+  <tr id="SendLevel">
+    <td>A_SendLevel</td>
+    <td><span class="ver">[v1.1.23+]:</span> 当前 <a href="commands/SendLevel.htm">SendLevel</a> 的设置 (可能的值为: 0 到 100 之间的整数, 包括0和100).</td>
+  </tr>
+  <tr id="StoreCapslockMode">
+    <td>A_StoreCapslockMode</td>
+    <td><span class="ver">[v1.1.23+]:</span> 由 <a href="commands/SetStoreCapslockMode.htm">SetStoreCapslockMode</a> 设置的当前模式字符串 (可能的值为: On 或 Off).</td>
+  </tr>
   <tr id="KeyDelay">
-    <td>A_KeyDelay</td>
-    <td>由 <a href="commands/SetKeyDelay.htm">SetKeyDelay</a> 设置的当前延迟 (总是十进制数, 不是十六进制). 此延迟适用于传统的 SendEvent 模式, 不适用于 <a href="commands/Send.htm#SendPlayDetail">SendPlay</a>.</td>
+    <td>A_KeyDelay<br>
+    A_KeyDuration</td>
+    <td>由 <a href="commands/SetKeyDelay.htm">SetKeyDelay</a> 设置的当前延迟 (总是十进制数, 不是十六进制). A_KeyDuration 依赖 <span class="ver">[v1.1.23+]</span> .</td>
+  </tr>
+  <tr id="KeyDelayPlay">
+    <td>A_KeyDelayPlay<br>
+    A_KeyDurationPlay</td>
+    <td>表示由 <a href="commands/SetKeyDelay.htm">SetKeyDelay</a> 设置 <a href="commands/Send.htm#SendPlayDetail">SendPlay</a> 模式的延迟或持续时间 (总是十进制数, 不是十六进制). 依赖 <span class="ver">[v1.1.23+]</span>.</td>
   </tr>
   <tr id="WinDelay">
     <td>A_WinDelay</td>
@@ -476,16 +494,25 @@ MsgBox,  %ElapsedTime% milliseconds have elapsed.</pre>
     <td>由 <a href="commands/SetControlDelay.htm">SetControlDelay</a> 设置的当前延迟 (总是十进制数, 不是十六进制).</td>
   </tr>
   <tr id="MouseDelay">
-    <td>A_MouseDelay</td>
-    <td>由 <a href="commands/SetMouseDelay.htm">SetMouseDelay</a> 设置的当前延迟 (总是十进制数, 不是十六进制). 此延迟适用于传统的 SendEvent 模式, 不适用于 <a href="commands/Send.htm#SendPlayDetail">SendPlay</a>.</td>
+    <td>A_MouseDelay<br>
+    A_MouseDelayPlay</td>
+    <td>由 <a href="commands/SetMouseDelay.htm">SetMouseDelay</a> 设置的当前延迟 (总是十进制数, 不是十六进制). A_MouseDelay 表示传统的 SendEvent 模式, 而 A_MouseDelayPlay 则表示 <a href="commands/Send.htm#SendPlayDetail">SendPlay</a>. A_MouseDelayPlay 依赖 <span class="ver">[v1.1.23+]</span>.</td>
   </tr>
   <tr id="DefaultMouseSpeed">
     <td>A_DefaultMouseSpeed</td>
     <td>由 <a href="commands/SetDefaultMouseSpeed.htm">SetDefaultMouseSpeed</a> 设置的当前速度 (总是十进制数, 不是十六进制).</td>
   </tr>
+  <tr id="CoordMode">
+    <td>A_CoordModeToolTip<br>
+    A_CoordModePixel<br>
+    A_CoordModeMouse<br>
+    A_CoordModeCaret<br>
+    A_CoordModeMenu</td>
+    <td><span class="ver">[v1.1.23+]:</span> <a href="commands/CoordMode.htm">CoordMode</a> 的当前设置值的字符串. (可能的值为: Window, Client 或 Screen) </td>
+  </tr>
   <tr id="RegView">
     <td>A_RegView</td>
-    <td><span class="ver">[v1.1.08+]：</span>由 <a href="commands/SetRegView.htm">SetRegView</a> 设置的当前注册表视图. </td>
+    <td><span class="ver">[v1.1.08+]:</span> 由 <a href="commands/SetRegView.htm">SetRegView</a> 设置的当前注册表视图. </td>
   </tr>
   <tr id="IconHidden">
     <td>A_IconHidden</td>
@@ -517,6 +544,18 @@ MsgBox,  %ElapsedTime% milliseconds have elapsed.</pre>
 </table>
 <h3>GUI 窗口和菜单栏</h3>
 <table class="info">
+  <tr id="DefaultGui">
+    <td>A_DefaultGui <span class="ver">[v1.1.23+]</span></td>
+    <td>The name or number of the current thread's <a href="commands/Gui.htm#Default">default GUI</a>.</td>
+  </tr>
+  <tr id="DefaultListView">
+    <td>A_DefaultListView <span class="ver">[v1.1.23+]</span></td>
+    <td>The <a href="commands/Gui.htm#Events">variable name</a> or <a href="commands/Gui.htm#HwndOutputVar">HWND</a> of the <a href="commands/ListView.htm">ListView control</a> upon which the <a href="commands/ListView.htm#BuiltIn">ListView functions</a> operate. If the default GUI lacks a ListView, this variable is blank.</td>
+  </tr>
+  <tr id="DefaultTreeView">
+    <td>A_DefaultTreeView <span class="ver">[v1.1.23+]</span></td>
+    <td>The <a href="commands/Gui.htm#Events">variable name</a> or <a href="commands/Gui.htm#HwndOutputVar">HWND</a> of the <a href="commands/TreeView.htm">TreeView control</a> upon which the <a href="commands/TreeView.htm#BuiltIn">TreeView functions</a> operate. If the default GUI lacks a TreeView, this variable is blank.</td>
+  </tr>
   <tr id="Gui">
     <td>A_Gui</td>
     <td>启动了 <a href="misc/Threads.htm">当前线程</a> 的 <a href="commands/Gui.htm">GUI</a> 的名称或编号. 除非当前线程是由 Gui 控件, 菜单项或 Gui 事件 (例如 GuiClose/GuiEscape) 启动的, 否则此变量为空.</td>

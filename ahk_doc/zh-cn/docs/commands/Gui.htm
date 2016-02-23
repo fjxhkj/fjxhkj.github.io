@@ -235,6 +235,7 @@ Menu, MyMenuBar, Add, &amp;Help, :HelpMenu
 
 <h2 id="Default">Gui, GuiName:Default</h2>
 <p>改变 <a href="../misc/Threads.htm">当前线程</a> 的默认 <a href="#MultiWin">GUI 窗口名称</a>, 这是在没有指定窗口名称时用于 <a href="GuiControl.htm">GuiControl</a>, <a href="GuiControlGet.htm">GuiControlGet</a> 和 Gui 命令自身的默认窗口. 在后面的例子中，默认窗口名称被改变为“MyGui”：<code>Gui MyGui:Default</code>。请参阅 <a href="#DefaultWin">线程的默认窗口</a> 了解关于默认窗口的更多细节.</p>
+<p><span class="ver">[v1.1.23+]:</span> 内置变量 <a href="../Variables.htm#DefaultGui">A_DefaultGui</a> 包含 默认GUI 的名称或数字.</p>
 
 <h2 id="Position">使用 SmartGUI Creator 创建窗口布局</h2>
 <p>虽然下一段落中描述了简单的布局选项, 但您会发现使用 Rajat 的 SmartGUI Creator 来创建会更简单, 因为它是完全可视化的; 即 "所见即所得". SmartGUI Creator 是免费的, 可以从 <a href="http://www.autohotkey.com/docs/SmartGUI/">www.autohotkey.com/docs/SmartGUI/</a> 下载</p>
@@ -245,7 +246,7 @@ Menu, MyMenuBar, Add, &amp;Help, :HelpMenu
 <p><strong><a name="R"></a>R</strong>: 指定文本的行数 (可以为浮点数, 如 R2.5). 使用 <strong>R</strong> 通常比 <strong>H</strong> (高度) 更合适. 如果同时指定 <strong>R</strong> 和 <strong>H</strong> 选项, 则 <strong>R</strong> 优先考虑. 对于 GroupBox, 此选项设置在框中可以容纳的控件数目. 对于 <a href="GuiControls.htm#DropDownList">DropDownLists</a>, <a href="GuiControls.htm#ComboBox">ComboBoxes</a> 和 <a href="GuiControls.htm#ListBox">ListBoxes</a>, 此选项设置在控件的列表部分一次可以看到的项目数 (但在 Windows XP 或更高版本中, 对于 DropDownList 和 ComboBox 控件常常同时省略 <strong>R</strong> 和 <strong>H</strong> 选项, 这样可以让弹出的列表自动设置为用户桌面的可用高度). 对于其他类型的控件, <strong>R</strong> 表示控件内可见的文本行数.</p>
 <p><strong>W</strong>: 宽度, 单位为像素. 如果省略, 对于某些控件则根据其内容自动计算宽度. 其他类型的控件具有下列默认的宽度值:<br>
   选项卡控件:
-  30 倍的当前字体大小加上 3 倍的 <a href="#Margin（边距）">X-边距</a> (行边距).<br>
+  30 倍的当前字体大小加上 3 倍的 <a href="#Margin">X-margin</a> (行边距).<br>
   垂直滚动条: 两倍的当前字体大小。<br>
   水平进度条, 水平滑动条, DropDownList, ComboBox, ListBox, GroupBox, Edit 和 Hotkey: 15 倍的当前字体大小 (GroupBox 例外, 其默认宽度为 18 倍, 这样可以显示内部的边距).</p>
 <p><strong>H</strong>: 高度, 单位为像素. 如果 <strong>H</strong> 和 <strong>R</strong> 选项同时省略, 则 DropDownList, ComboBox, ListBox 和初始内容为空的多行 Edit 控件默认为 3 行; GroupBox 默认为 2 行; 垂直滑动条和进度条默认为 5 行; 水平滑动条默认为 30 像素 (在没有指定其厚度时); 水平进度条默认为 2 倍的当前字体大小; Hotkey 控件默认为 1 行; 而 Tab 控件默认为 10 行. 对于其他类型的控件, 根据它们的内容自动计算高度. 请注意对于 DropDownList 和 ComboBox, <strong>H</strong> 为控件总是可见的部分 (大概指列表上面的框) 和其列表部分相加的高度 (但即使高度设置很小, 也至少会在下拉列表中显示一个项目). 同时对于所有类型的控件, 通过 <strong>R</strong> 选项指定行数比使用 <strong>H</strong> 更可取, 因为这样可以避免在控件中显示部分/不完整的文本行.</p>
@@ -328,7 +329,7 @@ ExitApp</pre>
 <p>0: 窗口被还原或通过拖拉窗口边缘这样正常调节过大小时。<br>
   1: 窗口被最小化了.<br>
   2: 窗口被最大化了.</p>
-<p>脚本中可以使用 GuiSize 调整控件的大小和位置来响应用户对窗口大小的改变. 通过 <a href="http://ahkscript.org/boards/viewtopic.php?f=6&t=1079">AutoXYWH() by tmplinshi and toralf</a> 可以让这种处理更容易些.</p>
+<p>脚本中可以使用 GuiSize 调整控件的大小和位置来响应用户对窗口大小的改变. 通过 <a href="https://autohotkey.com/boards/viewtopic.php?f=6&t=1079">AutoXYWH() by tmplinshi and toralf</a> 可以让这种处理更容易些.</p>
 <p>当窗口改变大小时 (脚本发出的事件), GuiSize 不一定会立即响应. 类似其他窗口事件, 如果当前线程为 <a href="Thread.htm#Interrupt">不可中断的</a>, GuiSize 直到线程变为可中断之前都不会响应. 如果脚本正在改变窗口大小, 下面的例子将确保 GuiSize 立即响应:</p>
 <pre><a href="Critical.htm#Off">Critical Off</a>  <em>; 无论是否设置过 Critical On.</em>
 <a href="Sleep.htm">Sleep -1</a></pre>

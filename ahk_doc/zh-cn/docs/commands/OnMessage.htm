@@ -22,56 +22,56 @@
   <dd><p>需要监视或查询的消息编号, 应该介于 0 和 4294967295 (0xFFFFFFFF) 之间. 如果您不想监视 <a href="../misc/SendMessageList.htm">系统消息</a> (即编号小于 0x400 的那些), 那么最好在大于 4096 (0x1000) 的范围中选择一个. 这降低了可能对当前及将来版本的 AutoHotkey 内部所使用的消息的冲突.</p></dd>
 
   <dt>Function</dt>
-  <dd><p>A <a href="../Functions.htm">函数</a> 的名称或 <span class="ver">[v1.1.20+]</span> 一个 <a href="../objects/Functor.htm">函数对象</a>, 传递函数名称字符串,必须用百分号 (%) 包围. </p>
-  <p>How the function is registered and the return value of OnMessage depend on whether this parameter is a string or a function object.  See <a href="#Name_v_Object">Function Name vs Object</a> for details.</p>
+  <dd><p>A <a href="../Functions.htm">函数</a> 的名称或 <span class="ver">[v1.1.20+]</span> <a href="../objects/Functor.htm">函数对象</a>, 传递函数名称字符串,必须用百分号 (%) 包围. </p>
+  <p>函数的注册和返回值取决于传递给这个参数的是函数名称还是对象. 详情参考 <a href="#Name_v_Object">函数名称 vs 对象</a>.</p>
   </dd>
 
   <dt>MaxThreads (最大线程)<span class="ver">[v1.0.47+]</span></dt>
   <dd><p><a name="MaxThreads"></a>此整数通常省略, 此时表示限制监视函数在同一时刻只能运行一个 <a href="../misc/Threads.htm">线程</a>. 这通常是最佳的, 因为如果不这样, 则每当监视函数中断它自己时脚本将不会按照时间先后顺序来处理消息. 因此，代替 <em>MaxThreads</em> 的一种方法是，请像<a href="#Critical">下面</a>描述的那样使用 <em>Critical</em> :</p>
-  <p><span class="ver">[v1.1.20+]:</span> By default, when multiple functions are registered for a single <em>MsgNumber</em>, they are called in the order that they were registered. To register a function to be called before any previously registered functions, specify a negative value for <em>MaxThreads</em>. For example, <code>OnMessage(Msg, Fn, -2)</code> registers <code>Fn</code> to be called before any other functions previously registered for <em>Msg</em>, and allows <em>Fn</em> a maximum of 2 threads. However, if the function is already registered, the order will not change unless it is unregistered and then re-registered.</p></dd>
+  <p><span class="ver">[v1.1.20+]:</span> 默认情况下多个函数注册到同一个 <em>MsgNumber</em> 时, 它们被调用的顺序按照它们注册的顺序来. 如果希望某个函数在其他比它先注册的函数之前就被调用, 可以给 <em>MaxThreads</em> 指定一个负数值. 例如, <code>OnMessage(Msg, Fn, -2)</code> 可将 <code>Fn</code> 函数提前到其他所有注册响应 <em>Msg</em> 的函数之前调用, 且允许 <em>Fn</em> 函数最大线程为 2. 然而, 如果函数已经注册了, 这个命令不会改变它, 除非进行解除注册之后再次注册.</p></dd>
 
 </dl>
 
 <h3 id="Name_v_Object">函数名称 vs 对象</h3>
-<p>OnMessage's return value and behavior depends on whether the <em>Function</em> parameter is a function name or an object.</p>
+<p>OnMessage 的返回值和行为取决于传递给 <em>Function</em> 参数的是函数名称还是对象.</p>
 
-<h4>函数名称</h4>
-<p>For backward compatibility, at most one function can be registered by name to monitor each unique <em>MsgNumber</em> -- this is referred to as the "legacy" monitor.</p>
-<p>When the legacy monitor is first registered, whether it is called before or after previously registered monitors depends on the <em>MaxThreads</em> parameter. Updating the monitor to call a different function does not affect the order unless the monitor is unregistered first.</p>
-<p>This registers or updates the current legacy monitor for <em>MsgNumber</em> (omit the quote marks if passing a variable):</p>
+<h4>函数名称 (Function Name)</h4>
+<p>为了向后兼容, 每个唯一 <em>MsgNumber</em> 只能用最多一个函数名称监听 -- 这被称为 "传统" 监听.</p>
+<p>当传统监听第一个被注册, 它是先被调用还是在其他监听者之后调用, 取决于 <em>MaxThreads</em> 参数. 更新监听者调用不同的函数不会影响指令, 除非(原来的)监听者先解除注册.</p>
+<p>这个注册的(函数名称)或更改当前 <em>MsgNumber</em> 的传统监听者 (如果传递的是变量就不要包含双引号):</p>
 <pre class="Syntax">Name := OnMessage(MsgNumber, "FunctionName")</pre>
-<p>The return value is one of the following:</p>
+<p>返回值为以下列表之一:</p>
 <ul>
-  <li>An empty string on <a href="#Failure">failure</a>.</li>
-  <li>The name of the previous function, if there was one.</li>
-  <li>Otherwise, the name of the new function.</li>
+  <li><a href="#Failure">失败</a>.返回空字符串.</li>
+  <li>返回前一个函数的名称, 如果存在前一个函数的话.</li>
+  <li>其他情况, 返回新函数的名称.</li>
 </ul>
-<p>This unregisters the current legacy monitor for <em>MsgNumber</em> (if any) and returns its name (blank if none):</p>
+<p>这是取消注册当前传统监听者, 返回 <em>MsgNumber</em> 的监听者(函数)名称, 如果没有则为空:</p>
 <pre class="Syntax">Name := OnMessage(MsgNumber, "")</pre>
-<p>This returns the name of the current legacy monitor for <em>MsgNumber</em> (blank if none):</p>
+<p>这是返回 <em>MsgNumber</em> 的当前传统监听者(函数)的名称, 如果没有则为空:</p>
 <pre class="Syntax">Name := OnMessage(MsgNumber)</pre>
 
-<h4>函数对象</h4>
-<p>Any number of <a href="../objects/Functor.htm">function objects</a> (including <a href="../objects/Func.htm">normal functions</a>) can monitor a given <em>MsgNumber</em>.</p>
-<p>Either of these two lines registers a function object to be called <strong>after</strong> any previously registered functions:</p>
+<h4>函数对象 (Function Object)</h4>
+<p>任意数量的 <a href="../objects/Functor.htm">函数对象 (function objects)</a> (包括 <a href="../objects/Func.htm">普通函数 (normal functions)</a>) 可用于监听某个指定的 <em>MsgNumber</em>.</p>
+<p>下面两种方法意义相同, 这样注册的监听者函数对象将在任何在它之前注册的监听者函数 <strong>之后</strong> 被调用:</p>
 <pre class="Syntax">
-OnMessage(MsgNumber, FuncObj)     <em>; Option 1</em>
-OnMessage(MsgNumber, FuncObj, 1)  <em>; Option 2 (MaxThreads = 1)</em>
+OnMessage(MsgNumber, FuncObj)     <em>; 方式 1</em>
+OnMessage(MsgNumber, FuncObj, 1)  <em>; 方式 2 (MaxThreads = 1)</em>
 </pre>
-<p>This registers a function object to be called <strong>before</strong> any previously registered functions:</p>
+<p>这样注册的监听者函数对象将在之前注册的所有监听者函数 <strong>之前</strong> 被调用:</p>
 <pre class="Syntax">OnMessage(MsgNumber, FuncObj, -1)</pre>
-<p>To unregister a function object, specify 0 for <em>MaxThreads</em>:</p>
+<p>要取消注册一个监听者函数对象, 把 <em>MaxThreads</em> 设为 0 即可:</p>
 <pre class="Syntax">OnMessage(MsgNumber, FuncObj, 0)</pre>
 
-<h3 id="Failure">Failure</h3>
-<p>Failure occurs when <em>Function</em>:</p>
+<h3 id="Failure">失败</h3>
+<p>当 <em>Function (参数)</em> 为以下情况时将导致失败:</p>
 <ol>
-  <li>is not an object, the name of a user-defined function, or an empty string;</li>
-  <li>is known to require more than four parameters; or</li>
-  <li>in v1.0.48.05 or older, has any <a href="../Functions.htm#ByRef">ByRef</a> or <a href="../Functions.htm#optional">optional</a> parameters.</li>
+  <li>不是用户定义函数对象的名称, 或是一个空字符串;</li>
+  <li>显式定义了超过4个参数; 或</li>
+  <li>在 v1.0.48.05 及更旧版本时, 定义了 <a href="../Functions.htm#ByRef">ByRef</a> 或 <a href="../Functions.htm#optional">可选</a> 参数.</li>
 </ol>
-<p>In v1.1.19.03 or older, failure also occurs if the script attempts to monitor a new message when there are already 500 messages being monitored.</p>
-<p>If <em>Function</em> is an object, an exception is thrown on failure. Otherwise, an empty string is returned.</p>
+<p>在 v1.1.19.03 及更旧的版本时, 当(一个函数对象)企图监听超过 500 个不同的消息时也会出错.</p>
+<p>如果 <em>Function</em> 为对象时, 失败将抛出一个异常. 其他情况下, 返回空字符串.</p>
 
 <h3>函数的参数</h3>
 <p>这个 <a href="../Functions.htm">函数</a> 可以接受一个或最多四个参数:</p>
@@ -83,7 +83,7 @@ OnMessage(MsgNumber, FuncObj, 1)  <em>; Option 2 (MaxThreads = 1)</em>
 <p>参数 #1：消息的 WPARAM 值. <br>
 参数 #2：消息的 LPARAM 值。<br>
 参数 #3：消息号，可用在用一个函数监视多个消息时。<br>
-参数 #4：发送消息的窗口或控件的 HWND（唯一 ID）。要使用 HWND 则需要加上<a href="../misc/WinTitle.htm#ahk_id">ahk_id</a>。</p>
+参数 #4：发送消息的窗口或控件的 HWND （唯一 ID）。要使用 HWND 则需要加上<a href="../misc/WinTitle.htm#ahk_id">ahk_id</a>。</p>
 <p>根据运行脚本的 AutoHotkey.exe 是 32 位或 64 位，WPARAM 和 LPARAM 是无符号 32 位整数（从 0 到 2<sup>32</sup>-1）或有符号 64 位整数（从 -2<sup>63</sup> 到 2<sup>63</sup>-1）。在 32 位脚本中，如果传入参数应该为有符号整数，则可以参照这个例子得到负数：</p>
 <pre>if (A_PtrSize = 4 &amp;&amp; wParam &gt; 0x7FFFFFFF)  <em>; 检查 <a href="../Variables.htm#PtrSize">A_PtrSize</a> 以确保脚本为 32 位。</em>
     wParam := -(~wParam) - 1</pre>
@@ -104,7 +104,7 @@ MsgParentWindow := WinExist()  <em>; 这里保存了消息发送的目标窗口�
 <h3>函数应该 <em>返回</em> 什么</h3>
 <p>如果监视函数使用不带任何参数的 <a href="Return.htm">Return</a>, 或指定空值如 "" (甚至从不使用 Return), 则当此函数结束时将继续正常处理传入的消息. 同样的情况也会出现在函数使用 <a href="Exit.htm">Exit</a> 或者出现了运行时错误的时候 (例如 <a href="Run.htm">运行</a> 不存在的文件). 与之相比，返回一个整数时会被作为回复立即发送；即程序不会再进一步处理此消息。例如, 监视 WM_LBUTTONDOWN (0x201) 的函数可以返回一个整数来阻止目标窗口接收到鼠标点击的通知. 在许多情况下 (例如使用 <a href="PostMessage.htm">PostMessage</a> 发送的消息), 它不关心返回了哪个整数; 不过如果不确定, 0 通常是最安全的.</p>
 <p>有效返回值的范围与运行脚本的 AutoHotkey.exe 是 32 位还是 64 位有关。对于 32 位脚本（<code><a href="../Variables.htm#PtrSize">A_PtrSize</a> = 4</code>），非空返回值必须介于 -2<sup>31</sup> 和 2<sup>32</sup>-1 之间，而 64 位脚本 <code><a href="../Variables.htm#PtrSize">A_PtrSize</a> = 8</code> 则必须介于 -2<sup>63</sup> 和 2<sup>63</sup>-1 之间。</p>
-<p><span class="ver">[v1.1.20+]:</span> If there are multiple functions monitoring a given message number, they are called one by one until one returns a non-empty value.</p>
+<p><span class="ver">[v1.1.20+]:</span> 如果有多个函数监听某一个消息 (message number), 它们将会一个接一个按顺序被调用, 直到被调用的函数返回一个非空值.</p>
 
 <h3 id="Remarks">一般说明</h3>
 <p>与普通的函数调用不同, 被监视消息的到达会启动新 <a href="../misc/Threads.htm">线程</a> 来调用函数. 因此, 函数会以设置的默认值启动, 例如 <a href="SendMode.htm">SendMode</a> 和 <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a>. 这些默认值可以在 <a href="../Scripts.htm#auto">自动执行段</a> 改变.</p>
