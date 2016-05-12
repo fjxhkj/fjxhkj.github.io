@@ -9,16 +9,15 @@ FileList := { MainJS:       "main.js"
             , JQueryJS:     "jquery.js"
             , TreeJQueryJS: "tree.jquery.js" }
 
-FileEncoding, CP936		;中文编码，否则会显示乱码
+FileEncoding, UTF-8
 For var, file in FileList
 	FileRead %var%, %A_ScriptDir%\%file%
 
-SetWorkingDir %A_ScriptDir%\..
-Overwrite("content.js", JQueryJS "`n" TreeJQueryJS "`n" TocJS "`n" IndexJS "`n" TranslateJS "`n" MainJS)
-Overwrite("content.chm.js", JQueryJS "`n" TranslateJS "`n" MainJS)
-SetWorkingDir %A_ScriptDir%\..\..\..
-
-;~ 不覆盖这两个文件
+;~ 仅当需要更新目录和索引时取消下面的注释
+;~ SetWorkingDir %A_ScriptDir%\..
+;~ Overwrite("content.js", JQueryJS "`n" TreeJQueryJS "`n" TocJS "`n" IndexJS "`n" TranslateJS "`n" MainJS)
+;~ Overwrite("content.chm.js", JQueryJS "`n" TranslateJS "`n" MainJS)
+;~ SetWorkingDir %A_ScriptDir%\..\..\..
 ;~ Overwrite("Table of Contents.hhc", TOC_CreateHHC(TocJS))
 ;~ Overwrite("Index.hhk", INDEX_CreateHHK(IndexJS))
 return

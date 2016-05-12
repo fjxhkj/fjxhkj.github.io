@@ -1,46 +1,46 @@
 toc = [
   {label:"AutoHotkey",path:"AutoHotkey.htm"},
-  {label:"Tutorial (å¿«é€Ÿå…¥é—¨æ•™ç¨‹)",path:"Tutorial.htm"},
-  {label:"FAQ (å¸¸è§é—®é¢˜)",path:"FAQ.htm"},
-  {label:"å‘½ä»¤å’Œå‡½æ•°ç´¢å¼•",path:"commands/index.htm"},
-  {label:"ä¼˜ç§€è„šæœ¬å±•ç¤º",path:"scripts/index.htm"},
-  {label:"æ›´æ–°è®°å½•",path:"AHKL_ChangeLog.htm"},
-  {label:"åŸºæœ¬ç”¨æ³•å’Œè¯­æ³•",children:
+  {label:"Tutorial (¿ìËÙÈëÃÅ½Ì³Ì)",path:"Tutorial.htm"},
+  {label:"FAQ (³£¼ûÎÊÌâ)",path:"FAQ.htm"},
+  {label:"ÃüÁîºÍº¯ÊıË÷Òı",path:"commands/index.htm"},
+  {label:"ÓÅĞã½Å±¾Õ¹Ê¾",path:"scripts/index.htm"},
+  {label:"¸üĞÂ¼ÇÂ¼",path:"AHKL_ChangeLog.htm"},
+  {label:"»ù±¾ÓÃ·¨ºÍÓï·¨",children:
   [
-    {label:"çƒ­é”®",path:"Hotkeys.htm"},
-    {label:"çƒ­å­—ä¸²å’Œè‡ªåŠ¨æ›¿æ¢",path:"Hotstrings.htm"},
-    {label:"é‡æ˜ å°„æŒ‰é”®å’Œé¼ æ ‡æŒ‰é’®",path:"misc/Remap.htm"},
-    {label:"æŒ‰é”®åˆ—è¡¨(é”®ç›˜,é¼ æ ‡,æ‰‹æŸ„)",path:"KeyList.htm"},
-    {label:"è„šæœ¬",path:"Scripts.htm"},
-    {label:"å˜é‡å’Œè¡¨è¾¾å¼",path:"Variables.htm"},
-    {label:"å‡½æ•°",path:"Functions.htm"},
-    {label:"è°ƒè¯•å®¢æˆ·ç«¯(DBGp)",path:"AHKL_DBGPClients.htm"},
-    {label:"å¯¹è±¡",path:"Objects.htm",children:
+    {label:"ÈÈ¼ü",path:"Hotkeys.htm"},
+    {label:"ÈÈ×Ö´®ºÍ×Ô¶¯Ìæ»»",path:"Hotstrings.htm"},
+    {label:"ÖØÓ³Éä°´¼üºÍÊó±ê°´Å¥",path:"misc/Remap.htm"},
+    {label:"°´¼üÁĞ±í(¼üÅÌ,Êó±ê,ÊÖ±ú)",path:"KeyList.htm"},
+    {label:"½Å±¾",path:"Scripts.htm"},
+    {label:"±äÁ¿ºÍ±í´ïÊ½",path:"Variables.htm"},
+    {label:"º¯Êı",path:"Functions.htm"},
+    {label:"µ÷ÊÔ¿Í»§¶Ë(DBGp)",path:"AHKL_DBGPClients.htm"},
+    {label:"¶ÔÏó",path:"Objects.htm",children:
     [
-      {label:"åŸºæœ¬ç”¨æ³•",path:"Objects.htm#Usage"},
-      {label:"æ‰©å±•ç”¨æ³•",path:"Objects.htm#Extended_Usage"},
-      {label:"è‡ªå®šä¹‰å¯¹è±¡",path:"Objects.htm#Custom_Objects"},
-      {label:"é»˜è®¤åŸºå¯¹è±¡",path:"Objects.htm#Default_Base_Object"},
-      {label:"å®ç°",path:"Objects.htm#Implementation"},
-      {label:"å¯¹è±¡",path:"objects/Object.htm"},
-      {label:"æšä¸¾å™¨å¯¹è±¡",path:"objects/Enumerator.htm"},
-      {label:"æ–‡ä»¶å¯¹è±¡",path:"objects/File.htm"},
-      {label:"å‡½æ•°å¯¹è±¡",path:"objects/Functor.htm"}
+      {label:"»ù±¾ÓÃ·¨",path:"Objects.htm#Usage"},
+      {label:"À©Õ¹ÓÃ·¨",path:"Objects.htm#Extended_Usage"},
+      {label:"×Ô¶¨Òå¶ÔÏó",path:"Objects.htm#Custom_Objects"},
+      {label:"Ä¬ÈÏ»ù¶ÔÏó",path:"Objects.htm#Default_Base_Object"},
+      {label:"ÊµÏÖ",path:"Objects.htm#Implementation"},
+      {label:"¶ÔÏó",path:"objects/Object.htm"},
+      {label:"Ã¶¾ÙÆ÷¶ÔÏó",path:"objects/Enumerator.htm"},
+      {label:"ÎÄ¼ş¶ÔÏó",path:"objects/File.htm"},
+      {label:"º¯Êı¶ÔÏó",path:"objects/Functor.htm"}
     ]}
   ]},
-  {label:"è¿ç§»åˆ° AutoHotkey_L 1.1",children:
+  {label:"Ç¨ÒÆµ½ AutoHotkey_L 1.1",children:
   [
-    {label:"AutoHotkey_L æ–°ç‰¹æ€§",path:"AHKL_Features.htm"},
-    {label:"è„šæœ¬å…¼å®¹æ€§",path:"Compat.htm"}
+    {label:"AutoHotkey_L ĞÂÌØĞÔ",path:"AHKL_Features.htm"},
+    {label:"½Å±¾¼æÈİĞÔ",path:"Compat.htm"}
   ]},
-  {label:"ç¯å¢ƒå˜é‡ç®¡ç†",children:
+  {label:"»·¾³±äÁ¿¹ÜÀí",children:
   [
     {label:"ClipWait",path:"commands/ClipWait.htm"},
     {label:"EnvGet",path:"commands/EnvGet.htm"},
     {label:"EnvSet",path:"commands/EnvSet.htm"},
     {label:"EnvUpdate",path:"commands/EnvUpdate.htm"}
   ]},
-  {label:"æœ¬æœºä»£ç äº¤äº’",children:
+  {label:"±¾»ú´úÂë½»»¥",children:
   [
     {label:"DllCall",path:"commands/DllCall.htm"},
     {label:"NumGet",path:"commands/NumGet.htm"},
@@ -62,7 +62,7 @@ toc = [
       {label:"ObjAddRef / ObjRelease",path:"commands/ObjAddRef.htm"}
     ]}
   ]},
-  {label:"æ–‡ä»¶,ç›®å½•å’Œç£ç›˜ç®¡ç†",children:
+  {label:"ÎÄ¼ş,Ä¿Â¼ºÍ´ÅÅÌ¹ÜÀí",children:
   [
     {label:"Drive",path:"commands/Drive.htm"},
     {label:"DriveGet",path:"commands/DriveGet.htm"},
@@ -96,15 +96,15 @@ toc = [
     {label:"IniDelete",path:"commands/IniDelete.htm"},
     {label:"IniRead",path:"commands/IniRead.htm"},
     {label:"IniWrite",path:"commands/IniWrite.htm"},
-    {label:"Loop(æ–‡ä»¶å’Œæ–‡ä»¶å¤¹)",path:"commands/LoopFile.htm"},
-    {label:"Loop(è¯»å–æ–‡ä»¶å†…å®¹)",path:"commands/LoopReadFile.htm"},
+    {label:"Loop(ÎÄ¼şºÍÎÄ¼ş¼Ğ)",path:"commands/LoopFile.htm"},
+    {label:"Loop(¶ÁÈ¡ÎÄ¼şÄÚÈİ)",path:"commands/LoopReadFile.htm"},
     {label:"SetWorkingDir",path:"commands/SetWorkingDir.htm"},
     {label:"SplitPath",path:"commands/SplitPath.htm"}
   ]},
-  {label:"æµç¨‹æ§åˆ¶",children:
+  {label:"Á÷³Ì¿ØÖÆ",children:
   [
     {label:"#Include/#IncludeAgain",path:"commands/_Include.htm"},
-    {label:"{ ... } (åŒºå—)",path:"commands/Block.htm"},
+    {label:"{ ... } (Çø¿é)",path:"commands/Block.htm"},
     {label:"Break",path:"commands/Break.htm"},
     {label:"Catch",path:"commands/Catch.htm"},
     {label:"Continue",path:"commands/Continue.htm"},
@@ -116,10 +116,10 @@ toc = [
     {label:"For-loop",path:"commands/For.htm"},
     {label:"Gosub",path:"commands/Gosub.htm"},
     {label:"Goto",path:"commands/Goto.htm"},
-    {label:"If å‘½ä»¤",path:"commands/IfExpression.htm",children:
+    {label:"If ÃüÁî",path:"commands/IfExpression.htm",children:
     [
-      {label:"If (ä¼ ç»Ÿå‹)",path:"commands/IfEqual.htm"},
-      {label:"If (è¡¨è¾¾å¼)",path:"commands/IfExpression.htm"},
+      {label:"If (´«Í³ĞÍ)",path:"commands/IfEqual.htm"},
+      {label:"If (±í´ïÊ½)",path:"commands/IfExpression.htm"},
       {label:"If var [not] between Low and High",path:"commands/IfBetween.htm"},
       {label:"If var is [not] type",path:"commands/IfIs.htm"},
       {label:"If var [not] in/contains MatchList",path:"commands/IfIn.htm"},
@@ -129,13 +129,13 @@ toc = [
       {label:"IfWinActive/IfWinNotActive",path:"commands/WinActive.htm"},
       {label:"IfWinExist/IfWinNotExist",path:"commands/WinExist.htm"}
     ]},
-    {label:"Loop å‘½ä»¤",path:"commands/Loop.htm",children:
+    {label:"Loop ÃüÁî",path:"commands/Loop.htm",children:
     [
       {label:"Loop",path:"commands/Loop.htm"},
-      {label:"Loop (æ–‡ä»¶å’Œæ–‡ä»¶å¤¹)",path:"commands/LoopFile.htm"},
-      {label:"Loop (è§£æå­—ç¬¦ä¸²)",path:"commands/LoopParse.htm"},
-      {label:"Loop (è¯»å–æ–‡ä»¶å†…å®¹)",path:"commands/LoopReadFile.htm"},
-      {label:"Loop (æ³¨å†Œè¡¨)",path:"commands/LoopReg.htm"}
+      {label:"Loop (ÎÄ¼şºÍÎÄ¼ş¼Ğ)",path:"commands/LoopFile.htm"},
+      {label:"Loop (½âÎö×Ö·û´®)",path:"commands/LoopParse.htm"},
+      {label:"Loop (¶ÁÈ¡ÎÄ¼şÄÚÈİ)",path:"commands/LoopReadFile.htm"},
+      {label:"Loop (×¢²á±í)",path:"commands/LoopReg.htm"}
     ]},
     {label:"OnExit",path:"commands/OnExit.htm"},
     {label:"Pause",path:"commands/Pause.htm"},
@@ -149,9 +149,9 @@ toc = [
     {label:"Throw",path:"commands/Throw.htm"},
     {label:"Try",path:"commands/Try.htm"},
     {label:"Until",path:"commands/Until.htm"},
-    {label:"While å¾ªç¯",path:"commands/While.htm"}
+    {label:"While Ñ­»·",path:"commands/While.htm"}
   ]},
-  {label:"å†…ç½®å‡½æ•°",path:"Functions.htm",children:
+  {label:"ÄÚÖÃº¯Êı",path:"Functions.htm",children:
   [
     {label:"Asc",path:"Functions.htm#Asc"},
     {label:"Chr",path:"Functions.htm#Chr"},
@@ -181,7 +181,7 @@ toc = [
     {label:"WinActive",path:"commands/WinActive.htm"},
     {label:"WinExist",path:"commands/WinExist.htm"}
   ]},
-  {label:"GUI, MsgBox, InputBox & å…¶ä»–å¯¹è¯æ¡†",children:
+  {label:"GUI, MsgBox, InputBox & ÆäËû¶Ô»°¿ò",children:
   [
     {label:"FileSelectFile",path:"commands/FileSelectFile.htm"},
     {label:"FileSelectFolder",path:"commands/FileSelectFolder.htm"},
@@ -202,9 +202,9 @@ toc = [
     {label:"ToolTip",path:"commands/ToolTip.htm"},
     {label:"TrayTip",path:"commands/TrayTip.htm"}
   ]},
-  {label:"é”®ç›˜é¼ æ ‡",children:
+  {label:"¼üÅÌÊó±ê",children:
   [
-    {label:"çƒ­é”®å’Œçƒ­å­—ä¸²",path:"Hotkeys.htm",children:
+    {label:"ÈÈ¼üºÍÈÈ×Ö´®",path:"Hotkeys.htm",children:
     [
       {label:"#HotkeyInterval",path:"commands/_HotkeyInterval.htm"},
       {label:"#HotkeyModifierTimeout",path:"commands/_HotkeyModifierTimeout.htm"},
@@ -232,7 +232,7 @@ toc = [
     {label:"ControlSend, ControlSendRaw",path:"commands/ControlSend.htm"},
     {label:"CoordMode",path:"commands/CoordMode.htm"},
     {label:"GetKeyState",path:"commands/GetKeyState.htm"},
-    {label:"æŒ‰é”®åˆ—è¡¨(é”®ç›˜ã€é¼ æ ‡ã€æ‰‹æŸ„)",path:"KeyList.htm"},
+    {label:"°´¼üÁĞ±í(¼üÅÌ¡¢Êó±ê¡¢ÊÖ±ú)",path:"KeyList.htm"},
     {label:"KeyHistory",path:"commands/KeyHistory.htm"},
     {label:"KeyWait",path:"commands/KeyWait.htm"},
     {label:"Input",path:"commands/Input.htm"},
@@ -249,7 +249,7 @@ toc = [
     {label:"SetNumScrollCapsLockState",path:"commands/SetNumScrollCapsLockState.htm"},
     {label:"SetStoreCapslockMode",path:"commands/SetStoreCapslockMode.htm"}
   ]},
-  {label:"æ•°å­¦å‡½æ•°",children:
+  {label:"ÊıÑ§º¯Êı",children:
   [
     {label:"Abs",path:"Functions.htm#Abs"},
     {label:"Ceil",path:"Functions.htm#Ceil"},
@@ -266,13 +266,13 @@ toc = [
     {label:"ASin/ACos/ATan",path:"Functions.htm#ASin"},
     {label:"Transform",path:"commands/Transform.htm"}
   ]},
-  {label:"å±å¹•ç®¡ç†",children:
+  {label:"ÆÁÄ»¹ÜÀí",children:
   [
     {label:"ImageSearch",path:"commands/ImageSearch.htm"},
     {label:"PixelGetColor",path:"commands/PixelGetColor.htm"},
     {label:"PixelSearch",path:"commands/PixelSearch.htm"}
   ]},
-  {label:"æ‚é¡¹å‘½ä»¤",children:
+  {label:"ÔÓÏîÃüÁî",children:
   [
     {label:"#NoTrayIcon",path:"commands/_NoTrayIcon.htm"},
     {label:"#SingleInstance",path:"commands/_SingleInstance.htm"},
@@ -287,22 +287,22 @@ toc = [
     {label:"URLDownloadToFile",path:"commands/URLDownloadToFile.htm"},
     {label:"VarSetCapacity",path:"commands/VarSetCapacity.htm"}
   ]},
-  {label:"è¿›ç¨‹ç®¡ç†",children:
+  {label:"½ø³Ì¹ÜÀí",children:
   [
     {label:"Process",path:"commands/Process.htm"},
     {label:"Run/RunWait",path:"commands/Run.htm"},
     {label:"RunAs",path:"commands/RunAs.htm"},
     {label:"Shutdown",path:"commands/Shutdown.htm"}
   ]},
-  {label:"æ³¨å†Œè¡¨ç®¡ç†",children:
+  {label:"×¢²á±í¹ÜÀí",children:
   [
-    {label:"Loop (æ³¨å†Œè¡¨)",path:"commands/LoopReg.htm"},
+    {label:"Loop (×¢²á±í)",path:"commands/LoopReg.htm"},
     {label:"RegDelete",path:"commands/RegDelete.htm"},
     {label:"RegRead",path:"commands/RegRead.htm"},
     {label:"RegWrite",path:"commands/RegWrite.htm"},
     {label:"SetRegView",path:"commands/SetRegView.htm"}
   ]},
-  {label:"å£°éŸ³ç®¡ç†",children:
+  {label:"ÉùÒô¹ÜÀí",children:
   [
     {label:"SoundBeep",path:"commands/SoundBeep.htm"},
     {label:"SoundGet",path:"commands/SoundGet.htm"},
@@ -311,7 +311,7 @@ toc = [
     {label:"SoundSet",path:"commands/SoundSet.htm"},
     {label:"SoundSetWaveVolume",path:"commands/SoundSetWaveVolume.htm"}
   ]},
-  {label:"å­—ç¬¦ä¸²å‘½ä»¤",children:
+  {label:"×Ö·û´®ÃüÁî",children:
   [
     {label:"Format()",path:"commands/Format.htm"},
 	{label:"FormatTime",path:"commands/FormatTime.htm"},
@@ -340,9 +340,9 @@ toc = [
     {label:"SubStr()",path:"Functions.htm#SubStr"},
     {label:"Trim()",path:"commands/Trim.htm"}
   ]},
-  {label:"çª—å£ç®¡ç†",children:
+  {label:"´°¿Ú¹ÜÀí",children:
   [
-    {label:"æ§ä»¶æ“ä½œ",children:
+    {label:"¿Ø¼ş²Ù×÷",children:
     [
       {label:"Control",path:"commands/Control.htm"},
       {label:"ControlClick",path:"commands/ControlClick.htm"},
@@ -359,7 +359,7 @@ toc = [
       {label:"SetControlDelay",path:"commands/SetControlDelay.htm"},
       {label:"WinMenuSelectItem",path:"commands/WinMenuSelectItem.htm"}
     ]},
-    {label:"çª—å£ç»„æ“ä½œ",children:
+    {label:"´°¿Ú×é²Ù×÷",children:
     [
       {label:"GroupActivate",path:"commands/GroupActivate.htm"},
       {label:"GroupAdd",path:"commands/GroupAdd.htm"},
@@ -399,7 +399,7 @@ toc = [
     {label:"WinWaitActive, WinWaitNotActive",path:"commands/WinWaitActive.htm"},
     {label:"WinWaitClose",path:"commands/WinWaitClose.htm"}
   ]},
-  {label:"#æŒ‡ä»¤",children:
+  {label:"#Ö¸Áî",children:
   [
     {label:"#AllowSameLineComments",path:"commands/_AllowSameLineComments.htm"},
     {label:"#ClipboardTimeout",path:"commands/_ClipboardTimeout.htm"},
