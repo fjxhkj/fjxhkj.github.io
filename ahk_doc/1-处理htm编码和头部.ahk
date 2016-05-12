@@ -17,6 +17,34 @@ return
 
 delHead()
 {
+   ;~ 更改 js 文件编码
+   ;~ 遍历目录用 D, 文件用 F, 文件和目录用 DF.
+   loop, Files, %A_ScriptDir%\*.js, RF
+   {      
+      _fEncoding := File_GetEncoding(A_LoopFileLongPath)
+      
+      ;~ utf8+bom,需要改为 utf8 no bom
+      if (_fEncoding = 4)
+      {
+          File_CpTransform(A_LoopFileFullPath, "b", "u")
+      }
+      ;~ ansi,需要改为utf8 no bom
+      else if (_fEncoding = 1)
+      {
+         File_CpTransform(A_LoopFileFullPath, "a", "u")
+      }
+      ;~ utf8 no bom,改为ANSI
+      ;~ else if (_fEncoding = 6)
+      ;~ {
+         ;~ File_CpTransform(A_LoopFileFullPath, "u", "a")         
+      ;~ }
+      
+      FileRead, content, % A_LoopFileFullPath
+      FileDelete, % A_LoopFileFullPath      
+      FileAppend, % content, % A_LoopFileFullPath
+   }
+      
+   ;~ 更改 htm 文件编码和头部编码设置
    ;~ Loop, %A_ScriptDir%\*.htm, , 1
    ;~ 遍历目录用 D, 文件用 F, 文件和目录用 DF.
    loop, Files, %A_ScriptDir%\*.htm*, RF
@@ -34,16 +62,13 @@ delHead()
       ;~ ansi,需要改为utf8 no bom
       else if (_fEncoding = 1)
       {
-         ;~ Debug(A_LineFile "`nline`: " A_LineNumber "`nFunc`:" A_ThisFunc "`n`n"
-         ;~ . A_LoopFileFullPath)
-         
          File_CpTransform(A_LoopFileFullPath, "a", "u")
       }
       ;~ utf8 no bom,改为ANSI
-      else if (_fEncoding = 6)
-      {
+      ;~ else if (_fEncoding = 6)
+      ;~ {
          ;~ File_CpTransform(A_LoopFileFullPath, "u", "a")         
-      }
+      ;~ }
       
       FileRead, content, % A_LoopFileFullPath
       FileDelete, % A_LoopFileFullPath
