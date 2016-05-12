@@ -9,7 +9,7 @@ FileList := { MainJS:       "main.js"
             , JQueryJS:     "jquery.js"
             , TreeJQueryJS: "tree.jquery.js" }
 
-FileEncoding, UTF-8
+FileEncoding, CP936		;中文编码，否则会显示乱码
 For var, file in FileList
 	FileRead %var%, %A_ScriptDir%\%file%
 

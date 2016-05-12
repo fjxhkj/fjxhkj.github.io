@@ -1,426 +1,440 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>å˜æ›´å’Œæ–°åŠŸèƒ½</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>±ä¸üºÍĞÂ¹¦ÄÜ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="static/theme.css" rel="stylesheet" type="text/css" />
 <script src="static/content.js" type="text/javascript"></script>
 </head>
 
 <body>
-<h1>å˜æ›´å’Œæ–°åŠŸèƒ½</h1>
-<p>ä¸‹é¢åˆ—å‡ºäº† AutoHotkey å½“å‰å¼€å‘åˆ†æ”¯ï¼ˆä¹Ÿç§°ä¸º AutoHotkey_Lï¼‰æ–°å¢çš„åŠŸèƒ½ã€‚</p>
-<p>å¯¹äºè¾ƒæ—§çš„å˜æ›´ï¼Œè¯·å‚é˜…<a href="ChangeLogHelp.htm">å­˜æ¡£å˜æ›´</a>ã€‚</p>
+<h1>±ä¸üºÍĞÂ¹¦ÄÜ</h1>
+<p>ÏÂÃæÁĞ³öÁË AutoHotkey µ±Ç°¿ª·¢·ÖÖ§(Ò²³ÆÎª AutoHotkey_L)ĞÂÔöµÄ¹¦ÄÜ.</p>
+<p>¶ÔÓÚ½Ï¾ÉµÄ±ä¸ü,Çë²ÎÔÄ<a href="ChangeLogHelp.htm">´æµµ±ä¸ü</a>.</p>
 
 <!--new revisions go here-->
-<h2 id="v1.1.23.01">1.1.23.01 - January 24, 2016</h2>
-<p>Fixed a theoretical issue with loading scripts from weird/very long paths.</p>
-<p>Ahk2Exe: Fixed Unicode in compiled scripts (broken by v1.1.23.00 release).</p>
+<h2 id="v1.1.23.05">1.1.23.05 - 2016Äê3ÔÂ27ÈÕ</h2>
+<p>ĞŞ¸´ InputBox, MsgBox, FileSelectFile ºÍ FileSelectFolder ÃüÁîÔÚµ±Alt¼ü±»°´ÏÂÊ±»á·¢ËÍÒ»¸ö·ÇÔ¤ÆÚµÄAlt-up³öÀ´. ÕâÊÇÓÉÓÚÔÚ v1.1.22.01 °æ±¾´¦Àí Ctrl/Shift Ê±µÄ´íÎóµ¼ÖÂµÄ.</p>
+<p>¸Ä½ø Ctrl/Shift µÄ¹¤×÷·½Ê½,ÒÔ±ÜÃâÔÚÍ¬Ê±°´ÏÂCtrl,Shift»òAlt¼üÊ±²»±ØÒªµÄÑÚ¸ÇÁËWin¼ü.</p>
 
-<h2 id="v1.1.23.00">1.1.23.00 - January 16, 2016</h2>
-<p>Added <a href="commands/Menu.htm#Insert">Menu Insert</a> sub-command.</p>
-<p>Added <a href="commands/MenuGetHandle.htm">MenuGetHandle()</a>.</p>
-<p>Added <a href="commands/MenuGetName.htm">MenuGetName()</a>.</p>
-<p>Added menu item options: Radio, Right, Break and BarBreak.</p>
-<p>Improved the Menu command to allow identifying items by position: <code>1&amp;</code></p>
-<p>Added <a href="commands/LoadPicture.htm">LoadPicture()</a>.</p>
-<p>Added <a href="misc/ImageHandles.htm">hicon/hbitmap: syntax</a> for passing handles to commands which normally load an image from file.</p>
-<p>Added built-in variables: A_CoordModeToolTip/Pixel/Mouse/Caret/Menu, A_DefaultGui, A_DefaultListView, A_DefaultTreeView, A_KeyDelayPlay, A_KeyDuration/Play, A_MouseDelayPlay, A_SendLevel, A_SendMode and A_StoreCapslockMode.</p>
-<p>Added <code>Ix</code> Hotkey option to set the hotkey variant's input level to x.</p>
-<p>Improved Picture control to support BackgroundTrans with icons.</p>
-<p>Improved Picture control to reduce flicker when loading large images.</p>
-<p>Small optimizations to the menu code and built-in var lookups.</p>
-<p>Fixed conversion of menu items to/from separators.</p>
-<p>Fixed A_ThisMenuItemPos to support duplicate item names.</p>
-<p>Fixed sub-menus sometimes not being recreated after a menu is deleted.</p>
-<p>Fixed AutoHotkeyXXX.exe to launch AutoHotkey.chm, not AutoHotkeyXXX.chm.</p>
+<h2 id="v1.1.23.04">1.1.23.04 - 2016Äê3ÔÂ26ÈÕ</h2>
+<p>ĞŞ¸´ LV_Modify ÒÔÖ§³Ö±»ºöÂÔµÄ²ÎÊı, Èç <code>LV_Modify(r,, col1)</code>.</p>
 
-<h2 id="v1.1.22.09">1.1.22.09 - November 11, 2015</h2>
-<p>ä¿®å¤ä¸€äº› SetTimer Delete çš„é—®é¢˜.</p>
+<h2 id="v1.1.23.03">1.1.23.03 - 2016Äê3ÔÂ12ÈÕ</h2>
+<p>ĞŞ¸´ __Delete Ôªº¯ÊıÈç¹ûÔÚÒì³£´«µİ¹ı³ÌÖĞ±»µ÷ÓÃÊ±,´íÎóµÄ²»Å×³ö»òÖØ¸´Å×³öÒì³£.</p>
+<p>ĞŞ¸´ µ±±ØĞë²ÎÊıÎª¿ÕÊ±º¯Êıµ÷ÓÃµÄÔØÈëÊ±Õì²âÎÊÌâ, Èç <code>fn(x,,y)</code>.</p>
+
+<h2 id="v1.1.23.02">1.1.23.02 - 2016Äê3ÔÂ12ÈÕ</h2>
+<p>ĞŞ¸´ RegDelete É¾³ıÕû¸ö¼üÖµ¶ø·ÇÄ¬ÈÏÖµ.</p>
+<p>´úÂëÎ¬»¤;Ò»Ğ©´úÂëÌå»ıµÄ¾«¼ò,ÌáÉı.</p>
+
+<h2 id="v1.1.23.01">1.1.23.01 - 2016Äê1ÔÂ24ÈÕ</h2>
+<p>ĞŞ¸´ ÀíÂÛÉÏ¿ÉÄÜ´æÔÚ´Ó»ûĞÎ»òÌ«³¤µÄÂ·¾¶ÖĞÎŞ·¨ÔØÈë½Å±¾µÄÎÊÌâ.</p>
+<p>Ahk2Exe: ĞŞ¸´ÒÑ±àÒë½Å±¾ÖĞµÄUnicode±àÂëÎÊÌâ(v1.1.23.00°æ±¾ÒıÈë).</p>
+
+<h2 id="v1.1.23.00">1.1.23.00 - 2016Äê1ÔÂ16ÈÕ</h2>
+<p>Ôö¼Ó <a href="commands/Menu.htm#Insert">Menu Insert</a> ×ÓÃüÁî.</p>
+<p>Ôö¼Ó <a href="commands/MenuGetHandle.htm">MenuGetHandle()</a>.</p>
+<p>Ôö¼Ó <a href="commands/MenuGetName.htm">MenuGetName()</a>.</p>
+<p>Ôö¼Ó MenuÃüÁî²Ëµ¥ÏîÄ¿: Radio, Right, Break ºÍ BarBreak.</p>
+<p>¸Ä½ø MenuÃüÁîÒÔÖ§³ÖÍ¨¹ıÏîÄ¿Î»ÖÃĞòºÅÊ¶±ğ²Ëµ¥ÏîÄ¿: <code>1&amp;</code></p>
+<p>Ôö¼Ó <a href="commands/LoadPicture.htm">LoadPicture()</a>.</p>
+<p>Ôö¼Ó <a href="misc/ImageHandles.htm">hicon/hbitmap: </a>´«µİ¾ä±ú¸øÄÇĞ©Í¨³£ĞèÒª´ÓÎÄ¼şÔØÈëÍ¼ÏñµÄÃüÁî.</p>
+<p>Ôö¼Ó ÄÚÖÃ±äÁ¿: A_CoordModeToolTip/Pixel/Mouse/Caret/Menu, A_DefaultGui, A_DefaultListView, A_DefaultTreeView, A_KeyDelayPlay, A_KeyDuration/Play, A_MouseDelayPlay, A_SendLevel, A_SendMode ºÍ A_StoreCapslockMode.</p>
+<p>Ôö¼Ó Hotkey ÃüÁîµÄ <code>Ix</code> Ñ¡Ïî,¶¯Ì¬ÉèÖÃÈÈ¼üµÄÊäÈëµÈ¼¶Îª x .</p>
+<p>¸Ä½ø Picture ¿Ø¼şÒÔÖ§³Ö±³¾°Í¸Ã÷µÄÍ¼±êÎÄ¼ş.</p>
+<p>¸Ä½ø Picture ¿Ø¼şÒÔ¼õÉÙÔØÈë´óÍ¼ÏñÊ±µÄÉÁË¸ÏÖÏó.</p>
+<p>¶Ô²Ëµ¥²¿·ÖµÄ´úÂëºÍÄÚÖÃ±äÁ¿²éÕÒ×öÁËÒ»µãÓÅ»¯.</p>
+<p>ĞŞ¸´ ²Ëµ¥ÏîÄ¿ÖĞÏîÄ¿ºÍ·Ö¸ôÏßµÄ×ª»».</p>
+<p>ĞŞ¸´ A_ThisMenuItemPos ÒÔÖ§³ÖÖØ¸´µÄÏîÄ¿Ãû³Æ.</p>
+<p>ĞŞ¸´ ×Ó²Ëµ¥ÎŞ·¨ÔÚ²Ëµ¥±»É¾³ıºóÓĞÊ±ÖØĞÂ´´½¨.</p>
+<p>ĞŞ¸´ AutoHotkeyXXX.exe Ö±½ÓÔËĞĞÊ±Æô¶¯ AutoHotkey.chm, ¶ø·Ç AutoHotkeyXXX.chm.</p>
+
+<h2 id="v1.1.22.09">1.1.22.09 - 2015Äê11ÔÂ11ÈÕ</h2>
+<p>ĞŞ¸´ SetTimer Delete µÄÒ»Ğ©ÎÊÌâ.</p>
 <ul>
-  <li>KeyHistory çš„ timer è®¡æ•°é”™è¯¯çš„åŒ…å«äº†å·²ç»åˆ é™¤çš„ timer.</li>
-  <li>Calling KeyHistory within a thread started by a timer crashed the script if the timer had been deleted but not turned off.</li>
-  <li>Deleting the most recently created timer prevented subsequently created timers from working unless ALL timers were deleted.</li>
+  <li>KeyHistory µÄ timer ¼ÆÊıµ±ÖĞ´íÎóµÄ°üº¬ÁËÒÑ¾­É¾³ıµÄ timer.</li>
+  <li>ÓÉ¶¨Ê±Æ÷³õÊ¼»¯µÄÏß³ÌÖĞ,Èç¹ûÒÑ±»É¾³ıµ«²¢Î´¹Ø±ÕµÄ¶¨Ê±Æ÷µ÷ÓÃÁËKeyHistory½«»áÒıÆğ½Å±¾±ÀÀ£.</li>
+  <li>É¾³ı×î½ü´´½¨µÄ¶¨Ê±Æ÷Ê±»áµ¼ÖÂÔçÇ°´´½¨µÄ¶¨Ê±Æ÷ÎŞ·¨ÔËĞĞ³ı·ÇËùÓĞ¶¨Ê±Æ÷±»É¾³ı.</li>
 </ul>
 
-<h2 id="v1.1.22.08">1.1.22.08 - November 11, 2015</h2>
-<p>Fixed For-loop to pass control correctly when _NewEnum/Next throws an exception.</p>
-<p>Fixed Finally to suspend the pending exception until its body has been evaluated, not just until the first built-in function call.</p>
-<p>Fixed load-time detection of invalid jumps from Finally blocks (broken by v1.1.20).</p>
+<h2 id="v1.1.22.08">1.1.22.08 - 2015Äê11ÔÂ11ÈÕ</h2>
+<p>ĞŞ¸´ ForÑ­»·ÔÚ_NewEnum/NextÅ×³öÒì³£Ê±ÈÔ¿ÉÒÔÕıÈ·´«µİ¿ØÖÆ.</p>
+<p>ĞŞ¸´ FinallyÃüÁîÔÚÆäÖ´ĞĞÌåÖ´ĞĞÍê³Éºó²ÅÔİÍ£ÑÓ³ÙÒì³£¶ø²»ÊÇ½öµ±Óöµ½Ê×¸öÄÚ½¨º¯Êıµ÷ÓÃÊ±.</p>
+<p>ĞŞ¸´ ¶ÔÓÚÀ´×ÔFinally´úÂë¶ÎµÄ²»¿ÉÓÃÌø×ªµÄÔØÈëÊ±Õì²â (v1.1.20ÒıÈë´ËBUG).</p>
 
-<h2 id="v1.1.22.07">1.1.22.07 - September 27, 2015</h2>
-<p>Fixed Gui control <code>w-1</code> and <code>h-1</code> options failing when DPI is 150+% and the Gui has not applied <code>-DPIScale</code>.</p>
-<p>Fixed <code>~<i>key</i> up</code> hotkeys to not perform an automatic <code>Send {<i>key</i> down}</code>. This was occurring only if the hotkey was turned on after the key was pressed down.</p>
-<h2 id="v1.1.22.06">1.1.22.06 - 2015å¹´9æœˆ13æ—¥</h2>
-<p>ä¿®å¤ è¾“å…¥å’Œçƒ­å­—ç¬¦ä¸²æ•è· Unicode å’Œ æ— æ ‡è®°å­—ç¬¦ç¼–ç  äº‹ä»¶.</p>
-<p>ä¿®å¤ Edit æ§ä»¶ä¸­å¦‚æœæœ€åä¸€è¡Œä¸ºç©ºè¡Œä¹Ÿè¿›è¡Œè‡ªåŠ¨ä¼¸ç¼©å¤§å°.</p>
-<p>ä¿®å¤ å¯å“åº” ComObj å‡½æ•°çš„ å†…å­˜ä¸è¶³ é—®é¢˜.</p>
-<p>ä¿®å¤ ComObjArray ç›´æ¥å¿½ç•¥å¤šä½™çš„å‚æ•°è€Œä¸ä¼šå´©æºƒ (ä»…é€‚ç”¨äºåŠ¨æ€è°ƒç”¨).</p>
-<p>ä¿®å¤ GuiControlä»¥â€œè¿½åŠ â€çš„å½¢å¼ä¿®æ”¹Tabsæ§ä»¶ï¼ˆè€Œä¸æ˜¯åŸæ¥çš„ç›´æ¥æ›¿æ¢ï¼Œè§<GuiControl>ä¸­çš„<Tabæ§åˆ¶>è¯´æ˜ï¼‰.</p>
-<p>ä¿®å¤ XP64 æ”¯æŒ.</p>
+<h2 id="v1.1.22.07">1.1.22.07 - 2015Äê9ÔÂ27ÈÕ</h2>
+<p>ĞŞ¸´ µ±DPIËõ·ÅÎª150+%ÇÒGuiÃ»ÓĞÊ¹ÓÃ <code>-DPIScale</code> ²ÎÊı,Gui¿Ø¼şÖĞµÄ <code>w-1</code> ºÍ <code>h-1</code> Ñ¡ÏîÊ§Ğ§ÎÊÌâ.</p>
+<p>ĞŞ¸´ <code>~<i>key</i> up</code> ÈÈ¼üÃ»ÓĞ×Ô¶¯ <code>Send {<i>key</i> down}</code>. ½öµ±ÈÈ¼üÔÚ¸Ã¼ü±»°´ÏÂºó²Å±»ÆôÓÃµÄÊ±ºò»á·¢Éú´ËÎÊÌâ.</p>
+<h2 id="v1.1.22.06">1.1.22.06 - 2015Äê9ÔÂ13ÈÕ</h2>
+<p>ĞŞ¸´ ÊäÈëºÍÈÈ×Ö·û´®²¶»ñ Unicode ºÍ ÎŞ±ê¼Ç×Ö·û±àÂë ÊÂ¼ş.</p>
+<p>ĞŞ¸´ Edit ¿Ø¼şÖĞÈç¹û×îºóÒ»ĞĞÎª¿ÕĞĞÒ²½øĞĞ×Ô¶¯ÉìËõ´óĞ¡.</p>
+<p>ĞŞ¸´ ¿ÉÏìÓ¦ ComObj º¯ÊıµÄ ÄÚ´æ²»×ã ÎÊÌâ.</p>
+<p>ĞŞ¸´ ComObjArray Ö±½ÓºöÂÔ¶àÓàµÄ²ÎÊı¶ø²»»á±ÀÀ£ (½öÊÊÓÃÓÚ¶¯Ì¬µ÷ÓÃ).</p>
+<p>ĞŞ¸´ GuiControlÒÔ"×·¼Ó"µÄĞÎÊ½ĞŞ¸ÄTabs¿Ø¼ş(¶ø²»ÊÇÔ­À´µÄÖ±½ÓÌæ»»,¼û<GuiControl>ÖĞµÄ<Tab¿ØÖÆ>ËµÃ÷).</p>
+<p>ĞŞ¸´ XP64 Ö§³Ö.</p>
 
-<h2 id="v1.1.22.05">1.1.22.05 - 2015å¹´9æœˆ10æ—¥</h2>
-<p>ä¿®å¤ ä¼˜åŒ–æ— æ•°å­— ID çš„å›¾æ ‡åŠ è½½.</p>
-<p>ä¿®å¤ å½“ Gui é”€æ¯æ—¶,å¯¹äº +g é€‰é¡¹çš„å‡½æ•°å¯¹è±¡ä¸ä¼šä¸»åŠ¨é‡Šæ”¾èµ„æº.</p>
-<p>ä¿®å¤ Gui Show æ˜¾ç¤º ä¸»Gui æ—¶é¿å…å¼ºåˆ¶æ¿€æ´» å­GUI.</p>
-<p>ä¿®å¤ å½“ Caps/Num/ScrollLock æŒ‰é”®æŒ‰ä¸‹æ—¶çŠ¶æ€è®¾ç½®å¤±è´¥.</p>
-<p>ä¿®å¤ Gui é¢œè‰²å½±å“æ–‡æœ¬çš„é¢œè‰² (ä¸€èˆ¬ä¸ºé»‘è‰²).</p>
-<p>ä¿®æ”¹ æé«˜å½“ Gui Show æ—¶ GuiSize ç«‹å³æ‰§è¡Œçš„æˆåŠŸå‡ ç‡.</p>
-<p><em>å¯¹äºå¼€å‘äººå‘˜:</em></p>
+<h2 id="v1.1.22.05">1.1.22.05 - 2015Äê9ÔÂ10ÈÕ</h2>
+<p>ĞŞ¸´ ÓÅ»¯ÎŞÊı×Ö ID µÄÍ¼±ê¼ÓÔØ.</p>
+<p>ĞŞ¸´ µ± Gui Ïú»ÙÊ±,¶ÔÓÚ +g Ñ¡ÏîµÄº¯Êı¶ÔÏó²»»áÖ÷¶¯ÊÍ·Å×ÊÔ´.</p>
+<p>ĞŞ¸´ Gui Show ÏÔÊ¾ Ö÷Gui Ê±±ÜÃâÇ¿ÖÆ¼¤»î ×ÓGUI.</p>
+<p>ĞŞ¸´ µ± Caps/Num/ScrollLock °´¼ü°´ÏÂÊ±×´Ì¬ÉèÖÃÊ§°Ü.</p>
+<p>ĞŞ¸´ Gui ÑÕÉ«Ó°ÏìÎÄ±¾µÄÑÕÉ« (Ò»°ãÎªºÚÉ«).</p>
+<p>ĞŞ¸Ä Ìá¸ßµ± Gui Show Ê± GuiSize Á¢¼´Ö´ĞĞµÄ³É¹¦¼¸ÂÊ.</p>
+<p><em>¶ÔÓÚ¿ª·¢ÈËÔ±:</em></p>
 <ul>
-	<li>è°ƒæ•´å·¥ç¨‹é…ç½®ä»¥é€‚åº”æ›´å¤š VC++ ç‰ˆæœ¬.</li>
-	<li>ä¿®å¤å¤šä¸ªåœ¨ VC++ 2015 ä¸­å‡ºç°çš„ç¼–è¯‘é”™è¯¯.</li>
-	<li>64-bit ç‰ˆæœ¬ä½¿ç”¨ VC++ 2015 æ¥ç¼–è¯‘. 32-bit ç‰ˆæœ¬ä»ç„¶ä½¿ç”¨ VC++ 2010 ç¼–è¯‘.</li>
+	<li>µ÷Õû¹¤³ÌÅäÖÃÒÔÊÊÓ¦¸ü¶à VC++ °æ±¾.</li>
+	<li>ĞŞ¸´¶à¸öÔÚ VC++ 2015 ÖĞ³öÏÖµÄ±àÒë´íÎó.</li>
+	<li>64-bit °æ±¾Ê¹ÓÃ VC++ 2015 À´±àÒë. 32-bit °æ±¾ÈÔÈ»Ê¹ÓÃ VC++ 2010 ±àÒë.</li>
 </ul>
-<h2 id="v1.1.22.04">1.1.22.04 - 2015å¹´8æœˆ19æ—¥</h2>
-<p>ä¿®æ­£ObjRawSet()ä¸è¿”å›å†…å®¹.</p>
-<p>æ·»åŠ Windows 10 supportedOSæ ‡ç­¾åˆ°æ‰§è¡Œç¨‹åºçš„manifest(é¿å…ä¸€äº›å…¼å®¹æ€§é—®é¢˜).</p>
-<p>æ·»åŠ æ£€æµ‹å‡½æ•°å£°æ˜ä¸­")"ä¹‹åçš„è¯­æ³•é”™è¯¯çš„æ£€æµ‹.</p>
+<h2 id="v1.1.22.04">1.1.22.04 - 2015Äê8ÔÂ19ÈÕ</h2>
+<p>ĞŞÕıObjRawSet()²»·µ»ØÄÚÈİ.</p>
+<p>Ìí¼ÓWindows 10 supportedOS±êÇ©µ½Ö´ĞĞ³ÌĞòµÄmanifest(±ÜÃâÒ»Ğ©¼æÈİĞÔÎÊÌâ).</p>
+<p>Ìí¼Ó¼ì²âº¯ÊıÉùÃ÷ÖĞ")"Ö®ºóµÄÓï·¨´íÎóµÄ¼ì²â.</p>
 
-<h2 id="v1.1.22.03">1.1.22.03 - 2015å¹´6æœˆ12æ—¥</h2>
-<p>ä¿®æ­£A_EndCharåœ¨Unicodeç»“å°¾å­—ç¬¦ä¸­è¿”å›æˆªæ–­å€¼çš„æƒ…å†µ.</p>
-<p>å°å˜æ›´:</p>
+<h2 id="v1.1.22.03">1.1.22.03 - 2015Äê6ÔÂ12ÈÕ</h2>
+<p>ĞŞÕıA_EndCharÔÚUnicode½áÎ²×Ö·ûÖĞ·µ»Ø½Ø¶ÏÖµµÄÇé¿ö.</p>
+<p>Ğ¡±ä¸ü:</p>
 <ul>
-	<li>æ”¹å˜A_Languageä½¿ç”¨GetSystemDefaultUILanguage()è·å–.</li>
-	<li>é‡æ„æ‰˜ç›˜é“¾æ¥èœå•Window Spy/å¸®åŠ©æ–‡ä»¶æ¥æé«˜ä»£ç å¤ç”¨.</li>
-	<li>ä¼˜åŒ–Gui/Menu/Hotkey/Hotstring/OnClipboardæ¶ˆæ¯å¤„ç†(minor).</li>
+	<li>¸Ä±äA_LanguageÊ¹ÓÃGetSystemDefaultUILanguage()»ñÈ¡.</li>
+	<li>ÖØ¹¹ÍĞÅÌÁ´½Ó²Ëµ¥Window Spy/°ïÖúÎÄ¼şÀ´Ìá¸ß´úÂë¸´ÓÃ.</li>
+	<li>ÓÅ»¯Gui/Menu/Hotkey/Hotstring/OnClipboardÏûÏ¢´¦Àí(¶à´¦).</li>
 </ul>
 
-<h2 id="v1.1.22.02">1.1.22.02 - 2015å¹´5æœˆ27æ—¥</h2>
-<p>ä¿®æ­£TreeViewä¸æäº¤<code>*</code> äº‹ä»¶åœ¨ä½ç½®æ¶ˆæ¯æƒ…å†µä¸‹.(Fixed TreeView to not raise <code>*</code> events for unknown notifications.)</p>
-<p>ä¿®æ­£å®šæ—¶å™¨åˆ é™¤æœ¬èº«æ—¶å‡ºç°çš„å´©æºƒæˆ–åçš„è¡¨ç°.</p>
-<p>ä¿®æ­£RWin-up<a href="commands/_MenuMaskKey.htm">è¢«å±è”½</a> åœ¨æŸäº›ç½•è§çš„æƒ…å†µä¸‹è€ŒLWin-upä¸ä¼š.</p>
-<h2 id="v1.1.22.01">1.1.22.01 - 2015å¹´5æœˆ24æ—¥</h2>
-<p>ä¿®æ­£Text/Edit/Buttonæ§ä»¶è°ƒæ•´å¤§å°æ¥å¼¥è¡¥å­—ç¬¦æº¢å‡º.</p>
-<p>ä¿®æ­£æ³¨å†Œè¡¨å‘½ä»¤å…è®¸åœ¨å­é”®ä¸­ä½¿ç”¨<code>:</code>å½“ä¸æ ¹é”®åˆå¹¶.</p>
-<p>ä¿®æ­£çƒ­é”®ä¼˜å…ˆé¡ºåº.</p>
-<p>é‡æ„else/try/catch/finallyæ¥æ”¯æŒ<code>hotkey::try cmd</code>.</p>
-<p>æ·»åŠ ä¸€ä¸ªè„šæœ¬å¯¹è¯æ¡†çš„è§£å†³æ–¹æ¡ˆå°±åƒCtrlæˆ–Shiftåœ¨é”®ç›˜é’©å­è¢«é”åæŒ‰ä¸‹çš„æƒ…å†µ.</p>
+<h2 id="v1.1.22.02">1.1.22.02 - 2015Äê5ÔÂ27ÈÕ</h2>
+<p>ĞŞÕıTreeView¶ÔÓÚÎ´ÖªÏûÏ¢²»Ìá½»<code>*</code> ÊÂ¼ş.</p>
+<p>ĞŞÕı¶¨Ê±Æ÷É¾³ı±¾ÉíÊ±³öÏÖµÄ±ÀÀ£»ò»µµÄ±íÏÖ.</p>
+<p>ĞŞÕıRWin-up<a href="commands/_MenuMaskKey.htm">±»ÆÁ±Î</a> ÔÚÄ³Ğ©º±¼ûµÄÇé¿öÏÂ¶øLWin-up²»»á.</p>
+<h2 id="v1.1.22.01">1.1.22.01 - 2015Äê5ÔÂ24ÈÕ</h2>
+<p>ĞŞÕıText/Edit/Button¿Ø¼şµ÷Õû´óĞ¡À´ÃÖ²¹×Ö·ûÒç³ö.</p>
+<p>ĞŞÕı×¢²á±íÃüÁîÔÊĞíÔÚ×Ó¼üÖĞÊ¹ÓÃ<code>:</code>µ±Óë¸ù¼üºÏ²¢.</p>
+<p>ĞŞÕıÈÈ¼üÓÅÏÈË³Ğò.</p>
+<p>ÖØ¹¹else/try/catch/finallyÀ´Ö§³Ö<code>hotkey::try cmd</code>.</p>
+<p>Ìí¼ÓÒ»¸ö½Å±¾¶Ô»°¿òµÄ½â¾ö·½°¸¾ÍÏñCtrl»òShiftÔÚ¼üÅÌ¹³×Ó±»Ëøºó°´ÏÂµÄÇé¿ö.</p>
 
-<h2 id="v1.1.22.00">1.1.22.00 - 2015å¹´5æœˆ1æ—¥</h2>
-<p>æ·»åŠ SetErrorMode(SEM_FAILCRITICALERRORS)åœ¨ç¨‹åºå¯åŠ¨æ—¶æŠ‘åˆ¶ç³»ç»Ÿçº§é”™è¯¯æ¶ˆæ¯,ä¾‹å¦‚"é©±åŠ¨å™¨ä¸­æ²¡æœ‰ç£ç›˜".è°ƒç”¨Driveæˆ–DriveGetä¸å†å½±å“è¿›ç¨‹çš„é”™è¯¯æ¨¡å¼.</p>
-<p>å˜æ›´MonthCalæ§ä»¶é»˜è®¤æ‹¥æœ‰tab-stopåœ¨Vistaæˆ–æ›´é«˜ç³»ç»Ÿä¸­.</p>
-<p>æ”¹è¿›ComObjConnectä½¿ç”¨IProvideClassInfo,å¦‚æœå¯ç”¨.</p>
-<p>ä¿®æ­£äº†æ–¹æ³•ã€å±æ€§å®šä¹‰å’Œæ‹¬å·åœ¨åŒä¸€è¡Œç»“æŸå‡ºç°çš„ä¸€äº›é—®é¢˜.</p>
-<p>ä¿®æ­£Text/Linkæ§ä»¶è‡ªåŠ¨è°ƒæ•´å¤§å°åœ¨+Border (WS_BORDER)æ ·å¼æƒ…å†µä¸‹.</p>
-<p>ä¿®æ­£<code>Break <i>N</i></code> å½“loopç›´æ¥è·Ÿåœ¨If/Else/Try/Catchåé¢çš„æƒ…å†µ.</p>
+<h2 id="v1.1.22.00">1.1.22.00 - 2015Äê5ÔÂ1ÈÕ</h2>
+<p>Ìí¼ÓSetErrorMode(SEM_FAILCRITICALERRORS)ÔÚ³ÌĞòÆô¶¯Ê±ÒÖÖÆÏµÍ³¼¶´íÎóÏûÏ¢,ÀıÈç"Çı¶¯Æ÷ÖĞÃ»ÓĞ´ÅÅÌ".µ÷ÓÃDrive»òDriveGet²»ÔÙÓ°Ïì½ø³ÌµÄ´íÎóÄ£Ê½.</p>
+<p>±ä¸üMonthCal¿Ø¼şÄ¬ÈÏÓµÓĞtab-stopÔÚVista»ò¸ü¸ßÏµÍ³ÖĞ.</p>
+<p>¸Ä½øComObjConnectÊ¹ÓÃIProvideClassInfo,Èç¹û¿ÉÓÃ.</p>
+<p>ĞŞÕıÁË·½·¨,ÊôĞÔ¶¨ÒåºÍÀ¨ºÅÔÚÍ¬Ò»ĞĞ½áÊø³öÏÖµÄÒ»Ğ©ÎÊÌâ.</p>
+<p>ĞŞÕıText/Link¿Ø¼ş×Ô¶¯µ÷Õû´óĞ¡ÔÚ+Border (WS_BORDER)ÑùÊ½Çé¿öÏÂ.</p>
+<p>ĞŞÕı<code>Break <i>N</i></code> µ±loopÖ±½Ó¸úÔÚIf/Else/Try/CatchºóÃæµÄÇé¿ö.</p>
 
-<h2 id="v1.1.21.03">1.1.21.03 - 2015å¹´4æœˆ12æ—¥</h2>
-<p>ä¿®æ­£å±æ€§å’Œæ–¹æ³•ä¹‹é—´çš„å‘½åå†²çªæ£€æµ‹.</p>
+<h2 id="v1.1.21.03">1.1.21.03 - 2015Äê4ÔÂ12ÈÕ</h2>
+<p>ĞŞÕıÊôĞÔºÍ·½·¨Ö®¼äµÄÃüÃû³åÍ»¼ì²â.</p>
 
-<h2 id="v1.1.21.02">1.1.21.02 - 2015å¹´4æœˆ4æ—¥</h2>
-<p>ä¿®æ­£<code>OnMessage(msg, fnobj, 0)</code> ä¸åšä»»ä½•äº‹å¦‚æœ<em>fnobj</em> æ²¡æœ‰è¢«æ³¨å†Œ.</p>
+<h2 id="v1.1.21.02">1.1.21.02 - 2015Äê4ÔÂ4ÈÕ</h2>
+<p>ĞŞÕı<code>OnMessage(msg, fnobj, 0)</code> ²»×öÈÎºÎÊÂÈç¹û<em>fnobj</em> Ã»ÓĞ±»×¢²á.</p>
 
-<h2 id="v1.1.21.01">1.1.21.01 - 2015å¹´4æœˆ3æ—¥</h2>
-<p>ä¿®æ­£StrReplace()å…è®¸ReplaceTextè¢«çœç•¥.</p>
-<p>ä¿®æ­£ç±»å˜é‡åä½¿ç”¨éASCIIå‘½å.</p>
+<h2 id="v1.1.21.01">1.1.21.01 - 2015Äê4ÔÂ3ÈÕ</h2>
+<p>ĞŞÕıStrReplace()ÔÊĞíReplaceText±»Ê¡ÂÔ.</p>
+<p>ĞŞÕıÀà±äÁ¿ÃûÊ¹ÓÃ·ÇASCIIÃüÃû.</p>
 
-<h2 id="v1.1.21.00">1.1.21.00 - 2015å¹´3æœˆ28æ—¥</h2>
-<p>æ·»åŠ <a href="commands/LoopReg.htm">Loop, Reg, RootKey[\Key, Mode]</a>.</p>
-<p>æ·»åŠ <a href="commands/LoopFile.htm">Loop, Files, FilePattern [, Mode]</a>.</p>
-<p>å˜æ›´<em>InputVar</em> å‚æ•°å…è®¸<a href="Variables.htm#percent-space">% è¡¨è¾¾å¼</a> (é™¤äº†å‘½ä»¤).</p>
-<p>ä¿®è®¢<a href="objects/Object.htm">å¯¹è±¡æ–¹æ³•</a>:</p>
+<h2 id="v1.1.21.00">1.1.21.00 - 2015Äê3ÔÂ28ÈÕ</h2>
+<p>Ìí¼Ó<a href="commands/LoopReg.htm">Loop, Reg, RootKey[\Key, Mode]</a>.</p>
+<p>Ìí¼Ó<a href="commands/LoopFile.htm">Loop, Files, FilePattern [, Mode]</a>.</p>
+<p>±ä¸ü<em>InputVar</em> ²ÎÊıÔÊĞí<a href="Variables.htm#percent-space">% ±í´ïÊ½</a> (³ıÁËÃüÁî).</p>
+<p>ĞŞ¶©<a href="objects/Object.htm">¶ÔÏó·½·¨</a>:</p>
 <ul>
-  <li>æ·»åŠ Object.InsertAt(), Object.Push() å’ŒObjRawSet().</li>
-  <li>æ·»åŠ Object.Delete(), Object.RemoveAt()å’ŒObject.Pop().</li>
-  <li>æ·»åŠ Object.Length().</li>
+  <li>Ìí¼ÓObject.InsertAt(), Object.Push() ºÍObjRawSet().</li>
+  <li>Ìí¼ÓObject.Delete(), Object.RemoveAt()ºÍObject.Pop().</li>
+  <li>Ìí¼ÓObject.Length().</li>
 </ul>
-<p>æ·»åŠ <a href="Functions.htm#Ord">Ord()</a> å’Œæ›´æ–°Chr() æ¥æ”¯æŒè¡¥å……å­—ç¬¦(&gt;0xFFFF).</p>
-<p>æ·»åŠ <a href="commands/StringReplace.htm">StrReplace()</a>.</p>
-<p>ç§»é™¤RegReadçš„è¿‡æ—¶çš„5å‚æ•°æ¨¡å¼ï¼Œè¿™æ˜¯ä¸ºäº†å…¼å®¹AutoIt v2ï¼ˆé¢å¤–çš„å‚æ•°æ˜¯æœªä½¿ç”¨çš„ï¼‰.</p>
-<p>å˜æ›´<a href="commands/RegRead.htm">RegRead</a>, <a href="commands/RegWrite.htm">RegWrite</a> and <a href="commands/RegDelete.htm">RegDelete</a>æ ¹é”®å’Œå­é”®å‚æ•°å¯ä»¥éšæ„ç»„åˆ.</p>
+<p>Ìí¼Ó<a href="Functions.htm#Ord">Ord()</a> ºÍ¸üĞÂChr() À´Ö§³Ö²¹³ä×Ö·û(&gt;0xFFFF).</p>
+<p>Ìí¼Ó<a href="commands/StringReplace.htm">StrReplace()</a>.</p>
+<p>ÒÆ³ıRegReadµÄ¹ıÊ±µÄ5²ÎÊıÄ£Ê½,ÕâÊÇÎªÁË¼æÈİAutoIt v2(¶îÍâµÄ²ÎÊıÊÇÎ´Ê¹ÓÃµÄ).</p>
+<p>±ä¸ü<a href="commands/RegRead.htm">RegRead</a>, <a href="commands/RegWrite.htm">RegWrite</a> and <a href="commands/RegDelete.htm">RegDelete</a>¸ù¼üºÍ×Ó¼ü²ÎÊı¿ÉÒÔËæÒâ×éºÏ.</p>
 
-<h2 id="v1.1.20.03">1.1.20.03 - 2015å¹´3æœˆ21æ—¥</h2>
-<p>ä¿®æ­£MouseGetPos (OutputVarControl),GuiContextMenu,GuiDropFiles (A_GuiControl)å¿½ç•¥è¢«ç¦ç”¨çš„æ§ä»¶çš„é—®é¢˜[broken by v1.1.20.00].</p>
+<h2 id="v1.1.20.03">1.1.20.03 - 2015Äê3ÔÂ21ÈÕ</h2>
+<p>ĞŞÕıMouseGetPos (OutputVarControl),GuiContextMenu,GuiDropFiles (A_GuiControl)ºöÂÔ±»½ûÓÃµÄ¿Ø¼şµÄÎÊÌâ[broken by v1.1.20.00].</p>
 
-<h2 id="v1.1.20.02">1.1.20.02 - 2015å¹´3æœˆ11æ—¥</h2>
-<p>ä¿®æ­£OnMessageçš„add-firstæ¨¡å¼.</p>
-<p>ä¿®æ­£A_OSVersionæœªçŸ¥çš„x64ç‰ˆæœ¬æ“ä½œç³»ç»Ÿ.</p>
-<p>ä¿®æ­£ExitAppæ¥å–æ¶ˆæš‚åœè„šæœ¬åœ¨é‡Šæ”¾å¯¹è±¡å‰ä»¥é˜²__delete å…ƒåŠŸèƒ½å·²è°ƒç”¨.</p>
-<p>çç¢çš„ä¼˜åŒ–å’Œä»£ç ç»´æŠ¤.</p>
+<h2 id="v1.1.20.02">1.1.20.02 - 2015Äê3ÔÂ11ÈÕ</h2>
+<p>ĞŞÕıOnMessageµÄadd-firstÄ£Ê½.</p>
+<p>ĞŞÕıA_OSVersionÎ´ÖªµÄx64°æ±¾²Ù×÷ÏµÍ³.</p>
+<p>ĞŞÕıExitAppÀ´È¡ÏûÔİÍ£½Å±¾ÔÚÊÍ·Å¶ÔÏóÇ°ÒÔ·À__delete Ôª¹¦ÄÜÒÑµ÷ÓÃ.</p>
+<p>ËöËéµÄÓÅ»¯ºÍ´úÂëÎ¬»¤.</p>
 
-<h2 id="v1.1.20.01">1.1.20.01 - 2015å¹´3æœˆ10æ—¥</h2>
-<p>ç”±äºåœ¨çº¿ç¨‹ä¸­æ–­ä¸­çš„ä¿å­˜å’Œæ¢å¤ErrorLevelä¸Šæ„æƒ³ä¸åˆ°çš„åæœï¼Œæ¢å¤v1.1.20.00æ‰€åšçš„æ›´æ”¹.</p>
+<h2 id="v1.1.20.01">1.1.20.01 - 2015Äê3ÔÂ10ÈÕ</h2>
+<p>ÓÉÓÚÔÚÏß³ÌÖĞ¶ÏÖĞµÄ±£´æºÍ»Ö¸´ErrorLevelÉÏÒâÏë²»µ½µÄºó¹û,»Ö¸´v1.1.20.00Ëù×öµÄ¸ü¸Ä.</p>
 <ul>
-  <li>ErrorLevelåœ¨æ–°çº¿ç¨‹å¼€å§‹æ—¶ä¸ä¼šé‡ç½®æˆ–æ¸…é™¤, åè€Œ,å®ƒä¿ç•™äº†åœ¨ä¸­æ–­çº¿ç¨‹çš„å€¼ï¼Œå°±åƒv1.1.19åŠæ—©æœŸç‰ˆæœ¬.</li>
-  <li>å¦‚æœErrorLevelåŒ…å«ä¸€ä¸ªå¯¹è±¡å¹¶ä¸”çº¿ç¨‹è¢«ä¸­æ–­,çº¿ç¨‹ç»§ç»­æ—¶å¯¹è±¡æ›¿æ¢ä¸ºç©ºå­—ç¬¦ä¸²,å°±åƒv1.1.19åŠæ—©æœŸç‰ˆæœ¬.</li>
-  <li>å½“çº¿ç¨‹ç»§ç»­æ—¶,å¦‚æœErrorLevelåŒ…å«ä¸€ä¸ªå­—ç¬¦ä¸²çš„é•¿åº¦è¶…è¿‡127ä¸ªå­—ç¬¦ï¼Œå®ƒä¼šè¢«æˆªæ–­ï¼Œå°±åƒv1.1.19åŠæ—©æœŸç‰ˆæœ¬.</li>
+  <li>ErrorLevelÔÚĞÂÏß³Ì¿ªÊ¼Ê±²»»áÖØÖÃ»òÇå³ı, ·´¶ø,Ëü±£ÁôÁËÔÚÖĞ¶ÏÏß³ÌµÄÖµ,¾ÍÏñv1.1.19¼°ÔçÆÚ°æ±¾.</li>
+  <li>Èç¹ûErrorLevel°üº¬Ò»¸ö¶ÔÏó²¢ÇÒÏß³Ì±»ÖĞ¶Ï,Ïß³Ì¼ÌĞøÊ±¶ÔÏóÌæ»»Îª¿Õ×Ö·û´®,¾ÍÏñv1.1.19¼°ÔçÆÚ°æ±¾.</li>
+  <li>µ±Ïß³Ì¼ÌĞøÊ±,Èç¹ûErrorLevel°üº¬Ò»¸ö×Ö·û´®µÄ³¤¶È³¬¹ı127¸ö×Ö·û,Ëü»á±»½Ø¶Ï,¾ÍÏñv1.1.19¼°ÔçÆÚ°æ±¾.</li>
 </ul>
-<p>ä¿®æ­£å®šæ—¶å™¨æœ‰æ—¶ä¼šå¯¼è‡´ErrorLevelä¼šè¢«æ ¼å¼åŒ–æˆåå…­è¿›åˆ¶å€¼.</p>
-<p>ä¿®æ­£ç±»æ–¹æ³•ä¿ç•™ç±»çš„è®¡æ•°å¼•ç”¨.</p>
+<p>ĞŞÕı¶¨Ê±Æ÷ÓĞÊ±»áµ¼ÖÂErrorLevel»á±»¸ñÊ½»¯³ÉÊ®Áù½øÖÆÖµ.</p>
+<p>ĞŞÕıÀà·½·¨±£ÁôÀàµÄ¼ÆÊıÒıÓÃ.</p>
 
-<h2 id="v1.1.20.00">1.1.20.00 - 2015å¹´3æœˆ8æ—¥</h2>
+<h2 id="v1.1.20.00">1.1.20.00 - 2015Äê3ÔÂ8ÈÕ</h2>
 <h4>New features:</h4>
-<p>å¢å¼ºHotkey, Menu, SetTimer, Gui events å’Œ Gui control eventsæ¥å—<a href="misc/Labels.htm#Functions">å‡½æ•°æ›¿æ¢æ ‡ç­¾</a>, å¦‚æœæ²¡æœ‰æ‰¾åˆ°æ ‡ç­¾.</p>
-<p>å¢å¼ºHotkey, Menu, SetTimer and Gui control eventsæ¥å—<a href="objects/Functor.htm">Funcå¯¹è±¡</a>.æ·»åŠ ä¸€ä¸ªåˆ é™¤å­å‘½ä»¤æ¥è®©settimeré‡Šæ”¾å¯¹è±¡.</p>
-<p>å¢å¼º<a href="commands/OnMessage.htm">OnMessage()</a>å…è®¸ä»»æ„æ•°é‡çš„å‡½æ•°æˆ–å‡½æ•°å¯¹è±¡æ¥ç›‘æ§å•ä¸ªæ¶ˆæ¯.</p>
-<p>æ·»åŠ <a href="commands/OnExit.htm">OnExit()</a>å’Œ<a href="commands/OnClipboardChange.htm">OnClipboardChange()</a>æ¥å—å‡½æ•°åæˆ–å¯¹è±¡.</p>
-<p>æ·»åŠ <a href="Hotkeys.htm#Function">çƒ­é”®æ ‡ç­¾æŒ‡å‘å‡½æ•°</a>çš„åŠŸèƒ½.</p>
-<p>æ·»åŠ <a href="commands/Format.htm#ULT">U/L/Tä¿®é¥°è¯­</a>æ‰§è¡ŒFormat()çš„æƒ…å†µè½¬æ¢.</p>
-<p>æ·»åŠ Inputçš„<a href="commands/Input.htm#E">Eé€‰é¡¹</a>, ä»è€Œå¤„ç†å•ä¸ªå­—ç¬¦çš„å­—ç¬¦ä»£ç ç»“æŸé”®è€Œä¸æ˜¯é€šè¿‡é”®ç .</p>
-<p>æ·»åŠ FileAppendçš„** (stderr)æ”¯æŒ.</p>
-<p>æ·»åŠ <a href="commands/ObjBindMethod.htm">ObjBindMethod(obj, method, args*)</a>å’Œ<a href="objects/Func.htm#Bind">Func.Bind(args*)</a>.</p>
+<p>ÔöÇ¿Hotkey, Menu, SetTimer, Gui events ºÍ Gui control events½ÓÊÜ<a href="misc/Labels.htm#Functions">º¯ÊıÌæ»»±êÇ©</a>, Èç¹ûÃ»ÓĞÕÒµ½±êÇ©.</p>
+<p>ÔöÇ¿Hotkey, Menu, SetTimer and Gui control events½ÓÊÜ<a href="objects/Functor.htm">Func¶ÔÏó</a>.Ìí¼ÓÒ»¸öÉ¾³ı×ÓÃüÁîÀ´ÈÃsettimerÊÍ·Å¶ÔÏó.</p>
+<p>ÔöÇ¿<a href="commands/OnMessage.htm">OnMessage()</a>ÔÊĞíÈÎÒâÊıÁ¿µÄº¯Êı»òº¯Êı¶ÔÏóÀ´¼à¿Øµ¥¸öÏûÏ¢.</p>
+<p>Ìí¼Ó<a href="commands/OnExit.htm">OnExit()</a>ºÍ<a href="commands/OnClipboardChange.htm">OnClipboardChange()</a>½ÓÊÜº¯ÊıÃû»ò¶ÔÏó.</p>
+<p>Ìí¼Ó<a href="Hotkeys.htm#Function">ÈÈ¼ü±êÇ©Ö¸Ïòº¯Êı</a>µÄ¹¦ÄÜ.</p>
+<p>Ìí¼Ó<a href="commands/Format.htm#ULT">U/L/TĞŞÊÎÓï</a>Ö´ĞĞFormat()µÄÇé¿ö×ª»».</p>
+<p>Ìí¼ÓInputµÄ<a href="commands/Input.htm#E">EÑ¡Ïî</a>, ´Ó¶ø´¦Àíµ¥¸ö×Ö·ûµÄ×Ö·û´úÂë½áÊø¼ü¶ø²»ÊÇÍ¨¹ı¼üÂë.</p>
+<p>Ìí¼ÓFileAppendµÄ** (stderr)Ö§³Ö.</p>
+<p>Ìí¼Ó<a href="commands/ObjBindMethod.htm">ObjBindMethod(obj, method, args*)</a>ºÍ<a href="objects/Func.htm#Bind">Func.Bind(args*)</a>.</p>
 
-<h4>å˜æ›´:</h4>
-<p>æ”¹å˜é»˜è®¤è¡¨ç°å½“ä¸»è„šæœ¬æœªæ‰¾åˆ°æ—¶:</p>
+<h4>±ä¸ü:</h4>
+<p>¸Ä±äÄ¬ÈÏ±íÏÖµ±Ö÷½Å±¾Î´ÕÒµ½Ê±:</p>
 <ul>
-  <li>å¦‚æœæ²¡æœ‰æŒ‡å®šè„šæœ¬å’Œæœªæ‰¾åˆ°é»˜è®¤è„šæœ¬æ–‡ä»¶ï¼Œåˆ™åœ¨æ˜¾ç¤ºå¸®åŠ©æ–‡ä»¶çš„æ¬¢è¿é¡µ.</li>
-  <li>å¦‚æœä¸€ä¸ªè„šæœ¬è¢«æŒ‡å®šæˆ–å¸®åŠ©æ–‡ä»¶ä¸¢å¤±ï¼ˆæˆ–è¢«é‡å‘½åï¼‰ï¼Œåªæ˜¾ç¤ºä¸€ä¸ªé”™è¯¯ä¿¡æ¯.</li>
+  <li>Èç¹ûÃ»ÓĞÖ¸¶¨½Å±¾ºÍÎ´ÕÒµ½Ä¬ÈÏ½Å±¾ÎÄ¼ş,ÔòÔÚÏÔÊ¾°ïÖúÎÄ¼şµÄ»¶Ó­Ò³.</li>
+  <li>Èç¹ûÒ»¸ö½Å±¾±»Ö¸¶¨»ò°ïÖúÎÄ¼ş¶ªÊ§(»ò±»ÖØÃüÃû),Ö»ÏÔÊ¾Ò»¸ö´íÎóĞÅÏ¢.</li>
 </ul>
-<p>å˜æ›´WinActivateæ¥è¿˜åŸå·²ç»æ¿€æ´»ä¸”æœ€å°åŒ–çš„çª—å£.</p>
-<p>å˜æ›´WinActivateæ¥å¯»æ‰¾ä¸€ä¸ªå¯è§çª—å£å¹¶æ¿€æ´»å½“DetectHiddenWindowså…³é—­ä¸”æ¿€æ´»çª—å£æ˜¯éšè—çš„æ—¶å€™,è€Œä¸æ˜¯ä»€ä¹ˆäº‹éƒ½ä¸åš.</p>
-<p>å˜æ›´A_CaretX/A_CaretYçš„è·å–æ–¹æ³•.</p>
+<p>±ä¸üWinActivateÀ´»¹Ô­ÒÑ¾­¼¤»îÇÒ×îĞ¡»¯µÄ´°¿Ú.</p>
+<p>±ä¸üWinActivateÀ´Ñ°ÕÒÒ»¸ö¿É¼û´°¿Ú²¢¼¤»îµ±DetectHiddenWindows¹Ø±ÕÇÒ¼¤»î´°¿ÚÊÇÒş²ØµÄÊ±ºò,¶ø²»ÊÇÊ²Ã´ÊÂ¶¼²»×ö.</p>
+<p>±ä¸üA_CaretX/A_CaretYµÄ»ñÈ¡·½·¨.</p>
 <ul>
-  <li>åœ¨æ›´å¤šçš„æƒ…å†µä¸‹çœŸæ­£çš„æ’å…¥ä½ç½®ä¸èƒ½ç¡®å®šæ—¶è¿”å›ç©ºç™½ï¼Œè€Œä¸æ˜¯è¿”å›æ´»åŠ¨çª—å£çš„å·¦ä¸Šè§’.</li>
-  <li>ä¸å¤ªå¯èƒ½äº§ç”Ÿå‰¯ä½œç”¨.</li>
-  <li>åœ¨consoleçª—å£ä¸­ç”Ÿæ•ˆ.</li>  
+  <li>ÔÚ¸ü¶àµÄÇé¿öÏÂÕæÕıµÄ²åÈëÎ»ÖÃ²»ÄÜÈ·¶¨Ê±·µ»Ø¿Õ°×,¶ø²»ÊÇ·µ»Ø»î¶¯´°¿ÚµÄ×óÉÏ½Ç.</li>
+  <li>²»Ì«¿ÉÄÜ²úÉú¸±×÷ÓÃ.</li>
+  <li>ÔÚconsole´°¿ÚÖĞÉúĞ§.</li>  
 </ul>
-<p>å˜æ›´A_OSVersionä½¿ç”¨<a href="http://msdn.microsoft.com/en-us/library/ff561910">RtlGetVersion()</a>,æ¥è·å–win10åŠæœªæ¥ç‰ˆæœ¬.</p>
-<p>å˜æ›´A_OSVersionè¿”å›"major.minor.build"æ ¼å¼å¦‚æœç³»ç»Ÿæ²¡æœ‰åå­—.</p>
-<p>å˜æ›´å¯¹è±¡æ¥æ”¯æŒ<code>x[,y]</code>, <code>x.y[,z]</code> and <code>x[](y)</code>.</p>
+<p>±ä¸üA_OSVersionÊ¹ÓÃ<a href="http://msdn.microsoft.com/en-us/library/ff561910">RtlGetVersion()</a>,À´»ñÈ¡win10¼°Î´À´°æ±¾.</p>
+<p>±ä¸üA_OSVersion·µ»Ø"major.minor.build"¸ñÊ½Èç¹ûÏµÍ³Ã»ÓĞÃû×Ö.</p>
+<p>±ä¸ü¶ÔÏóÀ´Ö§³Ö<code>x[,y]</code>, <code>x.y[,z]</code> and <code>x[](y)</code>.</p>
 <ul>
-  <li>ç”¨æˆ·è‡ªå®šä¹‰å¯¹è±¡å¯ä»¥åˆ©ç”¨thisæ¥æŒ‡å®šå±æ€§å’Œå…ƒå‡½æ•°çš„å‚æ•°çš„é»˜è®¤å€¼.  åœ¨__Callä¸­, ç¬¬ä¸€ä¸ªå‚æ•°è¢«çœç•¥äº†,å¦‚<code>x.__Call(,y)</code>.</li>
-  <li>COMå¯¹è±¡è°ƒç”¨ DISPID_VALUEå¦‚æœæˆå‘˜åç•¥. ä¾‹å¦‚, <code>x[]</code> æ£€ç´¢xçš„é»˜è®¤å±æ€§å¹¶ä¸”<code>fn[]()</code>å¯ä»¥ç”¨æ¥è°ƒç”¨JScriptå‡½æ•°.</li>
+  <li>ÓÃ»§×Ô¶¨Òå¶ÔÏó¿ÉÒÔÀûÓÃthisÀ´Ö¸¶¨ÊôĞÔºÍÔªº¯ÊıµÄ²ÎÊıµÄÄ¬ÈÏÖµ.  ÔÚ__CallÖĞ, µÚÒ»¸ö²ÎÊı±»Ê¡ÂÔÁË,Èç<code>x.__Call(,y)</code>.</li>
+  <li>COM¶ÔÏóµ÷ÓÃ DISPID_VALUEÈç¹û³ÉÔ±ÃûÂÔ. ÀıÈç, <code>x[]</code> ¼ìË÷xµÄÄ¬ÈÏÊôĞÔ²¢ÇÒ<code>fn[]()</code>¿ÉÒÔÓÃÀ´µ÷ÓÃJScriptº¯Êı.</li>
 </ul>
-<p>ä¸€äº›åº•å±‚çš„ä¿®æ”¹æ¥ä¿®æ­£bugï¼Œå‡å°‘ä»£ç å¤§å°æˆ–è€…æé«˜æ€§èƒ½,åŒ…æ‹¬:</p>
+<p>Ò»Ğ©µ×²ãµÄĞŞ¸ÄÀ´ĞŞÕıbug,¼õÉÙ´úÂë´óĞ¡»òÕßÌá¸ßĞÔÄÜ,°üÀ¨:</p>
 <ul>
-  <li>å˜æ›´#ifå’Œé™æ€å˜é‡åˆå§‹åŒ–çš„å‡†å¤‡.</li>
-  <li>å˜æ›´{ åŒºå— }çš„å‡†å¤‡.</li>
-</ul>
-
-<h4>é”™è¯¯ä¿®æ­£:</h4>
-<p>ä¿®æ­£VKåˆ°é”®åçš„è½¬æ¢æ¥éµå¾ªA-Zçš„å¸ƒå±€.</p>
-<ul>
-  <li>é€‚ç”¨äºGetKeyName, Hotkeyæ§ä»¶, A_PriorKey, KeyHistoryå’ŒInputçš„EndKey ErrorLevel (é™¤å¿…éœ€çš„Shifté”®).</li>
-  <li>æ‰€æœ‰å…¶ä»–é”®åŒ…æ‹¬éASCIIå­—ç¬¦ä¼šè¢«è½¬æ¢æˆAutohotkeyçš„å½“å‰é”®ç›˜å¸ƒå±€.</li>
-</ul>
-<p>ä¿®æ­£FileAppendçš„* (stdout) éµå¾ªç¼–ç å‚æ•°è€Œä¸æ˜¯ANSIæ–‡æœ¬.</p>
-<p>ä¿®æ­£è‡ªé€‚åº”å¤§å°GUIåªæœ‰ä¸€ä¸ªæ»šåŠ¨æ¡çš„æƒ…å†µ.</p>
-<p>ä¿®æ­£<code>Exception(m, n)</code> å½“nå¤ªå¤§æ—¶å´©æºƒçš„æƒ…å†µ.</p>
-<p>ä¿®æ­£GuiContextMenuåœ¨x64å¹³å°ä¸Šæ­£ç¡®è®¾ç½®A_GuiEvent.</p>
-<p>ä¿®æ­£å¦‚æœæ–‡ä»¶ä¸å­˜åœ¨æˆ–æ— æ³•æ‰“å¼€ï¼ŒFileGetSizeæœ‰æ—¶ä¼šç»™å‡ºä¸€ä¸ªä¸ç¡®å®šçš„ç»“æœ.</p>
-<p>ä¿®æ­£çº¿ç¨‹ä¸­æ–­æ—¶æ›´å®Œå…¨åœ°ä¿å­˜å’Œæ¢å¤ErrorLevel[ç”±äºæ„æƒ³ä¸åˆ°çš„ç»“æœåœ¨v1.1.20.01ç‰ˆæœ¬æ¢å¤].</p>
-<p>ä¿®æ­£ControlClickåæ ‡æ¨¡å¼å¿½ç•¥è¢«ç¦ç”¨çš„æ§ä»¶.</p>
-<p>ä¿®æ­£å½“Gui +MaxSizeçš„çª—å£å°ºå¯¸å°äº+MinSizeçš„å¥‡æ€ªçŠ¶å†µ.</p>
-<p>ä¿®æ­£GuiControl/Getä¼ å…¥GUIçš„HWNDè€Œéœ€è¦GUIåçš„æƒ…å†µ.</p>
-<p>ä¿®æ­£å…ƒå‡½æ•°å¹²æ‰°Exception()æ‰€æŠ¥å‘Šçš„è¡Œå·çš„é—®é¢˜.</p>
-
-<h2 id="v1.1.19.03">1.1.19.03 - 2015å¹´2æœˆ11æ—¥</h2>
-<p>æ”¹è¿›æŒ‰é”®æ˜ å°„æ¥æ”¯æŒ<code>scXXX::Y</code> å½“å½“å‰é”®ç›˜å¸ƒå±€ä¸æ˜ å°„<code>scXXX</code>è‡³VKç . å½“ç„¶, <code>Y</code> å¿…é¡»å­˜åœ¨åœ¨å½“å‰é”®ç›˜å¸ƒå±€.</p>
-<p>ä¿®æ­£<code>break n</code> è¿è½¬æ­£å¸¸å½“å½“å‰æ˜¯<code>until</code>çš„æƒ…å†µï¼Œè€Œä¸æ˜¯ç»ˆæ­¢çº¿ç¨‹.</p>
-<p>ä¿®æ­£ControlGetFocusç ´åç”¨æˆ·åŒå‡»çš„èƒ½åŠ›(thanks HotKeyIt).</p>
-<p>ä¿®æ­£ListViewä¸è°ƒç”¨gæ ‡ç­¾å½“æ¶ˆæ¯äº‹ä»¶æ˜¯ä¸æ”¯æŒæˆ–æœªçŸ¥çš„æƒ…å†µï¼Œä¾‹å¦‚LVN_GETEMPTYMARKUP.</p>
-<p>ä¿®æ­£<code>#Include *i &lt;X&gt;</code>å½“Xè¯­æ³•é”™è¯¯æ—¶é€€å‡ºç¨‹åº.</p>
-<p>ä¿®æ­£<code>for var in <i>expression</i></code> æœ‰æ—¶ç¨‹åºå´©æºƒå½“<i>expression</i> è°ƒç”¨ä¸€ä¸ªè„šæœ¬å‡½æ•°æ—¶.</p>
-
-<h2 id="v1.1.19.02">1.1.19.02 - 2015å¹´1æœˆ25æ—¥</h2>
-<p>ç§»é™¤Win9x/Win2kä¸Šçš„16è‰²å›¾æ ‡æ”¯æŒ.</p>
-<p>ç§»é™¤å•ç‹¬çš„æ‰˜ç›˜å›¾æ ‡èµ„æº.</p>
-<p>æ”¹è¿›é€‰æ‹©DLL/EXEæ–‡ä»¶å›¾æ ‡å°ºå¯¸çš„åŠŸèƒ½.</p>
-<ul><li>æ€»ä¹‹ï¼Œå®æ„¿é™ä½å°ºå¯¸è€Œä¸æ˜¯é«˜æ¡£ã€‚è¿™åœ¨125%æˆ–150% DPIç³»ç»Ÿç‰¹åˆ«æœ‰å¸®åŠ©.åœ¨ç³»ç»Ÿå›¾æ ‡çš„å°ºå¯¸æ˜¯20 / 40æˆ–24 / 48ï¼Œè€Œä¸æ˜¯16 / 32ã€‚å¦‚æœæ‰€æœ‰è¿™äº›å¤§å°éƒ½å­˜åœ¨äºå›¾æ ‡èµ„æºä¸­ï¼Œè¿™ç§å˜åŒ–å°±æ²¡æœ‰ä»€ä¹ˆåŒºåˆ«ã€‚</li></ul>
-<p>ä¿®æ­£çƒ­é”®åœ¨åŠ è½½æ—¶éªŒè¯å‡ºé”™çš„æƒ…å†µ.</p>
-<ul>
-	<li>çƒ­é”®æ°¸è¿œéƒ½ä¸å¯ç”¨æ—¶ï¼Œä¾‹å¦‚foo::ï¼Œç°åœ¨ä¼šè§†ä¸ºé”™è¯¯è€Œä¸æ˜¯è­¦å‘Šä¿¡æ¯.</li>
-	<li>åƒ^!&auml;::è¿™æ ·çš„çƒ­é”®æ˜¯æ— æ•ˆçš„å› ä¸ºå½“å‰é”®ç›˜å¸ƒå±€å¯ä»¥æœ‰ç›¸åŒçš„åŠ¨ä½œ, å¹¶ä¸”æ ‡ç­¾è¢«æ­£ç¡®æ³¨å†Œ(ä¾‹å¦‚"^!&auml;"è€Œä¸æ˜¯"^!&auml;:"). å¦‚æœ/ILIBå‘½ä»¤è¡Œå¼€å…³ä½¿ç”¨ï¼Œè­¦å‘Šè¢«æŠ‘åˆ¶.</li>
-	<li>é‡æ˜ å°„æ˜¯æ— æ•ˆçš„å› ä¸ºå½“å‰é”®ç›˜å¸ƒå±€æ˜¾ç¤ºä¸¤ä¸ªè­¦å‘Šè€Œä¸æ˜¯ä¸å¯æ¢å¤çš„é”™è¯¯.</li>
-	<li>å½“æ»šè½®é”®è¢«ä½œä¸ºå‰ç¼€é”®ï¼Œåªæœ‰ä¸€ä¸ªé”™è¯¯æ¶ˆæ¯è€Œä¸æ˜¯ä¸¤ä¸ªï¼Œè¿™éµå¾ª/ErrorStdOut.</li>
-</ul>
-<p>ä¿®æ­£/iLibå¼€å…³å†™å…¥æ–‡ä»¶å³ä½¿è¯­æ³•å‡ºé”™.</p>
-<p>ä¿®æ­£return/break/continue/è·‘åˆ°try..<a href="commands/Finally.htm">finally</a>.</p>
-
-<h2 id="v1.1.19.01">1.1.19.01 - 2015å¹´1æœˆ5æ—¥</h2>
-<p>Fixed Hotkey command crashing the program when trying to create new variants of existing hotkeys (broken by v1.1.19.00).</p>
-<p>Made some minor optimizations to the Hotkey command and A_TimeIdle, relating to removal of Win9x support.</p>
-
-<h2 id="v1.1.19.00">1.1.19.00 - 2015å¹´1æœˆ4æ—¥</h2>
-<p>ä¸º<code>Func.Call()</code>å¢åŠ äº†ä¸€ä¸ªåå­—. <code>Func.()</code> ä»»ç„¶å·¥ä½œä½†å·²åºŸå¼ƒ.</p>
-<p>ä¿®æ­£ä¸€äº›é”™è¯¯å½“<code>X.Y</code>å’Œ<code>X.Y(Z)</code> åœ¨VBScript/JScript/C#:</p>
-<ul>
-  <li>å¦‚æœ<code>X.__Call</code> åŒ…å«ä¸€ä¸ªå‡½æ•°<em>name</em>, ä¼šè¢«è¿”å›è€Œä¸æ˜¯è°ƒç”¨.</li>
-  <li>å½“<code>X.Y(Z)</code>è¿”å›ä¸€ä¸ªå€¼, Zè¢«å¿½ç•¥. å®ƒå®ç°åƒ<code>X.Y[Z]</code>å½“X.Yä¸æ˜¯å‡½æ•°.</li>
-</ul>
-<p>ä¿®æ­£çƒ­é”®å‘½ä»¤å¿½ç•¥~å‰ç¼€å½“<em>æ ‡ç­¾</em>è¢«çœç•¥.</p>
-<p>ä¿®æ­£çƒ­é”®å‘½ä»¤å¿½ç•¥$ç­¾æ³¨å¦‚æœçƒ­é”®å˜ç§å·²ç»åˆ›å»ºä½†æ²¡æœ‰ä½¿ç”¨$</p>
-<p>ä¿®æ­£<code>%Fn%()</code>è¯­æ³•å·¥ä½œäºJavaScriptå‡½æ•°å¯¹è±¡.</p>
-<p>ä¿®æ­£EXEçš„manifestæ¥ç¦ç”¨UACæ£€æµ‹ç®—æ³• (broken by v1.1.17).</p>
-<p>æ”¹è¿›äº†çº¿ç¨‹åœ¨è°ƒè¯•å™¨çš„è°ƒç”¨å †æ ˆä¸Šçš„è¡¨ç°.</p>
-<ul>
-  <li>çº¿ç¨‹çš„ç±»å‹è¢«ç°å®è€Œä¸æ˜¯æ ‡ç­¾å,è¿™åœ¨ä¸‹ä¸€ä¸ªå †æ ˆå…¥å£ä»»ç„¶æœ‰æ•ˆ,çƒ­é”®,hotkeyæ˜¾ç¤ºç›¸å.</li>
-  <li>å­çº¿ç¨‹æˆ–è€…å‡½æ•°è¢«è°ƒç”¨åçš„è¡Œå·è¢«æ˜¾ç¤ºè€Œä¸æ˜¯å¼€å§‹ä¹‹å‰çš„è¡Œå·.</li>
+  <li>±ä¸ü#ifºÍ¾²Ì¬±äÁ¿³õÊ¼»¯µÄ×¼±¸.</li>
+  <li>±ä¸ü{ Çø¿é }µÄ×¼±¸.</li>
 </ul>
 
-<h2 id="v1.1.18.00">1.1.18.00 - 2014å¹´12æœˆ30æ—¥</h2>
-<p>æ”¹è¿›Autohotkeyå¯¹è±¡çš„IDispatchå®ç°:</p>
+<h4>´íÎóĞŞÕı:</h4>
+<p>ĞŞÕıVKµ½¼üÃûµÄ×ª»»À´×ñÑ­A-ZµÄ²¼¾Ö.</p>
 <ul>
-  <li><code>X.Y</code>åœ¨VBScriptå’ŒC#ä¸­è¿”å›X.Yå¦‚æœå®ƒä¸æ˜¯å‡½æ•°å¯¹è±¡; ä»¥å‰åˆ™å°è¯•è°ƒç”¨X.Y()è€Œä¸ç®¡ç±»å‹.</li>
-  <li><code>X(Y)</code>åœ¨VBScript, JScriptå’ŒC#ä¸­è¿”å›X[Y]é™¤éXæ˜¯å‡½æ•°å¯¹è±¡,åœ¨è¿™ç§æƒ…å†µä¸‹å®ƒè¢«è°ƒç”¨å¦‚å‰.</li>
-  <li><code>X[Y]</code>åœ¨C# è¿”å›X[Y]å¦‚æœXä¸æ˜¯å‡½æ•°å¯¹è±¡;ä»¥å‰åˆ™å°è¯•è°ƒç”¨X.[Y]()è€Œä¸ç®¡ç±»å‹.</li>
-  <li><code>X.Y()</code>åœ¨C#ä¸­è¿”å›X.Yå¦‚æœå®ƒä¸æ˜¯å‡½æ•°å¯¹è±¡,ä¸ºäº†C#çš„æ­§ä¹‰æƒ…å†µ.</li>
-  <li>æœªå¤„ç†çš„å¼‚å¸¸éƒ½è½¬æ¢ä¸ºIDispatchå¼‚å¸¸.</li>
+  <li>ÊÊÓÃÓÚGetKeyName, Hotkey¿Ø¼ş, A_PriorKey, KeyHistoryºÍInputµÄEndKey ErrorLevel (³ı±ØĞèµÄShift¼ü).</li>
+  <li>ËùÓĞÆäËû¼ü°üÀ¨·ÇASCII×Ö·û»á±»×ª»»³ÉAutohotkeyµÄµ±Ç°¼üÅÌ²¼¾Ö.</li>
 </ul>
-<p>æ·»åŠ åˆ›å»ºJavaScript/IE DOMå¯¹è±¡çš„æ–°ç‰¹æ€§çš„æ”¯æŒ.</p>
-<p>ä¿®æ­£<code>FileAppend, %VarContainingClipboardAll%, File</code>å¯¼è‡´çš„å´©æºƒé—®é¢˜.</p>
+<p>ĞŞÕıFileAppendµÄ* (stdout) ×ñÑ­±àÂë²ÎÊı¶ø²»ÊÇANSIÎÄ±¾.</p>
+<p>ĞŞÕı×ÔÊÊÓ¦´óĞ¡GUIÖ»ÓĞÒ»¸ö¹ö¶¯ÌõµÄÇé¿ö.</p>
+<p>ĞŞÕı<code>Exception(m, n)</code> µ±nÌ«´óÊ±±ÀÀ£µÄÇé¿ö.</p>
+<p>ĞŞÕıGuiContextMenuÔÚx64Æ½Ì¨ÉÏÕıÈ·ÉèÖÃA_GuiEvent.</p>
+<p>ĞŞÕıÈç¹ûÎÄ¼ş²»´æÔÚ»òÎŞ·¨´ò¿ª,FileGetSizeÓĞÊ±»á¸ø³öÒ»¸ö²»È·¶¨µÄ½á¹û.</p>
+<p>ĞŞÕıÏß³ÌÖĞ¶ÏÊ±¸üÍêÈ«µØ±£´æºÍ»Ö¸´ErrorLevel[ÓÉÓÚÒâÏë²»µ½µÄ½á¹ûÔÚv1.1.20.01°æ±¾»Ö¸´].</p>
+<p>ĞŞÕıControlClick×ø±êÄ£Ê½ºöÂÔ±»½ûÓÃµÄ¿Ø¼ş.</p>
+<p>ĞŞÕıµ±Gui +MaxSizeµÄ´°¿Ú³ß´çĞ¡ÓÚ+MinSizeµÄÆæ¹Ö×´¿ö.</p>
+<p>ĞŞÕıGuiControl/Get´«ÈëGUIµÄHWND¶øĞèÒªGUIÃûµÄÇé¿ö.</p>
+<p>ĞŞÕıÔªº¯Êı¸ÉÈÅException()Ëù±¨¸æµÄĞĞºÅµÄÎÊÌâ.</p>
 
-<h2 id="v1.1.17.01">1.1.17.01 - 2014å¹´12æœˆ28æ—¥</h2>
-<p>ä¿®æ­£COMäº‹ä»¶å¥æŸ„æ²¡æœ‰æ”¶åˆ°æœ€åçš„å¯¹è±¡å‚æ•°.</p>
+<h2 id="v1.1.19.03">1.1.19.03 - 2015Äê2ÔÂ11ÈÕ</h2>
+<p>¸Ä½ø°´¼üÓ³ÉäÀ´Ö§³Ö<code>scXXX::Y</code> µ±µ±Ç°¼üÅÌ²¼¾Ö²»Ó³Éä<code>scXXX</code>ÖÁVKÂë. µ±È», <code>Y</code> ±ØĞë´æÔÚÔÚµ±Ç°¼üÅÌ²¼¾Ö.</p>
+<p>ĞŞÕı<code>break n</code> ÔË×ªÕı³£µ±µ±Ç°ÊÇ<code>until</code>µÄÇé¿ö,¶ø²»ÊÇÖÕÖ¹Ïß³Ì.</p>
+<p>ĞŞÕıControlGetFocusÆÆ»µÓÃ»§Ë«»÷µÄÄÜÁ¦(thanks HotKeyIt).</p>
+<p>ĞŞÕıListView²»µ÷ÓÃg±êÇ©µ±ÏûÏ¢ÊÂ¼şÊÇ²»Ö§³Ö»òÎ´ÖªµÄÇé¿ö,ÀıÈçLVN_GETEMPTYMARKUP.</p>
+<p>ĞŞÕı<code>#Include *i &lt;X&gt;</code>µ±XÓï·¨´íÎóÊ±ÍË³ö³ÌĞò.</p>
+<p>ĞŞÕı<code>for var in <i>expression</i></code> ÓĞÊ±³ÌĞò±ÀÀ£µ±<i>expression</i> µ÷ÓÃÒ»¸ö½Å±¾º¯ÊıÊ±.</p>
 
-<h2 id="v1.1.17.00">1.1.17.00 - 2014å¹´12æœˆ27æ—¥</h2>
-<h4>æ–°ç‰¹æ€§:</h4>
-<p>æ·»åŠ <a href="commands/Format.htm">Format()</a>.</p>
-<p><a href="commands/FileOpen.htm">FileOpen()</a>ç°åœ¨å¯ä»¥è¯»å–stdinæˆ–è€…å†™å…¥stoutæˆ–sterré€šè¿‡<code>"*"</code>æˆ–è€…<code>"**"</code> ä½œä¸ºæ–‡ä»¶å. <code>AutoHotkey.exe *</code> å¯ä»¥ç”¨æ¥ä»å¦ä¸€ä¸ªçº¿ç¨‹æ‰§è¡Œç¨‹åºç®¡é“è€Œä¸æ˜¯è¯»å–æ–‡ä»¶. ä¾‹å­æŸ¥çœ‹<a href="commands/Run.htm#ExecScript">ExecScript()</a>.</p>
-<p>æ·»åŠ é€šè¿‡ä¼ é€’Autohotkeyå¯¹è±¡è‡³COM APIæ¥å®ç°IDispatch.</p>
-<p>æ·»åŠ ComObjectåŒ…è£…çš„VT_BYREFæ”¯æŒ.ä½¿ç”¨<code>obj[]</code>æ¥è®¿é—®å‚è€ƒå€¼.</p>
-<h4>é”™è¯¯ä¿®å¤:</h4>
-<p>ä¿®æ­£åœ¨XP SP2ä¸Šçš„è“å±.</p>
-<p>ä¿®æ­£ComObjArrayè¿”å›å€¼,è€Œä¸æ˜¯æŒ‡é’ˆ. ä¹Ÿå°±æ˜¯è¯´ï¼Œè¿”å›çš„æ•°ç»„çš„å‰¯æœ¬ï¼Œè€Œä¸æ˜¯æŒ‡å‘ä¸€ä¸ªæ•°ç»„çš„æŒ‡é’ˆï¼Œè¯¥æ•°ç»„å°†è¢«åˆ é™¤.</p>
-<p>ä¿®æ­£ç¬¬ä¸€æ¬¡è¿è¡Œåœ¨ç”Ÿæˆçš„ç¤ºä¾‹è„šæœ¬ä¸­çš„URL.</p>
-<p>ä¿®æ­£<code>sc15D</code>æ˜ å°„åˆ°<code>vk5D</code>/AppsKey (Send, GetKeyNameç­‰ç­‰).</p>
-<p>ä¿®æ­£Editæ§ä»¶ä¸æ¥å—AltGr+Aä½œä¸ºCtrl+A.</p>
-<p>ä¿®æ­£é™æ€ç±»å˜é‡ä¸ä½œä¸ºä¸€ä¸ªæ ‡ç­¾çš„ç›®æ ‡ï¼Œè¯¥æ ‡ç­¾ç«‹å³ä¼˜å…ˆäºç±».</p>
-
-<h2 id="v1.1.16.05">1.1.16.05 - 2014å¹´9æœˆ28æ—¥</h2>
-<p>ä¿®æ­£x.y/[]/{}æœ‰æ—¶é”™è¯¯åœ°è¢«æ ‡è®°ä¸ºvariadic</p>
-
-<h2 id="v1.1.16.04">1.1.16.04 - 2014å¹´9æœˆ16æ—¥</h2>
-<p>ä¿®æ­£è¦†ç›–æ—¶åªè¯»å±æ€§äº§ç”Ÿçš„å´©æºƒ.</p>
-<p>ä¿®æ­£å½“RegExMatchå¯¹è±¡æ˜¯æœªæ•è·çš„å­è¡¨è¾¾å¼çš„å´©æºƒæƒ…å†µ.</p>
-
-<h2 id="v1.1.16.03">1.1.16.03 - 2014å¹´9æœˆ11æ—¥</h2>
-<p>ä¿®æ­£Abs()å’ŒMod()</p>
-
-<h2 id="v1.1.16.02">1.1.16.02 - 2014å¹´9æœˆ11æ—¥</h2>
-<p>ä¿®å¤æ”¯æŒåœ¨ç±»ä¸­ä½¿ç”¨#include (broken by a6ea27f).</p>
-<p>ä¿®æ­£æŸäº›æƒ…å†µå‰ªåˆ‡æ¿è¿”å›äºŒè¿›åˆ¶CF_HDROPæ•°æ®.</p>
-<p>æ”¹è¿›æ–‡ä»¶è¢«æ‰“å¼€çš„æƒ…å†µä¸‹FileGetSizeçš„ç²¾åº¦.</p>
-<p>æ”¹è¿›forå¾ªç¯åœ¨COMå¯¹è±¡ä¸­çš„è¡¨ç°.</p>
-
-<h2 id="v1.1.16.01">1.1.16.01 - 2014ï¼Œ9æœˆ10</h2>
-<p>æ”¯æŒåœ¨ç±»ä¸­åŠ¨æ€å®šä¹‰<a href="Objects.htm#Custom_Classes_property">å±æ€§</a>ã€‚</p>
-<p>ä¸ºGuiæ§ä»¶å®šä½å¢åŠ x+mä¸y+mé€‰é¡¹ã€‚</p>
-<p>ä¸ºListHotkeysï¼ˆåˆ—å‡ºçƒ­é”®ï¼‰ä¸­æ¯ä¸ªçƒ­é”®å¢åŠ #InputLevelé¡¹ã€‚</p>
-<p>ä¼˜åŒ–å¸¦Oï¼ˆå¯¹è±¡ï¼‰é€‰é¡¹çš„RegExMatchï¼ˆæ­£åˆ™æŸ¥æ‰¾ï¼‰ã€‚æŸäº›æƒ…å†µä¸‹ï¼Œæ•è·é•¿å­—ç¬¦ä¸²è¾ƒä¹‹å‰æœ‰æå¤§æé€Ÿã€‚</p>
-<p>ä¿®æ­£å¯¹è±¡ï¼Œå½“__Callç»“æŸæ—¶å°†æ£€æµ‹æ–°æ–¹æ³•ï¼ˆä¸__SetåŠ__Getä¸€è‡´ï¼‰ã€‚</p>
-<p>ä¿®æ­£ä¸€äº›VarSetCapacityå¤±è´¥åçš„æœªå®šä¹‰è¡Œä¸ºã€‚</p>
-<p>ä¿®æ­£FileReadï¼Œä½¿æ­£ç¡®æŠ¥å‘Šæ–‡ä»¶è¶…4GBæ—¶çš„é”™è¯¯ï¼Œè€Œéæˆªæ–­æ•°æ®ï¼Œå³ä¾¿ä¸éœ€è¦è¿™éƒ¨åˆ†æ•°æ®æ—¶ã€‚</p>
-<p>ä¿®æ­£FileRead *cï¼Œä½¿å½“å­—èŠ‚é•¿åº¦ä¸ºå¥‡æ•°æ—¶ï¼Œäº¦èƒ½æ­£ç¡®çš„æ”¾ç½®ç©ºç»“å°¾å­—ç¬¦ã€‚</p>
-<p>ä¿®æ­£ClipboardAllçš„é—®é¢˜ï¼Œä½œå¦‚ä¸‹æ”¹å˜ï¼š</p>
+<h2 id="v1.1.19.02">1.1.19.02 - 2015Äê1ÔÂ25ÈÕ</h2>
+<p>ÒÆ³ıWin9x/Win2kÉÏµÄ16É«Í¼±êÖ§³Ö.</p>
+<p>ÒÆ³ıµ¥¶ÀµÄÍĞÅÌÍ¼±ê×ÊÔ´.</p>
+<p>¸Ä½øÑ¡ÔñDLL/EXEÎÄ¼şÍ¼±ê³ß´çµÄ¹¦ÄÜ.</p>
+<ul><li>×ÜÖ®,ÄşÔ¸½µµÍ³ß´ç¶ø²»ÊÇ¸ßµµ.ÕâÔÚ125%»ò150% DPIÏµÍ³ÌØ±ğÓĞ°ïÖú.ÔÚÏµÍ³Í¼±êµÄ³ß´çÊÇ20 / 40»ò24 / 48,¶ø²»ÊÇ16 / 32.Èç¹ûËùÓĞÕâĞ©´óĞ¡¶¼´æÔÚÓÚÍ¼±ê×ÊÔ´ÖĞ,ÕâÖÖ±ä»¯¾ÍÃ»ÓĞÊ²Ã´Çø±ğ.</li></ul>
+<p>ĞŞÕıÈÈ¼üÔÚ¼ÓÔØÊ±ÑéÖ¤³ö´íµÄÇé¿ö.</p>
 <ul>
-  <li><a href="commands/_ClipboardTimeout.htm">#ClipboardTimeout</a>è¢«GetClipboardData()å¿½ç•¥ï¼Œä¹‹å‰å®ƒä¹Ÿå¹¶æœªå®é™…å‘æŒ¥ä½œç”¨å´å¯¼è‡´é—®é¢˜ã€‚æœ¬ä¿®æ­£è§£å†³å‰ªåˆ‡æ¿ä¸ºæ–‡ä»¶æ—¶ï¼ˆWindows 8ä¸­çš„ä»»ä½•æ–‡ä»¶ï¼ŒåŠzipæˆ–ç±»ä¼¼ä¸œè¥¿ä¸­çš„æ–‡ä»¶ï¼‰ï¼Œè¶…æ—¶åŠä¸¢å¤±æ•°æ®çš„é—®é¢˜ã€‚</li>
-  <li>ä¸ºé›¶é•¿åº¦å‰ªåˆ‡æ¿å†…å®¹åˆ†é…1å­—èŠ‚å†è¿”è¿˜ç»™å‰ªåˆ‡æ¿ï¼Œä¹‹å‰è®¾ç½®ä¸ºé›¶é•¿åº¦ä¼¼ä¹æœ‰é—®é¢˜ã€‚</li>
-  <li>ç”±Scintillaè®¾ç½®çš„MSDEVColumnSelect / MSDEVLineSelecå°†è¢«ä¿æŒï¼Œä½†ç”±VSè®¾ç½®çš„ä»»ä½•æ•°æ®å°†è¢«ä¸¢å¼ƒã€‚</li>
-  <li>å½“ç›´æ¥å°†ClipboardAllå†™è‡³æ–‡ä»¶æ—¶ï¼Œå°†ä¼˜å…ˆä½¿ç”¨Unicodeï¼ˆClipboardAllçš„å…¶ä»–ä½¿ç”¨æƒ…å†µè‡ªv1.1.08èµ·ä¾¿å¦‚æ­¤ï¼‰ã€‚</li>
-  <li>Unicodeç‰ˆæœ¬ä¸­å½“ClipboardAllåŠFileRead *cæ•°æ®é•¿åº¦ä¸ºå¥‡æ•°æ—¶ï¼Œå°†å‘ä¸Šå–æ•´åˆ°æœ€è¿‘çš„å¶æ•°ã€‚å› æ­¤ï¼Œç”±StrLenè¿”å›çš„ç»“æœå¯èƒ½è¢«åŠ 1ï¼Œé¿å…å¯èƒ½å¯¹æœ€åä¸€ä¸ªå­—èŠ‚çš„æˆªæ–­ã€‚</li>
+	<li>ÈÈ¼üÓÀÔ¶¶¼²»¿ÉÓÃÊ±,ÀıÈçfoo::,ÏÖÔÚ»áÊÓÎª´íÎó¶ø²»ÊÇ¾¯¸æĞÅÏ¢.</li>
+	<li>Ïñ^!&auml;::ÕâÑùµÄÈÈ¼üÊÇÎŞĞ§µÄÒòÎªµ±Ç°¼üÅÌ²¼¾Ö¿ÉÒÔÓĞÏàÍ¬µÄ¶¯×÷, ²¢ÇÒ±êÇ©±»ÕıÈ·×¢²á(ÀıÈç"^!&auml;"¶ø²»ÊÇ"^!&auml;:"). Èç¹û/ILIBÃüÁîĞĞ¿ª¹ØÊ¹ÓÃ,¾¯¸æ±»ÒÖÖÆ.</li>
+	<li>ÖØÓ³ÉäÊÇÎŞĞ§µÄÒòÎªµ±Ç°¼üÅÌ²¼¾ÖÏÔÊ¾Á½¸ö¾¯¸æ¶ø²»ÊÇ²»¿É»Ö¸´µÄ´íÎó.</li>
+	<li>µ±¹öÂÖ¼ü±»×÷ÎªÇ°×º¼ü,Ö»ÓĞÒ»¸ö´íÎóÏûÏ¢¶ø²»ÊÇÁ½¸ö,Õâ×ñÑ­/ErrorStdOut.</li>
 </ul>
-<p>ä¿®æ­£å¸¦è´Ÿå±å¹•åæ ‡å€¼çš„TreeViewæ§ä»¶çš„A_EventInfoå€¼ã€‚</p>
-<p>ä¿®æ­£ListView/TreeViewæ¶ˆæ¯ç­›é€‰ä¸­å¯èƒ½çš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£A_LineFile / A_LineNumberåœ¨#Ifè¡¨è¾¾å¼ä¸­ï¼ˆæ— æ³•æ­£ç¡®è¿”å›è®¾è®¡å€¼ï¼‰çš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£#Ifï¼Œè¢«æ·»åŠ åˆ°ListLinesä¸­ï¼ˆå°†æ˜¾ç¤ºä¸ºIfï¼‰ã€‚</p>
-<p>ä¿®æ­£<code>Abs(["-"]*)</code>åŠç±»ä¼¼æƒ…å†µä¸‹çš„å´©æºƒé—®é¢˜ã€‚</p>
-<p>ä¿®æ­£å…¨å±€ä¸­<code>} funcdef(){</code>åŠ<code>}}</code>ç»“å°¾çš„æ–¹æ³•/å±æ€§/ç±»ã€‚</p>
-<h2 id="v1.1.15.04">1.1.15.04 - 2014ï¼Œ8æœˆ12</h2>
-<p>ä¿®æ­£æ€§èƒ½é—®é¢˜ï¼š<code>&amp;å˜é‡åŒ…å«é•¿æ•°å€¼å­—ç¬¦ä¸²</code>ã€‚</p>
-<p>ä¿®æ­£é—®é¢˜ï¼šå½“å†…ç½®å˜é‡è¢«èµ‹å€¼ä¸ºå¯¹è±¡æ—¶ï¼Œä¼šç ´åå†…å­˜æ•°æ®ã€‚</p>
-<p>ä¿®æ­£è§£æå™¨ï¼Œä»¥ç¦æ­¢æŸäº›ä»£ç ä¸­çš„<code>continue</code>å‘½ä»¤ï¼Œå³ä¾¿å½“å‰å‡½æ•°å®šä¹‰åœ¨Loopå†…ã€‚</p>
-<p>ä¿®æ­£é”™è¯¯ï¼Œ<code>File.Encoding := x "-RAW"</code>æ‰“æ–­å¯¹éASCIIå­—ç¬¦çš„ç¼–ç /è§£ç ã€‚<code>-RAW</code>åç¼€è¢«ç•¥è¿‡ã€‚</p>
+<p>ĞŞÕı/iLib¿ª¹ØĞ´ÈëÎÄ¼ş¼´Ê¹Óï·¨³ö´í.</p>
+<p>ĞŞÕıreturn/break/continue/ÅÜµ½try..<a href="commands/Finally.htm">finally</a>.</p>
 
-<h2 id="v1.1.15.03">1.1.15.03 - 2014 å¹´ 8 æœˆ 2 æ—¥</h2>
-<p>ä¿®æ­£ä½¿ç”¨ Exit æˆ– Throw åå…ƒå‡½æ•°ä¸æ­£å¸¸é€€å‡ºçº¿ç¨‹çš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£éç¼–è¯‘è„šæœ¬ä¸­ FileInstall çš„ Dest ä¸ºç›¸å¯¹è·¯å¾„æ—¶ä½¿ç”¨ A_WorkingDir çš„é—®é¢˜ã€‚</p>
+<h2 id="v1.1.19.01">1.1.19.01 - 2015Äê1ÔÂ5ÈÕ</h2>
+<p>ĞŞ¸´ Hotkey ÃüÁîÔÚ´´½¨±äÁ¿ÖĞÒÑ´æÔÚµÄÈÈ¼üÊ±ÒıÆğ³ÌĞò±ÀÀ£(ÓÉv1.1.19.00ÒıÈë).</p>
+<p>Îª Hotkey ÃüÁîºÍ A_TimeIdle ×öÁË¶à´¦ÓÅ»¯(É¾³ıWin9xµÄÖ§³Ö).</p>
 
-<h2 id="v1.1.15.02">1.1.15.02 - 2014 å¹´ 7 æœˆ 7 æ—¥</h2>
-<p>ä¿®æ­£è°ƒè¯•å¯¹è±¡ä¸­è´Ÿæ•´æ•°é”®çš„é—®é¢˜ã€‚</p>
+<h2 id="v1.1.19.00">1.1.19.00 - 2015Äê1ÔÂ4ÈÕ</h2>
+<p>Îª<code>Func.Call()</code>Ôö¼ÓÁËÒ»¸öÃû×Ö. <code>Func.()</code> ÈÔÈ»¿ÉÓÃµ«ÒÑ·ÏÆú.</p>
+<p>ĞŞÕıÒ»Ğ©´íÎóµ±<code>X.Y</code>ºÍ<code>X.Y(Z)</code> ÔÚVBScript/JScript/C#:</p>
+<ul>
+  <li>Èç¹û<code>X.__Call</code> °üº¬Ò»¸öº¯Êı<em>name</em>, »á±»·µ»Ø¶ø²»ÊÇµ÷ÓÃ.</li>
+  <li>µ±<code>X.Y(Z)</code>·µ»ØÒ»¸öÖµ, Z±»ºöÂÔ. ËüÊµÏÖÏñ<code>X.Y[Z]</code>µ±X.Y²»ÊÇº¯Êı.</li>
+</ul>
+<p>ĞŞÕıÈÈ¼üÃüÁîºöÂÔ~Ç°×ºµ±<em>±êÇ©</em>±»Ê¡ÂÔ.</p>
+<p>ĞŞÕıÈÈ¼üÃüÁîºöÂÔ$Ç©×¢Èç¹ûÈÈ¼ü±äÖÖÒÑ¾­´´½¨µ«Ã»ÓĞÊ¹ÓÃ$</p>
+<p>ĞŞÕı<code>%Fn%()</code>Óï·¨¹¤×÷ÓÚJavaScriptº¯Êı¶ÔÏó.</p>
+<p>ĞŞÕıEXEµÄmanifestÀ´½ûÓÃUAC¼ì²âËã·¨ (ÓÉv1.1.17ÒıÈë).</p>
+<p>¸Ä½øÁËÏß³ÌÔÚµ÷ÊÔÆ÷µÄµ÷ÓÃ¶ÑÕ»ÉÏµÄ±íÏÖ.</p>
+<ul>
+  <li>Ïß³ÌµÄÀàĞÍ±»ÏÖÊµ¶ø²»ÊÇ±êÇ©Ãû,ÕâÔÚÏÂÒ»¸ö¶ÑÕ»Èë¿ÚÈÎÈ»ÓĞĞ§,ÈÈ¼ü,hotkeyÏÔÊ¾Ïà·´.</li>
+  <li>×ÓÏß³Ì»òÕßº¯Êı±»µ÷ÓÃºóµÄĞĞºÅ±»ÏÔÊ¾¶ø²»ÊÇ¿ªÊ¼Ö®Ç°µÄĞĞºÅ.</li>
+</ul>
 
-<h2 id="v1.1.15.01">1.1.15.01 - 2014 å¹´ 6 æœˆ 30 æ—¥</h2>
-<p>æ”¹å˜å†…ç½®çš„é”™è¯¯å’Œè­¦å‘Šå¯¹è¯æ¡†ä¸ºç½®é¡¶ã€‚</p>
-<p>ä¿®æ­£ <code>Until</code> ä¸ä¼šä»é€’å½’çš„æ–‡ä»¶å’Œæ³¨å†Œè¡¨å¾ªç¯ä¸­ä¸­æ–­çš„é”™è¯¯ã€‚</p>
+<h2 id="v1.1.18.00">1.1.18.00 - 2014Äê12ÔÂ30ÈÕ</h2>
+<p>¸Ä½øAutohotkey¶ÔÏóµÄIDispatchÊµÏÖ:</p>
+<ul>
+  <li><code>X.Y</code>ÔÚVBScriptºÍC#ÖĞ·µ»ØX.YÈç¹ûËü²»ÊÇº¯Êı¶ÔÏó; ÒÔÇ°Ôò³¢ÊÔµ÷ÓÃX.Y()¶ø²»¹ÜÀàĞÍ.</li>
+  <li><code>X(Y)</code>ÔÚVBScript, JScriptºÍC#ÖĞ·µ»ØX[Y]³ı·ÇXÊÇº¯Êı¶ÔÏó,ÔÚÕâÖÖÇé¿öÏÂËü±»µ÷ÓÃÈçÇ°.</li>
+  <li><code>X[Y]</code>ÔÚC# ·µ»ØX[Y]Èç¹ûX²»ÊÇº¯Êı¶ÔÏó;ÒÔÇ°Ôò³¢ÊÔµ÷ÓÃX.[Y]()¶ø²»¹ÜÀàĞÍ.</li>
+  <li><code>X.Y()</code>ÔÚC#ÖĞ·µ»ØX.YÈç¹ûËü²»ÊÇº¯Êı¶ÔÏó,ÎªÁËC#µÄÆçÒåÇé¿ö.</li>
+  <li>Î´´¦ÀíµÄÒì³£¶¼×ª»»ÎªIDispatchÒì³£.</li>
+</ul>
+<p>Ìí¼Ó´´½¨JavaScript/IE DOM¶ÔÏóµÄĞÂÌØĞÔµÄÖ§³Ö.</p>
+<p>ĞŞÕı<code>FileAppend, %VarContainingClipboardAll%, File</code>µ¼ÖÂµÄ±ÀÀ£ÎÊÌâ.</p>
 
-<h2 id="v1.1.15.00">1.1.15.00 - 2014 å¹´ 5 æœˆ 4 æ—¥</h2>
-<p>æ·»åŠ  A_OSVersion å€¼ <code>WIN_8.1</code>ã€‚</p>
-<p>æ”¹å˜ Hotkey å‘½ä»¤æ ¹æ®æ˜¯å¦å­˜åœ¨<a href="Hotkeys.htm#Tilde">é¢šåŒ–ç¬¦ï¼ˆ~ï¼‰å‰ç¼€</a>åº”ç”¨æˆ–ç§»é™¤çƒ­é”®å·²æœ‰å˜ä½“çš„ç©¿é€è¡Œä¸ºã€‚</p>
-<p>æ”¹å˜ exe manifest ä»¥å…è®¸ <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms724439">GetVersion</a>/<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms724451">GetVersionEx</a> æ£€æµ‹åˆ° Windows 8.1ã€‚</p>
+<h2 id="v1.1.17.01">1.1.17.01 - 2014Äê12ÔÂ28ÈÕ</h2>
+<p>ĞŞÕıCOMÊÂ¼ş¾ä±úÃ»ÓĞÊÕµ½×îºóµÄ¶ÔÏó²ÎÊı.</p>
 
-<h2 id="v1.1.14.04">1.1.14.04 - 2014 å¹´ 4 æœˆ 25 æ—¥</h2>
-<p>ä¿®æ­£å½“ <em>Function</em> ä¸ºçº¯æ•´æ•° 0 æ—¶ DllCall() ä¼šè®©è„šæœ¬å´©æºƒçš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£ <code>IsFunc("ComObj(")</code> è¿”å›é”™è¯¯è€Œä¸æŠ›å‡ºå¼‚å¸¸çš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£ ControlClick å‘é€ XButton1/XButton2 æ—¶å­˜åœ¨çš„é—®é¢˜ã€‚</p>
+<h2 id="v1.1.17.00">1.1.17.00 - 2014Äê12ÔÂ27ÈÕ</h2>
+<h4>ĞÂÌØĞÔ:</h4>
+<p>Ìí¼Ó<a href="commands/Format.htm">Format()</a>.</p>
+<p><a href="commands/FileOpen.htm">FileOpen()</a>ÏÖÔÚ¿ÉÒÔ¶ÁÈ¡stdin»òÕßĞ´Èëstout»òsterrÍ¨¹ı<code>"*"</code>»òÕß<code>"**"</code> ×÷ÎªÎÄ¼şÃû. <code>AutoHotkey.exe *</code> ¿ÉÒÔÓÃÀ´´ÓÁíÒ»¸öÏß³ÌÖ´ĞĞ³ÌĞò¹ÜµÀ¶ø²»ÊÇ¶ÁÈ¡ÎÄ¼ş. Àı×Ó²é¿´<a href="commands/Run.htm#ExecScript">ExecScript()</a>.</p>
+<p>Ìí¼ÓÍ¨¹ı´«µİAutohotkey¶ÔÏóÖÁCOM APIÀ´ÊµÏÖIDispatch.</p>
+<p>Ìí¼ÓComObject°ü×°µÄVT_BYREFÖ§³Ö.Ê¹ÓÃ<code>obj[]</code>À´·ÃÎÊ²Î¿¼Öµ.</p>
+<h4>´íÎóĞŞ¸´:</h4>
+<p>ĞŞÕıÔÚXP SP2ÉÏµÄÀ¶ÆÁ.</p>
+<p>ĞŞÕıComObjArray·µ»ØÖµ,¶ø²»ÊÇÖ¸Õë. Ò²¾ÍÊÇËµ,·µ»ØµÄÊı×éµÄ¸±±¾,¶ø²»ÊÇÖ¸ÏòÒ»¸öÊı×éµÄÖ¸Õë,¸ÃÊı×é½«±»É¾³ı.</p>
+<p>ĞŞÕıµÚÒ»´ÎÔËĞĞÔÚÉú³ÉµÄÊ¾Àı½Å±¾ÖĞµÄURL.</p>
+<p>ĞŞÕı<code>sc15D</code>Ó³Éäµ½<code>vk5D</code>/AppsKey (Send, GetKeyNameµÈµÈ).</p>
+<p>ĞŞÕıEdit¿Ø¼ş²»½ÓÊÜAltGr+A×÷ÎªCtrl+A.</p>
+<p>ĞŞÕı¾²Ì¬Àà±äÁ¿²»×÷ÎªÒ»¸ö±êÇ©µÄÄ¿±ê,¸Ã±êÇ©Á¢¼´ÓÅÏÈÓÚÀà.</p>
 
-<h2 id="v1.1.14.03">1.1.14.03 - 2014 å¹´ 2 æœˆ 14 æ—¥</h2>
-<p>ä¿®æ­£å½“ &lt;c10&gt;X.__Init</code> ä¸­æ­¢çº¿ç¨‹æ—¶ <code>new X</code> ä¸­å†…å­˜æ³„æ¼çš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£å½“æ–­ç‚¹æ•£å¸ƒåœ¨æ–¹æ³•å®šä¹‰ä¸­æ—¶ä¼šè½¬ç§»åˆ°ç±»å˜é‡åˆå§‹åŒ–ä½ç½®çš„é—®é¢˜ã€‚</p>
+<h2 id="v1.1.16.05">1.1.16.05 - 2014Äê9ÔÂ28ÈÕ</h2>
+<p>ĞŞÕıx.y/[]/{}ÓĞÊ±´íÎóµØ±»±ê¼ÇÎªvariadic</p>
 
-<h2 id="v1.1.14.02">1.1.14.02 - 2014 å¹´ 1 æœˆ 30 æ—¥</h2>
-<p>ä¿®æ­£ <code>x::</code> å’Œ <code>x up::</code>ï¼Œå½“ x ä½œä¸ºä¿®é¥°é”®è¢«é˜»æ­¢åœ¨æŒ‰ä¸‹è§¦å‘æ—¶åˆ™è®©å®ƒä»¬éƒ½åœ¨å¼¹èµ·æ—¶æ‰è§¦å‘ã€‚åœ¨ v1.1.14 ä¸­çš„é¢„æœŸè¡Œä¸ºæ˜¯å½“ x è¿˜ç”¨äºè‡ªå®šä¹‰ç»„åˆé”®ï¼ˆå¦‚ <code>x &amp; y::</code>ï¼‰çš„æ—¶å€™ï¼Œåˆ™ x çš„å•ç‹¬çƒ­é”®å’Œç»„åˆé”®éƒ½ä¼šåœ¨å¼¹èµ·æ—¶è§¦å‘ã€‚</p>
+<h2 id="v1.1.16.04">1.1.16.04 - 2014Äê9ÔÂ16ÈÕ</h2>
+<p>ĞŞÕı¸²¸ÇÊ±Ö»¶ÁÊôĞÔ²úÉúµÄ±ÀÀ£.</p>
+<p>ĞŞÕıµ±RegExMatch¶ÔÏóÊÇÎ´²¶»ñµÄ×Ó±í´ïÊ½µÄ±ÀÀ£Çé¿ö.</p>
 
-<h2 id="v1.1.14.01">1.1.14.01 - 2014 å¹´ 1 æœˆ 15 æ—¥</h2>
-<p>ä¿®æ­£ä¸å¸¦ Catch/Finally çš„ Try è¿‡ç¨‹ä¸­æ— å¼‚å¸¸æŠ›å‡ºæ—¶å´©æºƒçš„é”™è¯¯ã€‚</p>
+<h2 id="v1.1.16.03">1.1.16.03 - 2014Äê9ÔÂ11ÈÕ</h2>
+<p>ĞŞÕıAbs()ºÍMod()</p>
 
-<h2 id="v1.1.14.00">1.1.14.00 - 2014 å¹´ 1 æœˆ 15 æ—¥</h2>
-<p>å¢åŠ  <a href="commands/Finally.htm">Finally</a> è¯­å¥ç”¨äº try/catch åçš„æ¸…ç†æ“ä½œã€‚[fincs]</p>
-<p><b>æ”¹å˜</b>è‡ªå®šä¹‰ç»„åˆé”®ä¸­ <a href="Hotkeys.htm#Tilde">~ å‰ç¼€</a>çš„è¡Œä¸ºï¼Œä½¿ä¹‹æ›´ç›´è§‚ã€‚</p>
-<p>ä¿®æ­£ <code>x &amp; y::</code> çƒ­é”®ä¸­ï¼Œåœ¨é‡Šæ”¾xæ—¶ä¼šè§¦å‘ <code>x::</code> å’Œ <code>x up::</code> çƒ­é”®çš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£ ImageSearchï¼Œå½“ GDI è°ƒç”¨å¤±è´¥æ—¶è®¾ç½® ErrorLevel=2ï¼ˆè€Œé0ï¼‰ã€‚</p>
-<p>ä¿®æ­£ EnvGetï¼Œå½“å˜é‡è¶…è¿‡ 32767 ä¸ªå­—ç¬¦æ—¶è‡´ä½¿ç¨‹åºå´©æºƒçš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£åœ¨ StatusBarWait çš„ ErrorLevel ä¸­ä¸€ä¸ªå°çš„é”™è¯¯å¤„ç†ç¼ºé™·ã€‚</p>
-<p>ä¿®æ­£ ANSI ç‰ˆæœ¬ä¸­ FileRead *c å­˜åœ¨çš„å †æŸåã€‚</p>
-<p>ä¿®æ­£é€’å½’è°ƒç”¨ä¸­ä¼ é€’å±€éƒ¨å˜é‡åˆ°å¯å˜å‚æ•°å‡½æ•°ã€‚</p>
-<p>ä¿®æ­£è„šæœ¬ç¬¬ä¸€è¡Œä¸ºå°æ‹¬å·æ‹¬ä½çš„è¡¨è¾¾å¼æ—¶ï¼Œè„šæœ¬åŠ è½½å¤±è´¥çš„é—®é¢˜ã€‚</p>
-<p>ä¿®æ­£ PixelSearch å¿«é€Ÿæ¨¡å¼ï¼Œä½¿å…¶ä»…åœ¨æˆåŠŸæ—¶æ‰è®¾ç½® OutputVarX/Yã€‚</p>
+<h2 id="v1.1.16.02">1.1.16.02 - 2014Äê9ÔÂ11ÈÕ</h2>
+<p>ĞŞ¸´Ö§³ÖÔÚÀàÖĞÊ¹ÓÃ#include (broken by a6ea27f).</p>
+<p>ĞŞÕıÄ³Ğ©Çé¿ö¼ôÇĞ°å·µ»Ø¶ş½øÖÆCF_HDROPÊı¾İ.</p>
+<p>¸Ä½øÎÄ¼ş±»´ò¿ªµÄÇé¿öÏÂFileGetSizeµÄ¾«¶È.</p>
+<p>¸Ä½øforÑ­»·ÔÚCOM¶ÔÏóÖĞµÄ±íÏÖ.</p>
 
-<h2 id="v1.1.13.01">1.1.13.01 - 2013å¹´10æœˆ11æ—¥</h2>
-<p>Fixed variadic function calls with named values for required parameters.</p>
+<h2 id="v1.1.16.01">1.1.16.01 - 2014,9ÔÂ10</h2>
+<p>Ö§³ÖÔÚÀàÖĞ¶¯Ì¬¶¨Òå<a href="Objects.htm#Custom_Classes_property">ÊôĞÔ</a>.</p>
+<p>ÎªGui¿Ø¼ş¶¨Î»Ôö¼Óx+mÓëy+mÑ¡Ïî.</p>
+<p>ÎªListHotkeys(ÁĞ³öÈÈ¼ü)ÖĞÃ¿¸öÈÈ¼üÔö¼Ó#InputLevelÏî.</p>
+<p>ÓÅ»¯´øO(¶ÔÏó)Ñ¡ÏîµÄRegExMatch(ÕıÔò²éÕÒ).Ä³Ğ©Çé¿öÏÂ,²¶»ñ³¤×Ö·û´®½ÏÖ®Ç°ÓĞ¼«´óÌáËÙ.</p>
+<p>ĞŞÕı¶ÔÏó,µ±__Call½áÊøÊ±½«¼ì²âĞÂ·½·¨(Óë__Set¼°__GetÒ»ÖÂ).</p>
+<p>ĞŞÕıÒ»Ğ©VarSetCapacityÊ§°ÜºóµÄÎ´¶¨ÒåĞĞÎª.</p>
+<p>ĞŞÕıFileRead,Ê¹ÕıÈ·±¨¸æÎÄ¼ş³¬4GBÊ±µÄ´íÎó,¶ø·Ç½Ø¶ÏÊı¾İ,¼´±ã²»ĞèÒªÕâ²¿·ÖÊı¾İÊ±.</p>
+<p>ĞŞÕıFileRead *c,Ê¹µ±×Ö½Ú³¤¶ÈÎªÆæÊıÊ±,ÒàÄÜÕıÈ·µÄ·ÅÖÃ¿Õ½áÎ²×Ö·û.</p>
+<p>ĞŞÕıClipboardAllµÄÎÊÌâ,×÷ÈçÏÂ¸Ä±ä:</p>
+<ul>
+  <li><a href="commands/_ClipboardTimeout.htm">#ClipboardTimeout</a>±»GetClipboardData()ºöÂÔ,Ö®Ç°ËüÒ²²¢Î´Êµ¼Ê·¢»Ó×÷ÓÃÈ´µ¼ÖÂÎÊÌâ.±¾ĞŞÕı½â¾ö¼ôÇĞ°åÎªÎÄ¼şÊ±(Windows 8ÖĞµÄÈÎºÎÎÄ¼ş,¼°zip»òÀàËÆ¶«Î÷ÖĞµÄÎÄ¼ş),³¬Ê±¼°¶ªÊ§Êı¾İµÄÎÊÌâ.</li>
+  <li>ÎªÁã³¤¶È¼ôÇĞ°åÄÚÈİ·ÖÅä1×Ö½ÚÔÙ·µ»¹¸ø¼ôÇĞ°å,Ö®Ç°ÉèÖÃÎªÁã³¤¶ÈËÆºõÓĞÎÊÌâ.</li>
+  <li>ÓÉScintillaÉèÖÃµÄMSDEVColumnSelect / MSDEVLineSelec½«±»±£³Ö,µ«ÓÉVSÉèÖÃµÄÈÎºÎÊı¾İ½«±»¶ªÆú.</li>
+  <li>µ±Ö±½Ó½«ClipboardAllĞ´ÖÁÎÄ¼şÊ±,½«ÓÅÏÈÊ¹ÓÃUnicode(ClipboardAllµÄÆäËûÊ¹ÓÃÇé¿ö×Ôv1.1.08Æğ±ãÈç´Ë).</li>
+  <li>Unicode°æ±¾ÖĞµ±ClipboardAll¼°FileRead *cÊı¾İ³¤¶ÈÎªÆæÊıÊ±,½«ÏòÉÏÈ¡Õûµ½×î½üµÄÅ¼Êı.Òò´Ë,ÓÉStrLen·µ»ØµÄ½á¹û¿ÉÄÜ±»¼Ó1,±ÜÃâ¿ÉÄÜ¶Ô×îºóÒ»¸ö×Ö½ÚµÄ½Ø¶Ï.</li>
+</ul>
+<p>ĞŞÕı´ø¸ºÆÁÄ»×ø±êÖµµÄTreeView¿Ø¼şµÄA_EventInfoÖµ.</p>
+<p>ĞŞÕıListView/TreeViewÏûÏ¢É¸Ñ¡ÖĞ¿ÉÄÜµÄÎÊÌâ.</p>
+<p>ĞŞÕıA_LineFile / A_LineNumberÔÚ#If±í´ïÊ½ÖĞ(ÎŞ·¨ÕıÈ··µ»ØÉè¼ÆÖµ)µÄÎÊÌâ.</p>
+<p>ĞŞÕı#If,±»Ìí¼Óµ½ListLinesÖĞ(½«ÏÔÊ¾ÎªIf).</p>
+<p>ĞŞÕı<code>Abs(["-"]*)</code>¼°ÀàËÆÇé¿öÏÂµÄ±ÀÀ£ÎÊÌâ.</p>
+<p>ĞŞÕıÈ«¾ÖÖĞ<code>} funcdef(){</code>¼°<code>}}</code>½áÎ²µÄ·½·¨/ÊôĞÔ/Àà.</p>
+<h2 id="v1.1.15.04">1.1.15.04 - 2014,8ÔÂ12</h2>
+<p>ĞŞÕıĞÔÄÜÎÊÌâ:<code>&amp;±äÁ¿°üº¬³¤ÊıÖµ×Ö·û´®</code>.</p>
+<p>ĞŞÕıÎÊÌâ:µ±ÄÚÖÃ±äÁ¿±»¸³ÖµÎª¶ÔÏóÊ±,»áÆÆ»µÄÚ´æÊı¾İ.</p>
+<p>ĞŞÕı½âÎöÆ÷,ÒÔ½ûÖ¹Ä³Ğ©´úÂëÖĞµÄ<code>continue</code>ÃüÁî,¼´±ãµ±Ç°º¯Êı¶¨ÒåÔÚLoopÄÚ.</p>
+<p>ĞŞÕı´íÎó,<code>File.Encoding := x "-RAW"</code>´ò¶Ï¶Ô·ÇASCII×Ö·ûµÄ±àÂë/½âÂë.<code>-RAW</code>ºó×º±»ÂÔ¹ı.</p>
 
-<h2 id="v1.1.13.00">1.1.13.00 - 2013å¹´8æœˆ27æ—¥</h2>
-<p>Ported <a href="commands/StringSplit.htm">StrSplit()</a> from v2 alpha.</p>
+<h2 id="v1.1.15.03">1.1.15.03 - 2014 Äê 8 ÔÂ 2 ÈÕ</h2>
+<p>ĞŞÕıÊ¹ÓÃ Exit »ò Throw ºóÔªº¯Êı²»Õı³£ÍË³öÏß³ÌµÄÎÊÌâ.</p>
+<p>ĞŞÕı·Ç±àÒë½Å±¾ÖĞ FileInstall µÄ Dest ÎªÏà¶ÔÂ·¾¶Ê±Ê¹ÓÃ A_WorkingDir µÄÎÊÌâ.</p>
 
-<h2 id="v1.1.12.00">1.1.12.00 - 2013å¹´8æœˆ14æ—¥</h2>
-<p>Optional parameters can be omitted by writing two consecutive commas, as in <code>InStr(a, b,, 2)</code>.  Unlike previous versions, this now works for objects (including COM objects) and built-in functions.  <code>[a,,b]</code> can be used to create a sparse array.</p>
-<p>Object properties can now be set using variadic syntax, as in <code>x[y*]:=z</code>, where y contains an array of keys/indices or parameters.</p>
+<h2 id="v1.1.15.02">1.1.15.02 - 2014 Äê 7 ÔÂ 7 ÈÕ</h2>
+<p>ĞŞÕıµ÷ÊÔ¶ÔÏóÖĞ¸ºÕûÊı¼üµÄÎÊÌâ.</p>
 
-<h2 id="v1.1.11.02">1.1.11.02 - 2013å¹´6æœˆ28æ—¥</h2>
+<h2 id="v1.1.15.01">1.1.15.01 - 2014 Äê 6 ÔÂ 30 ÈÕ</h2>
+<p>¸Ä±äÄÚÖÃµÄ´íÎóºÍ¾¯¸æ¶Ô»°¿òÎªÖÃ¶¥.</p>
+<p>ĞŞÕı <code>Until</code> ²»»á´Óµİ¹éµÄÎÄ¼şºÍ×¢²á±íÑ­»·ÖĞÖĞ¶ÏµÄ´íÎó.</p>
+
+<h2 id="v1.1.15.00">1.1.15.00 - 2014 Äê 5 ÔÂ 4 ÈÕ</h2>
+<p>Ìí¼Ó A_OSVersion Öµ <code>WIN_8.1</code>.</p>
+<p>¸Ä±ä Hotkey ÃüÁî¸ù¾İÊÇ·ñ´æÔÚ<a href="Hotkeys.htm#Tilde">ò¦»¯·û(~)Ç°×º</a>Ó¦ÓÃ»òÒÆ³ıÈÈ¼üÒÑÓĞ±äÌåµÄ´©Í¸ĞĞÎª.</p>
+<p>¸Ä±ä exe manifest ÒÔÔÊĞí <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms724439">GetVersion</a>/<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms724451">GetVersionEx</a> ¼ì²âµ½ Windows 8.1.</p>
+
+<h2 id="v1.1.14.04">1.1.14.04 - 2014 Äê 4 ÔÂ 25 ÈÕ</h2>
+<p>ĞŞÕıµ± <em>Function</em> Îª´¿ÕûÊı 0 Ê± DllCall() »áÈÃ½Å±¾±ÀÀ£µÄÎÊÌâ.</p>
+<p>ĞŞÕı <code>IsFunc("ComObj(")</code> ·µ»Ø´íÎó¶ø²»Å×³öÒì³£µÄÎÊÌâ.</p>
+<p>ĞŞÕı ControlClick ·¢ËÍ XButton1/XButton2 Ê±´æÔÚµÄÎÊÌâ.</p>
+
+<h2 id="v1.1.14.03">1.1.14.03 - 2014 Äê 2 ÔÂ 14 ÈÕ</h2>
+<p>ĞŞÕıµ± &lt;c10&gt;X.__Init</code> ÖĞÖ¹Ïß³ÌÊ± <code>new X</code> ÖĞÄÚ´æĞ¹Â©µÄÎÊÌâ.</p>
+<p>ĞŞÕıµ±¶ÏµãÉ¢²¼ÔÚ·½·¨¶¨ÒåÖĞÊ±»á×ªÒÆµ½Àà±äÁ¿³õÊ¼»¯Î»ÖÃµÄÎÊÌâ.</p>
+
+<h2 id="v1.1.14.02">1.1.14.02 - 2014 Äê 1 ÔÂ 30 ÈÕ</h2>
+<p>ĞŞÕı <code>x::</code> ºÍ <code>x up::</code>,µ± x ×÷ÎªĞŞÊÎ¼ü±»×èÖ¹ÔÚ°´ÏÂ´¥·¢Ê±ÔòÈÃËüÃÇ¶¼ÔÚµ¯ÆğÊ±²Å´¥·¢.ÔÚ v1.1.14 ÖĞµÄÔ¤ÆÚĞĞÎªÊÇµ± x »¹ÓÃÓÚ×Ô¶¨Òå×éºÏ¼ü(Èç <code>x &amp; y::</code>)µÄÊ±ºò,Ôò x µÄµ¥¶ÀÈÈ¼üºÍ×éºÏ¼ü¶¼»áÔÚµ¯ÆğÊ±´¥·¢.</p>
+
+<h2 id="v1.1.14.01">1.1.14.01 - 2014 Äê 1 ÔÂ 15 ÈÕ</h2>
+<p>ĞŞÕı²»´ø Catch/Finally µÄ Try ¹ı³ÌÖĞÎŞÒì³£Å×³öÊ±±ÀÀ£µÄ´íÎó.</p>
+
+<h2 id="v1.1.14.00">1.1.14.00 - 2014 Äê 1 ÔÂ 15 ÈÕ</h2>
+<p>Ôö¼Ó <a href="commands/Finally.htm">Finally</a> Óï¾äÓÃÓÚ try/catch ºóµÄÇåÀí²Ù×÷.[fincs]</p>
+<p><b>¸Ä±ä</b>×Ô¶¨Òå×éºÏ¼üÖĞ <a href="Hotkeys.htm#Tilde">~ Ç°×º</a>µÄĞĞÎª,Ê¹Ö®¸üÖ±¹Û.</p>
+<p>ĞŞÕı <code>x &amp; y::</code> ÈÈ¼üÖĞ,ÔÚÊÍ·ÅxÊ±»á´¥·¢ <code>x::</code> ºÍ <code>x up::</code> ÈÈ¼üµÄÎÊÌâ.</p>
+<p>ĞŞÕı ImageSearch,µ± GDI µ÷ÓÃÊ§°ÜÊ±ÉèÖÃ ErrorLevel=2(¶ø·Ç0).</p>
+<p>ĞŞÕı EnvGet,µ±±äÁ¿³¬¹ı 32767 ¸ö×Ö·ûÊ±ÖÂÊ¹³ÌĞò±ÀÀ£µÄÎÊÌâ.</p>
+<p>ĞŞÕıÔÚ StatusBarWait µÄ ErrorLevel ÖĞÒ»¸öĞ¡µÄ´íÎó´¦ÀíÈ±Ïİ.</p>
+<p>ĞŞÕı ANSI °æ±¾ÖĞ FileRead *c ´æÔÚµÄ¶ÑËğ»µ.</p>
+<p>ĞŞÕıµİ¹éµ÷ÓÃÖĞ´«µİ¾Ö²¿±äÁ¿µ½¿É±ä²ÎÊıº¯Êı.</p>
+<p>ĞŞÕı½Å±¾µÚÒ»ĞĞÎªĞ¡À¨ºÅÀ¨×¡µÄ±í´ïÊ½Ê±,½Å±¾¼ÓÔØÊ§°ÜµÄÎÊÌâ.</p>
+<p>ĞŞÕı PixelSearch ¿ìËÙÄ£Ê½,Ê¹Æä½öÔÚ³É¹¦Ê±²ÅÉèÖÃ OutputVarX/Y.</p>
+
+<h2 id="v1.1.13.01">1.1.13.01 - 2013Äê10ÔÂ11ÈÕ</h2>
+<p>ĞŞ¸´ ÓÃÒÑÃüÃûÖµµ÷ÓÃ´ø²Î¿É±äº¯Êı.</p>
+
+<h2 id="v1.1.13.00">1.1.13.00 - 2013Äê8ÔÂ27ÈÕ</h2>
+<p>´Óv2²âÊÔ°æÒÆÖ² <a href="commands/StringSplit.htm">StrSplit()</a> º¯Êı.</p>
+
+<h2 id="v1.1.12.00">1.1.12.00 - 2013Äê8ÔÂ14ÈÕ</h2>
+<p>¿ÉÑ¡²ÎÊı¿ÉÍ¨¹ıÁ¬Ğ´Á½¸ö¶ººÅµÄ·½Ê½ÂÔ¹ı, Èç <code>InStr(a, b,, 2)</code>.  ºÍÖ®Ç°°æ±¾²»Í¬µÄÊÇ, ÕâÖÖ·½Ê½¿ÉÒÔÓÃÔÚ¶ÔÏó(°üÀ¨COM¶ÔÏó)ºÍÄÚÖÃº¯ÊıÖĞ. <code>[a,,b]</code>  µÄĞ´·¨¿ÉÒÔÓÃÀ´´´½¨Ï¡ÊèÊı×é.</p>
+<p>¶ÔÏóÊôĞÔÏÖÔÚ¿ÉÒÔÍ¨¹ıÊ¹ÓÃ¿É±äÖµµÄ·½Ê½¸³Óè, Èç <code>x[y*]:=z</code> ÖĞ y °üº¬ÁË ¼üÃû/Ë÷Òı»òÒ»×é²ÎÊı.</p>
+
+<h2 id="v1.1.11.02">1.1.11.02 - 2013Äê6ÔÂ28ÈÕ</h2>
 <p>Fixed GuiControl/Get to accept the ClassNN of a ComboBox's child Edit.  Specifying the HWND of a ComboBox's child Edit was already supported as a means of identifying the ComboBox.</p>
 
-<h2 id="v1.1.11.01">1.1.11.01 - 2013å¹´6æœˆ25æ—¥</h2>
+<h2 id="v1.1.11.01">1.1.11.01 - 2013Äê6ÔÂ25ÈÕ</h2>
 <p>Fixed InputBox default width/height (broken by v1.1.11.00 - commit <a href="https://github.com/Lexikos/AutoHotkey_L/commit/7373cc6443">7373cc6443</a>).</p>
 <p>Fixed DllCall arg type validation to handle SYM_OBJECT safely, and to respect #Warn UseUnset (when var name is not a valid type).</p>
 <p>Changed VarSetCapacity(var) to never warn about uninitialized vars.</p>
 
-<h2 id="v1.1.11.00">1.1.11.00 - 2013å¹´6æœˆ21æ—¥</h2>
+<h2 id="v1.1.11.00">1.1.11.00 - 2013Äê6ÔÂ21ÈÕ</h2>
 <p>Added support for <code>%A_LineFile%</code> in <a href="commands/_Include.htm">#Include</a>.</p>
 <p>Reduced the file size of AutoHotkeySC.bin by reducing the resolution of the (rarely used) filetype icon.</p>
 <p>Fixed <code>class X extends Y</code> to allow Y to be defined after X.</p>
 <p>Developed by fincs: AutoHotkey is now DPI-aware. The Gui commands automatically compensate when DPI is not 96. See <a href="commands/Gui.htm#DPIScale">Gui -DPIScale</a>.</p>
-<h2 id="v1.1.10.01">1.1.10.01 - 2013å¹´5æœˆ17æ—¥</h2>
+<h2 id="v1.1.10.01">1.1.10.01 - 2013Äê5ÔÂ17ÈÕ</h2>
 <p>Improved RegRead to support REG_BINARY values larger than 64K.</p>
 <p>Improved RegWrite to support REG_BINARY/REG_MULTI_SZ values larger than 64K.</p>
 <p>Fixed Process Close (and possibly other things) on Windows XP.</p>
 
-<h2 id="v1.1.10.00">1.1.10.00 - 2013å¹´5æœˆ11æ—¥</h2>
+<h2 id="v1.1.10.00">1.1.10.00 - 2013Äê5ÔÂ11ÈÕ</h2>
 <p>Added basic support for <a href="commands/GuiControls.htm#Custom">custom Gui control types</a>.</p>
 <p>Revised <a href="commands/SoundSet.htm">SoundSet</a>, <a href="commands/SoundGet.htm">SoundGet</a> and 'WaveVolume commands to better support Windows Vista and later.</p>
 <p>Fixed <code>Run "&lt;file&gt;" &lt;args&gt;</code> to not pass the space as part of the args.</p>
 <p>Fixed some issues with reading from console input (CONIN$).</p>
 
-<h2 id="v1.1.09.04">1.1.09.04 - 2013å¹´3æœˆ14æ—¥</h2>
+<h2 id="v1.1.09.04">1.1.09.04 - 2013Äê3ÔÂ14ÈÕ</h2>
 <p>Fixed Gui menu accelerator keys not working when the Gui itself (not a control) has focus.</p>
 
-<h2 id="v1.1.09.03">1.1.09.03 - 2013å¹´2æœˆ9æ—¥</h2>
+<h2 id="v1.1.09.03">1.1.09.03 - 2013Äê2ÔÂ9ÈÕ</h2>
 <p>Fixed <a href="http://www.autohotkey.com/board/index.php?showtopic=89624">two bugs</a> which affected certain assignments where the target variable contains an unflushed binary number but has zero capacity.</p>
 <p>Fixed GuiControl and GuiControlGet acting on the wrong control when given a HWND which does not belong to the current Gui. Instead, the condition is treated as an error.</p>
 <p>Fixed OnMessage functions to set A_Gui and A_GuiControl correctly when the target Gui is a child window.</p>
 
-<h2 id="v1.1.09.02">1.1.09.02 - 2012å¹´12æœˆ24æ—¥</h2>
+<h2 id="v1.1.09.02">1.1.09.02 - 2012Äê12ÔÂ24ÈÕ</h2>
 <p>Fixed MsgBox to show an error message when given invalid Options, instead of silently exiting the thread.</p>
 <p>Fixed syntax errors in class var initializers causing the program to crash without the proper error message.</p>
 
-<h2 id="v1.1.09.01">1.1.09.01 - 2012å¹´12æœˆ15æ—¥</h2>
+<h2 id="v1.1.09.01">1.1.09.01 - 2012Äê12ÔÂ15ÈÕ</h2>
 <p>Fixed AND/OR following a multi-statement comma, like <code>((x, y) and z)</code>.</p>
 <p>Fixed RegExReplace to support duplicate subpattern names correctly.</p>
 <p>Fixed Object.Remove() not freeing string keys.</p>
 <p>Fixed base.Invoke() to not depend on dynamic variable resolution.</p>
 
-<h2 id="v1.1.09.00">1.1.09.00 - 2012å¹´11æœˆ7æ—¥</h2>
+<h2 id="v1.1.09.00">1.1.09.00 - 2012Äê11ÔÂ7ÈÕ</h2>
 
 <h4>Breaking changes:</h4>
 <p>Removed <a href="misc/AutoIt2Compat.htm">.aut file compatibility</a> and #AllowSameLineComments.</p>
@@ -446,10 +460,10 @@
 <p>Optimized code size, fixed several bugs and made the debugger generally more robust.</p>
 
 
-<h2 id="v1.1.08.01">1.1.08.01 - 2012å¹´8æœˆ3æ—¥</h2>
+<h2 id="v1.1.08.01">1.1.08.01 - 2012Äê8ÔÂ3ÈÕ</h2>
 <p>Debugger: Fixed max_depth being either half the intended limit or unlimited.</p>
 
-<h2 id="v1.1.08.00">1.1.08.00 - 2012å¹´6æœˆ14æ—¥</h2>
+<h2 id="v1.1.08.00">1.1.08.00 - 2012Äê6ÔÂ14ÈÕ</h2>
 
 <h4>Breaking changes:</h4>
 <p>Changed the default script codepage to ANSI, as the previous behaviour was a common source of confusion. UTF-8 files must now have a byte order mark (BOM) to be recognized correctly. Notepad adds a BOM to any file saved as UTF-8.</p>
@@ -486,38 +500,38 @@
 <p>Fixed TreeView controls with <code>-Background</code> option rendering incorrectly on older OSes.</p>
 <p>Fixed error messages shown during execution of While/Until to identify the appropriate line.</p>
 
-<h2 id="v1.1.07.03">1.1.07.03 - 2012å¹´3æœˆ25æ—¥</h2>
+<h2 id="v1.1.07.03">1.1.07.03 - 2012Äê3ÔÂ25ÈÕ</h2>
 <p>Fixed Ctrl/Alt/Shift key-down hotkey breaking any corresponding key-up hotkey defined before it.</p>
 <p>Fixed key-down hotkeys to always use the hook if defined after a key-up hotkey of the same key. If the key-down hotkey used the "reg" method, the hook would block the key-down event and trigger only the key-up hotkey.</p>
 <p>Fixed load-time checks interpreting expressions with no derefs as raw text. For example, <code>gosub % "foo"</code> resolved to <code>"foo":</code> at load-time. Similarly, <code>% ""</code> was seen as invalid in various cases even if an empty string should be allowed.</p>
 
-<h2 id="v1.1.07.02">1.1.07.02 - 2012å¹´3æœˆ22æ—¥</h2>
+<h2 id="v1.1.07.02">1.1.07.02 - 2012Äê3ÔÂ22ÈÕ</h2>
 <p>Fixed a rare crash which can occur when GetClipboardData() fails.</p>
 <p>Fixed ComObjArray() to return an empty string on failure instead of an arbitrary integer.</p>
 <p>Fixed <code>Object.Remove(i, "")</code> affecting integer keys when <code>!Object.HasKey(i)</code>.</p>
 
-<h2 id="v1.1.07.01">1.1.07.01 - 2012å¹´3æœˆ2æ—¥</h2>
+<h2 id="v1.1.07.01">1.1.07.01 - 2012Äê3ÔÂ2ÈÕ</h2>
 <p>Fixed FileRead to ignore #MaxMem when reading UTF-16 on Unicode builds.</p>
 <p>Fixed dynamic function calls with built-in vars such as <code>%A_ThisLabel%()</code>.</p>
 
-<h2 id="v1.1.07.00">1.1.07.00 - 2012å¹´2æœˆ27æ—¥</h2>
+<h2 id="v1.1.07.00">1.1.07.00 - 2012Äê2ÔÂ27ÈÕ</h2>
 <p>Enhanced <code><a href="Functions.htm#DynCall">%var%()</a></code> to support <a href="objects/Func.htm">function references</a>, <a href="Objects.htm#Objects_as_Functions">objects imitating functions</a> and the <a href="Objects.htm#Default_Base_Object">default __Call meta-function</a>.</p>
 <p>Fixed <a href="commands/ControlGet.htm#List">ControlGet List</a> to work for ListViews where the script and the target process aren't both 32-bit or both 64-bit.</p>
 <p>Fixed <a href="commands/Send.htm#SendEvent">SendEvent</a> with a key delay of 0; a change introduced by v1.1.05.04 caused it to be slower than intended.</p>
 <p>Fixed <a href="objects/Object.htm#Remove">Object.Remove(i)</a> not adjusting keys if Object[i] doesn't exist.</p>
-<p>Fixed an error in <a href="commands/ComObjType.htm">ComObjType()</a> which 5æœˆ have caused unpredictable behaviour when it is called via an <a href="commands/ComObjActive.htm#Remarks">alternative name</a>.</p>
+<p>Fixed an error in <a href="commands/ComObjType.htm">ComObjType()</a> which 5ÔÂ have caused unpredictable behaviour when it is called via an <a href="commands/ComObjActive.htm#Remarks">alternative name</a>.</p>
 <p>Fixed <a href="commands/ExitApp.htm">ExitApp</a> to exit the thread if an <a href="commands/OnExit.htm">OnExit</a> subroutine prevents the script from terminating, instead of resuming execution after the <a href="commands/Block.htm">block</a> which contained ExitApp.</p>
 <p>Calling a function via an object no longer acts as a barrier to exiting the thread. Consequently, if <a href="commands/Exit.htm">Exit</a> is used or a runtime error occurs within a <a href="Objects.htm#Custom_Classes_method">class method</a>, the entire thread exits instead of just the function.</p>
 <p>Calling a base-class method using <a href="Objects.htm#Custom_Classes_base">base.Method()</a> or similar inside a class definition no longer causes a <a href="commands/_Warn.htm">UseUnset</a> warning if the method doesn't exist. Consequently, instantiating an object which has <a href="Objects.htm#Custom_Classes_var">instance variables</a> no longer causes a warning about the internal <code>base.__Init</code> method if the base class has no instance variables.</p>
 
-<h2 id="v1.1.06.02">1.1.06.02 - 2012å¹´2æœˆ13æ—¥</h2>
+<h2 id="v1.1.06.02">1.1.06.02 - 2012Äê2ÔÂ13ÈÕ</h2>
 <p>Fixed IniRead crashing when Section is omitted but Key isn't.</p>
 <p>Fixed accuracy of FileGetSize with files which are 4GB or larger.</p>
 
-<h2 id="v1.1.06.01">1.1.06.01 - 2012å¹´2æœˆ12æ—¥</h2>
+<h2 id="v1.1.06.01">1.1.06.01 - 2012Äê2ÔÂ12ÈÕ</h2>
 <p>Fixed MsgBox smart comma handling to require numeric Options, not Title.</p>
 
-<h2 id="v1.1.06.00">1.1.06.00 - 2012å¹´2æœˆ12æ—¥</h2>
+<h2 id="v1.1.06.00">1.1.06.00 - 2012Äê2ÔÂ12ÈÕ</h2>
 <h4>New features:</h4>
 <p>Integrated <a href="commands/_InputLevel.htm">#InputLevel</a> directive and <a href="commands/SendLevel.htm">SendLevel</a> command <a href="https://github.com/Lexikos/AutoHotkey_L/pull/7">by Russell Davis</a>.</p>
 <p>Integrated support for <a href="commands/GuiControls.htm#Link">Link</a> controls <a href="https://github.com/Lexikos/AutoHotkey_L/pull/9">by ChrisS85</a>.</p>
@@ -559,31 +573,31 @@
 <p>Fixed SendInput Win+L workaround causing Win key to "stick down".</p>
 <p>Fixed Ahk2Exe auto-including the wrong file if an auto-include used <a href="commands/_Include.htm">#Include &lt;Lib&gt;</a>.</p>
 
-<h2 id="v1.1.05.06">1.1.05.06 - 2011å¹´12æœˆ31æ—¥</h2>
+<h2 id="v1.1.05.06">1.1.05.06 - 2011Äê12ÔÂ31ÈÕ</h2>
 <p>Fixed inc (++) and dec (--) having no effect when used on an object field containing a string.</p>
 <p>Fixed inc (++) and dec (--) to cause a warning when used on an uninitialized variable.</p>
 
-<h2 id="v1.1.05.05">1.1.05.05 - 2011å¹´12æœˆ17æ—¥</h2>
+<h2 id="v1.1.05.05">1.1.05.05 - 2011Äê12ÔÂ17ÈÕ</h2>
 <p>Fixed <code>continue <i>n</i></code> misbehaving when an inner loop has no braces.</p>
 <p>Fixed <code>RegExMatchObject[Name]</code> to work correctly with duplicate names.</p>
 
-<h2 id="v1.1.05.04">1.1.05.04 - 2011å¹´12æœˆ5æ—¥</h2>
+<h2 id="v1.1.05.04">1.1.05.04 - 2011Äê12ÔÂ5ÈÕ</h2>
 <p>Fixed: Selected sub-command of ControlGet was unreliable on x64.</p>
 <p>Fixed: CPU was maxed out while waiting if an underlying thread displayed a dialog (and possibly in other cases).</p>
 
-<h2 id="v1.1.05.03">1.1.05.03 - 2011å¹´11æœˆ30æ—¥</h2>
+<h2 id="v1.1.05.03">1.1.05.03 - 2011Äê11ÔÂ30ÈÕ</h2>
 <p>Fixed <code>Loop ... Until VarContainingObject</code>.</p>
 
-<h2 id="v1.1.05.02">1.1.05.02 - 2011å¹´11æœˆ20æ—¥</h2>
+<h2 id="v1.1.05.02">1.1.05.02 - 2011Äê11ÔÂ20ÈÕ</h2>
 <p>Fixed false detection of end-of-file when loading a compiled script in some cases.</p>
 <p>Fixed SendInput to automatically release modifier keys when sending special characters or {U+xxxx} (which was broken by v1.1.00.01).</p>
 <p>Fixed ComObjConnect to filter out non-dispatch interfaces instead of allowing the script to crash.</p>
 <p>Fixed <code>new %VarContainingClassName%()</code>.</p>
 
-<h2 id="v1.1.05.01">1.1.05.01 - 2011å¹´10æœˆ16æ—¥</h2>
+<h2 id="v1.1.05.01">1.1.05.01 - 2011Äê10ÔÂ16ÈÕ</h2>
 <p>Fixed class declarations to allow directives such as #Include.</p>
 
-<h2 id="v1.1.05.00">1.1.05.00 - 2011å¹´10æœˆ8æ—¥</h2>
+<h2 id="v1.1.05.00">1.1.05.00 - 2011Äê10ÔÂ8ÈÕ</h2>
 <p>Added <a href="commands/CoordMode.htm">Client coordinate mode</a>.</p>
 <p>Added <a href="commands/RegExMatch.htm#ObjectMode">object output mode</a> for RegExMatch and RegEx callouts.</p>
 <p>Added <a href="Functions.htm#SuperGlobal">super-global</a> declarations, which avoid the need to repeat global declarations.</p>
@@ -607,10 +621,10 @@
 <p>Fixed Try/Catch to allow If/Loop/For/While with no enclosing block.</p>
 <p>Fixed enumerator object not being released when Until is used to break a For-loop.</p>
 
-<h2 id="v1.1.04.01">1.1.04.01 - 2011å¹´9æœˆ15æ—¥</h2>
+<h2 id="v1.1.04.01">1.1.04.01 - 2011Äê9ÔÂ15ÈÕ</h2>
 <p>Fixed FileRemoveDir setting ErrorLevel incorrectly.</p>
 
-<h2 id="v1.1.04.00">1.1.04.00 - 2011å¹´9æœˆ11æ—¥</h2>
+<h2 id="v1.1.04.00">1.1.04.00 - 2011Äê9ÔÂ11ÈÕ</h2>
 <p><strong>This release contains a number of potentially script-breaking changes.</strong></p>
 <p>Added exception handling support: <a href="commands/Try.htm">try</a>/<a href="commands/Catch.htm">catch</a>/<a href="commands/Throw.htm">throw</a> and <a href="commands/Throw.htm#Exception">Exception()</a>.</p>
 <p>Added StdOut mode for <a href="commands/_Warn.htm">#Warn</a>.</p>
@@ -635,7 +649,7 @@
 </ul>
 <p>Fixed a <a href="http://www.autohotkey.com/forum/topic76133.html">bug</a> affecting recursive variadic functions.</p>
 
-<h2 id="v1.1.03.00">1.1.03.00 - 2011å¹´8æœˆ28æ—¥</h2>
+<h2 id="v1.1.03.00">1.1.03.00 - 2011Äê8ÔÂ28ÈÕ</h2>
 <p>Added support for GUI names.</p>
 <p>Added support for identifying a GUI by its HWND.</p>
 <p>Added <code>+Parent%ParentGui%</code> Gui option.</p>
@@ -649,14 +663,14 @@
 <p>Changed ListLines to display While and Until lines which are executed each iteration.</p>
 <p>Changed ~= to have higher precedence than =/!=/&lt;/&gt;/&lt;=/&gt;= but lower than concat, and added it to the documentation.</p>
 
-<h2 id="v1.1.02.03">1.1.02.03 - 2011å¹´8æœˆ21æ—¥</h2>
+<h2 id="v1.1.02.03">1.1.02.03 - 2011Äê8ÔÂ21ÈÕ</h2>
 <p>Fixed (Debugger): numchildren attribute did not include Object.Base.</p>
 
-<h2 id="v1.1.02.02">1.1.02.02 - 2011å¹´8æœˆ20æ—¥</h2>
+<h2 id="v1.1.02.02">1.1.02.02 - 2011Äê8ÔÂ20ÈÕ</h2>
 <p>Fixed: Variable capacity was capped at 2GB on x64 builds.</p>
 <p>Fixed: Last Found Window not set by <code>#if WinExist(T)</code>.</p>
 
-<h2 id="v1.1.02.01">1.1.02.01 - 2011å¹´8æœˆ13æ—¥</h2>
+<h2 id="v1.1.02.01">1.1.02.01 - 2011Äê8ÔÂ13ÈÕ</h2>
 <p>Changed A_PriorKey to exclude key-up events.</p>
 <p>Fixed process name/path retrieval in certain cases, including:</p>
 <ul>
@@ -664,12 +678,12 @@
   <li>Retrieving name/path of an elevated process from a non-elevated process (UAC).</li>
 </ul>
 
-<h2 id="v1.1.02.00">1.1.02.00 - 2011å¹´8æœˆ6æ—¥</h2>
+<h2 id="v1.1.02.00">1.1.02.00 - 2011Äê8ÔÂ6ÈÕ</h2>
 <p>Added TV_SetImageList().</p>
 <p>Characters which require non-standard shift states 16 and 32 now use a fallback method instead of producing the wrong keystrokes.</p>
 <p>Revised handling of dead keys to solve problems which occur when multiple scripts with hotstrings are active.</p>
 
-<h2 id="v1.1.01.00">1.1.01.00 - 2011å¹´6æœˆ30æ—¥</h2>
+<h2 id="v1.1.01.00">1.1.01.00 - 2011Äê6ÔÂ30ÈÕ</h2>
 <p>Added support for instance variables in class definitions, using simple assignment syntax.</p>
 <p><b>Removed</b> <code>var</code> keyword used in class definitions; use <code>static</code> instead.</p>
 <p>Added new built-in variables: A_ScriptHwnd and A_PriorKey.</p>
@@ -687,7 +701,7 @@
 
 
 
-<h2 id="v1.1.00.01">1.1.00.01 - 2011å¹´6æœˆ17æ—¥</h2>
+<h2 id="v1.1.00.01">1.1.00.01 - 2011Äê6ÔÂ17ÈÕ</h2>
 <p>Fixed: Modifier keys weren't auto-released when sending special chars.</p>
 <p>Fixed: Scancode/modifier-key mapping conflicts such as sc1xx vs ^sc0xx.</p>
 <p>Fixed: $ and #UseHook had no effect if used only on the second or subsequent instance(s) of a hotkey.</p>
@@ -700,7 +714,7 @@
 <p>Added support for integers as class variable names.</p>
 <p>Added "Static" keyword for declaring class variables.</p>
 
-<h2 id="v1.1.00.00">1.1.00.00 - 2011å¹´5æœˆ1æ—¥</h2>
+<h2 id="v1.1.00.00">1.1.00.00 - 2011Äê5ÔÂ1ÈÕ</h2>
 <h4>New features:</h4>
 <p>Implemented basic <a href="Objects.htm#Custom_Classes">class definition syntax</a>.</p>
 <p>Implemented the <code><a href="Objects.htm#Custom_NewDelete">new</a></code> keyword for creating a derived object.</p>
@@ -717,23 +731,23 @@
 <p>Fixed A_MyDocuments etc. to use SHGetFolderPath instead of undocumented registry keys.</p>
 <p>Fixed non-empty ExcludeText causing windows with no text to be excluded.</p>
 
-<h2 id="v1.0.97.02">1.0.97.02 - 2011å¹´4æœˆ14æ—¥</h2>
+<h2 id="v1.0.97.02">1.0.97.02 - 2011Äê4ÔÂ14ÈÕ</h2>
 <p>Fixed misinterpretation of comma as an arg delimiter when enclosed in <code>{}</code> in an expression.</p>
 <p>Fixed For-loop to set A_Index only after the <i>Expression</i> arg is evaluated, so that the outer loop's value can be used.</p>
 <p>Fixed default script location to be based on the directory containing the EXE (as documented), not the working directory.</p>
 <p>Improved load-time validation to detect invalid attempts to jump out of a function with Goto.</p>
 
-<h2 id="v1.0.97.01">1.0.97.01 - 2011å¹´4æœˆ2æ—¥</h2>
+<h2 id="v1.0.97.01">1.0.97.01 - 2011Äê4ÔÂ2ÈÕ</h2>
 <p>Fixed the 64-bit build to not truncate HWNDs or SendMessage/PostMessage params to 32 bits.</p>
 <p>Fixed <code>*/::</code> being treated as an invalid hotkey (broken since L54).</p>
 <p>Fixed the icons.</p>
-<h2 id="v1.0.97.00">1.0.97.00 - 2011å¹´3æœˆ28æ—¥</h2>
+<h2 id="v1.0.97.00">1.0.97.00 - 2011Äê3ÔÂ28ÈÕ</h2>
 <p>Added <code>{key: value}</code> as syntax sugar for <code>Object("key", value)</code>.</p>
 <p>Added <code>[x, y, z]</code> as syntax sugar for <code>Array(x, y, z)</code>, which is a new function equivalent to  <code>Object(1, x, 2, y, 3, z)</code>.</p>
 <p>Added slight optimization: resolve any reference to True, False, A_PtrSize or A_IsUnicode in expressions at load-time.</p>
 <p>Fixed hotkey parser to treat <code>x & ^y</code> as an error instead of ignoring <code>^</code>.</p>
 
-<h2 id="v1.0.96.00">1.0.96.00 - 2011å¹´3æœˆ21æ—¥</h2>
+<h2 id="v1.0.96.00">1.0.96.00 - 2011Äê3ÔÂ21ÈÕ</h2>
 <h4><b>New features:</b></h4>
 <p><a href="commands/ComObjQuery.htm">ComObjQuery</a>: Queries a COM object for an interface or service.</p>
 <p><a href="commands/ComObjFlags.htm">ComObjFlags</a>: Retrieves or changes flags which control a COM wrapper object's behaviour.</p>
@@ -754,7 +768,7 @@
 <p>Selecting <i>Edit This Script</i> from the tray menu or using the Edit command crashed the script (broken by v1.0.95).</p>
 <p>Error dialogs pointed at irrelevant lines of code in some cases.</p>
 
-<h2 id="v1.0.95.00">1.0.95.00 - 2011å¹´3æœˆ12æ—¥</h2>
+<h2 id="v1.0.95.00">1.0.95.00 - 2011Äê3ÔÂ12ÈÕ</h2>
 <p>All file I/O has been heavily optimized.</p>
 <p>Added <a href="commands/_Warn.htm">#Warn</a> to assist with debugging; initial design by <a href="http://www.autohotkey.com/forum/profile.php?mode=viewprofile&amp;u=48847">ac</a>.</p>
 <p>By default, if <i>name_var</i> contains a function name, <code>name_var.()</code> calls the function. This can be overidden via the <a href="Objects.htm#Default_Base_Object">default base object</a>, as before.</p>
@@ -774,35 +788,35 @@
 <li>A_PriorHotkey and A_TimeSincePriorHotkey now have the expected values when used with #If.</li>
 <li>RegExReplace did not advance through the string correctly after a match failure if the string contained non-ASCII characters.</li>
 </ul>
-<h2 id="v1.0.92.02">1.0.92.02 - 2011å¹´1æœˆ19æ—¥</h2>
+<h2 id="v1.0.92.02">1.0.92.02 - 2011Äê1ÔÂ19ÈÕ</h2>
 <p>Fixed a memory leak which occurred when the return value of an object invocation or built-in function was not used, such as <code>file.ReadLine()</code> or <code>SubStr(x,y,z)</code> alone on a line.</p>
 <p>Replaced the fix from v1.0.92.01 with a better fix, which also fixes <code>k::MsgBox(),x:=y</code> and doesn't break <code>if()</code>.</p>
-<h2 id="v1.0.92.01">1.0.92.01 - 2011å¹´1æœˆ18æ—¥</h2>
+<h2 id="v1.0.92.01">1.0.92.01 - 2011Äê1ÔÂ18ÈÕ</h2>
 <p>Changed: FileCreateDir now sets A_LastError.</p>
 <p>Fixed: <code>GuiControl()</code> or similar was sometimes misinterpreted as a command.</p>
 
-<h2 id="v1.0.92.00">1.0.92.00 - 2011å¹´1æœˆ13æ—¥</h2>
+<h2 id="v1.0.92.00">1.0.92.00 - 2011Äê1ÔÂ13ÈÕ</h2>
 <p>Added support for compound assignments with objects, such as <code>x.y += z</code>.</p>
 <p>Improved IniWrite in Unicode builds to prevent an empty line from appearing at the top of each new file.</p>
 <p>Improved the parser to be more permissive about what can follow <code>{</code>/<code>}</code>/<code>Else</code>, especially when combined.</p>
 
-<h2 id="v1.0.91.05">1.0.91.05 - 2011å¹´1æœˆ1æ—¥</h2>
+<h2 id="v1.0.91.05">1.0.91.05 - 2011Äê1ÔÂ1ÈÕ</h2>
 <p>Fixed: Cleanup code in COM method calls was freeing the wrong parameters.</p>
 <p>Fixed (ANSI): DllCall set incorrect length for wstr parameters on output.</p>
 <p>Fixed: Variadic function calls were unstable when param object was empty.</p>
 
-<h2 id="v1.0.91.04">1.0.91.04 - 2010å¹´12æœˆ29æ—¥</h2>
+<h2 id="v1.0.91.04">1.0.91.04 - 2010Äê12ÔÂ29ÈÕ</h2>
 <p>Fixed (Unicode): RegExReplace omitted all text up to StartingPosition (broken by v1.0.90.00).</p>
 
-<h2 id="v1.0.91.03">1.0.91.03 - 2010å¹´12æœˆ27æ—¥</h2>
+<h2 id="v1.0.91.03">1.0.91.03 - 2010Äê12ÔÂ27ÈÕ</h2>
 <p>Fixed: RegEx callout subpattern vars - broken by v1.0.90.00.</p>
 
-<h2 id="v1.0.91.02">1.0.91.02 - 2010å¹´12æœˆ26æ—¥</h2>
+<h2 id="v1.0.91.02">1.0.91.02 - 2010Äê12ÔÂ26ÈÕ</h2>
 <p>COM: Added protection against NULL IDispatch/IUnknown pointers.</p>
 <p>COM: Skip QueryInterface for IDispatch if VT_DISPATCH is passed explicitly.</p>
 <p>Minor fix for maintainability: <code>obj.field := var</code> now correctly yields SYM_STRING, not SYM_OPERAND.</p>
 
-<h2 id="v1.0.91.01">1.0.91.01 - 2010å¹´12æœˆ24æ—¥</h2>
+<h2 id="v1.0.91.01">1.0.91.01 - 2010Äê12ÔÂ24ÈÕ</h2>
 <p>Fixed: Unexpected results with <code>File.Write(Str)</code> after text-reading.</p>
 <p>Fixed: UTF BOM check caused unexpected results in files without a BOM.</p>
 <p>Fixed (ANSI): Parsing loops and <code>File.ReadLine()</code> treated <code>Chr(255)</code> as EOF.</p>
@@ -810,7 +824,7 @@
 <p>Fixed: Disabling the last hook hotkey breaks Input.</p>
 <p>Added: Simple optimization for RegExMatch/Replace.</p>
 
-<h2 id="v1.0.91.00">1.0.91.00 - 2010å¹´12æœˆ21æ—¥</h2>
+<h2 id="v1.0.91.00">1.0.91.00 - 2010Äê12ÔÂ21ÈÕ</h2>
 <p><i>All changes in this release are COM-related.</i></p>
 <p>Added: <a href="commands/ComObjError.htm">ComObjError</a> now returns the previous setting.</p>
 <p>Added: <a href="commands/ComObjType.htm">ComObjType(co)</a> and <a href="commands/ComObjValue.htm">ComObjValue(co)</a>.</p>
@@ -822,7 +836,7 @@
 <p>Changed: Wrap unhandled variant types in an object rather than returning integer value.</p>
 <p>Changed: Manage VT_UNKNOWN/VT_ARRAY lifetime automatically, by default.</p>
 
-<h2 id="v1.0.90.00">1.0.90.00 - 2010å¹´11æœˆ27æ—¥</h2>
+<h2 id="v1.0.90.00">1.0.90.00 - 2010Äê11ÔÂ27ÈÕ</h2>
 <p>Fixed: UrlDownloadToFile in Unicode builds on Windows &lt; 7.</p>
 <p>Fixed: Upper-ANSI characters were sent as Alt+0 in ANSI build.</p>
 <p>Fixed: File.Pos was incorrect after attempting to read past EOF.</p>
@@ -835,7 +849,7 @@
 <p>Integrated Sean's improvements to number handling in COM interop.</p>
 <p>Optimized RegExReplace and RegExMatch in Unicode builds.</p>
 
-<h2 id="L61">Revision 61 - 2010å¹´10æœˆ3æ—¥</h2>
+<h2 id="L61">Revision 61 - 2010Äê10ÔÂ3ÈÕ</h2>
 <p>Added: <code>ObjClone(Object)</code>, forgotten when <code>Object.Clone()</code> was implemented.</p>
 <p>Added: Support for RegEx Unicode properties in Unicode builds. Also upgraded PCRE to 8.10.</p>
 <p>Added: <code>Object.Remove(int, "")</code> removes <code>Object[int]</code> without affecting other keys.</p>
@@ -848,7 +862,7 @@
 <p>Fixed: Input with 'M' option treated Ctrl-M (<code>`r</code>) as Ctrl-J (<code>`n</code>).</p>
 <p>Fixed: <code>Object.Remove(n)</code> returned 0 (not "") if <code>Object[n]</code> didn't exist.</p>
 
-<h2 id="L60">Revision 60 - 2010å¹´9æœˆ24æ—¥</h2>
+<h2 id="L60">Revision 60 - 2010Äê9ÔÂ24ÈÕ</h2>
 <p>Added: <a href="objects/File.htm#Encoding">File.Encoding</a> for changing or retrieving the codepage in use by a File object.</p>
 <p>Added: <a href="Functions.htm#Variadic">Variadic functions and function-calls</a> and <a href="commands/RegisterCallback.htm#Indirect">indirect mode</a> for callbacks.</p>
 <p>Added: <a href="objects/Object.htm#Clone">Object.Clone()</a></p>
@@ -865,9 +879,9 @@
 <p>Debugger: Added the capability to retrieve an object's contents (with a supported debugger client).</p>
 <p>Debugger: Fixed a few bugs.</p>
 
-<h2 id="L59">Revision 59 - 2010å¹´9æœˆ12æ—¥</h2>
+<h2 id="L59">Revision 59 - 2010Äê9ÔÂ12ÈÕ</h2>
 <p>Fixed: #If <i>expression</i> should now evaluate each <i>expression</i> at most once per keypress in all cases.</p>
-<p>Changed: SplashImage uses common image-loading routines; now supports PNG and similar, but results 5æœˆ differ from before for icon files.</p>
+<p>Changed: SplashImage uses common image-loading routines; now supports PNG and similar, but results 5ÔÂ differ from before for icon files.</p>
 <p>Added: <code><a href="commands/For.htm">For</a> x,y in z</code>.</p>
 <p>Added: <code>Loop .. <a href="commands/Until.htm">Until</a> <i>expression</i></code>, usable with any Loop or For-loop.</p>
 <p>Added: Named loops; <code><a href="commands/Continue.htm">continue</a> outer_loop</code>, <code><a href="commands/Break.htm">break</a> 2</code>, etc.</p>
@@ -876,9 +890,9 @@
 <p>Debugger: Allow <a href="Scripts.htm#debug_attach">attaching a debugger client</a> by sending the script a registered window message.</p>
 <p>Debugger: Allow detaching debugger client by sending the "detach" DBGp command.</p>
 
-<h2 id="L58">Revision 58 - 2010å¹´9æœˆ5æ—¥</h2>
+<h2 id="L58">Revision 58 - 2010Äê9ÔÂ5ÈÕ</h2>
 <p>Added: <code>static var := expression</code>.</p>
-<h2 id="L57">Revision 57 - 2010å¹´9æœˆ4æ—¥</h2>
+<h2 id="L57">Revision 57 - 2010Äê9ÔÂ4ÈÕ</h2>
 <p>Fixed Str*, WStr* and AStr* DllCall return types on x64.</p>
 <p>Added functionality to <a href="Functions.htm#InStr">InStr</a> to bring it in line with StringGetPos:</p>
 <ul>
@@ -893,7 +907,7 @@
 <p>Changed <a href="commands/NumGet.htm">NumGet</a>/<a href="commands/NumPut.htm">NumPut</a> to allow <i>Offset</i> to be omitted entirely since <i>Type</i> is always non-numeric.</p>
 <p>Removed the restriction that a label can't point to the end of a block.</p>
 
-<h2 id="L56">Revision 56 - 2010å¹´8æœˆ29æ—¥</h2>
+<h2 id="L56">Revision 56 - 2010Äê8ÔÂ29ÈÕ</h2>
 <p>Added support for x64 compiled scripts. Requires Ahk2Exe_L and x64 AutoHotkeySC.bin.</p>
 <p>Fixed: Deref operator (<code>*addr</code>) rejected addresses outside 32-bit range.</p>
 <p>Fixed: <code>#If <i>expression</i></code> memory allocation error on x64.</p>
@@ -901,7 +915,7 @@
 <p>Fixed: Special characters being sent out of sequence by SendInput/Play.</p>
 <p>Fixed: <code>*/</code> being discarded in continuation sections (see L54).</p>
 
-<h2 id="L55">Revision 55 - 2010å¹´8æœˆ19æ—¥</h2>
+<h2 id="L55">Revision 55 - 2010Äê8ÔÂ19ÈÕ</h2>
 <p>Fixed: GroupActivate not setting ErrorLevel=1 if no Label was specified.</p>
 <p>Fixed: Tab controls in x64 build.</p>
 <p>Fixed: String-copy mode of StrPut when length is omitted; broken by L53.</p>
@@ -910,7 +924,7 @@
 <p>Includes FileAppend, FileRead, FileReadLine, FileDelete, FileCopy, FileMove, FileGetAttrib/Time/Size/Version and FileSetAttrib/Time.</p>
 <p>Excludes FileCopyDir, FileRecycle, FileMoveDir, FileRemoveDir, FileRecycleEmpty, FileCreateDir and FileInstall as the APIs used do not consistently set or return a Win32 error code.</p>
 
-<h2 id="L54">Revision 54 - 2010å¹´8æœˆ15æ—¥</h2>
+<h2 id="L54">Revision 54 - 2010Äê8ÔÂ15ÈÕ</h2>
 <p>Fixed: RunAs in Unicode build. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=372973#372973">[jackieku]</a></p>
 <p>Fixed: RegisterCallback in x64 build. <a href="http://www.autohotkey.com/forum/viewtopic.php?p=374773#374773">[fincs]</a></p>
 <p>Fixed: Executables failing to run on Win2k and WinXP prior to SP2. Win2k requires SP4 and updates (probably <a href="http://support.microsoft.com/kb/816542">KB 816542</a>). XP not tested.</p>
@@ -937,7 +951,7 @@
 <p>Changed: <code>*/</code> at the beginning of a line is ignored if there was no <code>/*</code>. <a href="http://www.autohotkey.com/forum/topic61109.html">[Discussion]</a></p>
 <p>Removed ToCodePage and FromCodePage subcommands of Transform.</p>
 
-<h2 id="L53">Revision 53 - 2010å¹´8æœˆ8æ—¥</h2>
+<h2 id="L53">Revision 53 - 2010Äê8ÔÂ8ÈÕ</h2>
 
 <p><b>Merged AutoHotkey64</b> - COM support and x64 compatibility.</p>
 <p><b>x64</b> (<i>changes since AutoHotkey64</i>):</p>
@@ -972,25 +986,25 @@
 <p>Changed: <code>x.y[]</code> is now equivalent to <code>(x.y)[]</code> rather than <code>x["y"]</code>.</p>
 <p>Changed: Built-in methods can now be called with or without the underscore prefix (e.g. <code>obj.MaxIndex()</code> or <code>obj._MaxIndex()</code>).</p>
 
-<h2 id="L52">Revision 52 (again) - 2010å¹´6æœˆ10æ—¥</h2>
+<h2 id="L52">Revision 52 (again) - 2010Äê6ÔÂ10ÈÕ</h2>
 <p>Added support for built-in and environment variables in double-derefs.</p>
 <p>Improved support for multi-byte characters in certain codepages (previously only 932, 936, 949, 950 and 1361 were supported).</p>
 <p>Fixed: StrPut failed for codepages which don't support WC_NO_BEST_FIT_CHARS, such as UTF-7.</p>
 <p>Fixed: Double-deref as object - <code>literal%var%.literal</code>.</p>
 <p>Fixed: <code>StrPut("", Encoding)</code> null-terminated an invalid address.</p>
 
-<h2>Revision 52 - 2010å¹´6æœˆ12æ—¥</h2>
+<h2>Revision 52 - 2010Äê6ÔÂ12ÈÕ</h2>
 <p>Fixed: ObjRemove's Key parameter is now optional, as with <a href="objects/Object.htm#Remove">Object._Remove</a>.</p>
 <p>Fixed: Files were improperly locked while reading, unlike in older versions.</p>
 <p>Fixed: Uppercase Hex format caused negative integers to become unsigned.</p>
 <p>Fixed: RegExMatch was corrupting output array items when specific conditions were met. See <a href="http://www.autohotkey.com/forum/topic59120.html">bug report</a>.</p>
 
-<h2 id="L51">Revision 51 - 2010å¹´4æœˆ11æ—¥</h2>
+<h2 id="L51">Revision 51 - 2010Äê4ÔÂ11ÈÕ</h2>
 <p>Changed: Use &lt;EXENAME&gt;.ahk instead of AutoHotkey.ini or AutoHotkey.ahk.</p>
 <p>Changed: Default to UTF-8 for script files; override with /CPnnn.</p>
 <p>Fixed: Unpause when the script exits so that object __Delete meta-functions can run.</p>
 
-<h2 id="L50">Revision 50 - 2010å¹´3æœˆ27æ—¥</h2>
+<h2 id="L50">Revision 50 - 2010Äê3ÔÂ27ÈÕ</h2>
 <p>Improved flexibility of <a href="objects/Object.htm#Insert">Object._Insert</a>.</p>
 <ul>
   <li><code>Object._Insert(x)</code> - inserts x at <code>_MaxIndex()="" ? 1 : _MaxIndex() + 1</code>.</li>
@@ -1006,7 +1020,7 @@
 <p>Fixed: <code>Object._SetCapacity(key,n)</code> was not null-terminating in some cases.</p>
 <p>Fixed: StatusBarGetText returned only half of the text in Unicode builds.</p>
 
-<h2 id="L49">Revision 49 - 2010å¹´3æœˆ14æ—¥</h2>
+<h2 id="L49">Revision 49 - 2010Äê3ÔÂ14ÈÕ</h2>
 <p>Added <a href="objects/Object.htm#NewEnum">obj._NewEnum()</a>.</p>
 <p>Added <a href="objects/Object.htm">ObjMethod(obj)</a> for each built-in <code>obj._Method()</code>.</p>
 <p>Changed: ObjSet/Get/Call can no longer be called/overridden by script.</p>
@@ -1014,78 +1028,78 @@
 <p>Fixed: Character codes in VK_PACKET events were potentially misinterpreted as scancodes.</p>
 <p>Fixed: ExcludeText was ineffective after the first matching control.</p>
 
-<h2 id="L48">Revision 48 - 2010å¹´2æœˆ21æ—¥</h2>
+<h2 id="L48">Revision 48 - 2010Äê2ÔÂ21ÈÕ</h2>
 <p>Fixed: Standalone <code>obj.()</code> was not recognized as a valid expression.</p>
-<p>ControlSend now uses WM_CHAR to support characters which have no associated keycode.  For instance, this applies to "&#133;" (en-US), "&#x221e;" in a Unicode build and <code>{U+221e}</code> in either build.</p>
-<p>KeyHistory now shows the full 16-bit character code for VK_PACKET (VK=E7) events.  <a href="commands/Send.htm#Unicode">Send</a> 5æœˆ indirectly cause these to be generated for Unicode characters.</p>
+<p>ControlSend now uses WM_CHAR to support characters which have no associated keycode.  For instance, this applies to "&#8230;" (en-US), "&#x221e;" in a Unicode build and <code>{U+221e}</code> in either build.</p>
+<p>KeyHistory now shows the full 16-bit character code for VK_PACKET (VK=E7) events.  <a href="commands/Send.htm#Unicode">Send</a> 5ÔÂ indirectly cause these to be generated for Unicode characters.</p>
 
-<h2 id="L47">Revision 47 - 2010å¹´2æœˆ13æ—¥</h2>
+<h2 id="L47">Revision 47 - 2010Äê2ÔÂ13ÈÕ</h2>
 <p>Fixed (Unicode): ControlGet,List with ListView controls.</p>
 
-<h2 id="L46">Revision 46 - 2010å¹´2æœˆ11æ—¥</h2>
+<h2 id="L46">Revision 46 - 2010Äê2ÔÂ11ÈÕ</h2>
 <p>Added A_FileEncoding, which returns the current default file encoding.</p>
 <p>Added <a href="commands/StrPutGet.htm">StrPut</a> and extended <a href="commands/StrPutGet.htm">StrGet</a> with additional features.</p>
 
-<h2 id="L45">Revision 45 - 2010å¹´2æœˆ8æ—¥</h2>
-<p>Added _GetAddress; _SetCapacity/_GetCapacity 5æœˆ now operate on a given field.  <a href="objects/Object.htm">[more info]</a></p>
+<h2 id="L45">Revision 45 - 2010Äê2ÔÂ8ÈÕ</h2>
+<p>Added _GetAddress; _SetCapacity/_GetCapacity 5ÔÂ now operate on a given field.  <a href="objects/Object.htm">[more info]</a></p>
 <p>Added workaround for WM_PAINT infinite loop often caused by subclassing.</p>
 <p>Allow <code>obj.()</code> as a means to call the default method of an object; equivalent to <code>obj[""]()</code>.</p>
 <p>Dev: Added solution and project files for MSBuild 4.0 & VS2010.  <a href="http://github.com/Lexikos/AutoHotkey_L/commit/ed81ea089c223b46c883036c14454aa4386d3801">[more info]</a></p>
 <p>Fixed (Unicode): 'Running' column in ListHotkeys.</p>
 
-<h2 id="L44">Revision 44 - 2010å¹´2æœˆ7æ—¥</h2>
+<h2 id="L44">Revision 44 - 2010Äê2ÔÂ7ÈÕ</h2>
 <p>Fixed: Attempting to set "nothing" crashed the script. For instance, <code>x[]:=z</code>.</p>
 <p>Fixed (Unicode): Unable to find default script (Documents\AutoHotkey.ahk).</p>
 <p>Fixed (Unicode): A_Desktop, A_ProgramFiles and several other built-in variables which read their value from the registry caused strings to be incorrectly terminated.</p>
 <p>Fixed (ANSI): Characters in the range 0x80-0xFF couldn't be found by InStr or StringReplace.</p>
 <p>Changed (ANSI): Treat ToCodePage/FromCodePage like other unsupported/invalid subcommands.</p>
 
-<h2 id="L43">Revision 43 - 2010å¹´1æœˆ29æ—¥</h2>
+<h2 id="L43">Revision 43 - 2010Äê1ÔÂ29ÈÕ</h2>
 <p>Fixed: obj.Func() resulting in a random integer when it should be an empty string.</p>
 
-<h2 id="L42">Revision 42 - 2010å¹´1æœˆ28æ—¥</h2>
+<h2 id="L42">Revision 42 - 2010Äê1ÔÂ28ÈÕ</h2>
 <p>Merged with AutoHotkeyU.</p>
 <p>Numerous bug-fixes and improvements, some relating to the merge.</p>
 
-<h2 id="L41">Revision 41 - 2009å¹´12æœˆ20æ—¥</h2>
+<h2 id="L41">Revision 41 - 2009Äê12ÔÂ20ÈÕ</h2>
 <p>Fixed: Floating-point numbers were equivalent to an empty string when used as keys in objects.  They are now converted to numeric strings in the current <a href="commands/SetFormat.htm">float format</a>, as originally intended.</p>
 
-<h2 id="L40">Revision 40 - 2009å¹´12æœˆ13æ—¥</h2>
+<h2 id="L40">Revision 40 - 2009Äê12ÔÂ13ÈÕ</h2>
 <p>Changed meta-functions and multi-param behaviour to improve flexibility.  Meta-functions are now invoked *before* searching for an appropriate field in each base object; however, values in x.base will override meta-functions defined in x.base.base.  Chaining meta-functions (inheritence) is now possible by avoiding "Return"</p>
 <p>Improved Default Base functionality to be more consistent with real objects.</p>
 <p>Changed (Debugger): While stepping through code, skip all braces except those which end a function.</p>
 <p>Changed (Debugger): When stepping onto the hidden "Exit" at end of the script, consider it to be *below* the last physical line to avoid confusion.</p>
 
-<h2 id="L39">Revision 39 - 2009å¹´12æœˆ2æ—¥</h2>
+<h2 id="L39">Revision 39 - 2009Äê12ÔÂ2ÈÕ</h2>
 <p>Fixed (Debugger): Error in Base64 decoding used by property_set.</p>
 
-<h2 id="L38">Revision 38 - 2009å¹´11æœˆ17æ—¥</h2>
+<h2 id="L38">Revision 38 - 2009Äê11ÔÂ17ÈÕ</h2>
 <p>Added: <a href="commands/_MenuMaskKey.htm">#MenuMaskKey</a> directive to change which key is used to mask Alt/Win keyup events.  See <a href="http://www.autohotkey.com/forum/topic22378.html">this thread</a> for background information.</p>
 <p>Changed: If <code>x[1,2]:=3</code> creates an object for <code>x[1]</code>, it's base is no longer automatically set to <code>x.base</code>.  See <a href="Objects.htm#Subclassing_aoa">the documentation</a> for a method of controlling this behaviour.</p>  
 
-<h2 id="L37">Revision 37 - 2009å¹´11æœˆ7æ—¥</h2>
+<h2 id="L37">Revision 37 - 2009Äê11ÔÂ7ÈÕ</h2>
 <p>Added: Support for <code>obj[method_name](params)</code> object-call syntax.</p>
 
-<h2 id="L36">Revision 36 - 2009å¹´11æœˆ4æ—¥</h2>
+<h2 id="L36">Revision 36 - 2009Äê11ÔÂ4ÈÕ</h2>
 <p>Changed: If <code>x.y</code> or similar is immediately followed by an open-bracket (<code>[</code>), the right-most identifier preceding the bracket is treated as the first parameter of the operation.  For instance, <code>a.b.c[d]</code> is equivalent to <code>ObjGet(a.b,"c",d)</code> and <code>x.y[z]:=v</code> is equivalent to <code>ObjSet(x,"y",z,v)</code>. Previously each sub-expression preceding a bracket was evaluated separately.</p>
 <p>Changed: If a method-call such as <code>x.y()</code> is followed immediately by an assignment, the parentheses are treated as brackets. For instance, <code>x.y(z):=v</code> is now equivalent to <code>ObjSet(x,"y",z,v)</code>.</p>
 <p>Fixed: If(expr) and While(expr) with no delimiting space or comma.</p>  
 
-<h2 id="L35">Revision 35 - 2009å¹´10æœˆ25æ—¥</h2>
+<h2 id="L35">Revision 35 - 2009Äê10ÔÂ25ÈÕ</h2>
 <p>Fixed: Standalone expressions beginning with two or more "dots", such as <code>x.y.z()</code>. (Broken by L34.) Note that '(' or '[' or ':=' is still required.</p>
 
-<h2 id="L34">Revision 34 - 2009å¹´10æœˆ24æ—¥</h2>
+<h2 id="L34">Revision 34 - 2009Äê10ÔÂ24ÈÕ</h2>
 <p>Changed: Setting a value within an object to an empty string now stores the empty string rather than removing the key-value pair from the object.  _Remove can still be used to completely remove key-value pairs.</p>
 <p>Changed: Command names must be terminated with a space, tab or comma.  The following characters no longer bypass this requirement: <code>&lt;&gt;:+-*/!~&amp;|^[]</code>.  For instance, syntax errors such as <code>MsgBox&lt; foo</code> and <code>If!foo</code> are now caught at load-time.</p>
 <p>Fixed: Return now properly handles expressions which result in a variable containing an object.  For instance, <code>Return x:=y</code>, <code>Return (x)</code>, <code>Return x,...</code> and similar should work now (<code>Return x</code> already worked).</p>
 <p>Fixed: Multi-parameter get/set did not correctly support meta-functions for multiple objects (such as for <code>x</code> <i>and</i> <code>x[y]</code> in the expression <code>x[y,z]</code>).</p>
 <p>Fixed: Cascading object-assignments such as the <code>x[y]:=z</code> in <code>r:=x[y]:=z</code> could not yield numbers or objects - broken by L33.</p>
 <p>Fixed: <code>x._Remove(y)</code> crashed the script or removed the wrong item if <code>x</code> did not contain <code>y</code>.</p>
-<p>Fixed: <code>x.=y</code>, <code>if x.y=...</code> and similar.  5æœˆ affect other expressions.</p>
+<p>Fixed: <code>x.=y</code>, <code>if x.y=...</code> and similar.  5ÔÂ affect other expressions.</p>
 <p>Fixed: Standalone ternary expressions no longer requires spaces.  For instance, <code>x? F(1) : F(2)</code> is now allowed.</p>
 <p>Debugger: On script exit, disconnect debugger *after* releasing objects to allow debugging of __Delete handlers.</p>
 
-<h2 id="L33">Revision 33 - 2009å¹´10æœˆ3æ—¥</h2>
+<h2 id="L33">Revision 33 - 2009Äê10ÔÂ3ÈÕ</h2>
 <p>Fixed: Local variables were not automatically freed for functions which return objects or pure numbers.</p>
 <p>Fixed: Two separate reference-counting errors related to ternary operator and Object().</p>
 <p>Fixed: If a string returned by a scripted object function was assigned directly to a variable, the variable's length was set incorrectly.</p>
@@ -1093,130 +1107,130 @@
 <p>Fixed: Numeric strings with special formatting were not preserved when returned from a function via a variable or passed to a recursive function.</p>
 <p>Fixed: If the final result of an expression (other than for Return) is an object, correctly yield an empty string instead of silently aborting the thread.</p>
 <p>Fixed: __Delete meta-functions sometimes overwrote temporary values in the deref buffer.</p>
-<p>Added: An address retrieved via &amp;object 5æœˆ be cast back into an object reference by using Object(address).</p>  
+<p>Added: An address retrieved via &amp;object 5ÔÂ be cast back into an object reference by using Object(address).</p>  
 
-<h2 id="L32">Revision 32 - 2009å¹´9æœˆ26æ—¥</h2>
+<h2 id="L32">Revision 32 - 2009Äê9ÔÂ26ÈÕ</h2>
 <p>Fixed: Send/PostMessage crash when less than three parameters were specified.</p>
 
-<h2 id="L31">Revision 31 - 2009å¹´9æœˆ26æ—¥</h2>
+<h2 id="L31">Revision 31 - 2009Äê9ÔÂ26ÈÕ</h2>
 <p>Added: Object/array support and numerous minor changes to make this possible.</p>
 <p>Added: Support for While(expression) with no delimiting space.</p>
 <p>Added: Trim, LTrim, RTrim.</p>
-<p>Added: A ~= B; equivalent to RegExMatch(A, B).  5æœˆ be removed in a future revision.</p>
+<p>Added: A ~= B; equivalent to RegExMatch(A, B).  5ÔÂ be removed in a future revision.</p>
 <p>Fixed: An incompatibility with LowLevel.</p>
 <p>Changed: Characters [, ] and ? are no longer valid in variable names.  Consequently, ? (ternary) no longer requires a space on either side.</p>
-<p>Changed: Optional parameters 5æœˆ now be omitted at any position in the parameter list of a non-dynamic function call. Since this works by automatically inserting the parameter's default value at load-time, it is not supported or allowed for dynamic function-calls.</p>
+<p>Changed: Optional parameters 5ÔÂ now be omitted at any position in the parameter list of a non-dynamic function call. Since this works by automatically inserting the parameter's default value at load-time, it is not supported or allowed for dynamic function-calls.</p>
 <p>Debugger: Various minor changes to make program flow easier to follow while stepping through code.</p>
 <p>Optimization: If DllCall's first parameter is a literal string which identifies a function already present in memory, it is replaced with the actual address of the function.</p>
 <p>Updated from v1.0.48.03 to v1.0.48.04.</p>
 
-<h2 id="L30">Revision 30 - 2009å¹´5æœˆ31æ—¥</h2>
+<h2 id="L30">Revision 30 - 2009Äê5ÔÂ31ÈÕ</h2>
 <p>Updated from v1.0.48.02 to v1.0.48.03.</p>
 
-<h2 id="L29">Revision 29 - 2009å¹´5æœˆ2æ—¥</h2>
-<p>All supported image formats 5æœˆ now be used as menu icons.  Currently it is necessary to specify "actual size" when setting the icon to preserve transparency on Windows Vista and later. For example:</p>
+<h2 id="L29">Revision 29 - 2009Äê5ÔÂ2ÈÕ</h2>
+<p>All supported image formats 5ÔÂ now be used as menu icons.  Currently it is necessary to specify "actual size" when setting the icon to preserve transparency on Windows Vista and later. For example:</p>
 <pre>Menu, Icon, MenuItemName, Filename.png,, 0</pre>  
 
-<h2 id="L28">Revision 28 - 2009å¹´5æœˆ2æ—¥</h2>
+<h2 id="L28">Revision 28 - 2009Äê5ÔÂ2ÈÕ</h2>
 <p>Improved average-case performance of dynamic function calls by implementing binary search for function name look-ups. This change also applies to other areas, such as load-time resolution of function references in expressions and run-time resolution by OnMessage, RegisterCallback, etc.</p>  
 
-<h2 id="L27">Revision 27 - 2009å¹´4æœˆ26æ—¥</h2>
+<h2 id="L27">Revision 27 - 2009Äê4ÔÂ26ÈÕ</h2>
 <p>Updated from v1.0.48.00 to v1.0.48.02.</p>  
 
-<h2 id="L26">Revision 26 - 2009å¹´4æœˆ11æ—¥</h2>
+<h2 id="L26">Revision 26 - 2009Äê4ÔÂ11ÈÕ</h2>
 <p>Fixed: Menu icons were not drawn on items which have sub-menus if owner-drawing was in use.</p>
 <p>Fixed: Menu icons were not freed if all menu items were deleted at once.</p>
 <p>Changed (Source): Renamed AutoHotkey.sln to AutoHotkey_L.sln to allow VS window to be identified more easily.</p>  
 
-<h2 id="L25">Revision 25 - 2009å¹´3æœˆ30æ—¥</h2>
+<h2 id="L25">Revision 25 - 2009Äê3ÔÂ30ÈÕ</h2>
 <p>Fixed: Send {U+xxxx} correctly sets modifier key-state as with any normal key.</p>
 <p>Fixed: Send {U+..xx} no longer triggers hotkey SCxx.</p>
 
-<h2 id="L24">Revision 24 - 2009å¹´3æœˆ30æ—¥</h2>
+<h2 id="L24">Revision 24 - 2009Äê3ÔÂ30ÈÕ</h2>
 <p>Added: Support for Send {U+xxxx}. SendInput() is used where available for proper unicode support, otherwise falls back to Alt+Numpad.</p>
 
-<h2 id="L23">Revision 23 - 2009å¹´3æœˆ30æ—¥</h2>
+<h2 id="L23">Revision 23 - 2009Äê3ÔÂ30ÈÕ</h2>
 <p>Fixed: GuiControl, Enable/Disable now only resets focus if the focused control was disabled.</p>  
 
-<h2 id="L22">Revision 22 - 2009å¹´3æœˆ26æ—¥</h2>
+<h2 id="L22">Revision 22 - 2009Äê3ÔÂ26ÈÕ</h2>
 <p>Optimized If var [not] in/contains MatchList, especially for long lists containing shorter fields.</p>  
 
-<h2 id="L21">Revision 21 - 2009å¹´3æœˆ16æ—¥</h2>
+<h2 id="L21">Revision 21 - 2009Äê3ÔÂ16ÈÕ</h2>
 <p>Minor optimizations to While. [thanks Chris]</p>
 <p>Fixed (Debugger): Revisions 19 and 20 omitted timer threads from the call stack.</p>
 <p>Fixed (Debugger): XML-reserved characters were not escaped in most situations.</p>
 <p>Fixed (Debugger): Incorrect command and transaction_id were used in the final response before exiting the script.</p>  
 
-<h2 id="L20">Revision 20 - 2009å¹´2æœˆ27æ—¥</h2>
+<h2 id="L20">Revision 20 - 2009Äê2ÔÂ27ÈÕ</h2>
 <p>Changed: If an icon cannot be loaded with the new method, fall back to the old method.</p>
 
-<h2 id="L19">Revision 19 - 2009å¹´2æœˆ26æ—¥</h2>
+<h2 id="L19">Revision 19 - 2009Äê2ÔÂ26ÈÕ</h2>
 <p>Added: Gui, Font, qN option to set font quality/control anti-aliasing, where N is between 0 and 5.</p>
 <p>Fixed: IL_Add now loads icons at the most appropriate size when multiple sizes exist.</p>
 <p>Merged with AutoHotkey v1.0.48, introducing bug fixes, optimizations and other changes by Chris. Some AutoHotkey_L features were integrated into the mainstream release; changes to these features since previous revisions are as follows:</p>
 <ul>
   <li>Legacy behaviour is no longer applied to While - e.g. "While %x%" is correctly interpreted as a double-deref rather than as "While x".</li>
   <li>One-True-Brace style is now supported for While.</li>
-  <li>Static vars 5æœˆ now be declared and initialized in assume-static functions.</li>
-  <li>Passing too <em>few</em> parameters in a dynamic function call is no longer allowed, as it allows the function's caller to second-guess the function's designer, reduces the ability to detect script bugs at runtime, and 5æœˆ cause the application to crash if calling a built-in function.</li>
+  <li>Static vars 5ÔÂ now be declared and initialized in assume-static functions.</li>
+  <li>Passing too <em>few</em> parameters in a dynamic function call is no longer allowed, as it allows the function's caller to second-guess the function's designer, reduces the ability to detect script bugs at runtime, and 5ÔÂ cause the application to crash if calling a built-in function.</li>
 </ul>
 
-<h2 id="L18">Revision 18 - 2009å¹´2æœˆ21æ—¥</h2>
+<h2 id="L18">Revision 18 - 2009Äê2ÔÂ21ÈÕ</h2>
 <p>Fixed: Incomplete bug-fix in previous revision causing concat followed by assignment to skip the rest of the expression in some cases.</p>
 
-<h2 id="L17">Revision 17 - 2009å¹´2æœˆ20æ—¥</h2>
+<h2 id="L17">Revision 17 - 2009Äê2ÔÂ20ÈÕ</h2>
 <p>Added: Menu icons via Icon and NoIcon sub-commands of the Menu command.</p>
 <p>Changed: Negative icon numbers can now be used to indicate a resource ID within an executable.</p>
 <p>Changed: Set default style of menus to include MNS_CHECKORBMP.</p>
 <p>Changed: Load both small and large versions of custom tray icons to allow the correct icons to be shown in the appropriate places.</p>
 <p>Fixed: Loading of icons from executable files at sizes other than the system small/large.</p>
 
-<h2 id="L16">Revision 16 - 2009å¹´2æœˆ4æ—¥</h2>
+<h2 id="L16">Revision 16 - 2009Äê2ÔÂ4ÈÕ</h2>
 <p>Fixed: Deleting a menu item partially deleted its associated sub-menu.</p>  
 
-<h2 id="L15">Revision 15 - 2009å¹´2æœˆ1æ—¥</h2>
+<h2 id="L15">Revision 15 - 2009Äê2ÔÂ1ÈÕ</h2>
 <p>Fixed: SetFormat's presence in a *compiled* script was not disabling binary number write-caching. SetFormat should now work correctly in compiled scripts.</p>
 
-<h2 id="L14">Revision 14 - 2009å¹´2æœˆ1æ—¥</h2>
+<h2 id="L14">Revision 14 - 2009Äê2ÔÂ1ÈÕ</h2>
 <p>Numerous bug-fixes and optimizations by Chris (pre-v1.0.48 beta).</p>
 <p>Added: Support for regex callouts and the auto-callout option 'C'.</p>
 <p>Changed: A_AhkVersion now includes the revision number. For instance, this is 1.0.47.07.L14.</p>
 <p>Fixed: HWND's/window ID's were sign-extended to 64-bit. For instance, 0xb482057e became 0xffffffffb482057e.</p>
 
-<h2 id="L13">Revision 13 - 2008å¹´11æœˆ29æ—¥</h2>
+<h2 id="L13">Revision 13 - 2008Äê11ÔÂ29ÈÕ</h2>
 <p>Fixed: Invalid DllCall types were treated as INT in some build environments.</p>
 <p>Added: Workaround for GuiEscape issue when disabling focused control.</p>
 <p>Changed version info: InternalName, ProductName and FileDescription are now "AutoHotkey_L" instead of "AutoHotkey".</p>
 
-<h2 id="L12">Revision 12 - 2008å¹´9æœˆ6æ—¥</h2>
+<h2 id="L12">Revision 12 - 2008Äê9ÔÂ6ÈÕ</h2>
 <p>Fixed: Potential access violation when using property_get on a built-in variable. -- DBGP</p>
 
-<h2 id="L11">Revision 11 - 2008å¹´9æœˆ5æ—¥</h2>
+<h2 id="L11">Revision 11 - 2008Äê9ÔÂ5ÈÕ</h2>
 <p>Fixed: Remove checksum from AutoHotkeySC.bin via post-build script (AutoHotkey must be installed).</p>
 <p>Added: .L suffix to A_AhkVersion.</p>
 <p>Added: Preliminary support for DBGp (interactive debugging).</p>
 
-<h2 id="L10">Revision 10 - 2008å¹´8æœˆ2æ—¥</h2>
+<h2 id="L10">Revision 10 - 2008Äê8ÔÂ2ÈÕ</h2>
 <p>Fixed: WheelLeft/WheelRight support, which was broken in revision 9.</p>
 
-<h2 id="L9">Revision 9 - 2008å¹´6æœˆ29æ—¥</h2>
+<h2 id="L9">Revision 9 - 2008Äê6ÔÂ29ÈÕ</h2>
 <p>Fixed: Allow Break/Continue in While.</p>
 <p>Fixed: TrayTip in non-English Windows and possibly other side-effects of using Vista headers.</p>
 
-<h2 id="L8">Revision 8 - 2008å¹´6æœˆ27æ—¥</h2>
+<h2 id="L8">Revision 8 - 2008Äê6ÔÂ27ÈÕ</h2>
 <p>Added: #IfTimeout directive to set the timeout for evaluation of #If expressions, in milliseconds. Default is 1000.</p>
 <p>Added: Assume-static mode for functions. "Static" must precede any local/global variable declarations.</p>
 <p>Added: One-true-brace support for While.</p>
 <p>Changed: While now sets A_Index to the iteration about to begin.</p>
 
-<h2 id="L7">Revision 7 - 2008å¹´6æœˆ26æ—¥</h2>
+<h2 id="L7">Revision 7 - 2008Äê6ÔÂ26ÈÕ</h2>
 <p>Added: IsFunc(FuncName) - Returns a non-zero number if FuncName exists in the script or as a built-in function.</p>
 
-<h2 id="L5">Revision 5 - 2008å¹´6æœˆ19æ—¥</h2>
+<h2 id="L5">Revision 5 - 2008Äê6ÔÂ19ÈÕ</h2>
 <p>Cleaned up obsolete references to test scripts.</p>
 <p>Added basic default test script.</p>
 
-<h2 id="L4">Revision 4 - 2008å¹´6æœˆ18æ—¥</h2>
+<h2 id="L4">Revision 4 - 2008Äê6ÔÂ18ÈÕ</h2>
 <p>Added: #if (expression) - Similar to #IfWinActive, but for arbitrary expressions.</p>
 <p>Added: WheelLeft, WheelRight - Support for WM_MOUSEHWHEEL, which was introduced with Windows Vista. (Requires Vista.)</p>
 <p>Added: While, expression - Loop while a condition is true.</p>

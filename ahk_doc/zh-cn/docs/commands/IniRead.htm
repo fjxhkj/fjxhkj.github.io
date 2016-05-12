@@ -1,9 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>IniRead</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/content.js" type="text/javascript"></script>
@@ -12,53 +11,53 @@
 
 <h1>IniRead</h1>
 
-<p>Reads a value, section or list of section names from a standard format .ini file.</p>
+<p>´Ó±ê×¼ini¸ñÊ½ÎÄ¼şÖĞ¶ÁÈ¡Ò»¸öÖµ,Ò»¸ö¶Î»ò¶ÎÃûÁĞ±í.</p>
 
 <pre class="Syntax">IniRead, OutputVar, Filename, Section, Key [, Default]
 IniRead, OutputVarSection, Filename, Section
 IniRead, OutputVarSectionNames, Filename
 </pre>
-<h3>å‚æ•°</h3>
+<h3>²ÎÊı</h3>
 <dl>
 
   <dt>OutputVar</dt>
   <dd>
-      <p>The name of the variable in which to store the retrieved value. If the value cannot be retrieved, the variable is set to the value indicated by the <em>Default</em> parameter (described below).</p>
+      <p>´æ·Å·µ»ØÖµµÄ±äÁ¿Ãû. Èç¹ûÎŞ·¨·µ»ØÖµ, ´Ë±äÁ¿½«±»ÉèÖÃ³É <em>Default</em> ²ÎÊıËùÖ¸¶¨µÄÖµ(ÔÚÏÂÎÄÁĞ³ö).</p>
     </dd>
   
   <dt>OutputVarSection</dt>
-  <dd><p><span class="ver">[AHK_L 57+]:</span> Omit the <em>Key</em> parameter to read an entire section. Comments and empty lines are omitted. Only the first 65,533 characters of the section are retrieved.</p></dd>
+  <dd><p><span class="ver">[AHK_L 57+]:</span> Ê¡ÂÔ <em>Key</em> ²ÎÊıÊ±»á¶ÁÈ¡Ò»Õû¶ÎµÄÖµ.½ö¸Ã¶ÎµÄÇ°65,533¸ö×Ö·û´®»á±»·µ»Ø,²»°üº¬×¢ÊÍºÍ¿ÕĞĞ.</p></dd>
   
   <dt>OutputVarSectionNames</dt>
-  <dd><p><span class="ver">[AHK_L 57+]:</span> Omit the <em>Key</em> and <em>Section</em> parameters to retrieve a linefeed (<code>`n</code>) delimited list of section names.</p></dd>
+  <dd><p><span class="ver">[AHK_L 57+]:</span> Ê¡ÂÔ <em>Key</em> ºÍ <em>Section</em> ²ÎÊıÊ±»á·µ»ØÒ»¸öÒÔ»»ĞĞ·û (<code>`n</code>) ·Ö¸ôµÄ¶ÎÃûÁĞ±í.</p></dd>
 
   <dt>Filename</dt>
-  <dd><p>ini æ–‡ä»¶å, å¦‚æœæœªæŒ‡å®šç»å¯¹è·¯å¾„åˆ™å‡å®šåœ¨ <a href="../Variables.htm#WorkingDir">%A_WorkingDir%</a> ä¸­.</p></dd>
+  <dd><p>ini ÎÄ¼şÃû, Èç¹ûÎ´Ö¸¶¨¾ø¶ÔÂ·¾¶Ôò¼Ù¶¨ÔÚ <a href="../Variables.htm#WorkingDir">%A_WorkingDir%</a> ÖĞ.</p></dd>
 
   <dt>Section</dt>
-  <dd><p>ini æ–‡ä»¶ä¸­çš„æ®µå, å®ƒæ˜¯åŒ…å«åœ¨æ–¹æ‹¬å·ä¸­çš„æ ‡é¢˜çŸ­è¯­ (åœ¨æ­¤å‚æ•°ä¸­ä¸éœ€è¦åŠ æ–¹æ‹¬å·).</p></dd>
+  <dd><p>ini ÎÄ¼şÖĞµÄ¶ÎÃû, ËüÊÇ°üº¬ÔÚ·½À¨ºÅÖĞµÄ±êÌâ¶ÌÓï (ÔÚ´Ë²ÎÊıÖĞ²»ĞèÒª¼Ó·½À¨ºÅ).</p></dd>
 
   <dt>Key</dt>
-  <dd><p>ini æ–‡ä»¶ä¸­çš„é”®å.</p></dd>
+  <dd><p>ini ÎÄ¼şÖĞµÄ¼üÃû.</p></dd>
 
   <dt>Default</dt>
-  <dd><p>å½“æ²¡æœ‰æ‰¾åˆ°è¯·æ±‚çš„é”®æ—¶ä¿å­˜åˆ° <em>OutputVar</em> ä¸­çš„å€¼. å¦‚æœçœç•¥, æ­¤å‚æ•°é»˜è®¤ä¸ºå•è¯ ERROR. è¦å­˜å‚¨ç©ºå€¼ (ç©ºå­—ç¬¦ä¸²), è¯·æŒ‡å®š <a href="../Variables.htm#Space">%A_Space%</a>.</p>
-      <p><span class="ver">[AHK_L 57+]:</span> çœç•¥ <i>Key</i> æ—¶æ­¤å‚æ•°æ— æ„ä¹‰.</p>
+  <dd><p>µ±Ã»ÓĞÕÒµ½ÇëÇóµÄ¼üÊ±±£´æµ½ <em>OutputVar</em> ÖĞµÄÖµ. Èç¹ûÊ¡ÂÔ, ´Ë²ÎÊıÄ¬ÈÏÎªµ¥´Ê ERROR. Òª´æ´¢¿ÕÖµ (¿Õ×Ö·û´®), ÇëÖ¸¶¨ <a href="../Variables.htm#Space">%A_Space%</a>.</p>
+      <p><span class="ver">[AHK_L 57+]:</span> Ê¡ÂÔ <i>Key</i> Ê±´Ë²ÎÊıÎŞÒâÒå.</p>
       </dd>
 
 </dl>
 <h3>ErrorLevel</h3>
-<p>æ­¤å‘½ä»¤ <strong>ä¸ä¼š</strong> æ”¹å˜ <a href="../misc/ErrorLevel.htm">ErrorLevel</a>. å¦‚æœé‡åˆ°é—®é¢˜, <em>OutputVar</em> å°†è¢«è®¾ç½®ä¸ºå¦‚ä¸Šæ‰€è¿°çš„ <em>Default</em> å€¼.</p>
-<h3>å¤‡æ³¨</h3>
-<p>æ“ä½œç³»ç»Ÿä¼šè‡ªåŠ¨å¿½ç•¥è·å–å­—ç¬¦ä¸²ä¸­å‰å¯¼å’Œå°¾éšç©ºæ ¼/tab. ä¸ºé¿å…æ­¤æƒ…å†µï¼Œä½¿ç”¨å•å¼•å·æˆ–åŒå¼•å·ç»“æŸå­—ç¬¦ä¸²ã€‚æœ€å¤–å±‚çš„å•å¼•å·æˆ–åŒå¼•å·è¢«å¿½ç•¥ï¼Œä½†å¼•å·å†…çš„ç©ºæ ¼è¢«ä¿ç•™ã€‚</p>
-<p>è¶…è¿‡ 65,535 å­—ç¬¦çš„å€¼å¾ˆå¯èƒ½è¢«æˆªçŸ­ã€‚</p>
-<p>æ ‡å‡†çš„ ini æ–‡ä»¶çœ‹èµ·æ¥ç±»ä¼¼ä¸‹é¢è¿™æ ·:</p>
+<p>´ËÃüÁî <strong>²»»á</strong> ¸Ä±ä <a href="../misc/ErrorLevel.htm">ErrorLevel</a>. Èç¹ûÓöµ½ÎÊÌâ, <em>OutputVar</em> ½«±»ÉèÖÃÎªÈçÉÏËùÊöµÄ <em>Default</em> Öµ.</p>
+<h3>±¸×¢</h3>
+<p>²Ù×÷ÏµÍ³»á×Ô¶¯ºöÂÔ»ñÈ¡×Ö·û´®ÖĞÇ°µ¼ºÍÎ²Ëæ¿Õ¸ñ/tab. Îª±ÜÃâ´ËÇé¿ö,Ê¹ÓÃµ¥ÒıºÅ»òË«ÒıºÅ½áÊø×Ö·û´®.×îÍâ²ãµÄµ¥ÒıºÅ»òË«ÒıºÅ±»ºöÂÔ,µ«ÒıºÅÄÚµÄ¿Õ¸ñ±»±£Áô.</p>
+<p>³¬¹ı 65,535 ×Ö·ûµÄÖµºÜ¿ÉÄÜ±»½Ø¶Ì.</p>
+<p>±ê×¼µÄ ini ÎÄ¼ş¿´ÆğÀ´ÀàËÆÏÂÃæÕâÑù:</p>
 <pre>[SectionName]
 Key=Value</pre>
-<p><b>Unicode:</b> IniRead å’Œ IniWrite ä¾é å¤–éƒ¨å‡½æ•° <a href="http://msdn.microsoft.com/en-us/library/ms724353.aspx">GetPrivateProfileString</a> å’Œ <a href="http://msdn.microsoft.com/en-us/library/ms725501.aspx">WritePrivateProfileString</a> æ¥è¯»å–å’Œå†™å…¥å€¼. è¿™äº›å‡½æ•°ä»…æ”¯æŒ UTF-16 ç¼–ç çš„ Unicode æ–‡ä»¶; å…¶ä»–æ‰€æœ‰æ–‡ä»¶éƒ½è¢«è®¤ä¸ºä½¿ç”¨ç³»ç»Ÿé»˜è®¤ ANSI ä»£ç é¡µ.</p>
-<h3>ç›¸å…³</h3>
-<p><a href="IniDelete.htm">IniDelete</a>, <a href="IniWrite.htm">IniWrite</a>, <a href="RegRead.htm">RegRead</a>, <a href="LoopReadFile.htm">æ–‡ä»¶è¯»å–å¾ªç¯</a>, <a href="FileRead.htm">FileRead</a></p>
-<h3>ç¤ºä¾‹</h3>
+<p><b>Unicode:</b> IniRead ºÍ IniWrite ÒÀ¿¿Íâ²¿º¯Êı <a href="http://msdn.microsoft.com/en-us/library/ms724353.aspx">GetPrivateProfileString</a> ºÍ <a href="http://msdn.microsoft.com/en-us/library/ms725501.aspx">WritePrivateProfileString</a> À´¶ÁÈ¡ºÍĞ´ÈëÖµ. ÕâĞ©º¯Êı½öÖ§³Ö UTF-16 ±àÂëµÄ Unicode ÎÄ¼ş; ÆäËûËùÓĞÎÄ¼ş¶¼±»ÈÏÎªÊ¹ÓÃÏµÍ³Ä¬ÈÏ ANSI ´úÂëÒ³.</p>
+<h3>Ïà¹Ø</h3>
+<p><a href="IniDelete.htm">IniDelete</a>, <a href="IniWrite.htm">IniWrite</a>, <a href="RegRead.htm">RegRead</a>, <a href="LoopReadFile.htm">ÎÄ¼ş¶ÁÈ¡Ñ­»·</a>, <a href="FileRead.htm">FileRead</a></p>
+<h3>Ê¾Àı</h3>
 <pre class="NoIndent">IniRead, OutputVar, C:\Temp\myfile.ini, section2, key
 MsgBox, The value is %OutputVar%.</pre>
 

@@ -1,46 +1,46 @@
 toc = [
   {label:"AutoHotkey",path:"AutoHotkey.htm"},
-  {label:"Tutorial (quick start)",path:"Tutorial.htm"},
-  {label:"FAQ (Frequently Asked Questions)",path:"FAQ.htm"},
-  {label:"Command and Function Index",path:"commands/index.htm"},
-  {label:"Script Showcase",path:"scripts/index.htm"},
-  {label:"Recent Changes",path:"AHKL_ChangeLog.htm"},
-  {label:"Basic Usage and Syntax",children:
+  {label:"Tutorial (快速入门教程)",path:"Tutorial.htm"},
+  {label:"FAQ (常见问题)",path:"FAQ.htm"},
+  {label:"命令和函数索引",path:"commands/index.htm"},
+  {label:"优秀脚本展示",path:"scripts/index.htm"},
+  {label:"更新记录",path:"AHKL_ChangeLog.htm"},
+  {label:"基本用法和语法",children:
   [
-    {label:"Hotkeys",path:"Hotkeys.htm"},
-    {label:"Hotstrings & auto-replace",path:"Hotstrings.htm"},
-    {label:"Remapping keys and buttons",path:"misc/Remap.htm"},
-    {label:"Key List (Keyboard, Mouse, Joystick)",path:"KeyList.htm"},
-    {label:"Scripts",path:"Scripts.htm"},
-    {label:"Variables and Expressions",path:"Variables.htm"},
-    {label:"Functions",path:"Functions.htm"},
-    {label:"Debugging (DBGp) Clients",path:"AHKL_DBGPClients.htm"},
-    {label:"Objects",path:"Objects.htm",children:
+    {label:"热键",path:"Hotkeys.htm"},
+    {label:"热字串和自动替换",path:"Hotstrings.htm"},
+    {label:"重映射按键和鼠标按钮",path:"misc/Remap.htm"},
+    {label:"按键列表(键盘,鼠标,手柄)",path:"KeyList.htm"},
+    {label:"脚本",path:"Scripts.htm"},
+    {label:"变量和表达式",path:"Variables.htm"},
+    {label:"函数",path:"Functions.htm"},
+    {label:"调试客户端(DBGp)",path:"AHKL_DBGPClients.htm"},
+    {label:"对象",path:"Objects.htm",children:
     [
-      {label:"Basic Usage",path:"Objects.htm#Usage"},
-      {label:"Extended Usage",path:"Objects.htm#Extended_Usage"},
-      {label:"Custom Objects",path:"Objects.htm#Custom_Objects"},
-      {label:"Default Base Object",path:"Objects.htm#Default_Base_Object"},
-      {label:"Implementation",path:"Objects.htm#Implementation"},
-      {label:"Object",path:"objects/Object.htm"},
-      {label:"Enumerator Object",path:"objects/Enumerator.htm"},
-      {label:"File Object",path:"objects/File.htm"},
-      {label:"Function Objects",path:"objects/Functor.htm"}
+      {label:"基本用法",path:"Objects.htm#Usage"},
+      {label:"扩展用法",path:"Objects.htm#Extended_Usage"},
+      {label:"自定义对象",path:"Objects.htm#Custom_Objects"},
+      {label:"默认基对象",path:"Objects.htm#Default_Base_Object"},
+      {label:"实现",path:"Objects.htm#Implementation"},
+      {label:"对象",path:"objects/Object.htm"},
+      {label:"枚举器对象",path:"objects/Enumerator.htm"},
+      {label:"文件对象",path:"objects/File.htm"},
+      {label:"函数对象",path:"objects/Functor.htm"}
     ]}
   ]},
-  {label:"Moving to AutoHotkey 1.1 (AutoHotkey_L)",children:
+  {label:"迁移到 AutoHotkey_L 1.1",children:
   [
-    {label:"AutoHotkey_L New Features",path:"AHKL_Features.htm"},
-    {label:"Script Compatibility",path:"Compat.htm"}
+    {label:"AutoHotkey_L 新特性",path:"AHKL_Features.htm"},
+    {label:"脚本兼容性",path:"Compat.htm"}
   ]},
-  {label:"Environment Management",children:
+  {label:"环境变量管理",children:
   [
     {label:"ClipWait",path:"commands/ClipWait.htm"},
     {label:"EnvGet",path:"commands/EnvGet.htm"},
     {label:"EnvSet",path:"commands/EnvSet.htm"},
     {label:"EnvUpdate",path:"commands/EnvUpdate.htm"}
   ]},
-  {label:"Native Code Interop",children:
+  {label:"本机代码交互",children:
   [
     {label:"DllCall",path:"commands/DllCall.htm"},
     {label:"NumGet",path:"commands/NumGet.htm"},
@@ -62,7 +62,7 @@ toc = [
       {label:"ObjAddRef / ObjRelease",path:"commands/ObjAddRef.htm"}
     ]}
   ]},
-  {label:"File, Directory, and Disk Management",children:
+  {label:"文件,目录和磁盘管理",children:
   [
     {label:"Drive",path:"commands/Drive.htm"},
     {label:"DriveGet",path:"commands/DriveGet.htm"},
@@ -96,15 +96,15 @@ toc = [
     {label:"IniDelete",path:"commands/IniDelete.htm"},
     {label:"IniRead",path:"commands/IniRead.htm"},
     {label:"IniWrite",path:"commands/IniWrite.htm"},
-    {label:"Loop (files & folders)",path:"commands/LoopFile.htm"},
-    {label:"Loop (read file contents)",path:"commands/LoopReadFile.htm"},
+    {label:"Loop(文件和文件夹)",path:"commands/LoopFile.htm"},
+    {label:"Loop(读取文件内容)",path:"commands/LoopReadFile.htm"},
     {label:"SetWorkingDir",path:"commands/SetWorkingDir.htm"},
     {label:"SplitPath",path:"commands/SplitPath.htm"}
   ]},
-  {label:"Flow of Control",children:
+  {label:"流程控制",children:
   [
     {label:"#Include/#IncludeAgain",path:"commands/_Include.htm"},
-    {label:"{ ... } (block)",path:"commands/Block.htm"},
+    {label:"{ ... } (区块)",path:"commands/Block.htm"},
     {label:"Break",path:"commands/Break.htm"},
     {label:"Catch",path:"commands/Catch.htm"},
     {label:"Continue",path:"commands/Continue.htm"},
@@ -116,10 +116,10 @@ toc = [
     {label:"For-loop",path:"commands/For.htm"},
     {label:"Gosub",path:"commands/Gosub.htm"},
     {label:"Goto",path:"commands/Goto.htm"},
-    {label:"If commands",path:"commands/IfExpression.htm",children:
+    {label:"If 命令",path:"commands/IfExpression.htm",children:
     [
-      {label:"If (traditional)",path:"commands/IfEqual.htm"},
-      {label:"If (expression)",path:"commands/IfExpression.htm"},
+      {label:"If (传统型)",path:"commands/IfEqual.htm"},
+      {label:"If (表达式)",path:"commands/IfExpression.htm"},
       {label:"If var [not] between Low and High",path:"commands/IfBetween.htm"},
       {label:"If var is [not] type",path:"commands/IfIs.htm"},
       {label:"If var [not] in/contains MatchList",path:"commands/IfIn.htm"},
@@ -129,13 +129,13 @@ toc = [
       {label:"IfWinActive/IfWinNotActive",path:"commands/WinActive.htm"},
       {label:"IfWinExist/IfWinNotExist",path:"commands/WinExist.htm"}
     ]},
-    {label:"Loop commands",path:"commands/Loop.htm",children:
+    {label:"Loop 命令",path:"commands/Loop.htm",children:
     [
       {label:"Loop",path:"commands/Loop.htm"},
-      {label:"Loop (files & folders)",path:"commands/LoopFile.htm"},
-      {label:"Loop (parse a string)",path:"commands/LoopParse.htm"},
-      {label:"Loop (read file contents)",path:"commands/LoopReadFile.htm"},
-      {label:"Loop (registry)",path:"commands/LoopReg.htm"}
+      {label:"Loop (文件和文件夹)",path:"commands/LoopFile.htm"},
+      {label:"Loop (解析字符串)",path:"commands/LoopParse.htm"},
+      {label:"Loop (读取文件内容)",path:"commands/LoopReadFile.htm"},
+      {label:"Loop (注册表)",path:"commands/LoopReg.htm"}
     ]},
     {label:"OnExit",path:"commands/OnExit.htm"},
     {label:"Pause",path:"commands/Pause.htm"},
@@ -149,9 +149,9 @@ toc = [
     {label:"Throw",path:"commands/Throw.htm"},
     {label:"Try",path:"commands/Try.htm"},
     {label:"Until",path:"commands/Until.htm"},
-    {label:"While-loop",path:"commands/While.htm"}
+    {label:"While 循环",path:"commands/While.htm"}
   ]},
-  {label:"Built-in Functions",path:"Functions.htm",children:
+  {label:"内置函数",path:"Functions.htm",children:
   [
     {label:"Asc",path:"Functions.htm#Asc"},
     {label:"Chr",path:"Functions.htm#Chr"},
@@ -159,7 +159,7 @@ toc = [
     {label:"Format",path:"commands/Format.htm"},
     {label:"GetKeyName/VK/SC",path:"Functions.htm#GetKeyName"},
     {label:"GetKeyState",path:"Functions.htm#GetKeyState"},
-    {label:"InStr",path:"commands/InStr.htm"},
+    {label:"InStr",path:"Functions.htm#InStr"},
     {label:"IsByRef",path:"Functions.htm#IsByRef"},
     {label:"IsFunc",path:"Functions.htm#IsFunc"},
     {label:"IsLabel",path:"Functions.htm#IsLabel"},
@@ -176,12 +176,12 @@ toc = [
     {label:"StrPut/StrGet",path:"commands/StrPutGet.htm"},
     {label:"StrReplace",path:"commands/StringReplace.htm"},
     {label:"StrSplit",path:"commands/StringSplit.htm"},
-    {label:"SubStr",path:"commands/SubStr.htm"},
+    {label:"SubStr",path:"Functions.htm#SubStr"},
     {label:"VarSetCapacity",path:"commands/VarSetCapacity.htm"},
     {label:"WinActive",path:"commands/WinActive.htm"},
     {label:"WinExist",path:"commands/WinExist.htm"}
   ]},
-  {label:"GUI, MsgBox, InputBox & Other Dialogs",children:
+  {label:"GUI, MsgBox, InputBox & 其他对话框",children:
   [
     {label:"FileSelectFile",path:"commands/FileSelectFile.htm"},
     {label:"FileSelectFolder",path:"commands/FileSelectFolder.htm"},
@@ -202,9 +202,9 @@ toc = [
     {label:"ToolTip",path:"commands/ToolTip.htm"},
     {label:"TrayTip",path:"commands/TrayTip.htm"}
   ]},
-  {label:"Mouse and Keyboard",children:
+  {label:"键盘鼠标",children:
   [
-    {label:"Hotkeys and Hotstrings",path:"Hotkeys.htm",children:
+    {label:"热键和热字串",path:"Hotkeys.htm",children:
     [
       {label:"#HotkeyInterval",path:"commands/_HotkeyInterval.htm"},
       {label:"#HotkeyModifierTimeout",path:"commands/_HotkeyModifierTimeout.htm"},
@@ -232,7 +232,7 @@ toc = [
     {label:"ControlSend, ControlSendRaw",path:"commands/ControlSend.htm"},
     {label:"CoordMode",path:"commands/CoordMode.htm"},
     {label:"GetKeyState",path:"commands/GetKeyState.htm"},
-    {label:"Key List (Keyboard, Mouse, Joystick)",path:"KeyList.htm"},
+    {label:"按键列表(键盘、鼠标、手柄)",path:"KeyList.htm"},
     {label:"KeyHistory",path:"commands/KeyHistory.htm"},
     {label:"KeyWait",path:"commands/KeyWait.htm"},
     {label:"Input",path:"commands/Input.htm"},
@@ -249,7 +249,7 @@ toc = [
     {label:"SetNumScrollCapsLockState",path:"commands/SetNumScrollCapsLockState.htm"},
     {label:"SetStoreCapslockMode",path:"commands/SetStoreCapslockMode.htm"}
   ]},
-  {label:"Maths",children:
+  {label:"数学函数",children:
   [
     {label:"Abs",path:"Functions.htm#Abs"},
     {label:"Ceil",path:"Functions.htm#Ceil"},
@@ -266,13 +266,13 @@ toc = [
     {label:"ASin/ACos/ATan",path:"Functions.htm#ASin"},
     {label:"Transform",path:"commands/Transform.htm"}
   ]},
-  {label:"Screen Management",children:
+  {label:"屏幕管理",children:
   [
     {label:"ImageSearch",path:"commands/ImageSearch.htm"},
     {label:"PixelGetColor",path:"commands/PixelGetColor.htm"},
     {label:"PixelSearch",path:"commands/PixelSearch.htm"}
   ]},
-  {label:"Misc. Commands",children:
+  {label:"杂项命令",children:
   [
     {label:"#NoTrayIcon",path:"commands/_NoTrayIcon.htm"},
     {label:"#SingleInstance",path:"commands/_SingleInstance.htm"},
@@ -287,22 +287,22 @@ toc = [
     {label:"URLDownloadToFile",path:"commands/URLDownloadToFile.htm"},
     {label:"VarSetCapacity",path:"commands/VarSetCapacity.htm"}
   ]},
-  {label:"Process Management",children:
+  {label:"进程管理",children:
   [
     {label:"Process",path:"commands/Process.htm"},
     {label:"Run/RunWait",path:"commands/Run.htm"},
     {label:"RunAs",path:"commands/RunAs.htm"},
     {label:"Shutdown",path:"commands/Shutdown.htm"}
   ]},
-  {label:"Registry Management",children:
+  {label:"注册表管理",children:
   [
-    {label:"Loop (registry)",path:"commands/LoopReg.htm"},
+    {label:"Loop (注册表)",path:"commands/LoopReg.htm"},
     {label:"RegDelete",path:"commands/RegDelete.htm"},
     {label:"RegRead",path:"commands/RegRead.htm"},
     {label:"RegWrite",path:"commands/RegWrite.htm"},
     {label:"SetRegView",path:"commands/SetRegView.htm"}
   ]},
-  {label:"Sound Commands",children:
+  {label:"声音管理",children:
   [
     {label:"SoundBeep",path:"commands/SoundBeep.htm"},
     {label:"SoundGet",path:"commands/SoundGet.htm"},
@@ -311,13 +311,13 @@ toc = [
     {label:"SoundSet",path:"commands/SoundSet.htm"},
     {label:"SoundSetWaveVolume",path:"commands/SoundSetWaveVolume.htm"}
   ]},
-  {label:"String Management",children:
+  {label:"字符串命令",children:
   [
     {label:"Format()",path:"commands/Format.htm"},
 	{label:"FormatTime",path:"commands/FormatTime.htm"},
     {label:"IfInString/IfNotInString",path:"commands/IfInString.htm"},
     {label:"If var [not] in/contains MatchList",path:"commands/IfIn.htm"},
-    {label:"InStr()",path:"commands/InStr.htm"},
+    {label:"InStr()",path:"Functions.htm#InStr"},
     {label:"Loop (parse a string)",path:"commands/LoopParse.htm"},
     {label:"RegExMatch()",path:"commands/RegExMatch.htm"},
     {label:"RegExReplace()",path:"commands/RegExReplace.htm"},
@@ -337,12 +337,12 @@ toc = [
     {label:"StrPut()/StrGet()",path:"commands/StrPutGet.htm"},
     {label:"StrReplace()",path:"commands/StringReplace.htm"},
     {label:"StrSplit()",path:"commands/StringSplit.htm"},
-    {label:"SubStr()",path:"commands/SubStr.htm"},
+    {label:"SubStr()",path:"Functions.htm#SubStr"},
     {label:"Trim()",path:"commands/Trim.htm"}
   ]},
-  {label:"Window Management",children:
+  {label:"窗口管理",children:
   [
-    {label:"Controls",children:
+    {label:"控件操作",children:
     [
       {label:"Control",path:"commands/Control.htm"},
       {label:"ControlClick",path:"commands/ControlClick.htm"},
@@ -359,7 +359,7 @@ toc = [
       {label:"SetControlDelay",path:"commands/SetControlDelay.htm"},
       {label:"WinMenuSelectItem",path:"commands/WinMenuSelectItem.htm"}
     ]},
-    {label:"Window Groups",children:
+    {label:"窗口组操作",children:
     [
       {label:"GroupActivate",path:"commands/GroupActivate.htm"},
       {label:"GroupAdd",path:"commands/GroupAdd.htm"},
@@ -399,7 +399,7 @@ toc = [
     {label:"WinWaitActive, WinWaitNotActive",path:"commands/WinWaitActive.htm"},
     {label:"WinWaitClose",path:"commands/WinWaitClose.htm"}
   ]},
-  {label:"#Directives",children:
+  {label:"#指令",children:
   [
     {label:"#AllowSameLineComments",path:"commands/_AllowSameLineComments.htm"},
     {label:"#ClipboardTimeout",path:"commands/_ClipboardTimeout.htm"},
