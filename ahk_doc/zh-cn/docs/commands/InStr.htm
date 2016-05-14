@@ -10,45 +10,45 @@
 
 <h1>InStr()</h1>
 
-<p>Searches for a given occurrence of a string, from the left or the right.</p>
+<p>在一个字符串中向右或向左搜索指定内容.</p>
 
 <pre class="Syntax">FoundPos := InStr(Haystack, Needle [, CaseSensitive = false, StartingPos = 1, Occurrence = 1])</pre>
 <h3>Parameters</h3>
 <dl>
 
   <dt>FoundPos</dt>
-  <dd><p>Returns the position of an occurrence of the string <em>Needle</em> in the string <em>Haystack</em>. Position 1 is the first character; this is because 0 is synonymous with "false", making it an intuitive "not found" indicator.</p></dd>
+  <dd><p>返回字符串 <em>Needle</em> 在 <em>Haystack</em> 中出现的位置. 位置1 是第一个字符; 因为0等同于"false"直觉上会让人产生"找不到"的错觉.</p></dd>
 
   <dt>Haystack</dt>
-  <dd><p>The string whose content is searched.</p></dd>
+  <dd><p>被搜索的字符串.</p></dd>
   
   <dt>Needle</dt>
-  <dd><p>The string to search for.</p></dd>
+  <dd><p>需要搜索的字符串.</p></dd>
   
   <dt>CaseSensitive</dt>
-  <dd><p>If the parameter <em>CaseSensitive</em> is omitted or false, the search is not case sensitive (the method of insensitivity depends on <a href="StringCaseSense.htm">StringCaseSense</a>); otherwise, the case must match exactly.</p></dd>
+  <dd><p>如果省略 <em>CaseSensitive</em> 参数或指定为false, 搜索时将不区分大小写(不区分的方式取决于 <a href="StringCaseSense.htm">StringCaseSense</a> ) ; 否则会严格匹配大小写.</p></dd>
 
   <dt>StartingPos</dt>
-  <dd><p>If <em>StartingPos</em> is omitted, it defaults to 1 (the beginning of <em>Haystack</em>). Otherwise, specify 2 to start at the second character, 3 to start at the third, and so on.</p>
-      <p>If <em>StartingPos</em> is beyond the length of <em>Haystack</em>, 0 is returned. If <em>StartingPos</em> is 0 or negative, the search is conducted in reverse (right-to-left) beginning at that offset from the end.</p>
-      <p>Regardless of the value of <em>StartingPos</em>, the return value is always relative to the first character of <em>Haystack</em>. For example, the position of "abc" in "123abc789" is always 4.</p></dd>
+  <dd><p>如果省略 <em>StartingPos</em> 将默认从1 (<em>Haystack</em>字符串中的位置1)开始搜索. 否则, 指定 2 从第二个字符开始, 3 从第三个字符开始, 依此类推.</p>
+      <p>如果 <em>StartingPos</em> 超过了字符串 <em>Haystack</em> 的长度会返回0. 如果 <em>StartingPos</em> 指定0或负数会变成从字符串末尾开始的反向搜索 (从右到左).</p>
+      <p>不管 <em>StartingPos</em> 如何变, 返回值总是相对于 <em>Haystack</em> 中的第一个字符. 例如, "abc" 在 "123abc789" 中的位置总是 4.</p></dd>
 
   <dt>Occurrence</dt>
-  <dd><p>If <em>Occurrence</em> is omitted, it defaults to the first match of the <em>Needle</em> in <em>Haystack</em>. Specify 2 for <em>Occurrence</em> to return the position of the second match, 3 for the third match, etc.</p></dd>
+  <dd><p>如果省略 <em>Occurrence</em> 默认返回 <em>Needle</em> 在 <em>Haystack</em> 中的首次匹配位置. 指定 <em>Occurrence</em> 为2返回第二次匹配的位置, 3 返回第三次匹配位置,  依此类推.</p></dd>
 
   </dl>
 
-<h3>Remarks</h3>
-<p>This function is a combination of <a href="StringCaseSense.htm">IfInString</a> and <a href="StringCaseSense.htm">StringGetPos</a>, and a simplified form of <a href="RegExMatch.htm">RegExMatch()</a>.</p>
-<p>Generally this function is faster than <a href="RegExMatch.htm">RegExMatch()</a>, if you want to search for a simple substring inside a larger string.</p>
+<h3>备注</h3>
+<p>这个函数整合了 <a href="StringCaseSense.htm">IfInString</a> 和 <a href="StringCaseSense.htm">StringGetPos</a> 命令, 以及一个简单形式的 <a href="RegExMatch.htm">RegExMatch()</a>.</p>
+<p>如果想在一个较大的字符串中搜索一个简单的子字串, 这个函数通常要比 <a href="RegExMatch.htm">RegExMatch()</a> 来得快.</p>
 
-<h3>Related</h3>
+<h3>相关</h3>
 <p><a href="RegExMatch.htm">RegExMatch()</a>, <a href="StringGetPos.htm">StringGetPos</a>, <a href="StringCaseSense.htm">IfInString</a>, <a href="StringCaseSense.htm">StringCaseSense</a>, <a href="IfIn.htm">if var in/contains MatchList</a>, <a href="IfBetween.htm">if var between</a>, <a href="IfIs.htm">if var is type</a>
-<h3>Example</h3>
-<pre class="NoIndent"><em>; Example 1</em>
-MsgBox % InStr("123abc789","abc") <em>; Returns 4</em>
+<h3>示例</h3>
+<pre class="NoIndent"><em>; 示例 1</em>
+MsgBox % InStr("123abc789","abc") <em>; 返回 4</em>
 
-<em>; Example 2</em>
+<em>; 示例 2</em>
 Haystack := "The Quick Brown Fox Jumps Over the Lazy Dog"
 Needle := "Fox"
 If InStr(Haystack, Needle)
@@ -56,11 +56,11 @@ If InStr(Haystack, Needle)
 Else
   MsgBox, The string was not found.
 
-<em>; Example 3</em>
+<em>; 示例 3</em>
 Haystack := "The Quick Brown Fox Jumps Over the Lazy Dog"
 Needle := "the"
-MsgBox % InStr(Haystack, Needle, false, 1, 2) <em>; case insensitive search, return start position of second occurence</em>
-MsgBox % InStr(Haystack, Needle, true) <em>; case sensitive search, return start position of first occurence, same result as above</em>
+MsgBox % InStr(Haystack, Needle, false, 1, 2) <em>; 不区分大小写的搜索, 返回第二次匹配的位置</em>
+MsgBox % InStr(Haystack, Needle, true) <em>; 区分大小写的搜索, 返回首次匹配的位置, 结果同上</em>
 </pre>
 
 </body>

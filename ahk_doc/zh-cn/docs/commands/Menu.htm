@@ -50,18 +50,18 @@ Menu, tray, add, This Menu Item Is A Submenu, :MySubmenu</pre>
   <tr><td>+Radio</td>
   <td><span class="ver">[v1.1.23+]:</span> 选中菜单项时显示的是一个空心圆而不是打勾标志.</td></tr>
   <tr><td>+Right</td>
-  <td><span class="ver">[v1.1.23+]:</span> The item is right-justified within the menu bar. This only applies to <a href="Gui.htm#Menu">menu bars</a>, not popup menus or submenus.</td></tr>
+  <td><span class="ver">[v1.1.23+]:</span> 让菜单栏中的菜单项右对齐. 此选项仅适用于 <a href="Gui.htm#Menu">菜单栏</a> 而不是弹出式菜单或子菜单.</td></tr>
   <tr><td>+Break</td>
-  <td><span class="ver">[v1.1.23+]:</span> The item begins a new column in a popup menu.</td></tr>
+  <td><span class="ver">[v1.1.23+]:</span> 让弹出式菜单中的菜单项以新的一列开始.</td></tr>
   <tr><td>+BarBreak</td>
-  <td><span class="ver">[v1.1.23+]:</span> As above, but with a dividing line between columns.</td></tr>
+  <td><span class="ver">[v1.1.23+]:</span> 作用同上, 不过该选项会在列之间加分隔线.</td></tr>
 </table>
-<p>The plus sign (+) is optional and can be replaced with minus (-) to remove the option, as in <code>-Radio</code>. Options are not case sensitive.</p>
-<p>To change an existing item's options without affecting its label or submenu, simply omit the <em>Label-or-Submenu</em> parameter.</p>
-<p id="Insert"><strong>Insert [, ItemToInsertBefore, NewItemName, Label-or-Submenu, Options]</strong> <span class="ver">[v1.1.23+]</span>: Inserts a new item before the specified item. Usage is identical to <em>Add</em> (above), except for the additional <em>ItemToInsertBefore</em> parameter, which is the name of an existing item or a position&amp; between 1 and <a href="MenuGetHandle.htm#Examples">the current number of items</a> plus 1. Items can also be appended by omitting <em>ItemToInsertBefore</em> (by writing two consecutive commas). Unlike <em>Add</em>, <em>Insert</em> creates a new item even if <em>NewItemName</em> matches the name of an existing item.
-<p id="Delete"><strong>Delete [, MenuItemName]</strong>: 从菜单中删除 <em>MenuItemName</em> . 标准菜单项例如 Exit (请参阅下面) 不能被单独删除. 如果删除了<em>默认</em>菜单项, 则效果与使用 <em>NoDefault</em> 选项类似. 如果省略了 <em>MenuItemName</em>, 则会删除整个 <em>MenuName</em> 以及在其他菜单中名称为 <em>MenuName</em> 的任何子菜单项. Deleting a menu also causes the current <a href="#Win32_Menus">Win32 menu</a> of its parent and submenus to be destroyed, to be recreated later as needed.</p>
-<p id="DeleteAll"><strong>DeleteAll</strong>: 从菜单中删除所有自定义菜单项, 当不包含 <em>标准</em> 菜单项 (请参阅下面) 时则让菜单留空. 与使用 <em>Delete</em> 命令 (请参阅上面) 完全删除菜单不同, 此时仍然存在一个空菜单, 因此其他任何包含此菜单项作为子菜单的菜单仍保留这些子菜单. However, the current <a href="#Win32_Menus">Win32 menus</a> of this menu and its parent and submenus are destroyed, to be recreated later as needed.</p>
-<p><strong>Rename, MenuItemName [, NewName]</strong>: 改变 <em>MenuItemName</em> 为 <em>NewName</em> (如果 <em>NewName</em> 为空, 则 <em>MenuItemName</em> 会变为分隔线). 菜单项的当前目标标签或子菜单不会改变. <span class="ver">[v1.1.23+]:</span> A separator line can be converted to a normal item by specifying the position&amp; of the separator and a non-blank <em>NewName</em>, and then using the <em>Add</em> command to give the item a label or submenu.</p>
+<p>选项中的加号 (+) 是可选的也可以用减号 (-) 代替用以移除某个选项, 就像 <code>-Radio</code> . 选项不区分大小写.</p>
+<p>为了不影响菜单项的标签或子菜单, 在改变一个已存在的菜单项的选项时直接忽略 <em>Label-or-Submenu</em> 参数即可.</p>
+<p id="Insert"><strong>Insert [, ItemToInsertBefore, NewItemName, Label-or-Submenu, Options]</strong> <span class="ver">[v1.1.23+]</span>: 在指定的菜单项前插入一个新的菜单项. 其用法同上面的 <em>Add</em> , 多出来的 <em>ItemToInsertBefore</em> 参数代表一个已存在的菜单项名称或介于1和 <a href="MenuGetHandle.htm#Examples">当前菜单项数目</a>+1 之间的位置序号(位置&amp;). 也可以用忽略 <em>ItemToInsertBefore</em> (连写两个逗号)的方式追加菜单项. 与 <em>Add</em> 不同, <em>Insert</em> 在 <em>NewItemName</em> 和已有菜单项同名的情况下仍可以创建新的菜单项.
+<p id="Delete"><strong>Delete [, MenuItemName]</strong>: 从菜单中删除 <em>MenuItemName</em> . 标准菜单项例如 Exit (请参阅下面) 不能被单独删除. 如果删除了 <em>默认</em> 菜单项, 则效果与使用 <em>NoDefault</em> 选项类似. 如果省略了 <em>MenuItemName</em>, 则会删除整个 <em>MenuName</em> 以及在其他菜单中名称为 <em>MenuName</em> 的任何子菜单项. 删除一个菜单也会导致当前 <a href="#Win32_Menus">Win32 菜单</a> 的父菜单和子菜单被销毁, 之后在需要时才能被重新创建.</p>
+<p id="DeleteAll"><strong>DeleteAll</strong>: 从菜单中删除所有自定义菜单项, 当不包含 <em>标准</em> 菜单项 (请参阅下面) 时则让菜单留空. 与使用 <em>Delete</em> 命令 (请参阅上面) 完全删除菜单不同, 此时仍然存在一个空菜单, 因此其他任何包含此菜单项作为子菜单的菜单仍保留这些子菜单. 但当前 <a href="#Win32_Menus">Win32 菜单</a> 的父菜单和子菜单会被销毁, 之后在需要时才能被重新创建.</p>
+<p><strong>Rename, MenuItemName [, NewName]</strong>: 改变 <em>MenuItemName</em> 为 <em>NewName</em> (如果 <em>NewName</em> 为空, 则 <em>MenuItemName</em> 会变为分隔线). 菜单项的当前目标标签或子菜单不会改变. <span class="ver">[v1.1.23+]:</span> 可通过指定分隔线的 <em>位置&amp;</em> 和一个非空的 <em>NewName</em> 的方式将分隔线转换成正常的菜单项, 随后使用 <em>Add</em> 命令为其指定一个标签或子菜单.</p>
 <p><strong>Check, MenuItemName</strong>:在<em>MenuItemName</em>前添加复选标记(如果还没有).</p>
 <p><strong>Uncheck, MenuItemName</strong>:从<em>MenuItemName</em>中移除复选标记(如果有).</p>
 <p><strong>ToggleCheck, MenuItemName</strong>: 如果没有复选标记则进行添加; 否则移除它.</p>
@@ -98,18 +98,18 @@ Menu, tray, add, This Menu Item Is A Submenu, :MySubmenu</pre>
 <p><strong>NoMainWindow</strong> (默认): 此命令仅影响 <a href="Scripts.htm#ahk2exe">已编译脚本</a>. 它恢复脚本的默认行为, 即阻止打开主窗口. 即使此选项有效, 脚本运行中遇到下列命令时仍然会显示主窗口: <a href="ListLines.htm">ListLines</a>, <a href="ListVars.htm">ListVars</a>, <a href="ListHotkeys.htm">ListHotkeys</a> 和 <a href="KeyHistory.htm">KeyHistory</a>. <em>MenuName</em> 必须为 TRAY.</p>
 <p><strong>UseErrorLevel [, off]</strong>: 如果脚本中从未使用过此选项, 则它默认为 OFF. 每当 Menu 命令遇到错误时, OFF 设置会显示一个对话框并终止 <a href="../misc/Threads.htm">当前线程</a>. 指定 <code>Menu, Tray, UseErrorLevel</code> 来阻止显示对话框和终止线程；作为替代,如果遇到问题则 <a href="../misc/ErrorLevel.htm">ErrorLevel</a> 被设置为 1 否则为 0.要让此选项转回 off, 请在后一个参数中指定 OFF. 此设置是全局的, 这意味着它影响所有的菜单, 而不只是 <em>MenuName</em>.</p>
 
-<h2 id="Win32_Menus">Win32 Menus</h2>
-<p>As items are added to a menu or modified, the name and other properties of each item are recorded by the Menu command, but the actual <a href="https://msdn.microsoft.com/en-us/library/ms646977">Win32 menu</a> is not constructed immediately. This occurs when the menu or its parent menu is attached to a GUI or shown, either  for the first time or if the menu has been "destroyed" since it was last shown. Any of the following can cause this Win32 menu to be destroyed, along with any parent menus and submenus:</p>
+<h2 id="Win32_Menus">Win32 菜单</h2>
+<p>当菜单项被添加到菜单中或被修改时, 每个菜单项的名称和其他属性会被Menu命令记录下来,  但实际上 <a href="https://msdn.microsoft.com/en-us/library/ms646977">Win32 菜单</a> 并不会被马上创建. 这种情况发生在菜单或父菜单被附加到一个GUI或者首次被显示或者菜单在最近一次显示后被"销毁".下列任意一种情形都会导致Win32菜单被销毁,其父菜单和子菜单也会随之销毁:</p>
 <ul>
-  <li>Deleting a menu.</li>
-  <li>Replacing an item's submenu with a label or a different menu.</li>
+  <li>删除菜单.</li>
+  <li>用标签或不同的菜单替换某个菜单项的子菜单.</li>
   <li>Menu, <em>MenuName</em>, <strong>DeleteAll</strong>.</li>
-  <li>Menu, <em>MenuName</em>, <strong>NoStandard</strong> (if the standard items were present).</li>
+  <li>Menu, <em>MenuName</em>, <strong>NoStandard</strong> (如果标准菜单项存在的话).</li>
 </ul>
-<p>Any modifications which are made to the menu directly by Win32 API calls only apply to the current "instance" of the menu, and are lost when the menu is destroyed.</p>
-<p>Each menu item is assigned an ID when it is first added to the menu. Scripts cannot rely on an item receiving a particular ID, but can retrieve the ID of an item by using GetMenuItemID as shown in the <a href="MenuGetHandle.htm#Examples">MenuGetHandle example</a>. This ID cannot be used with the Menu command, but can be used with various <a href="https://msdn.microsoft.com/en-us/library/ms646977">Win32 functions</a>.</p>
+<p>任何通过 Win32 API 调用直接对菜单进行的修改仅适用与菜单的当前 "实例" ,在菜单被销毁后丢失.</p>
+<p>在首次添加到菜单中时每个菜单项都会被分配到一个ID. 脚本不能依靠某个菜单项来接收其特定ID, 但可以像 <a href="MenuGetHandle.htm#Examples">MenuGetHandle 示例</a> 中那样使用GetMenuItemID获取该ID. 此ID不可以用在Menu命令中, 却可以用于多种 <a href="https://msdn.microsoft.com/en-us/library/ms646977">Win32 函数</a>.</p>
 
-<h2>Remarks 备注</h2>
+<h2>备注</h2>
 <p>菜单和菜单项的名称长度最多可达 260 个字符.</p>
 <p>分割线可通过 <code>Menu, <i>MenuName</i>, Add</code> 来增加 (也就是忽略其他所有参数). 要单独删除分割线, 确定他们在菜单中的位置 (依赖 v1.1.23+). 例如, 使用 <code>Menu, <i>MenuName</i>, Delete, 3&amp;</code> 如果分隔符之前有两个项目. 还可以 <code>Menu, <i>MenuName</i>, DeleteAll</code> 然后重新添加自定义菜单项.</p>
 <p>新的菜单项总是添加到菜单的底部. 对于托盘菜单:要把您的菜单项放到标准菜单项的上面,(在添加完自定义菜单项后)执行 <code>Menu, tray, NoStandard</code> 后面接着执行 <code>Menu, tray, Standard</code>.</p>
@@ -119,7 +119,7 @@ Menu, tray, add, This Menu Item Is A Submenu, :MySubmenu</pre>
 <p>每当通过菜单项运行子程序时, 它会使用设置 (例如 <a href="SendMode.htm">SendMode</a>) 的默认值开始. 这些默认值可以在 <a href="../Scripts.htm#auto">自动执行段</a> 改变.</p>
 <p>内置变量 <strong><a href="../Variables.htm#ThisMenuItem">A_ThisMenuItem</a></strong> 和 <strong><a href="../Variables.htm#ThisMenuItemPos">A_ThisMenuItemPos</a></strong> 分别包含了最近用户选择的自定义菜单项的名称和位置(如果没有则为空).同样地, <strong>A_ThisMenu</strong> 是选择的 <strong>A_ThisMenuItem</strong> 的菜单名称. 这些变量可用于在创建的菜单内容不总是相同的时候. 在这种情况下, 通常最好把所有这样的菜单项指向相同的标签, 并在此标签中引用上面的变量来决定执行什么动作.</p>
 <p>要让非热键且非 <a href="Gui.htm">GUI</a> 的脚本持续运行 (例如仅包含自定义菜单或菜单项的脚本), 请使用 <a href="_Persistent.htm">#Persistent</a>.</p>
-<h2>Related 相关</h2>
+<h2>相关</h2>
 <p><a href="Gui.htm">GUI</a>, <a href="../misc/Threads.htm">线程</a>, <a href="Thread.htm">Thread</a>, <a href="Critical.htm">Critical</a>, <a href="_NoTrayIcon.htm">#NoTrayIcon</a>, <a href="Gosub.htm">Gosub</a>, <a href="Return.htm">Return</a>, <a href="SetTimer.htm">SetTimer</a>, <a href="_Persistent.htm">#Persistent</a></p>
 <h2>示例</h2>
 <pre class="NoIndent"><em>; 示例 #1: 这是个可运行脚本, 它添加一个新菜单项到托盘图标菜单的底部.</em>

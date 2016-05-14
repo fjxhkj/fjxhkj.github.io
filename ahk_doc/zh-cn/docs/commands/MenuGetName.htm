@@ -11,21 +11,21 @@
 
 <h1>MenuGetName <span class="ver">[v1.1.23+]</span></h1>
 
-<p>Retrieves the name of a menu given a handle to its underlying <a href="Menu.htm#Win32_Menus">Win32 menu</a>.</p>
+<p>指定菜单的基础 <a href="Menu.htm#Win32_Menus">Win32 菜单</a>句柄获取菜单的名称.</p>
 <pre class="Syntax">MenuName := MenuGetName(Handle)</pre>
 
-<h3>Parameters</h3>
+<h3>参数</h3>
 <dl>
 
   <dt>Handle</dt>
-  <dd><p>A Win32 menu handle (HMENU).</p></dd>
+  <dd><p>Win32 菜单句柄 (HMENU).</p></dd>
 
 </dl>
 
-<h3 id="Remarks">Remarks</h3>
-<p>Only the menu's current handle is recognized. When the menu's underlying Win32 menu is destroyed and recreated, the handle changes. For details, see <a href="Menu.htm#Win32_Menus">Win32 Menus</a>.</p>
+<h3 id="Remarks">备注</h3>
+<p>只能识别菜单的当前句柄. 当菜单的基础Win32菜单被销毁或重建时, 菜单的句柄也会改变. 详见 <a href="Menu.htm#Win32_Menus">Win32 菜单</a>.</p>
 
-<h3>Related</h3>
+<h3>相关</h3>
 <p><a href="Menu.htm">Menu</a>, <a href="MenuGetHandle.htm">MenuGetHandle</a></p>
 
 </body>
