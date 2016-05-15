@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>WinTitle 与最近找到的窗口</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/content.js" type="text/javascript"></script>
@@ -24,7 +24,7 @@
 </style>
 </head>
 <body>
-<h1><em>WinTitle</em> 参数与最近找到的窗口</h1>
+<h1><em>WinTitle</em> 参数  &amp;  最近找到的窗口</h1>
 
 <p>许多命令和一些函数中含有 <em>WinTitle</em> 参数用来标识要操作的窗口.此参数可以为窗口的标题或部分标题及在此页面描述的其他条件.</p>
 
@@ -53,14 +53,14 @@
 id := WinExist("A")
 MsgBox % id
 
-<em>; 按下 Win+↑ 来最大化活动窗口</em>
+<em>; 按下 Win+&uarr; 来最大化活动窗口</em>
 #Up::WinMaximize, A</pre>
 
 <h2 id="ahk_class">ahk_class 窗口类</h2>
 <p>窗口类是系统用来创建窗口的模板的属性集.换句话说,窗口类表示窗口的<em>类型</em>.要使用窗口类,请根据 Window Spy 显示的指定 <code>ahk_class ExactClassName</code>.可以用 <a href="../commands/WinGetClass.htm">WinGetClass</a> 获取 <em>ExactClassName</em>.</p>
 <p>如果启用了正则的<a href="../commands/SetTitleMatchMode.htm">标题匹配模式</a>,则 ahk_class 接受<a href="../misc/RegEx-QuickRef.htm">正则表达式</a>.</p>
 <pre>
-<em>; 激活控制台窗口(即 cmd.exe)</em>
+<em>; 激活命令行窗口 (例如 cmd.exe)</em>
 WinActivate, ahk_class ConsoleWindowClass
 </pre>
 
@@ -78,7 +78,7 @@ WinActivate, ahk_pid %VarContainingPID%
 
 <h2 id="ahk_exe">ahk_exe 进程名称,路径 <span class="ver">[v1.1.01+]</span></h2>
 <p>使用 ahk_exe 可以标识含有指定名称或路径的进程拥有的窗口.</p>
-<p><a href="#ahk_pid">ahk_pid</a> 限制为某个指定进程,而 ahk_exe 可以包含在进程名称或路径中含有指定字符串的所有进程.如果启用了正则的<a href="../commands/SetTitleMatchMode.htm">标题匹配模式</a>,则 ahk_exe 可以接受<a href="../misc/RegEx-QuickRef.htm">正则表达式</a>.在其他情况下,ahk_exe 接受不区分大小写的名称或完整路径,例如 <code>ahk_exe notepad.exe</code> 包含了 <code>ahk_exe C:\Windows\Notepad.exe</code>,<code>ahk_exe C:\Windows\System32\Notepad.exe</code> 及其他变体.</p>
+<p>当 <a href="#ahk_pid">ahk_pid</a> 限制为某个指定进程, 而 ahk_exe 可以包含在进程名称或路径中含有指定字符串的所有进程. 如果启用了正则表达式的 <a href="../commands/SetTitleMatchMode.htm">标题匹配模式</a> , 则 ahk_exe 可以用 <a href="../misc/RegEx-QuickRef.htm">正则表达式</a> 匹配进程, 但必须是进程的完整路径. 其他情况下, ahk_exe 接受不区分大小写的名称或完整路径, 例如 <code>ahk_exe notepad.exe</code> 可以匹配到 <code>ahk_exe C:\Windows\Notepad.exe</code>, <code>ahk_exe C:\Windows\System32\Notepad.exe</code> 及其他变化.</p>
 <pre>
 <em>; 激活现有的 notepad.exe 窗口或打开新窗口</em>
 if WinExist("ahk_exe notepad.exe")
@@ -86,6 +86,8 @@ if WinExist("ahk_exe notepad.exe")
 else
     Run, notepad.exe
 </pre>
+<pre>SetTitleMatchMode RegEx
+WinActivate ahk_exe i)\\notepad\.exe$  <em>; Match the name part of the full path.</em></pre>
 
 <h2 id="ahk_group">ahk_group 窗口组</h2>
 <p>使用 ahk_group 可以标识匹配之前由<a href="../commands/GroupAdd.htm">窗口组</a>定义的规则的窗口.</p>

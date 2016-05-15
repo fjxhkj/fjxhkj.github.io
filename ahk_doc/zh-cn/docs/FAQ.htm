@@ -21,6 +21,7 @@
 </ul>
 <h3>常见任务</h3>
 <ul>
+  <li><a href="#install">如果 AutoHotkey 无法安装我该怎么办?</a></li>
   <li><a href="#autoexec">为什么我脚本中的某些行总是无法执行?</a></li>
   <li><a href="#vista">为什么我的脚本在 XP 运行良好却无法工作于 Windows <em>xxx</em> ?</a></li>
   <li><a href="#uac">我该如何处理用 户账户控制 (UAC) 导致的问题?</a></li>
@@ -81,6 +82,15 @@
 <p> 在 <a href="Variables.htm#Expressions">表达式</a> 中逗号或百分号括在引号中时, 可以使用这样重音符但不是必须的. 例如:<code>Var := &quot;15%&quot;</code>. </p>
 
 <h2>General Troubleshooting</h2>
+<h3 id="install">如果 AutoHotkey 无法安装,我该怎么办?</h3>
+<p id="install-7z"><strong>7-zip 错误:</strong> 用 7-zip 或其他解压缩软件解压安装程序 EXE, 然后运行 setup.exe 或 Installer.ahk (拖拽 Installer.ahk 到 AutoHotkeyU32.exe 上即可).</p>
+<p>AutoHotkey's installer comes packaged as a 7-zip self-extracting archive which attempts to extract to the user's Temp directory and execute a compiled script. Sometimes system policies or other factors prevent the files from being extracted or executed. Usually in such cases the message "7-zip Error" is displayed. Manually extracting the files to a different directory may help.</p>
+<p id="install-hang"><strong>Setup hangs:</strong> If the setup window comes up blank or not at all, try one or both of the following:</p>
+<ul><li>Hold Ctrl or Shift when the installer starts. If you get a UAC prompt, hold Ctrl or Shift as you click Yes/Continue. You should get a prompt asking whether you want to install with default options.</li>
+<li>Install using <a href="Scripts.htm#install">command line options</a>. If you have manually extracted the setup files from the installer EXE, use either <code>setup.exe /S</code> or <code>AutoHotkeyU32.exe Installer.ahk /S</code>.</li>
+</ul>
+<p><strong>Other:</strong> The suggestions above cover the most common problems. For further assistance, post on the forums.</p>
+
 <h3 id="autoexec">为什么我脚本中的某些行总是无法执行?</h3>
 <p>任何想在脚本启动时立即执行的行都应该出现在脚本的顶部, 要在首个 <a href="Hotkeys.htm">热键</a>, <a href="Hotstrings.htm">热字串</a> 或 <a href="commands/Return.htm">Return</a> 之前. 更多细节请参阅<a href="Scripts.htm#auto">自动执行部分</a>. </p>
 <p>还有, 含有多行执行语句的 <a href="Hotkeys.htm">热键</a> 必须把它的首行写在热键的 <em>下面</em> 而不能在同一行. 例如:</p>
