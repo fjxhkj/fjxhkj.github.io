@@ -119,7 +119,7 @@ function AddContent()
     //
 
     var en = 'http://ahkscript.org/docs/';
-    var de = 'http://ragnar-f.github.io/docs/';
+    var de = 'http://ahkde.github.io/docs/';
     var cn = 'http://ahkcn.sourceforge.net/docs/';
 
     $('#lng-btn-en').on('click', function() { document.location = en + relPath; } );
@@ -321,8 +321,8 @@ function AddChmAndOnlineFeatures()
 
   var divStyle = {fontSize: "11px", float: "right"};
   var aStyle = {cursor: "pointer", color: $("a:not([href=])").css("color")};
-  var selectLink = $('<a id="selectCode">').text(translate.cdSelectBtn).css(aStyle);
-  var downloadLink = $('<a id="downloadCode">').text(translate.cdDownloadBtn).css(aStyle);
+  var selectLink = $('<a id="selectCode"></a>').text(translate.cdSelectBtn).css(aStyle);
+  var downloadLink = $('<a id="downloadCode"></a>').text(translate.cdDownloadBtn).css(aStyle);
 
   $('pre').each(function(index) {
     if ($(this).is(".Syntax")) {

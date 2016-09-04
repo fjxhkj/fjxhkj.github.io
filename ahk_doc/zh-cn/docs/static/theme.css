@@ -158,7 +158,8 @@ table.info th {
 	background-color: #F6F6F6;
 	padding: 0.3em 0.5em;
 }
-/* version number/requirement tag */
+/* heading note / version number/requirement tag */
+.headnote,
 h1 .ver, h2 .ver, h3 .ver {
 	color: #808080;
     font-size: 65%;
@@ -166,6 +167,7 @@ h1 .ver, h2 .ver, h3 .ver {
 	margin-left: 1em;
 	vertical-align: text-middle;
 }
+h4 .headnote,
 h4 .ver {
     font-weight: normal;
 }
@@ -205,6 +207,8 @@ a.ver:hover, a.ver:focus {
 }
 .methodShort h2 {
 	margin-top: 0;
+  color: black;
+  border-bottom: 0px;
 }
 .methodShort table.info {
 	border: none;
@@ -255,7 +259,7 @@ ul.jqtree-tree .jqtree-toggler {
     *top: 0;  /* fix for ie7 */
     font-size: 10px;
     line-height: 12px;
-    font-family: Î¢ÈíÑÅºÚ, Consolas, Arial;  /* fix for ie9 */
+    font-family: Arial;  /* fix for ie9 */
     border-bottom: none;
     color: #333;
 }
