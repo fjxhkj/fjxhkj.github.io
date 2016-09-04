@@ -20,12 +20,13 @@ delHead()
    {
       _fEncoding := File_GetEncoding(A_LoopFileFullPath)
 
-      ;~ a to b
+      ;~ 1 = ANSI
+      ;~ 4 = UTF-8 +BOM
+      ;~ 6 = UTF-8
       if (_fEncoding = 1)
       {
          File_CpTransform(A_LoopFileFullPath, "a", "u")
       }
-      ;~ u to b
       else if (_fEncoding = 4)
       {
          File_CpTransform(A_LoopFileFullPath, "b", "u")
