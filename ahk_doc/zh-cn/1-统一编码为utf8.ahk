@@ -1,16 +1,19 @@
 #NoEnv
-#Warn
-#Warn, LocalSameAsGlobal, Off
+#Warn, UseUnsetGlobal, StdOut
+#Warn, LocalSameAsGlobal, StdOut
 #Warn, UseUnsetLocal, Off
+#Include %A_ScriptDir%
+SetWorkingDir, %A_ScriptDir%
+SetBatchLines, -1
+ListLines Off
+
+global Gs_Author := "Fonny"
+, Gs_OptionFile := SubStr(A_ScriptName, 1, -3) "ini"
+, Gs_DebugLevel := 3
 
 Include_CpTransform()
 delHead()
 
-SetWorkingDir, %A_ScriptDir%
-FileCopy, _forReplace\content.js, docs\static\, 1
-FileCopy, _forReplace\content.chm.js, docs\static\, 1
-FileCopy, _forReplace\data_toc.js, docs\static\source\, 1
-FileCopy, _forReplace\CreateFiles4Help.ahk, docs\static\source\, 1
 ExitApp
 return
 
@@ -56,50 +59,10 @@ delHead()
          _newContent .= _line "`n"
       }
       ;~ 删除最后的换行符
-      _newContent := SubStr(_newContent, 1 , -1)
+      _newContent := Trim(_newContent, "`n")
       FileAppend, % _newContent, % A_LoopFileFullPath
       ToolTip, %A_Index% %A_LoopFileFullPath% 完成
    }
    Trace("替换头部完成", 3)
-   return
-}
-
-go_change1()
-{
-   ;~ 新版的js引用位置变化
-   _replaceStr1 =
-   (`"
-   static/jquery.js" type="text/javascript"></script>
-   )
-
-   _replaceStr2=
-   (`"
-   static/tree.jquery.js" type="text/javascript"></script>
-   )
-
-   Loop, %A_ScriptDir%\*.htm, , 1
-   {
-       FileRead, content, % A_LoopFileFullPath
-       FileDelete, % A_LoopFileFullPath
-
-      _newContent := ""
-      Loop, parse, content, `n, `r
-      {
-         _line := Trim(A_LoopField)
-         if (A_Index < 20)
-         && ((_line ~= _replaceStr1) || (_line ~= _replaceStr2))
-         {
-            continue
-         }
-         _newContent .= A_LoopField "`n"
-      }
-
-      ;~ 删除最后的换行符
-      _newContent := SubStr(_newContent, 1 , -1)
-
-      FileAppend, % _newContent, % A_LoopFileFullPath
-   }
-   Trace("第一步完成")
-   Sleep, 500
    return
 }
