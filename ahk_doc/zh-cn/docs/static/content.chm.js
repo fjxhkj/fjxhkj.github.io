@@ -5,17 +5,17 @@
 
 translate = {
   hdSearchTxt: "AutoHotkey",
-  hdSearchBtn: "ËÑË÷",
+  hdSearchBtn: "æœç´¢",
   hdSearchLnk: "https://www.baidu.com/s?wd={0}",
-  sbContent: "Ä¿Â¼",
-  sbIndex: "Ë÷Òı",
-  ftLicense: "°æÈ¨:",
+  sbContent: "ç›®å½•",
+  sbIndex: "ç´¢å¼•",
+  ftLicense: "ç‰ˆæƒ:",
   ftExtra: "",
-  cdSelectBtn: "Ñ¡Ôñ",
-  cdDownloadBtn: "ÏÂÔØ",
-  verToolTipAHK_L: "ÊÊÓÃÓÚ:\nAutoHotkey_L {0} ¼°¸ü¸ß°æ±¾\nAutoHotkey v1.0.90.00 ¼°¸ü¸ß°æ±¾",
-  verToolTipDefault: "ÊÊÓÃÓÚ AutoHotkey {0} ¼°¸ü¸ß°æ±¾",
-  tutLocalMessage: "Èç¹ûÄãÒÑ¾­ÔÚ±¾µØ²é¿´±¾ÎÄµµ, ¿ÉÄÜÄãÒÑ¾­°²×°ÁËÊÊºÏµÄ AutoHotkey °æ±¾, ÄÇÃ´Äã¿ÉÒÔÌø¹ıÕÂ½Ú b."
+  cdSelectBtn: "é€‰æ‹©",
+  cdDownloadBtn: "ä¸‹è½½",
+  verToolTipAHK_L: "é€‚ç”¨äº:\nAutoHotkey_L {0} åŠæ›´é«˜ç‰ˆæœ¬\nAutoHotkey v1.0.90.00 åŠæ›´é«˜ç‰ˆæœ¬",
+  verToolTipDefault: "é€‚ç”¨äº AutoHotkey {0} åŠæ›´é«˜ç‰ˆæœ¬",
+  tutLocalMessage: "å¦‚æœä½ å·²ç»åœ¨æœ¬åœ°æŸ¥çœ‹æœ¬æ–‡æ¡£, å¯èƒ½ä½ å·²ç»å®‰è£…äº†é€‚åˆçš„ AutoHotkey ç‰ˆæœ¬, é‚£ä¹ˆä½ å¯ä»¥è·³è¿‡ç« èŠ‚ b."
 };
 if (!IsInsideCHM() && !IsSearchBot())
 {

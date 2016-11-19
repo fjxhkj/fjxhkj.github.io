@@ -19,8 +19,13 @@ return
 
 delHead()
 {
-   Loop, %A_ScriptDir%\*.htm, , 1
+   Loop, %A_ScriptDir%\*.*, , 1
    {
+      if ! (A_LoopFileExt ~= "i)(htm|js)")
+      {
+         continue
+      }
+
       _fEncoding := File_GetEncoding(A_LoopFileFullPath)
 
       ;~ 1 = ANSI
