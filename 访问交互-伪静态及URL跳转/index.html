@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>伪静态及URL跳转 - SpeedPHP 文档</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-table.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/prettify.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../css/highlight.css"> -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-table.min.js"></script>
+        <!-- <script src="../js/highlight.pack.js"></script> -->
+        <script src="../js/prettify.min.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">SpeedPHP 文档</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80%E3%80%81%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8SpeedPHP/">一 开始使用SpeedPHP</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C%E3%80%81Hello%20World/">二 Hello World</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%89%E3%80%81%E7%90%86%E8%A7%A3MVC/">三 理解MVC</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9B%9B%E3%80%81%E5%88%B6%E4%BD%9C%E7%95%99%E8%A8%80%E6%9C%AC/">四 制作留言本</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E5%8F%8AAjax/">五 数据操作及Ajax</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架概述 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-SAE%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8/">SAE平台使用</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%88%E6%9D%83%E5%8F%8A%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/">版权及开源协议</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%BC%96%E7%A0%81%E7%89%88%E6%9C%AC/">编码版本</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%B9%E8%89%B2/">特色</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发指南 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE/">安全建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%A8%8B%E5%BA%8F%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">程序目录结构</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%89%A9%E5%B1%95/">架构及扩展</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">开发流程</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%A8%A1%E5%9D%97modules/">模块modules</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89/">用户自定义</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">访问交互 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-session%EF%BC%8Fcookie/">session／cookie</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">表单提交及获取$_GET／$_POST的数据</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E7%89%B9%E6%80%A7%E5%92%8C%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">模板引擎特性和使用方法</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">使用frameset</a>
+</li>
+                            
+<li class="active">
+    <a href="./">伪静态及URL跳转</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据操作 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-SQL%E6%94%AF%E6%8C%81%E5%8F%8A%E5%85%B3%E8%81%94%E5%AE%9E%E7%8E%B0/">SQL支持及关联实现</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%A4%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E4%B8%BB%E4%BB%8E%E5%BA%93%E9%85%8D%E7%BD%AE/">多数据库、主从库配置</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%88%86%E9%A1%B5/">分页</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%B1%BB/">建立数据模型类</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E6%95%99%E7%A8%8B/">数据操作教程</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-SQL%E6%94%AF%E6%8C%81%E5%8F%8A%E5%85%B3%E8%81%94%E5%AE%9E%E7%8E%B0/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#url">伪静态配置及URL跳转</a></li>
+            <li><a href="#_1">一、特色</a></li>
+            <li><a href="#_2">二、服务器配置</a></li>
+            <li><a href="#_3">三、框架伪静态配置</a></li>
+            <li><a href="#url_1">四、URL地址函数</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="url">伪静态配置及URL跳转</h1>
+<p>本章我们会讲解伪静态的配置，还有URL构造的方法等相关内容。</p>
+<blockquote>
+<p>新版的sp框架，伪静态功能是内置支持的。</p>
+</blockquote>
+<h2 id="_1">一、特色</h2>
+<p>在不到80行代码里面，实现了功能强大的php伪静态路由功能。（包括伪静态路由和url产生）<br />
+精简的代码带来非常高的执行效率，对比旧版的UrlRewrite扩展速度上有三倍的提升。</p>
+<blockquote>
+<p>当然，旧版框架对比其他大型PHP框架的伪静态已经非常轻量级和快速了。</p>
+</blockquote>
+<ul>
+<li>支持moduels多模块。</li>
+<li>支持URL和参数定制。</li>
+<li>支持http开头的域名适配，对跨站构造URL有良好的支持。</li>
+<li>支持泛域名适配，如 *.example.com 的适配。</li>
+<li>规则更简单，更直观，更容易配置了。</li>
+<li>通过url()函数即可构造URL地址。</li>
+</ul>
+<h2 id="_2">二、服务器配置</h2>
+<p>一般初学者使用伪静态时，首先遇到的问题是产生“404找不到页面”的情况。这情况通常都是因为没有正确配置服务器的原因。</p>
+<p>接下来我们介绍一下较为常见的服务器的伪静态配置方法。</p>
+<h3 id="apache">Apache</h3>
+<p>在默认情况下，sp框架在程序根目录已经自带.htaccess文件，该文件在Apache服务器下面是自动加载并且已经完成配置的。</p>
+<p>根目录的.htaccess文件内容是：</p>
+<pre><code>&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+&lt;/IfModule&gt;
+</code></pre>
+
+<p>注意，有时候我们会发现Apache服务器即使已经有了.htaccess文件，但是还是会发生404的情况，这样就需要检查一下Apache本身的配置是否开启“文件配置”的选项了。</p>
+<ol>
+<li>找到httpd.conf文件，一般windows在apache/conf/httpd.conf目录里面，linux在/etc/httpd/conf/httpd.conf。</li>
+<li>打开并且搜索到您的web根目录配置。如：</li>
+</ol>
+<pre><code>&lt;Directory &quot;/var/www/html&quot;&gt;
+　　AllowOverride None
+&lt;/Directory&gt;
+</code></pre>
+
+<p>改为:</p>
+<pre><code>&lt;Directory &quot;/var/www/html&quot;&gt;
+　　AllowOverride All
+&lt;/Directory&gt;
+</code></pre>
+
+<p>主要是修改 AllowOverride 的值，AllowOverride 意思是：是否能通过.htaccess文件配置来覆盖httpd.conf的配置。</p>
+<ol>
+<li>检查以下语句前面有没有#号，有的话去掉#。如果无法找到该行配置，则在httpd.conf文件最后增加。</li>
+</ol>
+<pre><code>LoadModule rewrite_module modules/mod_rewrite.so
+</code></pre>
+
+<ol>
+<li>重启Apache即可。</li>
+</ol>
+<h3 id="nginx">Nginx</h3>
+<p>Nginx现在非常流行，大多数时候已经替代了Apache的地位。</p>
+<p>Nginx需要配置当前站点的配置文件，如下：</p>
+<pre><code>location / {
+    if (!-e $request_filename){
+        rewrite (.*) /index.php;
+    }
+}
+location ^~ /protected {
+    deny all;
+}
+</code></pre>
+
+<blockquote>
+<p>一般当前站点的配置文件会存储在/etc/nginx/sites-available/目录下面，以站点域名为名称的conf文件。</p>
+</blockquote>
+<h3 id="sae">新浪SAE平台</h3>
+<p>config.yaml是SAE的配置文件，以下是伪静态的实例：</p>
+<pre><code>name: speedweb
+version: 3
+
+handle:
+- rewrite: if (!-d &amp;&amp; !-f) goto &quot;/index.php?%{QUERY_STRING}&quot;
+- hostaccess: if (%{REQUEST_URI} ~ &quot;/protected/&quot;) deny &quot;all&quot;
+</code></pre>
+
+<h2 id="_3">三、框架伪静态配置</h2>
+<p>sp框架的伪静态配置，在protected/config.php文件里面，大概是这样：</p>
+<pre><code>$config = array(
+    'rewrite'=&gt;array(
+        'admin/index.html'   =&gt; 'admin/main/index',
+        'admin/&lt;c&gt;_&lt;a&gt;.html' =&gt; 'admin/&lt;c&gt;/&lt;a&gt;',
+        '&lt;c&gt;/&lt;a&gt;'            =&gt; '&lt;c&gt;/&lt;a&gt;',
+        '/'                  =&gt; 'main/index',
+    ),
+);
+</code></pre>
+
+<p>这里rewrite数组，就是我们的伪静态配置，可以看到，左边key值是URL地址，而右边是指向的modules/controller/action（当然没有modules也行）。</p>
+<p>如果需要关闭 rewrite，可以设置 <code>'rewrite' =&gt; null</code> ,那么全部URL都会变成原来的 <code>/index.php?m=模块&amp;c=控制器&amp;a=方法&amp;参数名=参数值</code> 的形式。</p>
+<p>我们来了解几个规则，非常简单：</p>
+<ol>
+<li><code>&lt;m&gt;&lt;c&gt;&lt;a&gt;</code> 分别指代 modules，controller，action。</li>
+<li>其他的 &lt;单词&gt;，都是 <code>_GET</code> 的参数名称。</li>
+<li><strong>越是明确指向的URL配置，越要放前面。比如说 <code>admin/index.html</code>，要放在 <code>admin/&lt;c&gt;_&lt;a&gt;.html</code> 的前面，因为 <code>admin/index.html</code> 是明确的。而 <code>&lt;c&gt;/&lt;a&gt;</code> 和 <code>/</code> 就被放到最后了</strong>。</li>
+</ol>
+<p>我们来看看各种配置对应表：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>配置</th>
+<th>实现URL</th>
+<th>控制器/方法<br>模块/控制器/方法</th>
+<th>GET参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>固定URL</td>
+<td><code>'index.html'=&gt;'main/index'</code></td>
+<td><code>/index.html</code></td>
+<td><code>main/index</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>固定URL</td>
+<td><code>'123.json'=&gt;'view/number'</code></td>
+<td><code>/123.json</code></td>
+<td><code>view/number</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>固定URL</td>
+<td><code>'admin/index.html'=&gt;'admin/main/index'</code></td>
+<td><code>/admin/index.html</code></td>
+<td><code>admin/main/index</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>使用 <code>&lt;c&gt;，&lt;a&gt;</code></td>
+<td><code>'&lt;c&gt;_&lt;a&gt;.html'=&gt;'&lt;c&gt;/&lt;a&gt;'</code></td>
+<td><code>/控制器_方法.html</code></td>
+<td><code>控制器/方法</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>使用 <code>&lt;m&gt;，&lt;c&gt;，&lt;a&gt;</code></td>
+<td><code>'&lt;m&gt;/&lt;c&gt;_&lt;a&gt;.html'=&gt;'&lt;m&gt;/&lt;c&gt;/&lt;a&gt;'</code></td>
+<td><code>/模块/控制器_方法.html</code></td>
+<td><code>模块/控制器/方法</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>使用 <code>&lt;m&gt;，&lt;c&gt;，&lt;a&gt;</code> <br> <code>固定部分URL</code></td>
+<td><code>'user-&lt;a&gt;.html'=&gt;'user/&lt;a&gt;'</code></td>
+<td><code>/user-方法.html</code></td>
+<td><code>user/方法</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>使用参数</td>
+<td><code>'blog-&lt;id&gt;.do'=&gt;'user/blog'</code></td>
+<td><code>/blog-9527.do</code></td>
+<td><code>user/blog</code></td>
+<td><code>arg("id") = 9527</code></td>
+</tr>
+<tr>
+<td>使用参数</td>
+<td><code>'admin/user/&lt;username&gt;'=&gt;'admin/user/detail'</code></td>
+<td><code>/admin/user/jake</code></td>
+<td><code>admin/user/detail</code></td>
+<td><code>arg("username") = "jake"</code></td>
+</tr>
+<tr>
+<td>使用参数</td>
+<td><code>'u/&lt;uid&gt;/album.html'=&gt;'user/album'</code></td>
+<td><code>/u/123/album.html</code></td>
+<td><code>user/album</code></td>
+<td><code>arg("uid") = 123</code></td>
+</tr>
+<tr>
+<td>使用参数</td>
+<td><code>'page-&lt;username&gt;/&lt;tid&gt;'=&gt;'page/view'</code></td>
+<td><code>/page-jake/10086</code></td>
+<td><code>page/view</code></td>
+<td><code>arg("username") = 'jake'</code>，<code>arg("tid") = 10086</code></td>
+</tr>
+<tr>
+<td>泛域名</td>
+<td><code>'http://&lt;username&gt;.speedphp.com/'=&gt;'main/index'</code></td>
+<td><code>http://jake.speedphp.com</code></td>
+<td><code>main/index</code></td>
+<td><code>arg("username") = 'jake'</code></td>
+</tr>
+<tr>
+<td>泛域名</td>
+<td><code>'http://&lt;shopname&gt;.shop.speedphp.com/article-&lt;id&gt;.html'=&gt;'article/show'</code></td>
+<td><code>http://ak47.shop.speedphp.com/article-520.html</code></td>
+<td><code>article/show</code></td>
+<td><code>arg("shopname") = 'ak47'</code>，<code>arg("id") = 520</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="url_1">四、URL地址函数</h2>
+<p>当配置好上述的规则后，我们可以通过url()函数，来生成URL地址。</p>
+<p><code>url()</code> 函数有三个参数：$c, $a, $param</p>
+<ol>
+<li><code>$c</code> 参数是控制器名称，对应到 <code>protected/controller</code> 目录下面的 controller 类，如果用到 modules 模块开发，那么参数值是 <code>模块名/控制器名</code>。对应该模块目录下的 controller 类。</li>
+<li><code>$a</code> 参数是方法名称。对应 controller 类里面的，带 action 前缀的方法。</li>
+<li><code>$param</code> 是参数数组，键是参数名称，值是参数值。</li>
+</ol>
+<h3 id="_4">在没有伪静态的时候：</h3>
+<blockquote>
+<p>不设置伪静态就配置：'rewrite'=&gt;null</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>控制器内使用url()函数</th>
+<th>模板内使用</th>
+<th>显示结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>进入控制器/方法</td>
+<td><code>url("view", "index")</code></td>
+<td><code>&lt;{url c="view" a="index"}&gt;</code></td>
+<td><code>/index.php?c=view&amp;a=index</code></td>
+</tr>
+<tr>
+<td>进入模块/控制器/方法</td>
+<td><code>url("admin/view", "index")</code></td>
+<td><code>&lt;{url c="admin/view" a="index"}&gt;</code></td>
+<td><code>/index.php?m=admin&amp;c=view&amp;a=index</code></td>
+</tr>
+<tr>
+<td>带参数</td>
+<td><code>url("view", "index", array("page"=&gt;100))</code></td>
+<td><code>&lt;{url c="view" a="index" page="100"}&gt;</code></td>
+<td><code>/index.php?c=view&amp;a=index&amp;page=100</code></td>
+</tr>
+<tr>
+<td>带参数</td>
+<td><code>url("admin/view", "index", array("page"=&gt;100, "sort"=&gt;"desc"))</code></td>
+<td><code>&lt;{url c="admin/view" a="index" page="100" sort="desc"}&gt;</code></td>
+<td><code>/index.php?m=admin&amp;c=view&amp;a=index&amp;page=100&amp;sort=desc</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">在开启伪静态之后：</h3>
+<p>开启伪静态之后，会根据rewrite配置而定URL的生成方式。</p>
+<table>
+<thead>
+<tr>
+<th>配置</th>
+<th>控制器内使用url()函数</th>
+<th>模板内使用</th>
+<th>显示结果</th>
+<th>指向控制器/方法（或 模块/控制器/方法）</th>
+<th>GET参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'index.html'=&gt;'main/index'</code></td>
+<td><code>url("main", "index")</code></td>
+<td><code>&lt;{url c="main" a="index"}&gt;</code></td>
+<td><code>/index.html</code></td>
+<td><code>main/index</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>'123.json'=&gt;'view/number'</code></td>
+<td><code>url("view", "number")</code></td>
+<td><code>&lt;{url c="view" a="number"}&gt;</code></td>
+<td><code>/123.json</code></td>
+<td><code>view/number</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>'admin/index.html'=&gt;'admin/main/index'</code></td>
+<td><code>url("admin/main", "index")</code></td>
+<td><code>&lt;{url c="admin/main" a="index"}&gt;</code></td>
+<td><code>/admin/index.html</code></td>
+<td><code>admin/main/index</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>'&lt;c&gt;_&lt;a&gt;.html'=&gt;'&lt;c&gt;/&lt;a&gt;'</code></td>
+<td><code>url("mycontrol", "myaction")</code></td>
+<td><code>&lt;{url c="mycontrol" a="myaction"}&gt;</code></td>
+<td><code>/mycontrol_myaction.html</code></td>
+<td><code>mycontrol/myaction</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>'&lt;m&gt;/&lt;c&gt;_&lt;a&gt;.html'=&gt;'&lt;m&gt;/&lt;c&gt;/&lt;a&gt;'</code></td>
+<td><code>url("mod/mycontrol", "myaction")</code></td>
+<td><code>&lt;{url c="mod/mycontrol" a="myaction"}&gt;</code></td>
+<td><code>/mod/mycontrol_myaction.html</code></td>
+<td><code>mod/mycontrol/myaction</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>'user-&lt;a&gt;.html'=&gt;'user/&lt;a&gt;'</code></td>
+<td><code>url("user", "myaction")</code></td>
+<td><code>&lt;{url c="user" a="myaction"}&gt;</code></td>
+<td><code>/user-myaction.html</code></td>
+<td><code>user/myaction</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>'blog-&lt;id&gt;.do'=&gt;'user/blog'</code></td>
+<td><code>url("user", "blog", array("id"=&gt;9527))</code></td>
+<td><code>&lt;{url c="user" a="blog" id="9527"}&gt;</code></td>
+<td><code>/blog-9527.do</code></td>
+<td><code>user/blog</code></td>
+<td><code>arg("id") = 9527</code></td>
+</tr>
+<tr>
+<td><code>'blog-&lt;id&gt;.do'=&gt;'user/blog'</code></td>
+<td><code>url("user", "blog", array("page"=&gt;2, "id"=&gt;9527))</code></td>
+<td><code>&lt;{url c="user" a="blog" page="2" id="9527"}&gt;</code></td>
+<td><code>/blog-9527.do**?page=2**</code></td>
+<td><code>user/blog</code></td>
+<td><code>arg("id") = 9527, **arg("page") = 2**</code></td>
+</tr>
+<tr>
+<td><code>'admin/user/&lt;username&gt;'=&gt;'admin/user/detail'</code></td>
+<td><code>url("admin/user", "detail", array("username"=&gt;"jake"))</code></td>
+<td><code>&lt;{url c="admin/user" a="detail" username="jake"}&gt;</code></td>
+<td><code>/admin/user/jake</code></td>
+<td><code>admin/user/detail</code></td>
+<td><code>arg("username") = "jake"</code></td>
+</tr>
+<tr>
+<td><code>'u/&lt;uid&gt;/album.html'=&gt;'user/album'</code></td>
+<td><code>url("user", "album", array("uid"=&gt;123))</code></td>
+<td><code>&lt;{url c="user" a="album" uid="123"}&gt;</code></td>
+<td><code>/u/123/album.html</code></td>
+<td><code>user/album</code></td>
+<td><code>arg("uid") = 123</code></td>
+</tr>
+<tr>
+<td><code>'u/&lt;uid&gt;/album.html'=&gt;'user/album'</code></td>
+<td><code>url("user", "album", array("uid"=&gt;123, "sort"=&gt;"2"))</code></td>
+<td><code>&lt;{url c="user" a="album" uid="123" sort="2"}&gt;</code></td>
+<td><code>/u/123/album.html?sort=2</code></td>
+<td><code>user/album</code></td>
+<td><code>arg("uid") = 123</code>, <code>arg("sort") = 2</code></td>
+</tr>
+<tr>
+<td><code>'page-&lt;username&gt;/&lt;tid&gt;'=&gt;'page/view'</code></td>
+<td><code>url("page", "view", array("username"=&gt;"jake", "tid"=&gt;"10086"))</code></td>
+<td><code>&lt;{url c="user" a="album" username="jake" tid="10086"}&gt;</code></td>
+<td><code>/page-jake/10086</code></td>
+<td><code>page/view</code></td>
+<td><code>arg("username") = 'jake'</code>，<code>arg("tid") = 10086</code></td>
+</tr>
+<tr>
+<td><code>'http://&lt;username&gt;.speedphp.com/'=&gt;'main/index'</code></td>
+<td><code>url("main", "index", array("username"=&gt;"jake"))</code></td>
+<td><code>&lt;{url c="main" a="index" username="jake"}&gt;</code></td>
+<td><code>http://jake.speedphp.com</code></td>
+<td><code>main/index</code></td>
+<td><code>arg("username") = 'jake'</code></td>
+</tr>
+<tr>
+<td><code>'http://&lt;shopname&gt;.shop.speedphp.com/article-&lt;id&gt;.html' =&gt;'article/show'</code></td>
+<td><code>url("article", "showindex", array("shopname"=&gt;"ak47", "id"=&gt;520))</code></td>
+<td><code>&lt;{url c="article" a="show" shopname="ak47" id="520"}&gt;</code></td>
+<td><code>http://ak47.shop.speedphp.com/article-520.html</code></td>
+<td><code>article/show</code></td>
+<td><code>arg("shopname") = 'ak47'</code>，<code>arg("id") = 520</code></td>
+</tr>
+<tr>
+<td><code>'http://&lt;shopname&gt;.shop.speedphp.com/article-&lt;id&gt;.html' =&gt;'article/show'</code></td>
+<td><code>url("article", "showindex", array("shopname"=&gt;"ak47", "id"=&gt;520, "page"=&gt;2))</code></td>
+<td><code>&lt;{url c="article" a="show" shopname="ak47" id="520" page="2"}&gt;</code></td>
+<td><code>http://ak47.shop.speedphp.com/article-520.html?page=2</code></td>
+<td><code>article/show</code></td>
+<td><code>arg("shopname") = 'ak47'</code>，<code>arg("id") = 520</code>, <code>arg("page") = 2</code></td>
+</tr>
+</tbody>
+</table>
+<p>这里注意两个问题：</p>
+<ol>
+<li>比配置多出来的参数，那么会以?参数名=参数值的方式跟在URL后面。上表应该可以看得出来。</li>
+<li><strong>如果发现取得的URL不是想要的，可以调整一下rewrite配置规则的前后顺序，多几次调整就会正确，并且找到规律。</strong></li>
+</ol></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a href="https://www.goldrobot.org">www.goldrobot.org</a></p>
+            <!-- <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p> -->
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

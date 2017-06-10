@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>session／cookie - SpeedPHP 文档</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-table.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/prettify.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../css/highlight.css"> -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-table.min.js"></script>
+        <!-- <script src="../js/highlight.pack.js"></script> -->
+        <script src="../js/prettify.min.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">SpeedPHP 文档</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80%E3%80%81%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8SpeedPHP/">一 开始使用SpeedPHP</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C%E3%80%81Hello%20World/">二 Hello World</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%89%E3%80%81%E7%90%86%E8%A7%A3MVC/">三 理解MVC</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9B%9B%E3%80%81%E5%88%B6%E4%BD%9C%E7%95%99%E8%A8%80%E6%9C%AC/">四 制作留言本</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E5%8F%8AAjax/">五 数据操作及Ajax</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架概述 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-SAE%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8/">SAE平台使用</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%88%E6%9D%83%E5%8F%8A%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/">版权及开源协议</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%BC%96%E7%A0%81%E7%89%88%E6%9C%AC/">编码版本</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%B9%E8%89%B2/">特色</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发指南 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE/">安全建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%A8%8B%E5%BA%8F%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">程序目录结构</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%89%A9%E5%B1%95/">架构及扩展</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">开发流程</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%A8%A1%E5%9D%97modules/">模块modules</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89/">用户自定义</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">访问交互 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li class="active">
+    <a href="./">session／cookie</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">表单提交及获取$_GET／$_POST的数据</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E7%89%B9%E6%80%A7%E5%92%8C%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">模板引擎特性和使用方法</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">使用frameset</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BC%AA%E9%9D%99%E6%80%81%E5%8F%8AURL%E8%B7%B3%E8%BD%AC/">伪静态及URL跳转</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据操作 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-SQL%E6%94%AF%E6%8C%81%E5%8F%8A%E5%85%B3%E8%81%94%E5%AE%9E%E7%8E%B0/">SQL支持及关联实现</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%A4%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E4%B8%BB%E4%BB%8E%E5%BA%93%E9%85%8D%E7%BD%AE/">多数据库、主从库配置</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%88%86%E9%A1%B5/">分页</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%B1%BB/">建立数据模型类</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E6%95%99%E7%A8%8B/">数据操作教程</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#sessioncookie">框架中session／cookie的使用</a></li>
+            <li><a href="#session">使用 session</a></li>
+            <li><a href="#cookie">使用 cookie</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="sessioncookie">框架中session／cookie的使用</h1>
+<h2 id="session">使用 session</h2>
+<p>session的作用主要在保存会话信息，在访问者浏览网站的期间，对访问者相关的信息进行记录，当浏览器关闭后，会话结束，session数据也就消失了。</p>
+<p>PHP框架中session是一个数组，可以通过 <code>$_SESSION['key'] = $value</code> 的方式对session赋值。如：</p>
+<pre><code>$_SESSION['myname'] = 'Helllo';
+echo $_SESSION['myname'];
+</code></pre>
+
+<p>使用session的前提，是程序已经打开 <code>session_start()</code> 。</p>
+<p>新版sp框架中，<code>session_start()</code> 默认 <strong>没有</strong>  开启，如果需要开启，请把 <code>session_start()</code> 放在 <code>init()</code> 或者入口文件内。</p>
+<p>使用session过程中，会遇到输出header与session冲突的问题。通常会提示：</p>
+<pre><code>Warning: session_start() [function.session-start]: Cannot send session cache limiter - headers already sent (output started at xxx.php:29) in xxx
+</code></pre>
+
+<p>引起该问题的原因，是在 <code>session_start()</code> 之前，存在输出的 header 或字符。这里给以下几个建议：</p>
+<ul>
+<li>全局的 header 输出，要放在入口文件全局定义的位置，不要放入口文件的开头。当然，如果是单个header输出，如文件下载，则可以直接放到某个控制器/方法中。</li>
+<li>检查文件是否带BOM或其他输出字符，BOM可以通过编辑器来检查，而输出字符，则可以通过在浏览器中另存源文件下来，用记事本打开，看到乱码或空格就证明有输出字符。这些字符可以通过把源文件放到记事本中另存为来消除。</li>
+<li>可以在入口文件全局定义位置中，加入 <code>ob_start()</code> 来避免出错。</li>
+</ul>
+<blockquote>
+<p>session通常还有许多设置，如将session存放到数据库中等等。详情请见php.net文档。<br />
+这些session的设置，均可以放到入口文件全局定义位置来设置。</p>
+</blockquote>
+<p>session存放的位置，是在服务器的系统临时中，所以一般而言，session文件中的内容不会被访问者浏览到。</p>
+<h2 id="cookie">使用 cookie</h2>
+<p>cookie在程序中使用通常作为“保持登录”或是跟踪访问者操作等。和session不同，cookie存放的位置，是在访问者的浏览器缓存中。</p>
+<p>cookie的使用有几个要素：过期时间、路径、域。cookie可以通过setcookie函数设置：</p>
+<pre><code>setcookie ( COOKIE名字, COOKIE值, 过期时间, 路径, 域名 )
+</code></pre>
+
+<ul>
+<li>过期时间：默认是会话时间长度，和session相同。</li>
+<li>路径：默认是“/”，设置在当前域名下COOKIE生效的路径。</li>
+<li>域：域名，默认是当前网站域名。<br />
+        可以设置成 <code>.speedphp.com</code> 来使得整个网站（包括二级域名）都可以读取该COOKIE。</li>
+</ul>
+<h3 id="_1">举几个例子:</h3>
+<pre><code>setcookie(&quot;TestCookie&quot;, $value);  // 该cookie的过期时间是会话时间
+setcookie(&quot;TestCookie&quot;, $value, time()+3600);   // 该cookie的过期时间是1小时，当前时间time() 加 3600秒（1小时）
+setcookie(&quot;TestCookie&quot;, $value, time()+3600, &quot;/bbs/&quot;, &quot;.speedphp.com&quot;); // 该cookie的过期时间是1小时，只在speedphp.com及speedphp.com二级域名的bbs目录下使用。
+</code></pre>
+
+<p>cookie值可以用$_COOKIE数组来获取。</p>
+<pre><code>echo $_COOKIE['TestCookie'];
+</code></pre>
+
+<h3 id="cookie_1">cookie测试问题</h3>
+<p>由于COOKIE是先发送到访问者浏览器中，然后再被浏览器发送到服务器给PHP程序。所以在调试COOKIE的时候，要刷新一下页面才能看到刚才setcookie的值。<br />
+例如:</p>
+<pre><code>// 第一个页面
+// 假设COOKIE的TestCookie没有值
+setcookie(&quot;TestCookie&quot;, &quot;我是值&quot;);
+echo $_COOKIE['TestCookie']; // 不会输出值，因为浏览器没有发送COOKIE上来。
+// 第二个页面
+echo $_COOKIE['TestCookie']; // 输出“我是值”，因为PHP已经读取到浏览器发送的值。
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a href="https://www.goldrobot.org">www.goldrobot.org</a></p>
+            <!-- <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p> -->
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

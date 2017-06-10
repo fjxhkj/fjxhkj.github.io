@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>五 数据操作及Ajax - SpeedPHP 文档</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-table.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/prettify.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../css/highlight.css"> -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-table.min.js"></script>
+        <!-- <script src="../js/highlight.pack.js"></script> -->
+        <script src="../js/prettify.min.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">SpeedPHP 文档</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80%E3%80%81%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8SpeedPHP/">一 开始使用SpeedPHP</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C%E3%80%81Hello%20World/">二 Hello World</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%89%E3%80%81%E7%90%86%E8%A7%A3MVC/">三 理解MVC</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9B%9B%E3%80%81%E5%88%B6%E4%BD%9C%E7%95%99%E8%A8%80%E6%9C%AC/">四 制作留言本</a>
+</li>
+                            
+<li class="active">
+    <a href="./">五 数据操作及Ajax</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架概述 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-SAE%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8/">SAE平台使用</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%88%E6%9D%83%E5%8F%8A%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/">版权及开源协议</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%BC%96%E7%A0%81%E7%89%88%E6%9C%AC/">编码版本</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%B9%E8%89%B2/">特色</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发指南 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE/">安全建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%A8%8B%E5%BA%8F%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">程序目录结构</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%89%A9%E5%B1%95/">架构及扩展</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">开发流程</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%A8%A1%E5%9D%97modules/">模块modules</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89/">用户自定义</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">访问交互 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-session%EF%BC%8Fcookie/">session／cookie</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">表单提交及获取$_GET／$_POST的数据</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E7%89%B9%E6%80%A7%E5%92%8C%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">模板引擎特性和使用方法</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">使用frameset</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BC%AA%E9%9D%99%E6%80%81%E5%8F%8AURL%E8%B7%B3%E8%BD%AC/">伪静态及URL跳转</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据操作 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-SQL%E6%94%AF%E6%8C%81%E5%8F%8A%E5%85%B3%E8%81%94%E5%AE%9E%E7%8E%B0/">SQL支持及关联实现</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%A4%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E4%B8%BB%E4%BB%8E%E5%BA%93%E9%85%8D%E7%BD%AE/">多数据库、主从库配置</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%88%86%E9%A1%B5/">分页</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%B1%BB/">建立数据模型类</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E6%95%99%E7%A8%8B/">数据操作教程</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9B%9B%E3%80%81%E5%88%B6%E4%BD%9C%E7%95%99%E8%A8%80%E6%9C%AC/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../%E6%A6%82%E8%BF%B0-SAE%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#ajax">快速入门五、数据操作及Ajax</a></li>
+            <li><a href="#_1">一、页面调整</a></li>
+            <li><a href="#_2">二、查看单条留言</a></li>
+            <li><a href="#_3">三、点赞</a></li>
+            <li><a href="#_4">四、时间显示的补充</a></li>
+            <li><a href="#_5">五、删除留言</a></li>
+            <li><a href="#_6">六、分页显示</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="ajax">快速入门五、数据操作及Ajax</h1>
+<p>前面的教程我们已经完成了一个留言本的初步开发。接下来我们来了解一下sp框架的数据操作，以及初步学习一下Ajax的开发方式。</p>
+<blockquote>
+<p>Ajax是异步Javascript技术，可以在页面没有刷新的情况下，从服务器接收新的内容来显示和操作。</p>
+<p>时至今日，Ajax已经成为了网站开发技术的标配。</p>
+</blockquote>
+<p><a href="../images/5.zip">本教程最终完成例子下载</a></p>
+<h2 id="_1">一、页面调整</h2>
+<p>我们的留言本由于需要加入更多的操作，所以在页面HTML上面需要再修改一下，加入一个留言查看的弹窗。</p>
+<p>新的HTML在这里：<a href="../images/4.zip">下载新的页面</a></p>
+<p>解压取出里面的showmsg.html文件，它只是页面的HTML片段，主要提供显示一个查看单条留言的对话框，并不是完整的页面。</p>
+<p>将showmsg.html放到protected/view目录下面。</p>
+<p>我们现在需要把这个页面插入到guestbook.html中。打开guestbook.html，在最下面填写留言表单的下方，我们加入一行代码：</p>
+<pre><code>&lt;{include file="showmsg.html"}&gt;
+</code></pre>
+<p>看起来大概是这样：<br />
+<img alt="include文件" src="../images/21.jpg" /></p>
+<p>刷新localhost后，右键查看源代码，我们会发现showmsg.html的内容已经放在include那个位置上了。</p>
+<blockquote>
+<p>这是sp框架模板引擎的include语法功能，具体了解可以参考手册相关内容。</p>
+<p>inlucde语法的好处是可以把模板内通用的HTML片段抽离出来独立成文件，方便其他模板文件引用进去，达到一次修改就可以改变所有引用的内容。</p>
+</blockquote>
+<h2 id="_2">二、查看单条留言</h2>
+<p>我们在protected/controller目录下面，新建个php文件，名称是：ViewController.php，里面内容是：</p>
+<pre><code>&lt;?php
+class ViewController extends BaseController {
+    function actionShow(){
+        // 把提交的upid参数，作为值来构造一个查询条件数组，
+        // 条件是：把id字段中等于提交upid参数值的记录查询出来
+        $condition = array("id" =&gt; arg("upid"));
+        $guestbook = new Model("guestbook");
+        // 通过find()方法，按条件数据进行查询，
+        // find返回结果是对应记录的一维数组
+        $result = $guestbook-&gt;find($condition);
+        // 输出看看
+        dump($result);
+    }
+}
+</code></pre>
+<p>当我们打开浏览器http://localhost/view/show.html?upid=1 ，可以看到：</p>
+<p><img alt="find结果" src="../images/22.jpg" /></p>
+<p>内容比较多，我们仔细来研究研究：</p>
+<ul>
+<li>这里是ViewController类，跟MainController一样，它继承于BaseController类，而且类的名字跟文件名是一样的。</li>
+<li>ViewController类里面的方法叫actionShow()，action开头的方法是可以被浏览器访问到的。actionShow()是执行这块操作的主体代码块。</li>
+<li>actionShow()方法开始我们把提交上来的参数upid，作为值构造成了一个查询条件的数组，数组名称是$condition。</li>
+<li>arg("upid")代表获取浏览器提交上来upid的参数。</li>
+<li>继续实例化guestbook表，然后调用find()方法，用$condition这个条件数组作为参数输入。</li>
+<li>取得find()方法的结果$result，并且用dump()进行调试输出观察。</li>
+</ul>
+<p>Model类的find()方法，指的是查询一条符合条件的记录，返回的是一维数组。</p>
+<p>对比一下前章节学习过的findAll()方法，我们把上述代码的find()直接改成findAll()。</p>
+<p><img alt="改成findAll" src="../images/23.jpg" /></p>
+<p>刷新浏览器我们可以看到跟find()的一点不一样的地方了：</p>
+<p><img alt="findAll结果" src="../images/24.jpg" /></p>
+<p>是的，findAll()比find()的结果多了个0，也就是多了一个维度。</p>
+<blockquote>
+<p>从原理上来讲，find()方法内部其实是调用了findAll()来查询，但是会指定只返回第一条记录，然后find()会把第一条记录变成一维的数组再返回给用户。</p>
+</blockquote>
+<p>也就是说，find()实际上是findAll()的第一条记录，不过find()相对方便的是它是一维数组，可以直接通过类似$result["title"]的方式来取得值，而不是findAll()结果的$result[0]["title"]。</p>
+<blockquote>
+<p>相同条件下，find()的$result["title"]是等于findAll()的$result[0]["title"]的。</p>
+</blockquote>
+<p>这时候我们已经可以指定查询到了单条留言的内容了。那么我们会把返回变成json格式。</p>
+<blockquote>
+<p>json格式是目前较为通用的数据传输格式。</p>
+</blockquote>
+<p>我们现在把dump()调试去掉，改成json输出：</p>
+<pre><code>&lt;?php
+class ViewController extends BaseController {
+    function actionShow(){
+        // 把提交的upid参数，作为值来构造一个查询条件数组，
+        // 条件是：把id字段中等于提交upid参数值的记录查询出来
+        $condition = array("id" =&gt; arg("upid"));
+        $guestbook = new Model("guestbook");
+        // 通过find()方法，按条件数据进行查询，
+        // find返回结果是对应记录的一维数组
+        $result = $guestbook-&gt;findAll($condition);
+        // 输出看看
+        header('Content-type: application/json');
+        echo json_encode($result);
+    }
+}
+</code></pre>
+<ul>
+<li>header()函数的作用是输出后让浏览器识别这是一个json流。</li>
+<li>json_encode()函数是php自带函数，可以将php数组转换成json格式，这里转换好了之后，就echo输出了。</li>
+</ul>
+<blockquote>
+<p>跟json_encode()对应的还有json_decode()函数，作用相反，将json格式转回php数组。<br />
+echo是输出的意思，比如我们最早的 echo "hello world";，当然我们这个页面是没有用到模板的（没有display），是直接输出的。</p>
+</blockquote>
+<p>刷新浏览器我们可以看到json的输出了：</p>
+<p><img alt="json结果" src="../images/25.jpg" /></p>
+<p>这里看起来像是乱码的东西，就是json格式的数据。</p>
+<hr />
+<p>接下来我们修改一下HTML，对，就是插入那个showmsg.html</p>
+<pre><code>&lt;div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"&gt;
+    &lt;div class="modal-dialog" role="document"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+                &lt;h4 class="modal-title" id="show_title"&gt;&lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                &lt;p id="show_contents"&gt;&lt;/p&gt;
+                &lt;blockquote class="blockquote-reverse small"&gt;
+                    &lt;ul class="list-inline text-muted"&gt;
+
+                        &lt;li&gt;by&lt;/li&gt;
+                        &lt;li id="show_username"&gt;&lt;/li&gt;
+                        &lt;li id="show_createtime"&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;button type="button" class="btn btn-default btn-xs"&gt;&lt;span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"&gt;&lt;/span&gt; 100&lt;/button&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/blockquote&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;关闭&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    function showmsg(id){
+        // 由于需要JSON数据，所以使用$.getJSON
+        $.getJSON("&lt;{url c="view" a="show"}&gt;", { 'upid': id }, function(json){
+            // 这里是返回的数据，json变量就是json格式的数据，可以直接使用
+            // 给各个位置赋值上去
+            $("#show_title").html(json.title);
+            $("#show_contents").html(json.contents);
+            $("#show_username").html(json.username);
+            $("#show_createtime").html(json.createtime);
+            // 显示对话框
+            $('#showModal').modal('show');
+        }); 
+    }
+&lt;/script&gt;
+</code></pre>
+<p>我们修改了不少地方，逐个来看看。</p>
+<ul>
+<li>在每个需要显示内容的HTML元素上，我们加入了id的属性，也就是分别给它们取个名字，方便通过JS来进行赋值。</li>
+<li>加入了一个JS函数showmsg()，这个js函数的作用首先是调用jQuery库的getJSON()方法，把传入的id发到&lt;{url c="view" a="show"}&gt;这个地址上面去。</li>
+<li>然后接收返回的json数据，一一对应填入HTML里面。</li>
+<li>最后把对话框显示出来。</li>
+</ul>
+<blockquote>
+<p>JS是Javascript的简称，JS是可以在网页上面执行的脚本程序。具体JS教程可以参考w3c的教程。<br />
+由于本身页面模板上面已经有jQuery库，故不再需要引入可以直接使用。jQuery是JS的一个流行的类库，非常有用，建议多学习。</p>
+</blockquote>
+<p>我们还需要给每个留言增加个启动showmsg()函数的链接。在guestbook.html里面，我们把循环里面的标题增加一个链接。</p>
+<p>把原来的：</p>
+<pre><code>&lt;h4 class="media-heading"&gt;&lt;{$r.title}&gt;&lt;button type="button" class="close" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;&lt;/h4&gt;
+</code></pre>
+<p>改成了：</p>
+<pre><code>&lt;h4 class="media-heading"&gt;&lt;a href="javascript:void(0);" onclick="showmsg(&lt;{$r.id}&gt;)"&gt;&lt;{$r.title}&gt;&lt;/a&gt;&lt;button type="button" class="close" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;&lt;/h4&gt;
+</code></pre>
+<ul>
+<li>onclick是HTML的一个事件，意思是点击后发生点什么，这里的代码指的是“当点击这个链接时，指向地址是空的，但是会启动JS函数showmsg()”</li>
+<li>showmsg()函数传入了当前留言的id值。</li>
+</ul>
+<p>保存，刷新浏览器。点击任何一条留言的标题，那么就可以看到：</p>
+<p><img alt="查看单条留言" src="../images/26.jpg" /></p>
+<p>这里弹出的内容，是通过Ajax从view/show里面获取到的。</p>
+<h2 id="_3">三、点赞</h2>
+<p>看到每个留言下面的大拇指标志吗？ 通常在网络上这是点赞的意思。我们来实现这样的功能吧。</p>
+<p>点赞通常是一个数字，所以我们需要在原来的数据表guestbook上面新增一个数字字段来存储它，名字就叫dig。这里是通过PHPMyAdmin增加的界面：</p>
+<p><img alt="增加dig字段" src="../images/27.jpg" /></p>
+<p>对应的SQL语句是：</p>
+<pre><code>ALTER TABLE `guestbook` ADD `dig` INT(11) NULL DEFAULT '0' AFTER `username`;
+</code></pre>
+<p>完成后我们可以看到dig字段已经在那儿了。</p>
+<p><img alt="增加dig字段结果" src="../images/28.jpg" /></p>
+<p>打开ViewController.php，增加一个action作为点赞操作的方法。</p>
+<pre><code>function actionDig(){
+    // 同样的，首先是根据提交参数确定条件
+    $condition = array("id" =&gt; arg("upid"));
+    $guestbook = new Model("guestbook");
+    // 先查出当前记录的点赞数是多少
+    $result = $guestbook-&gt;find($condition);
+    // 然后把点赞加一
+    $dig = $result["dig"] + 1;
+    // 建新的更新数据，跟create相似的
+    // 是需要更新的字段名对应新的值
+    $newrow = array("dig" =&gt; $dig);
+    // 执行更新操作
+    // 这里update的意思是把符合$condition条件的记录
+    // 按$newrow设定的字段，把这些字段的值改成新值
+    $guestbook-&gt;update($condition, $newrow);
+
+    // 然后直接显示更新后的点赞数
+    echo $dig;
+}
+</code></pre>
+<ul>
+<li>首先我们是查询出来对应的id记录的dig数量是多少，然后加一。</li>
+<li>再通过update把加一后的值更新回去</li>
+<li>最后显示一下新的值</li>
+</ul>
+<p>update()方法输入两个参数，前面参数是条件数组，后面参数是需要更新的字段+值。</p>
+<blockquote>
+<p>从使用方式来看，update()方法很像是find() + create()的组合。</p>
+</blockquote>
+<p>然后在guestbook.html页面上面，我们修改一下点赞显示的方式，加入onclick事件。</p>
+<blockquote>
+<p>因为点赞显示的位置没有元素，所以我们可以用span把数字包裹起来，这样就可以给它赋以名称id了。</p>
+</blockquote>
+<pre><code>&lt;button type="button" class="btn btn-default btn-xs" onclick="digmsg(&lt;{$r.id}&gt;)"&gt;&lt;span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"&gt;&lt;/span&gt; &lt;span id="dig-&lt;{$r.id}&gt;"&gt;&lt;{$r.dig}&gt;&lt;/span&gt;&lt;/button&gt;
+</code></pre>
+<p>首先我们刷新一下页面，会发现点赞数已经出来了——当然只有0。</p>
+<p>然后我们在showmsg.html的script里面，再加上digmsg()函数：</p>
+<pre><code>function digmsg(id){
+    // 这里不需要json返回，所以直接使用$.get即可
+    $.get("&lt;{url c="view" a="dig"}&gt;", {"upid" : id}, function(dig){
+        $("#dig-" + id).html(dig);
+    });
+}
+</code></pre>
+<p>这里我们有个小技巧，就是在页面foreach循环的时候，点赞位置的id是dig-&lt;{$r.id}&gt;，所以每条留言的这个id都是不一样的，所以在 $("#dig-" + id).html(dig);就可以把返回的数据填充到正确id的点赞位置了。</p>
+<p>完成后我们刷新一下浏览器，发现点赞数字可以点击了，并且点击后，数字会变大。</p>
+<p><img alt="点赞结果" src="../images/29.jpg" /></p>
+<p>最后我们还需要修改一下查看留言的弹出框，把点赞数也显示上去。</p>
+<p>包括把弹出的HTML点赞位置改为：</p>
+<pre><code>&lt;span id="show_dig"&gt;&lt;/span&gt;
+</code></pre>
+<p>JS函数showmsg()里面也要增加：</p>
+<pre><code>$("#show_dig").html(json.dig);
+</code></pre>
+<p>改好后弹窗框也OK了：</p>
+<p><img alt="点赞结果" src="../images/30.jpg" /></p>
+<h2 id="_4">四、时间显示的补充</h2>
+<p>从上图弹出框可以看到留言时间还是时间戳。我们来把它修改一下成好看的日期吧。</p>
+<p>在ViewController的actionShow()方法里面，我们加入一个转换：</p>
+<pre><code>$result["createtime"] = date("Y年m月d日 H:i:s", $result["createtime"]);
+</code></pre>
+<p>放在查询到$result后，还没有输出之前。大概的位置是：</p>
+<p><img alt="显示漂亮时间" src="../images/31.jpg" /></p>
+<p>那么弹出框时间也就正常了。</p>
+<blockquote>
+<p>这里介绍的技巧，是当查询到数据之后，其实还是可以进一步修改的，有时候我们在php端修改，会更方便点。</p>
+</blockquote>
+<h2 id="_5">五、删除留言</h2>
+<p>一般数据库操作，最基本的就是增删改查（CURD），分别是增加（create）、删除（delete），修改（update），查询（find/findAll）。增改查前面已经介绍过了，我们现在来介绍最后一个删除操作。</p>
+<blockquote>
+<p>CURD的查询是英文READ，但是我们比较喜欢用find/findAll，这是文法的问题。</p>
+</blockquote>
+<p>打开ViewController.php，增加一个action作为删除操作的方法。</p>
+<pre><code>function actionDel(){
+    // 同样的，首先是根据提交参数确定条件
+    $condition = array("id" =&gt; arg("upid"));
+    $guestbook = new Model("guestbook");
+
+    // 直接返回结果，实际上这个结果是被忽略的
+    echo $guestbook-&gt;delete($condition);
+}
+</code></pre>
+<p>删除操作相对简单，跟其他操作一样，先是确定数组条件，然后直接调用delete()方法。</p>
+<p>delete()方法只有一个参数，代表了删除记录的条件。</p>
+<p>接下来我们修改guestbook.html文件，首先我们把foreach循环留言的大块DIV，加入一个ID，以识别不同的留言。</p>
+<pre><code>&lt;div class="panel panel-default" id="panel-&lt;{$r.id}&gt;"&gt;
+</code></pre>
+<p>然后在每个留言的右上角，已经有个 x 了，这是一个删除按钮。我们加入事件给它。</p>
+<p><img alt="一个xx" src="../images/32.jpg" /></p>
+<p>代码是：</p>
+<pre><code>&lt;button type="button" class="close" aria-label="Close" onclick="delmsg(&lt;{$r.id}&gt;)"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+</code></pre>
+<p>具体部分代码是：</p>
+<pre><code>...
+&lt;div class="col-md-8"&gt;
+    &lt;{foreach $records as $r}&gt;
+    &lt;div class="panel panel-default" id="panel-&lt;{$r.id}&gt;"&gt;
+        &lt;div class="panel-body"&gt;
+            &lt;div class="media"&gt;
+                &lt;div class="media-left"&gt;
+                    &lt;a href="#"&gt;
+                        &lt;img class="media-object" src="/i/img/1.gif" alt="..."&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="media-body"&gt;
+                    &lt;h4 class="media-heading"&gt;&lt;a href="javascript:void(0);" onclick="showmsg(&lt;{$r.id}&gt;)"&gt;&lt;{$r.title}&gt;&lt;/a&gt;&lt;button type="button" class="close" aria-label="Close" onclick="delmsg(&lt;{$r.id}&gt;)"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;&lt;/h4&gt; &lt;{$r.contents}&gt;
+                    &lt;blockquote class="blockquote-reverse small"&gt;
+                    ...
+</code></pre>
+<p>然后我们还是在showmsg.html的script里面，再加上delmsg()函数：</p>
+<pre><code>function delmsg(id){
+    // 这里不需要json返回，所以直接使用$.get即可
+    $.get("&lt;{url c="view" a="del"}&gt;", {"upid" : id}, function(){
+        $("#panel-" + id).fadeOut();
+    });
+}
+</code></pre>
+<ul>
+<li>这里实际上不需要返回值，所以也没有赋值给返回值。</li>
+<li>fadeOut()是一个很好玩的动画效果，会让页面上的元素渐变消失。</li>
+</ul>
+<p>OK后我们来刷新一下页面，点击其中一个留言右上角的叉，留言就消失了。</p>
+<h2 id="_6">六、分页显示</h2>
+<p>当我们留言内容变多的时候，页面会变得很长，这时候我们需要对留言进行分页显示。</p>
+<blockquote>
+<p>分页也是比较基础的功能之一，大部分网站都可以见到它的身影。</p>
+<p>另外在我们的页面上，其实也是有分页的HTML在的。</p>
+</blockquote>
+<p>我们先来介绍一下关于findAll()方法的深入使用方法。</p>
+<p>findAll()方法有四个参数，依次是$conditions，$sort，$fields，$limit；</p>
+<ul>
+<li>$conditions是条件数组，默认情况下是字段对应值的查询条件。</li>
+<li>$sort是排序方式，比如说接下来我们会用到“createtime DESC”就是根据createtime创建时间倒序查询。</li>
+<li>$fields是查询出来的字段，一般是“*”即可。</li>
+<li>$limit是限定查询的数量，也是我们分页的基础。默认情况是“第几条，要几条”，比如说“10, 20”指的是从第10条记录开始，查出20条数据。</li>
+</ul>
+<p>除了限定条数，$limit还有一种分页的方法：数组形式的$limit是自动分页的功能，指的是array(第几页, 每页多少条);如如 $limit = array(10, 20);，就是查出第10页，每页20条记录。</p>
+<blockquote>
+<p>“查出第10页，每页20条记录”，我们可以知道实际上findAll出来的结果最多是20条。</p>
+</blockquote>
+<p>打开MainController文件，我们修改一下actionIndex()方法。</p>
+<pre><code>function actionIndex(){
+    // 接收页码参数
+    $page = (int)arg("p", 1);
+
+    // 实例化一个guestbook的模型类
+    $guestbook = new Model("guestbook");
+    // 用findAll()方法查询guestbook表的全部数据
+    $this-&gt;records = $guestbook-&gt;findAll(null, "createtime DESC", "*", array($page, 3));
+    // 输出看看
+    // dump($this-&gt;records);
+
+    $this-&gt;pager = $guestbook-&gt;page;
+    // dump($this-&gt;pager);
+
+    $this-&gt;display("guestbook.html");
+}
+</code></pre>
+<p>改后我们发现页面上只有3篇留言了。下面我们来研究研究：</p>
+<p><strong>页码</strong></p>
+<ul>
+<li>接收页码$page，我们用了arg("p", 1);后面参数1是代表如果p不存在，则返回1.</li>
+<li>(int)arg("p", 1)的意思是强制将p参数转换成数字，保证数据库安全。</li>
+</ul>
+<p><strong>findAll</strong></p>
+<pre><code>$guestbook-&gt;findAll(null, "createtime DESC", "*", array($page, 3));
+</code></pre>
+<p>这里用了findAll的四个参数：</p>
+<ul>
+<li>null指的是没有条件，查询全部内容。</li>
+<li>"createtime DESC"指的是按createtime倒序查询，如果是正序那么应该是"createtime ASC"。</li>
+<li>"*"是全部字段，默认这个就好。</li>
+<li>array($page, 3)，这里指的是：当前是第$page页，每页3条留言。</li>
+</ul>
+<p>综上我们可以知道，现在$this-&gt;records查询出来的结果是第$page的3条留言。</p>
+<blockquote>
+<p>因为我本机上面留言较少，所以分页只设置了3页，如果大家有兴趣可以设置大点的数字。</p>
+</blockquote>
+<p><strong>page</strong></p>
+<pre><code>$this-&gt;pager = $guestbook-&gt;page;
+</code></pre>
+<p>这句代码紧跟着上面的findAll查询，意思是从$guestbook里面取出上一次findAll给出来的页码数据。</p>
+<blockquote>
+<p>这句代码必须紧跟着findAll，如果$guestbook再来一次findAll，那么可能$guestbook-&gt;page就不是第一次findAll的页码数据了。</p>
+</blockquote>
+<p>$this-&gt;pager输出看看：</p>
+<p><img alt="页码数据" src="../images/33.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>total_count</td>
+<td>符合条件的总记录数量</td>
+</tr>
+<tr>
+<td>page_size</td>
+<td>每页多少条件记录</td>
+</tr>
+<tr>
+<td>total_page</td>
+<td>总共有多少页</td>
+</tr>
+<tr>
+<td>first_page</td>
+<td>第一页页码</td>
+</tr>
+<tr>
+<td>prev_page</td>
+<td>上一页页码</td>
+</tr>
+<tr>
+<td>next_page</td>
+<td>下一页页码</td>
+</tr>
+<tr>
+<td>last_page</td>
+<td>最后一页页码</td>
+</tr>
+<tr>
+<td>current_page</td>
+<td>当前页页码</td>
+</tr>
+<tr>
+<td>all_pages</td>
+<td>全部页码数组</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>查询位移，等于$limit的第一个参数</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>查询条数，等$limit的第二个参数</td>
+</tr>
+</tbody>
+</table>
+<p>取得页码数据后，我们就可以开始修改页面上的页面显示了。找到guestbook.html文件的约55行左右，把分页显示的nav整个修改成：</p>
+<pre><code>&lt;{if $pager}&gt;
+&lt;nav&gt;
+    &lt;ul class="pagination pull-right"&gt;
+        &lt;li&gt;
+            &lt;a href="&lt;{url c="main" a="index" p=$pager.prev_page}&gt;" aria-label="Previous"&gt;
+                &lt;span aria-hidden="true"&gt;&amp;laquo;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;{foreach $pager.all_pages as $p}&gt;
+        &lt;li&lt;{if $p == $pager.current_page}&gt; class="active"&lt;{/if}&gt;&gt;
+            &lt;a href="&lt;{url c="main" a="index" p=$p}&gt;"&gt;&lt;{$p}&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;{/foreach}&gt;
+        &lt;li&gt;
+            &lt;a href="&lt;{url c="main" a="index" p=$pager.next_page}&gt;" aria-label="Next"&gt;
+                &lt;span aria-hidden="true"&gt;&amp;raquo;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;{/if}&gt;
+</code></pre>
+<ul>
+<li>首先我们判断是否有分页数据，这里&lt;{if}&gt;标签的作用就是如果$pager为空，则不会显示整个分页。$pager为空的意思是数据表记录没有能填满一页（根据分多少页的参数）。</li>
+<li>填充上一页和下一页，注意是通过url函数传递p参数的</li>
+<li>循环all_pages的页码数据，显示各个页码。</li>
+<li>循环过程中，会通过&lt;{if}&gt;做一下判断，判断显示的页码是否当前页，如果是的话，会在li上面加入一个 class="active"的属性，加亮显示。</li>
+<li>最终分页上面会生成各个分页的链接。</li>
+</ul>
+<blockquote>
+<p>之所以未满一页不显示分页，这也是对页面浏览者友好的表现，如果只有一两个留言，那么显示个点击不了的页码，甚不美观。</p>
+</blockquote>
+<p>我们来看看最终效果：</p>
+<p><img alt="分页效果" src="../images/34.jpg" /></p>
+<hr />
+<p>以上我们已经了解过简单数据操作和Ajax等相关知识，sp框架的初级内容已经介绍得差不多了。请大家继续学习我们的教程，以便了解更多相关知识。</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a href="https://www.goldrobot.org">www.goldrobot.org</a></p>
+            <!-- <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p> -->
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

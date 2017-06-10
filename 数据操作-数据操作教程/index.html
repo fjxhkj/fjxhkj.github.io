@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>数据操作教程 - SpeedPHP 文档</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-table.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/prettify.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../css/highlight.css"> -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-table.min.js"></script>
+        <!-- <script src="../js/highlight.pack.js"></script> -->
+        <script src="../js/prettify.min.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">SpeedPHP 文档</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80%E3%80%81%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8SpeedPHP/">一 开始使用SpeedPHP</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C%E3%80%81Hello%20World/">二 Hello World</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%89%E3%80%81%E7%90%86%E8%A7%A3MVC/">三 理解MVC</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9B%9B%E3%80%81%E5%88%B6%E4%BD%9C%E7%95%99%E8%A8%80%E6%9C%AC/">四 制作留言本</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E5%8F%8AAjax/">五 数据操作及Ajax</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架概述 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-SAE%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8/">SAE平台使用</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%88%E6%9D%83%E5%8F%8A%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/">版权及开源协议</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%BC%96%E7%A0%81%E7%89%88%E6%9C%AC/">编码版本</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%B9%E8%89%B2/">特色</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发指南 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE/">安全建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%A8%8B%E5%BA%8F%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">程序目录结构</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%89%A9%E5%B1%95/">架构及扩展</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">开发流程</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%A8%A1%E5%9D%97modules/">模块modules</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89/">用户自定义</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">访问交互 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-session%EF%BC%8Fcookie/">session／cookie</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">表单提交及获取$_GET／$_POST的数据</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E7%89%B9%E6%80%A7%E5%92%8C%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">模板引擎特性和使用方法</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">使用frameset</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BC%AA%E9%9D%99%E6%80%81%E5%8F%8AURL%E8%B7%B3%E8%BD%AC/">伪静态及URL跳转</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据操作 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-SQL%E6%94%AF%E6%8C%81%E5%8F%8A%E5%85%B3%E8%81%94%E5%AE%9E%E7%8E%B0/">SQL支持及关联实现</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%A4%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E4%B8%BB%E4%BB%8E%E5%BA%93%E9%85%8D%E7%BD%AE/">多数据库、主从库配置</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%88%86%E9%A1%B5/">分页</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%B1%BB/">建立数据模型类</a>
+</li>
+                            
+<li class="active">
+    <a href="./">数据操作教程</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%B1%BB/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">数据操作教程</a></li>
+            <li><a href="#findall">一、数据查找 findAll()</a></li>
+            <li><a href="#find">二、查询一条纪录 find()</a></li>
+            <li><a href="#create">三、新增纪录 create()</a></li>
+            <li><a href="#delete">四、删除纪录 delete()</a></li>
+            <li><a href="#update">五、修改纪录 update()</a></li>
+            <li><a href="#findcount">六、计算总数 findCount()</a></li>
+            <li><a href="#incr-decr">七、按字段增减 incr() / decr()</a></li>
+            <li><a href="#sql-dumpsql">八、输出执行SQL供调试 dumpSql()</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">数据操作教程</h1>
+<p>本章我们来了解一下sp框架的数据操作方法。</p>
+<h2 id="findall">一、数据查找 findAll()</h2>
+<h3 id="_2">用法：</h3>
+<pre><code>findAll($conditions = array(), $sort = null, $fields = '*', $limit = null)
+</code></pre>
+
+<h3 id="_3">参数：</h3>
+<h4 id="condition">$condition</h4>
+<blockquote>
+<p>数组形式，查找纪录的条件。有两种方式：</p>
+</blockquote>
+<h5 id="and">一个或多个相等关系并以AND组合起来的查询.</h5>
+<p>例如:</p>
+<pre><code>array(&quot;cid&quot;=&gt;12, &quot;score&quot;=&gt;100)
+</code></pre>
+
+<p>等同于:</p>
+<pre><code>WHERE cid = 12 AND score = 100
+</code></pre>
+
+<h5 id="_4">其他更复杂的查询条件数组</h5>
+<p>该数组的[0]下标项，是查询的字符串条件，但是输入参数必须是绑定形式的；数组的其他键对值项，都是绑定的参数字段对应值。<br />
+这种类型比较难理解，比如说我们需要模糊查找文章title带有“php”的文章,那么 $condition 可以设置成:</p>
+<pre><code>$keyword = &quot;php&quot;;
+findAll(
+    array(&quot;title like :word&quot;, 
+        &quot;:word&quot; =&gt; '%'.$keyword.'%'
+    )
+);
+</code></pre>
+
+<p>等同于:</p>
+<pre><code>WHERE title like '%php%'
+</code></pre>
+
+<blockquote>
+<p>PHP5.4 起可以使用短数组定义语法，用 [] 替代 array()。所以5.4之后可以使用更简洁优雅的方式来写$condition。</p>
+</blockquote>
+<pre><code>findAll([&quot;title like :word&quot;,&quot;:word&quot;=&gt;&quot;%&quot;.$keyword.&quot;%&quot;]); // after 5.4
+</code></pre>
+
+<p>$condition 条件可以解决包括大于小于等于，or条件，like查询等条件的构造。</p>
+<p>再来两个例子：</p>
+<ul>
+<li>假设我们要删除IP为 <code>218.26.35.*</code> 网段的纪录：</li>
+</ul>
+<pre><code class="PHP">$condition = array('ip like :ip', 
+    &quot;:ip&quot; =&gt; &quot;218.26.35.%&quot;
+);
+
+$obj-&gt;delete($condition);
+</code></pre>
+
+<p>等同于:</p>
+<pre><code class="SQL">DELETE * FROM records WHERE ip like &quot;218.26.35.%&quot;;
+</code></pre>
+
+<ul>
+<li>OR逻辑复杂条件查询：</li>
+</ul>
+<pre><code class="PHP">$condition = array(&quot;score &gt; :score AND ( classname = :c1 OR classname = :c2 )&quot;, 
+    &quot;:score&quot; =&gt; 90,
+    &quot;:c1&quot;    =&gt; &quot;class1&quot;,
+    &quot;:c2&quot;    =&gt; &quot;class2&quot;,
+);
+
+$obj-&gt;findAll($condition);
+</code></pre>
+
+<p>等同于:</p>
+<pre><code>SELECT * FROM students WHERE score &gt; 90 AND ( classname = 'class1' OR classname = 'class2' );
+</code></pre>
+
+<blockquote>
+<p>findAll()的$condition参数，实际上和find()、findCount()、delete()、update()、incr()、decr()的第一个参数$condition是完全一样的；这些方法的条件数组，都可以使用上述的两种模式的数组。</p>
+<p>对比旧版的$condition字符串条件查询，新版的$condition已经不再支持纯粹的字符串查询，而是采用更安全、不需要手动escape的“字符串+绑定参数”组成的数组才能进行查询。</p>
+<p><strong>绑定参数是目前数据库编程避免SQL注入的最佳方法。</strong></p>
+</blockquote>
+<h4 id="sort">$sort</h4>
+<blockquote>
+<p>字符串形式，指定查询结果的排序方式。</p>
+</blockquote>
+<p>首先我们来看看，通常SQL语句中的排序是如何实现的，比如说留言本中需要按照时间先后排序（正序，就是ASC，反序DESC）</p>
+<pre><code>SELECT * FROM  spgb_gb ORDER BY post_time ASC // 正序，也就是时间小的排前面
+SELECT * FROM  spgb_gb ORDER BY post_time DESC // 反序，时间大的排前面
+SELECT * FROM spgb_gb WHERE name = 'jake' ORDER BY post_time ASC, replay DESC // 查询留言者是jake的留言，按时间正序然后回复反序的方式排列（一般按回复内容的头字母排列）
+</code></pre>
+
+<p>而当我们使用find()/findAll()的时候，可以：</p>
+<pre><code>$results = $gb-&gt;findAll(null, &quot; post_time ASC &quot;); // 条件为空，排序是时间正序
+$results = $gb-&gt;findAll(null, &quot; post_time DESC &quot;); // 条件为空，排序是时间反序
+$results = $gb-&gt;findAll(array( 'name' =&gt; 'jake' ), &quot; post_time ASC, replay DESC &quot;); // 条件为name=jake，排序是时间正序然后回复反序的方式排列
+</code></pre>
+
+<p>从上面可以看出，$sort参数就是直接使用ORDER BY的条件来排序的。即使有多个排序条件，也是可以和SQL语句一样使用的。</p>
+<blockquote>
+<p>在$sort条件未设置的情况下，默认$sort是按主键的正序来进行查找。</p>
+</blockquote>
+<ul>
+<li>$fields，字符串形式，指定取得的结果字段集合。默认是“*”指的是取全部的字段结果。</li>
+</ul>
+<p>在通常的数据库查找中，节省系统资源的一个方法，是限定查找返回的字段，可以减少PHP和数据库之间的数据流量，以达到优化程序和提高速度的目的。</p>
+<pre><code>SELECT gid, name, contents FROM  spgb_gb
+SELECT spgb_gb.gid, spgb_gd.name, spgb_gb.contents FROM spgb_gb
+</code></pre>
+
+<p>以上两条SQL语句的相等的，而第二条SQL语句在返回的字段名称前，加上的表全名，这样做更为严谨。<br />
+而使用find()/findAll()，可以：</p>
+<pre><code>$results = $gb-&gt;findAll(null, null, &quot; gid, name, contents &quot;); // 条件为空，排序为默认的主键ID排序，返回字段限制是gid, name, contents
+$results = $gb-&gt;findAll(null, null, &quot; spgb_gb.gid, spgb_gd.name, spgb_gb.contents &quot;); // 和上面相同
+</code></pre>
+
+<p>而在输出$results结果的时候，我们可以看到，find()/findAll()返回的结果仅有gid, name, contents</p>
+<pre><code>$result = array(
+    0 =&gt; array(
+        'gid' =&gt; 12,
+        'name' =&gt; '小李',
+        'contents' =&gt; '我的留言',
+    ),
+    1 =&gt; array(
+        'gid' =&gt; 13,
+        'name' =&gt; '小李',
+        'contents' =&gt; '我的第二条留言',
+    ),
+);
+</code></pre>
+
+<p>在使用$fields的时候，请注意：$fields一定要包括排序$sort的字段，比如按时间排序，那么$fields是务必要包含时间字段。当$sort 为空（默认）的时候，那么$field需要包含主键（因为默认$sort是按主键排序的）</p>
+<ul>
+<li>$limit，字符串形式，指定取得结果的位移和数量。默认是取符合条件的全部纪录。$limit等同于LIMIT限定结果的语句。如“10, 20”指的是从第10条符合条件的纪录开始，取20条纪录。</li>
+</ul>
+<p><strong>$limit一般是和$sort结合使用，如按留言时间反序，获取10条记录。</strong></p>
+<p>举例：</p>
+<pre><code>// 按时间反序，获取前面10条记录，相等于  LIMIT 0, 10（从0条开始，获取10条记录）
+SELECT * FROM spgb_gb ORDER BY post_time DESC LIMIT 10 ;
+// 按时间反序，获取从30条开始的10条记录
+SELECT * FROM spgb_gb ORDER BY post_time DESC LIMIT 30, 10 ;
+</code></pre>
+
+<p>而findAll()则是：</p>
+<pre><code>$results = $gb-&gt;findAll(null, null, &quot; post_time DESC  &quot;, &quot; 10 &quot;);  
+$results = $gb-&gt;findAll(null, null, &quot; post_time DESC  &quot;, &quot; 30, 10 &quot;);
+</code></pre>
+
+<p>新版sp框架的$limit可以是另一种形式，数组形态，可以支持自动分页计算。该数组有三个值，分别代表“当前页码”、“每页多少条纪录”、“分页显示范围”。<br />
+比如说 <code>$limit = array(5, 10, 10);</code> 表示当前是取第5页的结果，每页显示10条纪录，分页显示范围是10。</p>
+<blockquote>
+<p>分页的具体介绍请参考手册相关文章。<br />
+当$limit是数组，那么实际上findAll()会自动计算符合条件的纪录总数。</p>
+</blockquote>
+<p><strong>返回</strong>：</p>
+<p>findAll ()返回一个二维数组。第一层是各个符合条件的纪录，第二层是表字段对应纪录值的数组。<br />
+如果没有查询到结果，findAll()将返回一个空数组，可以通过empty()函数或者结果==false来判断是否有符合条件的结果。</p>
+<h2 id="find">二、查询一条纪录 find()</h2>
+<p>find()方法是findAll()的简便方法，它等同于：</p>
+<ul>
+<li>findAll()设置了$limit=1，也就是findAll()只返回1条件记录。</li>
+<li>从结果中抽出第一个纪录的数组。（虽然就只有一个纪录）相当于取findAll()结果的[0]纪录数组。</li>
+</ul>
+<p>find()有三个参数：$conditions, $sort, $fields，跟findAll()的前三个参数是完全相同的；而find()的返回结果是一维数组或者是空数组。</p>
+<p>find()方法的好处是当有时候我们只需要查到符合条件的一条纪录，而不是纪录数组的第0条（findAll()）。</p>
+<p>比如说查询某ID的文章，我们只需要直接返回符合条件的准确纪录。这时候用find()就会直接方法一维数组，方便直接使用。</p>
+<blockquote>
+<p>find()和findAll()的结果对比可以参考入门教程。</p>
+</blockquote>
+<h2 id="create">三、新增纪录 create()</h2>
+<p><strong>用法</strong>：create($row)</p>
+<p><strong>参数</strong>：</p>
+<ul>
+<li>$row是新增纪录数组，数组键是字段名，值是数据值。如果在数组内没有对应的字段，那么会使用数据表默认值。</li>
+</ul>
+<p><strong>示例</strong></p>
+<pre><code>// 首先是准备新增的数据
+// 表中的gid因为是自增量，所以没必要去赋值
+// replay因为是可为空，并且刚留言也不会有回复，所以也可以不赋值
+// 数组中的键是字段名称，值是数据
+$newrow = array( // PHP的数组
+    'name' =&gt; 'jake',
+    'contents' =&gt; '这是我的第一个留言',
+    'post_time' =&gt; date('Y-m-d H:i:s'),
+    'post_ip' =&gt; $_SERVER['REMOTE_ADDRESS'],
+);
+$gb = new Model(&quot;guestbook&quot;); // 初始化留言本模型类
+$gb-&gt;create($newrow);  // 进行新增操作  
+</code></pre>
+
+<p><strong>返回值</strong>：</p>
+<p>create()新增成功则返回新增的自增量ID值，失败则抛出错误。</p>
+<h2 id="delete">四、删除纪录 delete()</h2>
+<p><strong>用法</strong>：delete($condition)</p>
+<p><strong>参数</strong>：</p>
+<ul>
+<li>$condition是删除纪录的条件，数组格式，条件和findAll()的$condition完全一样。</li>
+</ul>
+<p><strong>示例</strong></p>
+<pre><code>$condition = array('gid'=&gt;13); // 构造条件
+$gb = new Model(&quot;guestbook&quot;);
+$gb-&gt;delete($condition); 
+</code></pre>
+
+<p><strong>返回值</strong>：</p>
+<p>delete()返回影响行数。所谓影响行数指的是修改或删除数据库纪录时，被修改或删除的纪录行数是多少。比如说上面的代码里面，如果gid = 13的纪录有两条，那么delete()后返回的结果是2。</p>
+<p>如果delete()返回0，那么只是代表符合$condition条件的纪录为0，所以delete操作虽然已经正常执行，但是没有影响到任何一行纪录。</p>
+<blockquote>
+<p>注意这里跟旧版完全不一样，旧版框架的delete和update都只是返回true/false。</p>
+<p>新版框架返回影响行数，让我们可以更方便判断：修改/删除了多少条纪录。</p>
+</blockquote>
+<h2 id="update">五、修改纪录 update()</h2>
+<p><strong>用法</strong>：update($condition, $row)</p>
+<p><strong>参数</strong>：</p>
+<ul>
+<li>$condition是修改纪录的条件，数组格式，条件和findAll()的$condition完全一样。</li>
+<li>$row是待修改的新值数组，数组键是字段名，值是数据值。仅有$row里面有的字段才会被更新。</li>
+</ul>
+<p>update()方法很像是delete() + create()的组合，不管是参数还是行为。</p>
+<pre><code>$condition = array('gid'=&gt;12);
+$gb = new Model(&quot;guestbook&quot;);
+$gb-&gt;update($condition, array('contents'=&gt;'新信息'));
+</code></pre>
+
+<p><strong>返回值</strong>：</p>
+<p>update()和delete()一样，都是返回影响行数，也就是被修改了多少条件纪录。</p>
+<h2 id="findcount">六、计算总数 findCount()</h2>
+<p><strong>用法</strong>：findCount($condition)</p>
+<p><strong>参数</strong>：</p>
+<ul>
+<li>$condition 和 findAll()等的$condition参数完全一样。</li>
+</ul>
+<p>当我们需要计算数据表里面符合条件的纪录有多少条件，但又不想把全部纪录查出来的时候，那么findCount()就非常方便了。<br />
+findCount()方法主要用于计算符合$condition的记录数量。</p>
+<pre><code>// 我们来看看数据表中有多少条留言者是“jake”的留言
+$condition = array( 'name' =&gt; 'jake' ); // 条件是同样的
+$gb = new Model(&quot;guestbook&quot;); // 初始化留言本模型类
+$sum = $gb-&gt;findCount($condition); // 使用了findCount
+echo &quot;jake总共留言了&quot;.$sum.&quot;条。&quot;;
+</code></pre>
+
+<p><strong>返回值</strong>：</p>
+<p>返回符合$condition记录的数量，如无任何符合条件的记录将返回 0。</p>
+<h2 id="incr-decr">七、按字段增减 incr() / decr()</h2>
+<p>使用incr()和decr()可以很方便的进行数值字段的增加和减少。</p>
+<p>如在计算页面访问量等操作中，只要一个incr()就可以实现数值增加。</p>
+<p><strong>用法</strong></p>
+<p>incr($condition, $field, $optval = 1)</p>
+<p>decr($condition, $field, $optval = 1)</p>
+<p>假设我们要为UID为10的博客页面增加一次的访问量：</p>
+<pre><code>$blog = new Model(&quot;blog&quot;);
+$blog-&gt;incr(array('uid'=&gt;10), 'click');
+</code></pre>
+
+<p>decr()的使用同样简单，也是decr(条件, '字段名')。</p>
+<p>请注意：<br />
+- incr()和decr()的参数$condition（条件），和find()/findAll()等方法的$condition一样。<br />
+- incr()和decr()的参数$field（字段），该字段类型务必是数值类型。<br />
+- 第三个参数$optval默认是1，如果要一次增加2或者更多的值，就可以设置$optval。</p>
+<h2 id="sql-dumpsql">八、输出执行SQL供调试 dumpSql()</h2>
+<p>dumpSql()方法可以收集当前模型类执行过的全部SQL语句，返回一个包含了这些SQL语句的数组。</p>
+<p>通常我们开发中可以使用dumpSql()来看看SQL语句正确与否。</p>
+<blockquote>
+<p>因为绑定参数执行SQL的缘故，所以一般返回的SQL都是未经绑定参数的语句。</p>
+</blockquote></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a href="https://www.goldrobot.org">www.goldrobot.org</a></p>
+            <!-- <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p> -->
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

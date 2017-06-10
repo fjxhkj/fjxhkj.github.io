@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>开发流程 - SpeedPHP 文档</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-table.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/prettify.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../css/highlight.css"> -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-table.min.js"></script>
+        <!-- <script src="../js/highlight.pack.js"></script> -->
+        <script src="../js/prettify.min.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">SpeedPHP 文档</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80%E3%80%81%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8SpeedPHP/">一 开始使用SpeedPHP</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C%E3%80%81Hello%20World/">二 Hello World</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%89%E3%80%81%E7%90%86%E8%A7%A3MVC/">三 理解MVC</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9B%9B%E3%80%81%E5%88%B6%E4%BD%9C%E7%95%99%E8%A8%80%E6%9C%AC/">四 制作留言本</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E5%8F%8AAjax/">五 数据操作及Ajax</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架概述 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-SAE%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8/">SAE平台使用</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%88%E6%9D%83%E5%8F%8A%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/">版权及开源协议</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%BC%96%E7%A0%81%E7%89%88%E6%9C%AC/">编码版本</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%B9%E8%89%B2/">特色</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发指南 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE/">安全建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%A8%8B%E5%BA%8F%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">程序目录结构</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%89%A9%E5%B1%95/">架构及扩展</a>
+</li>
+                            
+<li class="active">
+    <a href="./">开发流程</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%A8%A1%E5%9D%97modules/">模块modules</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89/">用户自定义</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">访问交互 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-session%EF%BC%8Fcookie/">session／cookie</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">表单提交及获取$_GET／$_POST的数据</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E7%89%B9%E6%80%A7%E5%92%8C%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">模板引擎特性和使用方法</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">使用frameset</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BC%AA%E9%9D%99%E6%80%81%E5%8F%8AURL%E8%B7%B3%E8%BD%AC/">伪静态及URL跳转</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据操作 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-SQL%E6%94%AF%E6%8C%81%E5%8F%8A%E5%85%B3%E8%81%94%E5%AE%9E%E7%8E%B0/">SQL支持及关联实现</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%A4%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E4%B8%BB%E4%BB%8E%E5%BA%93%E9%85%8D%E7%BD%AE/">多数据库、主从库配置</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%88%86%E9%A1%B5/">分页</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%B1%BB/">建立数据模型类</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E6%95%99%E7%A8%8B/">数据操作教程</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%89%A9%E5%B1%95/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">开发流程</a></li>
+            <li><a href="#_2">一、快速迭代开发流程</a></li>
+            <li><a href="#mvc">二、基于MVC架构开发流程</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">开发流程</h1>
+<p>SpeedPHP框架推荐两种PHP系统的开发流程。</p>
+<p>开发流程，在许多软件工程的书籍上面，是属于开发方法学的一部分内容。开发方法学可以说是保证项目成功的整体方法，有兴趣的朋友可以参考相关文章或到论坛讨论。而开发流程，就是开发方法学中最基本的组成部分。</p>
+<blockquote>
+<p>本章内容均为个人经验所总结，并在实践中多个项目中证实了其有效性，但在一般方法学的书上找不到对应的方法学理论（有相似的），读者朋友有建议或问题欢迎到论坛讨论。</p>
+</blockquote>
+<h2 id="_2">一、快速迭代开发流程</h2>
+<p>我们介绍的第一种开发流程，是快速迭代开发流程。快速迭代开发流程主要的对象是中小型应用程序、在需求不太明朗或探索阶段使用，根据WEB系统开发的基础过程，在最短的时间内把根本的需求功能完成并发布，在发布的时候尽可能收集用户反馈，然后进入下一轮的类似开发过程中；不停重复该过程，使得系统需求在实践中不断根据用户需求而完善。</p>
+<p><strong>使用对象</strong>：</p>
+<ul>
+<li>需求不明朗的项目，</li>
+<li>创业型项目，</li>
+<li>试验型项目，</li>
+<li>中小型应用程序等。</li>
+</ul>
+<p><strong>核心词</strong>：快速发布，迭代完善</p>
+<p><strong>示意图</strong>：</p>
+<p><img alt="快速迭代示意图" src="../images/7.jpg" /></p>
+<p><strong>实施步骤</strong>：</p>
+<h3 id="1">1. 核心需求，核心外观元素</h3>
+<p>定下项目的核心需求，核心需求就是你的项目与别的项目不同的地方，或者说，如果没有核心需求，那么该项目也没必要存在。</p>
+<p>一般而言，创业型的项目，核心需求就是“满足用户某一需求”，如hao123网站，核心需求就是满足用户“网址导航”的需求、如企业网站，核心需求有可能是宣传企业、或宣传产品、或吸引在线订单等。核心需求最好只有一个，才能更快更好地发布和完善，才能更好地增强到最大收益。如果有多个核心需求怎么办？如果你的项目是上面所述的“使用对象”，那么初期项目核心需求应该只有一个，然后在迭代期间加入其他需求，根据用户的反馈再行修正。</p>
+<p>核心的外观元素，如网站外观、LOGO、域名等。这些元素，从一开始就是为了核心需求服务，所以要注意不能喧宾夺主，不要为了外观设计而弱化和转移了网站的核心需求。</p>
+<h3 id="2">2. 核心模型，页面设计</h3>
+<p>当核心需求定下后，可以开始设计核心模型，以此同时可以开始页面的设计（如果是团队开发的话）。</p>
+<p>核心模型，主要是定下数据表的基础结构，还有用户操作的模拟。</p>
+<p>从核心需求出发，考虑用户对核心需求的多个操作（可以说成页面交互）、用户可以得到的数据等。这样可以初步确定需要的是哪些数据（数据基础结构），还有需要哪些页面（用户操作模拟）。</p>
+<p>在核心模型的建设的同时，页面外观设计也可以同步进行。</p>
+<blockquote>
+<p>结合SpeedPHP框架开发，核心模板可以定义了model类（主要是数据表）和controller类（页面与交互），页面外观设计可以定义了view模板。</p>
+</blockquote>
+<p>定义模型可以直接通过写PHP类文件来进行，如controller类，开发者可以根据页面交互，设计出相应控制器与动作；当然，我们主要是需要架构，动作内部的代码可以等到下一步骤再编写。</p>
+<p>通过这一步骤，我们大略可以得出应用程序的整体架构，并写出部分的代码了。</p>
+<blockquote>
+<p>得出大体的程序架构而不是一开始就些内部代码，好处就是可以让开发者有了整体观，对系统和项目需求有了一个整体的概念，“了然于胸”，这样在代码实现阶段才不会迷失在代码和功能延伸的旋窝中。</p>
+</blockquote>
+<h3 id="3">3. 功能实现，填充页面，上线运行</h3>
+<p>当核心模型完成后，页面设计稿也逐渐完成的时候，可以开始功能的实现；通俗些说就是“套页面”了。</p>
+<p>这一步骤主要的工作流程：controller中，从$_GET/$_POST里面获取到用户提交数据和操作数据，然后通过model进行数据库的读取与写入，返回给controller再通过$this-&gt;赋值到模板中，最后在模板中完成标签的使用和显示。</p>
+<p>在完成了以上三个步骤之后，项目基本可以用了。由于上面的步骤省去了许多“非核心”的需求（因为一开始就只考虑核心需求，所以后面的设计和编程都只围绕在核心需求来做），所以上面步骤完成的时间比较短，一般而言，也很简陋。不过没关系，我们慢慢完善——根据真正的用户需要！</p>
+<h3 id="4">4. 收集反馈，收集数据，筛选需求</h3>
+<p>收集用户反馈，项目上线后，给用户使用核心的功能，并建立良好的反馈通道，热心收集用户提出的反馈。</p>
+<p>用户是没有耐心的、只会很直观地提出看法。要导引用户提出反馈和理解用户的看法，是一项需要非常用心的工作。</p>
+<p>收集客观数据，在项目上线后，还需要收集“访问统计分析”、“注册人数”、“使用人数”等等客观数据来辅助验证用户反馈。</p>
+<p>收集好了用户反馈后，就开始将这些反馈进行筛选，使其成为下一步迭代开发的“核心需求”。</p>
+<p>筛选用户需求：</p>
+<ul>
+<li>不要先入为主。这是需求分析中最严重的问题，有的开发者本身就对系统需求有所看法并且自认为是最好的看法，然后会将用户的反馈分成两类：“正确，赞同我看法的”和“错误，不赞同我看法的”。这样的角度来看待用户反馈，倒不如不要看用户反馈了。</li>
+<li>不要忽略“很笨”的意见。用户有可能会提一些咋一听上去是令人啼笑皆非的建议，但深思下来，有可能那是非常有价值的意见。</li>
+<li>关注与核心需求有关的细节。只关注与核心需求相关的细节。</li>
+<li>和原有核心需求不同的意见，要特别注意和仔细思考。</li>
+</ul>
+<h3 id="5">5. 迭代开发</h3>
+<p>在提炼出再一次的核心需求后，我们开始进入第二轮的“迭代开发”，也就是第二次开发过程。</p>
+<ul>
+<li>重复上面所述1~3步骤，将新补充完善的核心需求变化为现实。</li>
+<li>在原有系统基础上，继续调整和改动。由于前面所述的第二步骤的框架MVC架构，所以可以让调整和改动变得更简单。只是对相应的部分进行改动，如数据调整改model（或者继承等方法）、交互增加了调整controller、页面改动调整view模板。</li>
+<li>在第二次开发完成后，继续收集用户反馈，以调整需求并进行开发。这就是“迭代”开发的含义。</li>
+</ul>
+<h2 id="mvc">二、基于MVC架构开发流程</h2>
+<p>这里介绍的第二种开发流程，更倾向于传统的过程式开发流程。可以说是融合WEB系统开发的特点和传统的过程式开发流程的综合。</p>
+<p><strong>使用对象</strong>：</p>
+<ul>
+<li>需求较明确的项目，</li>
+<li>B/S应用类系统（非网站），</li>
+<li>较大型的应用系统等。</li>
+</ul>
+<p><strong>核心词</strong>：基于MVC的系统分析、系统设计、系统实现。</p>
+<p><strong>示意图</strong>：</p>
+<p><img alt="快速迭代示意图" src="../images/8.jpg" /></p>
+<p>本过程共有三个阶段，分别对应传统开发流程的：分析、设计、实现，然后每阶段都可以分开MVC三部分来进行。</p>
+<p><strong>实施步骤</strong>：</p>
+<h3 id="1_1">1. 系统分析</h3>
+<p>和传统开发流程一致，首先我们对系统进行分析工作。我们可以将系统分成三类来进行分析：</p>
+<ul>
+<li>需求分析（control）：提炼角色，再现角色与系统交互的场景，分析交互点。</li>
+<li>业务流分析（model）：检视和模拟业务流的走向、变化，静态观察业务数据构成和使用。</li>
+<li>界面原型（view）：设计界面原型，验证上面两者分析的正确性和合理性。</li>
+</ul>
+<p>产物：需求分析文档，业务数据分析文档，界面原型。</p>
+<h3 id="2_1">2. 系统设计</h3>
+<p>在系统设计阶段，我们同样分开三部分来进行：</p>
+<ul>
+<li>交互设计（control）：将前面《需求分析文档》中的“交互场景”设计成控制器（controller），场景中的交互点，设计成控制器的动作（action），换句话说，也就是页面。</li>
+<li>数据结构设计（model）：从《业务数据分析文档》提炼出业务模型（model），细化模型的接口，并根据其属性来建立数据结构。</li>
+<li>界面设计（view）：开始设计用户界面和系统界面，以验证先期需要达到的需求。</li>
+</ul>
+<p>产物：控制器架构、模型架构、数据结构、界面设计稿。</p>
+<h3 id="3_1">3. 系统实现</h3>
+<p>在系统实现阶段，开发团队通常可以并行地分别进行业务逻辑、界面和程序交互的设计：</p>
+<ul>
+<li>专注于交互程序（control）：继承于spController，通过对控制器和动作的交互程序编程，来实现系统交互功能，以及将数据发送到前端界面view中显示。</li>
+<li>专注于业务逻辑（model）：继承于spModel，通过对业务逻辑和数据的封装，制造只通过接口与外界联系的模型类，供给控制器使用。</li>
+<li>专注于前端界面设计（view）：通常，使用模板引擎技术将控制器提供的数据进行简单的逻辑处理并显示。</li>
+</ul>
+<p>产物：完成系统。</p>
+<p>以上就是基于MVC的系统分析、系统设计、系统实现的过程。其实以上两种方法学可以并存在同一个过程中，这需要开发者根据实际情况来灵活应用。</p>
+<blockquote>
+<p>简而言之，任何的方法学或者过程，都是希望能在最短的时间内，做最优质的项目；如何保证质量以及按时，开发者可以多探讨。</p>
+</blockquote>
+<p>另外，从SpeedPHP框架本身而言，良好的编码架构是保证了开发流程成功的一个要素；同时，SpeedPHP比起其他框架而言，更简单易学，这也让开发团队可以节省下成员更替的空档时间和节省上手时间，这也符合了“最短时间”的需要。</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a href="https://www.goldrobot.org">www.goldrobot.org</a></p>
+            <!-- <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p> -->
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

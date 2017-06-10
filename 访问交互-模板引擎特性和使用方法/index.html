@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>模板引擎特性和使用方法 - SpeedPHP 文档</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-table.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/prettify.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../css/highlight.css"> -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-table.min.js"></script>
+        <!-- <script src="../js/highlight.pack.js"></script> -->
+        <script src="../js/prettify.min.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">SpeedPHP 文档</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80%E3%80%81%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8SpeedPHP/">一 开始使用SpeedPHP</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C%E3%80%81Hello%20World/">二 Hello World</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%89%E3%80%81%E7%90%86%E8%A7%A3MVC/">三 理解MVC</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9B%9B%E3%80%81%E5%88%B6%E4%BD%9C%E7%95%99%E8%A8%80%E6%9C%AC/">四 制作留言本</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E5%8F%8AAjax/">五 数据操作及Ajax</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架概述 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-SAE%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8/">SAE平台使用</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%88%E6%9D%83%E5%8F%8A%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/">版权及开源协议</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%BC%96%E7%A0%81%E7%89%88%E6%9C%AC/">编码版本</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%B9%E8%89%B2/">特色</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发指南 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE/">安全建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%A8%8B%E5%BA%8F%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">程序目录结构</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%89%A9%E5%B1%95/">架构及扩展</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">开发流程</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%A8%A1%E5%9D%97modules/">模块modules</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89/">用户自定义</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">访问交互 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-session%EF%BC%8Fcookie/">session／cookie</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">表单提交及获取$_GET／$_POST的数据</a>
+</li>
+                            
+<li class="active">
+    <a href="./">模板引擎特性和使用方法</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">使用frameset</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BC%AA%E9%9D%99%E6%80%81%E5%8F%8AURL%E8%B7%B3%E8%BD%AC/">伪静态及URL跳转</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据操作 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-SQL%E6%94%AF%E6%8C%81%E5%8F%8A%E5%85%B3%E8%81%94%E5%AE%9E%E7%8E%B0/">SQL支持及关联实现</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%A4%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E4%B8%BB%E4%BB%8E%E5%BA%93%E9%85%8D%E7%BD%AE/">多数据库、主从库配置</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%88%86%E9%A1%B5/">分页</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%B1%BB/">建立数据模型类</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E6%95%99%E7%A8%8B/">数据操作教程</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">新版模板引擎特性和使用方法</a></li>
+            <li><a href="#_2">特性</a></li>
+            <li><a href="#_3">使用模板</a></li>
+            <li><a href="#_4">模板语法</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">新版模板引擎特性和使用方法</h1>
+<p>新版的sp框架，已经集成了一个非常轻量级的模板引擎，通过120行左右的代码，实现兼容Smarty开发中最常用的语法，是代替Smarty的首选。</p>
+<blockquote>
+<p>绝大部分开发过程中，我们用到Smarty引擎的功能只是Smarty的百分之一代码量不到，并且Smarty越来越臃肿。所以我们开发了新的模板引擎，并且内置在框架内，仅仅120行的代码，实现了日常开发全部用到的模板功能。</p>
+</blockquote>
+<h2 id="_2">特性</h2>
+<p><strong>编译</strong></p>
+<ul>
+<li>模板在第一次框架执行时，会被编译成php文件并保存下来，之后除非模板文件有修改，否则会一直使用编译后的php文件，极大节省了资源。</li>
+<li>模板编译成php文件更方便opcode缓存，性能非常好。</li>
+<li>当模板的其中一部分被修改后，会触发局部编译，仅仅针对部分页面进行编译，也很好地节省了资源。</li>
+</ul>
+<p><strong>目录</strong></p>
+<ul>
+<li>编译目录在protected/tmp，模板目录在protected/view。protected/view也称为模板根目录。</li>
+<li>目录均为默认配置，只有在SAE环境下需要配置'view'  =&gt; array('compile_dir'=&gt;SAE_TMP_PATH),具体参考本手册。</li>
+</ul>
+<p><strong>自带防跨站脚本攻击XSS</strong></p>
+<ul>
+<li>每个输出到页面的模板变量，默认都会被进行htmlspecialchars()的转换，以保证输入脚本不会被执行。</li>
+<li>只有在单个变量后面加入nofilter属性后才会被取消转换原样输出，但这时候就需要开发者谨慎使用了。</li>
+</ul>
+<blockquote>
+<p>php自带的htmlspecialchars()函数会将'&amp;'，'"'，"'"，'&lt;'，'&gt;'转换成对应的HTML标记。</p>
+</blockquote>
+<h2 id="_3">使用模板</h2>
+<p><strong>赋值</strong></p>
+<p>在控制器内，可以简单地使用$this-&gt;foo=bar的方法将变量值传给模板使用。</p>
+<p>如 $this-&gt;foo = "bar"; 那么模板内就可以使用&lt;{$foo}&gt;变量了。</p>
+<p><strong>显示模板</strong></p>
+<p>控制器内通过$this-&gt;display("模板文件名")的方式进行模板的显示。</p>
+<p>如 模板是 protected/view/guestbook.html 文件，要在控制器显示即可用以下代码：</p>
+<pre><code>$this-&gt;display("guestbook.html");
+</code></pre>
+<p>就可以显示出来。</p>
+<blockquote>
+<p>这里protected/view也称为模板根目录。</p>
+</blockquote>
+<p>如果是模板目录内还有子目录，即可在display里面带上子目录。</p>
+<p>如 模板是 protected/view/main/index.html 文件，那么：</p>
+<pre><code>$this-&gt;display("main/index.html");
+</code></pre>
+<blockquote>
+<p>display()使用的路径均以模板根目录为开始。</p>
+</blockquote>
+<p><strong>自动显示模板</strong></p>
+<p>sp框架的模板自动输出可以让我们不需要使用display语句就可以将模板输出， 对代码本身而言是简化了不少，对开发者而言也更方便了。</p>
+<blockquote>
+<p>旧版框架广受好评的自动模板输出，新版也继承了，而且是内置的，不需要配置。</p>
+</blockquote>
+<p>在模板根目录里面，把模板名称设置为“控制器名_方法名.html”，对应控制器/方法就不需要display()，而直接输出此模板。</p>
+<p>如模板目录内有名为：“main_index.html”的模板，那么MainController/actionIndex()里面，不需要调用$this-&gt;display()方法，也会自动输出“main_index.html”的模板。</p>
+<ul>
+<li>模板名必须是“控制器_方法名.html”。无需配置，框架会自动检测有无匹配名称的模板，进行显示。</li>
+<li>如果控制器方法内已经调用过$this-&gt;display()来显示模板，那么即使存在对应名称的模板，也不会自动显示。</li>
+<li>该功能也同时支持modules模块开发，但需要多一级路径，如admin模块下的MainController/actionIndex()，那么对应的自动显示的模板文件路径是：protected/view/admin/main_index.html。注意这里多了admin一级目录。</li>
+</ul>
+<p><a href="../images/8.zip">例子下载</a></p>
+<p><strong>自动显示模板的最佳实践</strong>是：在比较简单甚至没有内容只是显示模板的页面上，可以尽量多地使用自动模板（如关于网站、介绍我们等页面）。如果是模板赋值较多，逻辑较复杂的页面，建议是尽量使用$this-&gt;diplay()进行显示，这样逻辑更清晰。</p>
+<p><strong>layout布局</strong></p>
+<p>layout布局也是比较方便于使用模板的辅助功能，主要是解决页面之间共同的大结构的模板问题。</p>
+<blockquote>
+<p>旧版框架里面，一般解决页面共用结构，是通过在各模板上面，前面include一个header.html，后面再include一个footer.html来实现的。</p>
+<p>不过这样首先体验很糟糕，毕竟每个页面都需要写上下两个include，忘记了就麻烦。而且要在不同的模板动态调整大结构也是比较麻烦的，比如说使用不同的header.html。</p>
+<p>当然，通过一些小技巧，旧版框架还是能实现这个layout布局的。</p>
+</blockquote>
+<p>新版自带layout布局的模式，就可以很好解决此问题。</p>
+<p>layout布局，可以通过一个可灵活变动的布局模板，然后自动成为其他模板的大结构。</p>
+<ul>
+<li>布局模板可以在控制器内定义，生效访问根据控制器本身的范围，比如说MainController那么只有Main控制器里面的方法才会生效，如果是BaseController那么但凡继承BaseController都会生效（除非单独的控制器自己再覆盖定义一个）。</li>
+<li>生效范围内的模板，都不再需要写外面的结构，可以直接写里面的结构。</li>
+<li>模板输出的时候，布局模板会在外面，嵌套了里面的各个模板。</li>
+<li><strong>当$layout被设置成空的时候，那么当前页面就不会启用布局模板。</strong>对于一些比较特殊的页面，如Ajax请求带模板的页面，比较方便哦。</li>
+</ul>
+<p><a href="../images/8.zip">例子下载</a>（和上面的自动显示模板的例子是同一个）</p>
+<p>使用layout布局我们先要准备两个事情：</p>
+<ol>
+<li>要赋值给控制器的$layout这个成员变量，值是一个模板的文件名。如例子里面是在BaseController.php里面，$layout="layout.html"。</li>
+<li>在模板目录，我们要创建刚才赋值的文件名的文件。例子里面我们创建了protected/view/layout.html。</li>
+</ol>
+<p>我们看看layout.html里面内容是什么：</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;layout演示&lt;/title&gt;
+    &lt;link href="/i/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;br /&gt;
+    &lt;div class="container"&gt;
+        &lt;nav class="navbar navbar-default"&gt;
+            &lt;div class="container-fluid"&gt;
+                &lt;div class="navbar-header"&gt;
+                    &lt;a class="navbar-brand" href="#"&gt;
+                        Layout演示
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+        &lt;{include file=$__template_file}&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>主要关注 &lt;{include file=$__template_file}&gt;这句，这是布局模板的关键所在。</p>
+<p>然后我们看看其他的模板：</p>
+<p>main_index.html</p>
+<pre><code>&lt;div class="jumbotron"&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p&gt;
+    &lt;p&gt;&lt;a class="btn btn-primary btn-lg" href="&lt;{url c="view" a="index"}&gt;" role="button"&gt;Learn more&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>可以发现main_index.html和view_index.html都只有中间的HTML，没有包括头尾的HTML。（也没有header.html和footer.html什么的）</p>
+<p>在页面输出的时候，我们查看源码，如http://localhost/main/index</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;layout演示&lt;/title&gt;
+    &lt;link href="/i/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;br /&gt;
+    &lt;div class="container"&gt;
+        &lt;nav class="navbar navbar-default"&gt;
+            &lt;div class="container-fluid"&gt;
+                &lt;div class="navbar-header"&gt;
+                    &lt;a class="navbar-brand" href="#"&gt;
+                        Layout演示
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+        &lt;div class="jumbotron"&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.&lt;/p&gt;
+    &lt;p&gt;&lt;a class="btn btn-primary btn-lg" href="http://localhost/view/index" role="button"&gt;Learn more&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;    
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>可以发现layout.html的内容已经在页面上，而且main_index.html的内容是嵌在中间的。</p>
+<p><img alt="layout示意图" src="../images/35.jpg" /></p>
+<blockquote>
+<p>例子里面需要注意一下的是BaseController.php文件的$layout变量。</p>
+</blockquote>
+<h2 id="_4">模板语法</h2>
+<p>本章介绍新版模板引擎的全部功能，我们会发现新版模板引擎的语法和Smarty比较像，而且包含了日常开发中用到的Smarty的功能。</p>
+<p><strong>限定符</strong></p>
+<p>模板引擎的限定符是&lt;{和}&gt;，而且一般不能进行修改，除非直接使用View类。</p>
+<p>限定符的意思是在模板页面里面，在&lt;{ 和 }&gt; 中间的代码，均被视为模板语法，会被模板引擎进行编译。</p>
+<blockquote>
+<p>也可以把限定符内的内容理解成类似php的语法代码，在最终显示的页面上，是看不到这些代码的，只能看到这些代码输出的结果。</p>
+</blockquote>
+<p>模板引擎的全部语法，都是指在模板内的限定符中间编写的代码规则。</p>
+<p><strong>注释</strong></p>
+<p>模板内的注释写法如下：</p>
+<pre><code>&lt;{*这里是一个注释*}&gt;
+</code></pre>
+<p>注释的作用只是写在代码页面上供提示之用，不会执行也不会输出到页面上。</p>
+<p><strong>变量显示</strong></p>
+<p>在控制器内通过$this-&gt;foo=bar的方式传值的变量，在模板内都可以直接通过$foo的方式使用。</p>
+<p>如MainController.php</p>
+<pre><code>&lt;?php
+class MainController extends BaseController {
+    function actionIndex(){
+        $this-&gt;myval = "123";
+        $this-&gt;display("main_index.html");
+    }
+}
+</code></pre>
+<p>在main_index.html模板即可通过:</p>
+<pre><code>传值是：&lt;{$myval}&gt;
+</code></pre>
+<p>结果是：传值是123</p>
+<p>这里的变量可以是一切php的变量，包括数字/字符串/数组等。</p>
+<p><strong>变量自动过滤及避免过滤</strong></p>
+<p>从控制器中传递到模板的变量，如果直接显示将默认进行HTML转码，功能类似PHP函数htmlspecialchars();</p>
+<pre><code>'&amp;' (和符号) 转成 '&amp;amp;'
+'"' (双引号) 转成 '&amp;quot;'
+"'" (单引号) 转成 '&amp;#039;' (或者 &amp;apos;)
+'&lt;' (小于号) 转成 '&amp;lt;'
+'&gt;' (大于号) 转成 '&amp;gt;'
+</code></pre>
+<p>如MainController.php</p>
+<pre><code>&lt;?php
+class MainController extends BaseController {
+    function actionIndex(){
+        $this-&gt;myval = "&lt;script&gt;alert('攻击代码');&lt;/script&gt;";
+        $this-&gt;display("main_index.html");
+    }
+}
+</code></pre>
+<p>在main_index.html模板:</p>
+<pre><code>传值是：&lt;{$myval}&gt;
+</code></pre>
+<p>显示的HTML源码是：</p>
+<pre><code>传值是：&amp;lt;script&amp;gt;alert(&amp;#039;攻击代码&amp;#039;);&amp;lt;/script&amp;gt;
+</code></pre>
+<p>有时我们也需要让变量直接显示成HTML，而不进行过滤的，那么在保证变量本身安全的前提下，我们可以通过nofilter语法来避免过滤。</p>
+<p>还是上述的例子，但是在模板内是：</p>
+<pre><code>传值是：&lt;{$myval nofilter}&gt;
+</code></pre>
+<p>加入了nofilter的修饰符，然后显示是：</p>
+<p><img alt="nofilter" src="../images/42.jpg" /></p>
+<p>显示的HTML源码是：</p>
+<pre><code>传值是：&lt;script&gt;alert('攻击代码');&lt;/script&gt;
+</code></pre>
+<p><strong>变量赋值</strong></p>
+<p>模板内可以通过等号进行变量赋值，如：</p>
+<pre><code>&lt;{$foo = $myval + 2}&gt;
+&lt;{$foo}&gt;
+</code></pre>
+<p>那么$foo会输出125 (123+2）。</p>
+<p><strong>使用常量</strong></p>
+<p>PHP常量在模板内不能直接使用，但可以通过简单的小技巧来实现。</p>
+<p>MainController.php</p>
+<pre><code>&lt;?php
+class MainController extends BaseController {
+    function actionIndex(){
+        define("MY_CONSTANT", "show the money");
+        $this-&gt;constant = MY_CONSTANT;
+        $this-&gt;display("main_index.html");
+    }
+}
+</code></pre>
+<p>在main_index.html模板:</p>
+<pre><code>显示常量：&lt;{$constant}&gt;
+</code></pre>
+<p>这里先将全部用户定义常量传给模板变量，然后在模板内直接使用。传值这个步骤可以放控制器，要做到全局也可以放BaseController。如：</p>
+<pre><code>&lt;?php
+class BaseController extends Controller{
+    public $layout = "layout.html";
+
+    // 通过继承将display重写，使得可以传入常量的数组
+    function display($tpl_name, $return = false){
+        $this-&gt;constant = MY_CONSTANT;
+        parent::display($tpl_name, $return);
+    }
+}
+</code></pre>
+<p><strong>数组点号</strong></p>
+<p>变量输出时，如果是数组，那么可以通过传统数组的方括号来显示值，也可以通过点号来显示。</p>
+<p>如MainController.php</p>
+<pre><code>&lt;?php
+class MainController extends BaseController {
+    function actionIndex(){
+        $this-&gt;myval = array("num"=&gt;10086);
+        $this-&gt;display("main_index.html");
+    }
+}
+</code></pre>
+<p>那么在模板内可以使用以下两种显示方式：</p>
+<pre><code>&lt;{$myval["num"]}&gt; 等同于 &lt;{$myval.num}&gt;
+</code></pre>
+<p>显示的结果是：10086 等同于 10086</p>
+<p><strong>循环foreach</strong></p>
+<p>新版模板引擎支持php的foreach语法，但是稍微有点不一样。</p>
+<blockquote>
+<p>&lt;{/foreach}&gt;是foreach的结束符</p>
+</blockquote>
+<p>如MainController.php</p>
+<pre><code>&lt;?php
+class MainController extends BaseController {
+    function actionIndex(){
+        $this-&gt;myarr = array(
+            "one" =&gt; "100",
+            "two" =&gt; "200",
+            "three" =&gt; "300",
+        );
+        $this-&gt;display("main_index.html");
+    }
+}
+</code></pre>
+<p>main_index.html</p>
+<pre><code>&lt;{foreach $myarr as $k =&gt; $v}&gt;
+    &lt;p&gt;&lt;{$k}&gt; =&gt; &lt;{$v}&gt;&lt;/p&gt;
+&lt;{/foreach}&gt;
+</code></pre>
+<p>输出：</p>
+<p><img alt="foreach结果" src="../images/36.jpg" /></p>
+<p>当然，不要key的数组foreach也是可以的：</p>
+<pre><code>&lt;{foreach $myarr as $v}&gt;
+    &lt;p&gt;&lt;{$v}&gt;&lt;/p&gt;
+&lt;{/foreach}&gt;
+</code></pre>
+<p><img alt="foreach结果" src="../images/37.jpg" /></p>
+<p><strong>foreach的自带值</strong></p>
+<p>模板的foreach有一些比较特殊的值，方便平时编程使用的。</p>
+<table>
+<thead>
+<tr>
+<th>自带值</th>
+<th>意义</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$v@index</td>
+<td>循环索引，从0开始按循环次数递增</td>
+<td>用于判断当前循环次数，如隔行换底色等</td>
+</tr>
+<tr>
+<td>$v@iteration</td>
+<td>循环次数，从1开始递增，等同于$v@index + 1</td>
+<td>用于显示序号</td>
+</tr>
+<tr>
+<td>$v@first</td>
+<td>当第一次循环，值是true，之后一直是false</td>
+<td>用于判断当前循环是否循环的最开始第一次，如制作表格的表头之类的</td>
+</tr>
+<tr>
+<td>$v@last</td>
+<td>当循环到最后一次，值为true，未到最后则是false</td>
+<td>用于判断当前循环是否最后一次循环，比如说有时候循环最后一行的收尾处理</td>
+</tr>
+<tr>
+<td>$v@total</td>
+<td>循环数组的总次数，等于与count(数组)</td>
+<td>显示总数，在一开始就知道总数挺方便的</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<pre><code>&lt;{foreach $myarr as $v}&gt;
+    &lt;p&gt;第&lt;{$v@iteration}&gt;个值：&lt;{$v}&gt;
+        &lt;{if $v@first == true}&gt;
+            （这里是开始一行）
+        &lt;{/if}&gt;
+        &lt;{if $v@last == true}&gt;
+            （这里是最后一行）
+        &lt;{/if}&gt;
+    &lt;/p&gt;
+&lt;{/foreach}&gt;
+</code></pre>
+<p>结果：</p>
+<p><img alt="foreach结果" src="../images/38.jpg" /></p>
+<p><strong>多维数组的显示</strong></p>
+<p>示例：</p>
+<pre><code>&lt;?php
+class MainController extends BaseController {
+    function actionIndex(){
+        $this-&gt;myarr = array(
+                array(
+                        array(
+                                'name' =&gt; 'apple',
+                                'count' =&gt; '1000',
+                        ),
+                        array(
+                                'name' =&gt; 'banana',
+                                'count' =&gt; '2000'
+                        ),
+                ),
+                array(
+                        array(
+                                'name' =&gt; 'cat',
+                                'count' =&gt; '5000',
+                        ),
+                        array(
+                                'name' =&gt; 'dog',
+                                'count' =&gt; '100'
+                        ),
+                ),
+        );
+        $this-&gt;display("main_index.html");
+    }
+}
+</code></pre>
+<p>模板：</p>
+<pre><code>&lt;{foreach $myarr as $arr1}&gt;
+    第&lt;{$arr1@iteration}&gt;列
+        &lt;{foreach $arr1 as $arr2}&gt;
+                &lt;{foreach $arr2 as $k =&gt; $v}&gt;
+                        &lt;p&gt;&lt;{$k}&gt;：&lt;{$v}&gt;&lt;/p&gt;
+                &lt;{/foreach}&gt;
+        &lt;{/foreach}&gt;
+&lt;{/foreach}&gt;
+</code></pre>
+<p>结果：</p>
+<p><img alt="多维数组结果" src="../images/40.jpg" /></p>
+<p><strong>break，continue</strong></p>
+<p>foreach循环里面可以使用php语法的break和continue，使用方法是：</p>
+<pre><code>&lt;{break}&gt;
+</code></pre>
+<p>和</p>
+<pre><code>&lt;{continue}&gt;
+</code></pre>
+<p>作用跟php内使用完全一致。</p>
+<p><strong>if判断</strong></p>
+<p>新版模板引擎支持if判断，包括if，elseif，else，&lt;{/if}&gt;（结束符）。</p>
+<p>如：</p>
+<pre><code>&lt;?php
+class MainController extends BaseController {
+    function actionIndex(){
+        $this-&gt;myval = 500;
+        $this-&gt;mybool = false;
+        $this-&gt;display("main_index.html");
+    }
+}
+</code></pre>
+<p>模板：</p>
+<pre><code>&lt;p&gt;
+&lt;{if $myval &gt; 1000}&gt;
+    myval大于1000
+&lt;{elseif $myval &gt; 100}&gt;
+    myval小于等于1000，大于100
+&lt;{else}&gt;    
+    myval小于等于100
+&lt;{/if}&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;{if $mybool}&gt;
+    mybool是true
+&lt;{else}&gt;
+    mybool是false
+&lt;{/if}&gt;
+&lt;/p&gt;
+</code></pre>
+<p>结果：</p>
+<p><img alt="foreach结果" src="../images/39.jpg" /></p>
+<p><strong>include包含模板</strong></p>
+<p>模板中可以通过include语法进行模板的包含。</p>
+<ul>
+<li>包含的模板路径以模板根目录为基础，一般是protected/view。</li>
+<li>包含的模板里面不能有包含原来模板的语句，否则会造成死循环。</li>
+</ul>
+<p>语法：</p>
+<pre><code>&lt;{include file="inner.html"}&gt;
+</code></pre>
+<p>一般include是用于包含公共HTML片段，使得不需要相同的代码写多次，而且修改也能比较方便地修改一个地方即可。</p>
+<p><strong>函数调用方法</strong></p>
+<p>新版框架可以直接调用php函数输出。不再需要像旧版一样需要注册函数。</p>
+<blockquote>
+<p>理论上，注册一个函数来使用是很不合理的事情，毕竟模板内也是php，也能执行php函数。</p>
+</blockquote>
+<p><strong>一般建议模板内调用的函数，都是可以直接输出结果的。</strong></p>
+<p>示例：</p>
+<pre><code>&lt;?php
+class MainController extends BaseController {
+    function actionIndex(){
+        // strtotime可以通过字符串取得时间戳
+        // 这里取上个星期天的时间戳
+        $this-&gt;mytime = strtotime("last sunday");
+        $this-&gt;display("main_index.html");
+    }
+}
+</code></pre>
+<p>模板调用date()函数输出：</p>
+<pre><code>上个星期天是&lt;{date("Y年m月d日", $mytime)}&gt;
+</code></pre>
+<p>结果：</p>
+<p><img alt="foreach结果" src="../images/41.jpg" /></p>
+<p><strong>URL地址构造函数url()</strong></p>
+<p>新版框架还支持另一种函数调用方式，我们通过最常用的url()地址构造函数来讲解一下：</p>
+<p>在模板内使用url()函数是这样的：</p>
+<pre><code>&lt;a href="&lt;{url c="main" a="index"}&gt;"&gt;返回首页&lt;/a&gt;
+</code></pre>
+<p>这里有一些特点：</p>
+<ul>
+<li>url()函数并不是通过类似date()函数的函数调用的。</li>
+<li>参数是类似键值对（key-value）的方式赋值。</li>
+</ul>
+<p>观察一下url()函数的代码，会发现：</p>
+<pre><code>function url($c = 'main', $a = 'index', $param = array()){
+    if(is_array($c)){
+        $param = $c;
+        $c = $param['c']; unset($param['c']);
+        $a = $param['a']; unset($param['a']);
+    }
+    ...
+</code></pre>
+<p>参数$c做了一个特殊的处理：判断$c（第一个参数）是否数组，如果是的话，将数组内和参数同名键的值取出来赋值给同名参数。</p>
+<p>也就是说，第一个参数$c实际上是一个带了完整三个参数的数组。</p>
+<p>所以，如果需要写一个类似url()的函数，那么它的第一个参数数组，就是全部的参数的数组。</p>
+<p>而且这个函数在模板调用时，就可以直接通过键值对的方式来赋值参数了。</p>
+<p>有时我们需要对URL的中文进行URLdecode处理，如某些情况下的JS或者ajax传递汉字或特殊值参数时，会发现&lt;{url}&gt;的调用将汉字或特殊值转换成%20的URL编码后的样子，不利于JS的编写和参数构造。</p>
+<p>这个时候我们可以通过函数的方式来将URL解码，那么输出到页面上“汉字”就会保持原样。</p>
+<pre><code>&lt;a href="&lt;{urldecode(url("search", "index", array("search" =&gt; "汉字")))}&gt;"&gt;返回首页&lt;/a&gt;
+</code></pre>
+<p>这里是直接用了urldecode()函数，而url()函数也是用了它的原始的版本。</p>
+<p><strong>临时目录不可写错误</strong></p>
+<p>很多时候在linux上使用新版框架会产生以下错误提示：</p>
+<pre><code>Err: Directory "somedir/tmp" is not writable or readable
+</code></pre>
+<p>原因是protected/tmp目录不可写导致的。</p>
+<p>解决方法是：将protected/tmp目录的权限设置成777。</p>
+<p><strong>修改限定符</strong></p>
+<p>在新版中，左右限定符（&lt;{和}&gt;）是默认的。因其可以在页面上很好地跟Javascript脚本做区分。不过如果希望自行修改限定符，可以通过以下方法：</p>
+<pre><code>// 这里是BaseController里面的init()方法
+function init(){
+    $compile_dir = isset($GLOBALS['view']['compile_dir']) ? $GLOBALS['view']['compile_dir'] : APP_DIR.DS.'protected'.DS.'tmp';
+    $this-&gt;_v = new View(APP_DIR.DS.'protected'.DS.'view', $compile_dir, '{', '}');
+
+    // ..其他代码..
+}
+</code></pre>
+<p><strong>模板中CSS和JS的路径</strong></p>
+<blockquote>
+<p>图片、CSS和Javascript文件，我们通常称其为“媒体文件”。</p>
+</blockquote>
+<p>媒体文件在页面上使用，可以有两种路径：相对路径、绝对路径。</p>
+<p><strong><em>相对路径</em></strong>：指的是媒体文件相对于浏览器访问的当前目录的路径。</p>
+<p>比如说：</p>
+<pre><code>http://www.speedphp.com/bbs/forum-6-1.html
+</code></pre>
+<p>这个网址浏览器的当前访问目录，是:</p>
+<pre><code>http://www.speedphp.com/bbs/
+</code></pre>
+<p>如果该网页上面有这样一张图片：</p>
+<pre><code>&lt;img src="images/logo.gif" alt="" /&gt;
+</code></pre>
+<p>那么，这张图片就称为“相对路径”，可以认为，通过以下地址就可以访问到这张图片：</p>
+<pre><code>http://www.speedphp.com/bbs/images/logo.gif
+</code></pre>
+<p>还有更多例子：</p>
+<pre><code>&lt;script type="text/javascript" src="js/jquery.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="css/style.css" type="text/css" media="screen" /&gt;
+&lt;img src="images/logo.gif" alt="" /&gt;
+“./”点斜杠是相对路径：（注意是点+斜杠）
+&lt;script type="text/javascript" src="./js/jquery.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="./css/style.css" type="text/css" media="screen" /&gt;
+&lt;img src="./images/logo.gif" alt="" /&gt;
+</code></pre>
+<p>相对路径在使用中会有个缺点，当前页面的访问目录如果修改，那么页面上的媒体文件路径也可能要修改，不然就会找不到媒体文件。</p>
+<p>所以，一般建议只在当前页面访问目录能确定不会修改的情况下，才直接在模板上面使用相对路径。</p>
+<blockquote>
+<p>有些时候，当一套speedphp的程序，从原来的未开启urlrewrite到开启后，产生页面上图片或者css文件错乱的情况，就有可能是因为使用了相对路径；解决的方案是修改成绝对路径，或者重新调整媒体文件的路径。</p>
+</blockquote>
+<p><strong><em>绝对路径</em></strong>：指的是媒体文件相对网站根目录的路径。</p>
+<p>绝对路径有两种情况，单斜杠开头的媒体文件地址，或者是http://开头的完整的媒体文件地址。</p>
+<p>以下都是绝对路径的例子：</p>
+<pre><code>&lt;script type="text/javascript" src="/js/jquery.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" /&gt;
+&lt;img src="/images/logo.gif" alt="" /&gt;
+&lt;script type="text/javascript" src="http://www.speedphp.com/js/jquery.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="http://www.speedphp.com/css/style.css" type="text/css" media="screen" /&gt;
+&lt;img src="http://www.speedphp.com/images/logo.gif" alt="" /&gt;
+</code></pre>
+<p>由于在绝对路径中，媒体文件是相对于网站根目录，所以无论在哪个页面上，用绝对路径都能找到这个媒体文件。</p>
+<p>如果对于媒体文件地址比较困惑的情况，建议直接用绝对路径。</p>
+<blockquote>
+<p>url()函数产生的网址，也是http://开头的绝对路径地址。</p>
+</blockquote></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a href="https://www.goldrobot.org">www.goldrobot.org</a></p>
+            <!-- <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p> -->
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

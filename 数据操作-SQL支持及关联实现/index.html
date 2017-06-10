@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>SQL支持及关联实现 - SpeedPHP 文档</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/bootstrap-table.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/prettify.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../css/highlight.css"> -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-table.min.js"></script>
+        <!-- <script src="../js/highlight.pack.js"></script> -->
+        <script src="../js/prettify.min.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">SpeedPHP 文档</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">快速入门 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%80%E3%80%81%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8SpeedPHP/">一 开始使用SpeedPHP</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%8C%E3%80%81Hello%20World/">二 Hello World</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%B8%89%E3%80%81%E7%90%86%E8%A7%A3MVC/">三 理解MVC</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E5%9B%9B%E3%80%81%E5%88%B6%E4%BD%9C%E7%95%99%E8%A8%80%E6%9C%AC/">四 制作留言本</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E5%8F%8AAjax/">五 数据操作及Ajax</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架概述 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-SAE%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8/">SAE平台使用</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%88%E6%9D%83%E5%8F%8A%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE/">版权及开源协议</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%BC%96%E7%A0%81%E7%89%88%E6%9C%AC/">编码版本</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a>
+</li>
+                            
+<li >
+    <a href="../%E6%A6%82%E8%BF%B0-%E7%89%B9%E8%89%B2/">特色</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">开发指南 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%AE/">安全建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%A8%8B%E5%BA%8F%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/">程序目录结构</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%9E%B6%E6%9E%84%E5%8F%8A%E6%89%A9%E5%B1%95/">架构及扩展</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">开发流程</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E5%91%BD%E5%90%8D%E5%BB%BA%E8%AE%AE/">命名建议</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%A8%A1%E5%9D%97modules/">模块modules</a>
+</li>
+                            
+<li >
+    <a href="../%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E7%94%A8%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89/">用户自定义</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">访问交互 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-session%EF%BC%8Fcookie/">session／cookie</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%8F%8A%E8%8E%B7%E5%8F%96%24_GET%EF%BC%8F%24_POST%E7%9A%84%E6%95%B0%E6%8D%AE/">表单提交及获取$_GET／$_POST的数据</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E7%89%B9%E6%80%A7%E5%92%8C%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">模板引擎特性和使用方法</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BD%BF%E7%94%A8frameset/">使用frameset</a>
+</li>
+                            
+<li >
+    <a href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BC%AA%E9%9D%99%E6%80%81%E5%8F%8AURL%E8%B7%B3%E8%BD%AC/">伪静态及URL跳转</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">数据操作 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li class="active">
+    <a href="./">SQL支持及关联实现</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%A4%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E4%B8%BB%E4%BB%8E%E5%BA%93%E9%85%8D%E7%BD%AE/">多数据库、主从库配置</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%88%86%E9%A1%B5/">分页</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%BB%BA%E7%AB%8B%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%B1%BB/">建立数据模型类</a>
+</li>
+                            
+<li >
+    <a href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E6%95%99%E7%A8%8B/">数据操作教程</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../%E8%AE%BF%E9%97%AE%E4%BA%A4%E4%BA%92-%E4%BC%AA%E9%9D%99%E6%80%81%E5%8F%8AURL%E8%B7%B3%E8%BD%AC/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C-%E5%A4%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E4%B8%BB%E4%BB%8E%E5%BA%93%E9%85%8D%E7%BD%AE/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#sql">SQL支持及关联实现</a></li>
+            <li><a href="#sql-query">一、SQL查询方法 query()</a></li>
+            <li><a href="#sql-execute">二、SQL操作方法 execute()</a></li>
+            <li><a href="#_1">三、事务支持</a></li>
+            <li><a href="#_2">四、数据关联查询</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="sql">SQL支持及关联实现</h1>
+<p>本章将介绍sp框架数据SQL操作的使用方法，以及关联查询。</p>
+<h2 id="sql-query">一、SQL查询方法 query()</h2>
+<p><strong>用法：</strong> query($sql, $params = array())</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>$sql参数是需要查询的SQL语句，SQL中输入参数值需要用类似“:foo”、“:bar”的绑定标识来代替。</li>
+<li>$params是参数绑定值列表，键是类似“:foo”、“:bar”的绑定标识，值是输入数据。</li>
+</ul>
+<p><strong>返回值</strong></p>
+<p>query()返回查询结果的二维数组，跟findAll()结果一样。</p>
+<p><strong>举例：</strong></p>
+<p>子查询</p>
+<pre><code>$obj-&gt;query(
+    "select tbl_student.* from tbl_student, (select student_id from tbl_score where examdate = ':examdate') sc where sc.student_id = tbl_student.student_id group by tbl_student.student_id", 
+    array(
+        ":examdate" =&gt; "2010-10-12"
+    )
+);
+</code></pre>
+<p>UNION联合查询</p>
+<pre><code>$obj-&gt;query(
+    "(SELECT a FROM t1 WHERE a=:v1 AND B=:v2 ORDER BY a LIMIT 10) UNION (SELECT a FROM t2 WHERE a=:v3 AND B=:v4 ORDER BY a LIMIT 10)", 
+    array(
+        ":v1" =&gt; 10,
+        ":v2" =&gt; 2,
+        ":v3" =&gt; 20,
+        ":v4" =&gt; 3,
+    )
+);
+</code></pre>
+<p>JOIN连接查询</p>
+<pre><code>$obj-&gt;query("SELECT t1.id,t2.id,t3.id FROM t1,( t2 LEFT JOIN t3 ON (t3.id=t1.id) ) WHERE t1.id=t2.id");
+</code></pre>
+<blockquote>
+<p>对比旧版的findSql()来说，新版的query()最大的不同是通过绑定参数来输入数据的，更加安全。</p>
+</blockquote>
+<h2 id="sql-execute">二、SQL操作方法 execute()</h2>
+<p><strong>用法：</strong> execute($sql, $params = array())</p>
+<p><strong>参数：</strong></p>
+<ul>
+<li>$sql参数是需要查询的SQL语句，SQL中输入参数值需要用类似“:foo”、“:bar”的绑定标识来代替。</li>
+<li>$params是参数绑定值列表，键是类似“:foo”、“:bar”的绑定标识，值是输入数据。</li>
+</ul>
+<p>请注意query()和execute()方法之间的区别：query()是SQL语句查找时使用的，而execute()是SQL语句更新/删除/新建的时候使用的。</p>
+<blockquote>
+<p>通俗点说，query()中的SQL语句主要以“SELECT”为开头，而execute()中的SQL语句以“UPDATE/DELETE/CREATE”开头。</p>
+<p>而且两者的返回值是最大的不同。</p>
+</blockquote>
+<p><strong>返回值</strong></p>
+<p>execute()返回影响行数，跟update()/delete()方法结果一样。</p>
+<p><strong>举例</strong></p>
+<p>增删改create，update，delete</p>
+<pre><code>$obj-&gt;execute("INSERT INTO table_name (col1, col2) VALUES(:col1, col1*2)", array(
+    ":col1" =&gt; 15,
+));
+
+$obj-&gt;execute("UPDATE table_name SET col1=:col1, col2 = col1*2 WHERE col3 &gt; :col3", array(
+    ":col1" =&gt; 100,
+    ":col3" =&gt; 100,
+));
+
+$obj-&gt;execute("DELETE table_name where col1 &gt; :col1 AND col2 &lt; :col2", array(
+    ":col1" =&gt; 30,
+    ":col2" =&gt; 50,
+));
+</code></pre>
+<p>建表，改变表</p>
+<pre><code>$obj-&gt;execute("CREATE TABLE tbl_topic(tid int NOT NULL AUTO_INCREMENT,topic VARCHAR(200) NOT NULL,clicks BIGINT NOT NULL DEFAULT 0,PRIMARY KEY (tid)) DEFAULT CHARSET utf8");
+
+$obj-&gt;execute("ALTER TABLE t1 RENAME t2");
+</code></pre>
+<p>其他操作</p>
+<pre><code>$obj-&gt;execute("REPLACE INTO mysql.user (Host,User,Password) VALUES('%', :username,PASSWORD(:password)) ", array(
+    ":username" =&gt; "jake",
+    ":password" =&gt; "123456"
+));
+</code></pre>
+<h2 id="_1">三、事务支持</h2>
+<p>支持SQL就能支持数据库事务，当然数据库类型需要是innoDB。</p>
+<pre><code>$g = new Model("lib_guestbook");
+// 开启事务
+$g-&gt;execute("START TRANSACTION"); // 或者是$g-&gt;execute("BEGIN");
+// 这里是很多的插入或修改操作等，一般来说查询不需要用事务的。
+$result1 = $g-&gt;create(xxx);
+$result2 = $g-&gt;update(xxx);
+...
+// 这里判断操作是否成功，然后回滚或提交事务
+    if( false == $result1 || false == $result2 || ... ){ // create、update之类的返回false即是操作失败，也有可能是字段错误
+    $g-&gt;execute("ROLLBACK");  // 出现问题，事务回滚
+}else{
+    $g-&gt;execute("COMMIT");  // 没有问题，那么事务提交。
+}
+</code></pre>
+<p>以上就是事务的实现，不过一般情况下不需要使用到这些，只有在大并发或数据库管理的时候才需要用到，请谨慎。</p>
+<blockquote>
+<p>开发者可以自行覆盖Model的方法来对事务进行封装，因为Model本身的绝大部分函数，对数据库的操作都是一条SQL的，所以对事务的封装没有很大的必要。</p>
+<p>如果应用程序内，Model的派生类内，有比较复杂的数据处理，那么将这个处理和事务封装到覆盖的方法里，这是更轻便的OOP做法。</p>
+</blockquote>
+<h2 id="_2">四、数据关联查询</h2>
+<p>跟旧版框架不一样的地方是，新版sp框架提倡数据库关联直接通过SQL来进行查询，新版代码也没有对关联进行封装。</p>
+<p>理由：</p>
+<ul>
+<li>封装关联操作，是通过所谓的ORM方式封装一些很古怪的函数和方法来实现。但是这样学习成本非常高。</li>
+<li>封装关联后，不利于更细致的操作。</li>
+<li>封装关联后，不能直观地看出查询的条件。在理解代码上存在比较大的困难。</li>
+<li>封装关联性能方面会比较差，相对直接用SQL的话。</li>
+</ul>
+<p>所以：</p>
+<ul>
+<li>使用query()方法，直接使用SQL语句进行关联查询。</li>
+<li>关联查询一般只是SQL的join语法，很容易理解，直接把代码功能写出来，也很直观。</li>
+<li>SQL语句是比较基础的web开发知识，普通开发者不用再学习一门ORM封装语言。</li>
+<li>执行效率非常高。</li>
+</ul>
+<blockquote>
+<p>其实换句话来说，SQL语句并非复杂到不敢面对的事情，过度把它封装起来是不是很多旧余。</p>
+</blockquote></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a href="https://www.goldrobot.org">www.goldrobot.org</a></p>
+            <!-- <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p> -->
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

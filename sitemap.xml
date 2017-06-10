@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/快速入门一、开始使用SpeedPHP/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/快速入门二、Hello World/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/快速入门三、理解MVC/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/快速入门四、制作留言本/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/快速入门五、数据操作及Ajax/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/概述-SAE平台使用/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/概述-版权及开源协议/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/概述-编码版本/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/概述-开发环境/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/概述-特色/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/开发指南-命名建议/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/开发指南-安全建议/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/开发指南-程序目录结构/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/开发指南-架构及扩展/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/开发指南-开发流程/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/开发指南-命名建议/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/开发指南-模块modules/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/开发指南-用户自定义/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/访问交互-session／cookie/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/访问交互-表单提交及获取$_GET／$_POST的数据/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/访问交互-模板引擎特性和使用方法/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/访问交互-使用frameset/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/访问交互-伪静态及URL跳转/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/数据操作-SQL支持及关联实现/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/数据操作-多数据库、主从库配置/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/数据操作-分页/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/数据操作-建立数据模型类/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/数据操作-数据操作教程/</loc>
+     <lastmod>2017-06-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>
