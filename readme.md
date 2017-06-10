@@ -1,3 +1,3 @@
 # Goldrobot.org - Pages
 
-[首页](fjxhkj.github.com)
+[首页](/fjxhkj.github.com)
