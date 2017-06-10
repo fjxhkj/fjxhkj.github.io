@@ -1,0 +1,41 @@
+site_name: "SpeedPHP 文档"
+copyright: "<a href=\"https://www.goldrobot.org\">www.goldrobot.org</a>"
+theme_dir1: "myThemes/readthedocs"
+theme_dir: "myThemes/mkdocs"
+markdown_extensions:
+    - nl2br
+pages:
+    - "index.md"
+    - 快速入门:
+      - "一 开始使用SpeedPHP": "快速入门一、开始使用SpeedPHP.md"
+      - "二 Hello World": "快速入门二、Hello World.md"
+      - "三 理解MVC": "快速入门三、理解MVC.md"
+      - "四 制作留言本": "快速入门四、制作留言本.md"
+      - "五 数据操作及Ajax": "快速入门五、数据操作及Ajax.md"
+    - 框架概述:
+      - "SAE平台使用": "概述-SAE平台使用.md"
+      - "版权及开源协议": "概述-版权及开源协议.md"
+      - "编码版本": "概述-编码版本.md"
+      - "开发环境": "概述-开发环境.md"
+      - "特色": "概述-特色.md"
+    - 开发指南:
+      - "命名建议": "开发指南-命名建议.md"
+      - "安全建议": "开发指南-安全建议.md"
+      - "程序目录结构": "开发指南-程序目录结构.md"
+      - "架构及扩展": "开发指南-架构及扩展.md"
+      - "开发流程": "开发指南-开发流程.md"
+      - "命名建议": "开发指南-命名建议.md"
+      - "模块modules": "开发指南-模块modules.md"
+      - "用户自定义": "开发指南-用户自定义.md"
+    - 访问交互:
+      - "session／cookie": "访问交互-session／cookie.md"
+      - "表单提交及获取$_GET／$_POST的数据": "访问交互-表单提交及获取$_GET／$_POST的数据.md"
+      - "模板引擎特性和使用方法": "访问交互-模板引擎特性和使用方法.md"
+      - "使用frameset": "访问交互-使用frameset.md"
+      - "伪静态及URL跳转": "访问交互-伪静态及URL跳转.md"
+    - 数据操作:
+      - "SQL支持及关联实现": "数据操作-SQL支持及关联实现.md"
+      - "多数据库、主从库配置": "数据操作-多数据库、主从库配置.md"
+      - "分页": "数据操作-分页.md"
+      - "建立数据模型类": "数据操作-建立数据模型类.md"
+      - "数据操作教程": "数据操作-数据操作教程.md"
