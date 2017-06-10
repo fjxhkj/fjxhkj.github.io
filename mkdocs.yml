@@ -7,11 +7,11 @@ markdown_extensions:
 pages:
     - "index.md"
     - 快速入门:
-      - "一 开始使用SpeedPHP": "快速入门一、开始使用SpeedPHP.md"
-      - "二 Hello World": "快速入门二、Hello World.md"
-      - "三 理解MVC": "快速入门三、理解MVC.md"
-      - "四 制作留言本": "快速入门四、制作留言本.md"
-      - "五 数据操作及Ajax": "快速入门五、数据操作及Ajax.md"
+      - "一 开始使用SpeedPHP": "快速入门一-开始使用SpeedPHP.md"
+      - "二 Hello World": "快速入门二-Hello World.md"
+      - "三 理解MVC": "快速入门三-理解MVC.md"
+      - "四 制作留言本": "快速入门四-制作留言本.md"
+      - "五 数据操作及Ajax": "快速入门五-数据操作及Ajax.md"
     - 框架概述:
       - "SAE平台使用": "概述-SAE平台使用.md"
       - "版权及开源协议": "概述-版权及开源协议.md"
