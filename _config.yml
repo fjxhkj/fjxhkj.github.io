@@ -2,3 +2,4 @@ name: My Docs
 description: My docs for coding
 url: "https://doc.goldrobot.org"
 theme: jekyll-theme-leap-day
+permalink: /404.html
