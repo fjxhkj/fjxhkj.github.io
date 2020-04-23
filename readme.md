@@ -1,8 +1,4 @@
-# Goldrobot.org - Pages
-
-[首页](https://fjxhkj.github.io/goldrobot/)
-
-## 使用 mkdocs 更新
+# 使用 mkdocs 更新
 
 ```
 mkdocs gh-deploy
