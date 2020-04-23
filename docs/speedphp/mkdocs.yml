@@ -1,7 +1,7 @@
-site_name: "SpeedPHP 文档"
-copyright: "<a href=\"https://www.goldrobot.org\">www.goldrobot.org</a>"
-theme_dir1: "myThemes/readthedocs"
-theme_dir: "myThemes/mkdocs"
+site_name: "SpeedPHP 官方文档"
+copyright: "<a href=\"https://doc.goldrobot.org\">doc.goldrobot.org</a>"
+theme_dir1: "../myThemes/readthedocs"
+theme_dir: "../myThemes/mkdocs"
 markdown_extensions:
     - nl2br
 pages:
