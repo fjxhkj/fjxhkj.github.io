@@ -10,7 +10,7 @@ tags: [blog,docs]
 ## php
 
 - [php 7.2](/docs/php-org)
-- [speedphp](/docs/speedphp)
+- [speedphp](/docs/speedphp/docs)
 
 ## AutoHotkey
 
